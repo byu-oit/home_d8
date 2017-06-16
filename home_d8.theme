@@ -1,0 +1,419 @@
+<?php
+
+
+/**
+ * @file
+ * Functions to support theming in the home_d8 theme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+global $base_url;
+$theme_root = $base_url.'/'.drupal_get_path('theme','home_d8');
+
+
+//
+//function home_d8_preprocess_views_view(&$variables){
+//    global $base_url;
+//    $theme_root = $base_url.'/'.drupal_get_path('theme','home_d8');
+//    $variables['theme_root'] = $theme_root;
+//    $query = \Drupal::entityQuery('taxonomy_term');
+//    $query->condition('vid', "team_categories");
+//    $tids = $query->execute();
+//    $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadMultiple($tids);
+//    $variables['team_categories'] = $terms;
+//}
+//
+function home_d8_preprocess_page(&$variables) {
+    global $base_url;
+    $theme_root = $base_url.'/'.drupal_get_path('theme','home_d8');
+    $variables['theme_root'] = $theme_root;
+    $user = \Drupal::currentUser()->id();
+    $account = \Drupal\user\Entity\User::load($user);
+    //$info = $account->get('field_info')->value;
+    $name = $account->getUsername();
+    if($user){
+        $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+        if($user->get('user_picture')->entity){
+            $picture = $user->get('user_picture')->entity->url();
+        }
+    }
+    $current_path = \Drupal::service('path.current')->getPath();
+    $path_args = explode('/', $current_path);
+    $variables['arg'] = $path_args[1];
+    //$variables['logopath'] = $base_url . '/' . drupal_get_path('theme','home_d8') . '/logo.png';
+    //$variables['user'] = $user;
+    //$variables['name'] = $name;
+    //$variables['info'] = $info;
+    //$variables['picture'] = $picture;
+
+    /* ------ load BYU Web Components ----- */
+//    example
+//    if($variables['is_front']){
+//        $variables['#attached']['library'][] = 'theme_name/custom-library';
+//    }
+    $version = trim(theme_get_setting('version'));
+    if(!is_null($version ) ) {
+        $variables['#attached']['library'][] = 'home_d8/custom-library';
+//        drupal_add_css('//cdn.byu.edu/byu-theme-components/' . $version . '/byu-theme-components.min.css', array('type' => 'external'));
+//        drupal_add_js('//cdn.byu.edu/byu-theme-components/' . $version . '/byu-theme-components.min.js', 'external');
+    } else {
+        $variables['#attached']['library'][] = 'home_d8/components-latest-js';
+        $variables['#attached']['library'][] = 'home_d8/components-latest-css';
+    }
+    /* --- Load Fonts ------- */
+    $font_package = trim(theme_get_setting('font_package'));
+    if($font_package == 'fonts-full' ) {
+        $variables['#attached']['library'][] = 'home_d8/fonts-full';
+    } else { // load fonts-basic
+        $variables['#attached']['library'][] = 'home_d8/fonts-basic';
+    }
+
+    $userOb = $variables['user'];
+//    $username = $userOb->account->name;
+
+
+//    $account = $userOb->account;
+//    $variables['username'] = $account->name;
+
+    //echo 'username: ' . $variables['username'];
+//    dpm($userOb);
+
+
+//    $variables['search_form'] = drupal_get_form('search_block_form');
+
+    // Load the site name out of configuration.
+    $config = \Drupal::config('system.site');
+    $variables['site_name'] = $config->get('name');
+
+
+    $variables['page_title'] = $variables['page']['#title'];
+    $variables['clients_top'] = views_embed_view('client', 'block_4');
+    $variables['current_url'] = $_SERVER['REQUEST_URI'];
+    $theme_root = $base_url.'/'.drupal_get_path('theme','home_d8');
+    $variables['theme_root'] = $theme_root;
+    $libraries['#attached']['library'][] = 'herchel/global-styling';
+
+    $variables['logopath'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
+
+//    $searchBlock = \Drupal\block\Entity\Block::load('search_form_block');
+//    $variables['search_block_output'] = $searchBlock;
+//    kint($variables);
+//    $variables['search_block_output'] = \Drupal::entityTypeManager()->getViewBuilder('block')->view($searchBlock);
+//    $variables['search_block_output'] = getSearch();
+//    $search_block_output = getSearch();
+//    dpm($search_block_output);
+
+    $searchBlock = \Drupal\block\Entity\Block::load('searchform');
+//    $variables['search_block'] = \Drupal::entityManager()
+//        ->getViewBuilder('block')
+//        ->view($searchBlock);
+
+
+    /* -- Load Theme settings ---- */
+    $variables['header_option'] = theme_get_setting('header_option');
+    $variables['subtitle_use'] = theme_get_setting('subtitle_use'); // t/f
+    $variables['subtitle_above'] = theme_get_setting('subtitle_above'); // t/f
+    $variables['subtitle_italic'] = theme_get_setting('subtitle_italic'); // t/f
+
+    $variables['subtitle_text'] = theme_get_setting('subtitle_text'); // text
+
+//    $variables['attributes'][] = 'katria-testing-header-class';
+    $variables['actions_bg'] = theme_get_setting('actions_bg');
+
+    // sign in
+    $variables['login_use'] = theme_get_setting('login_use'); // t/f
+    $variables['login_url'] = theme_get_setting('login_url');
+    $variables['logout_url'] = theme_get_setting('logout_url');
+    // my account stuff here
+    $variables['myaccount_use'] = theme_get_setting('myaccount_use'); // t/f
+    $variables['myaccount_url'] = theme_get_setting('myaccount_url');
+
+    // search
+    $variables['search_use'] = theme_get_setting('search_use');
+    // menu
+    $variables['menu_disable'] = theme_get_setting('menu_disable');
+    $variables['transparent'] = theme_get_setting('transparent');
+
+
+
+
+    // general page settings
+    $variables['full_width'] = theme_get_setting('full_width');
+    $variables['custom_width'] = theme_get_setting('custom_width');
+
+
+    $variables['footer_option'] = theme_get_setting('footer_option');
+//    $variables['footer_color_option'] = theme_get_setting('footer_color_option');
+    $variables['header_sticky_option'] = theme_get_setting('header_sticky_option');
+    $variables['page_header_option'] = theme_get_setting('page_header_option');
+    $variables['page_header_color_option'] = theme_get_setting('page_header_color_option');
+    $variables['below_slider_option'] = theme_get_setting('below_slider_option');
+    $variables['navigation_option'] =  theme_get_setting('navigation_option');
+    $variables['contact_option'] =  theme_get_setting('contact_option');
+    $variables['contact_about_link'] =  theme_get_setting('contact_about_link');
+    $variables['contact_about'] =  theme_get_setting('contact_about');
+    $variables['contact_us_link'] =  theme_get_setting('contact_us_link');
+    $variables['contact_us'] =  theme_get_setting('contact_us');
+    $variables['breadcrumbs'] =  theme_get_setting('breadcrumbs');
+
+
+
+
+
+//    kint($variables);
+
+}
+
+function getSearch(&$variables) {
+//    $block_manager = \Drupal::service('plugin.manager.block');
+//// You can hard code configuration or you load from settings.
+//    $config = [];
+//    $plugin_block = $block_manager->createInstance('searchform', $config);
+//// Some blocks might implement access check.
+//    $access_result = $block_plugin->access(\Drupal::currentUser());
+//// Return empty render array if user doesn't have access.
+//    if ($access_result->isForbidden()) {
+//        // You might need to add some cache tags/contexts.
+//        return [];
+//    }
+//    $render = $plugin_block->build();
+//// In some cases, you need to add the cache tags/context depending on
+//// the block implemention. As it's possible to add the cache tags and
+//// contexts in the render method and in ::getCacheTags and
+//// ::getCacheContexts methods.
+//    return $render;
+}
+
+//
+//function home_d8_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+//    $request = \Drupal::routeMatch()->getRouteObject()->getDefault('view_id');
+//    //Override Panels Page
+//    $current_uri = \Drupal::request()->getRequestUri();
+//    if(stristr($current_uri,'index') || stristr($current_uri,'index-corporate') || stristr($current_uri,'about') || stristr($current_uri,'contact-us') || stristr($current_uri,'shortcodes') || stristr($current_uri,'page-our-office')){
+//        $suggestions[]= 'page__panels';
+//    }
+//    $node = \Drupal::request()->attributes->get('node');
+//    if ($node) {
+//        $nodeType = $node->getType();
+//        switch ($nodeType) {
+//            case 'portfolio':
+//                $suggestions[] =  'page__portfolio';
+//                break;
+//
+//            case 'product':
+//                $suggestions[] =  'page__product';
+//                break;
+//
+//            default:
+//                # code...
+//                break;
+//        }
+//    }
+//
+//    if( $request == 'product_pages') {
+//        $suggestions[] =  'page__productlist';
+//    }
+//
+//    if( $request == 'portfolio_pages') {
+//        $suggestions[] =  'page__portfoliolist';
+//    }
+//
+//}
+//function home_d8_theme_suggestions_block_alter(&$suggestions, $variables) {
+//    //Override Block Type
+//    $content = $variables['elements']['content'];
+//    if (isset($content['#block_content']) && $content['#block_content'] instanceof \Drupal\block_content\BlockContentInterface) {
+//        $suggestions[] = 'block__' . $content['#block_content']->bundle();
+//    }
+//}
+//
+///**
+// * Implements hook_preprocess_HOOK() for node.html.twig.
+// */
+//function home_d8_preprocess_node(&$variables) {
+//    global $base_url;
+//    // Assign Related Block to Porfolio Single Page
+//    $variables['related_portfolio'] = views_embed_view('portfolio_block', 'block_related');
+//    $variables['related_portfolio_carousel'] = views_embed_view('portfolio_block', 'block_related_carousel');
+//    $variables['base_url'] = $base_url;
+//    $theme_root = $base_url.'/'.drupal_get_path('theme','home_d8');
+//    $variables['theme_root'] = $theme_root;
+//
+//    // Allowed view modes
+//    $view_mode = $variables['view_mode']; // Retrieve view mode
+//    $allowed_view_modes = ['full']; // Array of allowed view modes (for performance so as to not execute on unneeded nodes)
+//
+//    // If view mode is in allowed view modes list, pass to home_d8_add_regions_to_node()
+//    if(in_array($view_mode, $allowed_view_modes)) {
+//        // Allowed regions (for performance so as to not execute for unneeded region)
+//        $allowed_regions = ['left_sidebar','right_sidebar'];
+//        home_d8_add_regions_to_node($allowed_regions, $variables);
+//    }
+//
+//    $node = $variables['node'];
+//    if (\Drupal::currentUser()->isAnonymous()) {
+//        $variables['isLogin'] = FALSE;
+//    } else {
+//        $variables['isLogin'] = TRUE;
+//    }
+//
+//    $nid = $variables['node']->nid->value;
+//    $num_comment = db_query('SELECT comment_count FROM {comment_entity_statistics} WHERE entity_id = ' . $nid)->fetchAssoc();
+//    $variables['comment_count'] = $num_comment['comment_count'];
+//}
+//
+///**
+// * home_d8_add_regions_to_node
+// */
+//
+//function home_d8_add_regions_to_node($allowed_regions, &$variables) {
+//    // Retrieve active theme
+//    $theme = \Drupal::theme()->getActiveTheme()->getName();
+//
+//    // Retrieve theme regions
+//    $available_regions = system_region_list($theme, 'REGIONS_ALL');
+//
+//    // Validate allowed regions with available regions
+//    $regions = array_intersect(array_keys($available_regions), $allowed_regions);
+//
+//    // For each region
+//    foreach ($regions as $key => $region) {
+//
+//        // Load region blocks
+//        $blocks = entity_load_multiple_by_properties('block', array('theme' => $theme, 'region' => $region));
+//
+//        // Sort ‘em
+//        uasort($blocks, 'Drupal\block\Entity\Block::sort');
+//
+//        // Capture viewable blocks and their settings to $build
+//        $build = array();
+//        foreach ($blocks as $key => $block) {
+//            if ($block->access('view')) {
+//                $build[$key] = entity_view($block, 'block');
+//            }
+//        }
+//
+//        // Add build to region
+//        $variables[$region] = $build;
+//    }
+//}
+//
+function home_d8_preprocess_html(&$variables) {
+    global $base_url;
+    $theme_root = $base_url.'/'.drupal_get_path('theme','home_d8');
+    $variables['theme_root'] = $theme_root;
+    $current_path = \Drupal::service('path.current')->getPath();
+    $path_args = explode('/', $current_path);
+    $variables['arg'] = $path_args[1];
+    $variables['layout_option'] = theme_get_setting('layout_option');
+    $variables['header_option'] = theme_get_setting('header_option');
+    $variables['h_semi_transparent_option'] = theme_get_setting('h_semi_transparent_option');
+    $variables['skin_option'] = theme_get_setting('skin_option');
+    $variables['loader'] = theme_get_setting('loader');
+    $variables['your_css'] = theme_get_setting('your_css');
+
+    // general page
+    $full_width = 'full-width-' . theme_get_setting('full_width');
+//    $custom_width = 'custom-width-' . theme_get_setting('custom_width');
+    $min_page_height = 'min-height-' . theme_get_setting('min_page_height');
+//    $variables['attributes']['class'][] = $full_width;
+    // katria left off here getting these variables in
+//    array_push($variables['attributes']['class'],$full_width, $custom_width, $min_page_height);
+
+
+
+    $font_one = theme_get_setting('font_one');
+    $font_two = theme_get_setting('font_two');
+    $font_three = theme_get_setting('font_three');
+    $font_four = theme_get_setting('font_four');
+    $font_five = theme_get_setting('font_five');
+    $font_one_color = theme_get_setting('font_one_color');
+    $font_two_color = theme_get_setting('font_two_color');
+    $font_three_color = theme_get_setting('font_three_color');
+    $font_four_color = theme_get_setting('font_four_color');
+    $font_five_color = theme_get_setting('font_five_color');
+    $p_font = theme_get_setting('p_font');
+    $variables['attributes']['class'][] = 'katria-testing-preprocess-html';
+    array_push($variables['attributes']['class'],$font_one, $font_two, $font_three, $font_four, $font_five, $font_one_color, $font_two_color, $font_three_color, $font_four_color, $font_five_color, $p_font);
+//    array_push($variables['attributes']['class'],$variables['logged_in']);
+//    $variables['attributes']['class'][] = [
+//        logged_in ? 'user-logged-in',
+//    not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
+//    node_type ? 'page-node-type-' ~ node_type|clean_class,
+//    db_offline ? 'db-offline',
+//    ];
+
+
+}
+//
+//function home_d8_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+//    $product_type = $variables['elements']['#node']->getType();
+//    if ($variables['elements']['#view_mode'] == 'teaser') {
+//        $suggestions[] = 'node__' . $product_type . '__teaser';
+//    }
+//
+//}
+
+/**
+ * Implements hook_preprocess_user().
+ */
+function home_d8_preprocess_user(&$variables) {
+    /** @var User $account */
+    $account = $variables['elements']['#user'];
+
+    $variables['username'] = $account->getDisplayName();
+}
+function home_d8_preprocess_block(&$variables) {
+//    kint($variables);
+//    if($variables['block']->region == 'footer_11') :
+//        $variables['title_attributes_array'][] = 'invisible-elements';
+//    endif;
+//    if($variables['block']['elements']['#configuration']['id'] == 'search_form_block')  {
+////        $variables['search_link'] = $variables['block']['content']['#action'];
+//        $variables['search_link'] = 'test';
+//    }
+}
+function home_d8_preprocess_region(&$variables) {
+    /* ---- processing footer content ----- */
+//    kint($variables);
+//    $variables['elements'][0]['#theme']['#attrbiutes'][] = 'test';
+    // check if this region is a footer one
+//    if($variables['region'] == 'footer_11') {
+//        print 'this is a test footer1';
+//        $f1_blocks = $variables['elements']; // list of blocks
+////        dpm($variables);
+//        $i = 0;
+////        $len = count($f1_blocks);
+//        foreach($f1_blocks as $block) {
+//
+////            if($i == 0){  // print only the title of the first block per footer column
+////                $blockTitle = $block['#configuration']['label'];
+////                print '<span slot="header">' . $blockTitle . '</span>';
+////            }
+////            $blockBody = $block['content']['body'][0]['#text'];
+////            print $blockBody;
+////            $i++;
+//
+//        }
+////
+//    }
+
+
+}
+
+// probably for a controller, not for in here
+//function searchForm() {
+//    $myform = \Drupal::formBuilder()->getForm('Drupal\Core\Form\search_form_block');
+//    // If you want modify the form:
+//    $myform['field']['#value'] = 'From my controller';
+//
+//    $build = [
+//        '#theme' => 'mytemplate'
+//    '#form' => $myform,
+//  ];
+//}

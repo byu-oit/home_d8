@@ -1,0 +1,354 @@
+
+/* ----------- BYU HOMEPAGE SPECIFIC--------- */
+
+
+
+/* --- BYU COlors --- */
+
+// blues
+$navy: #002E5D;
+$darknavy: #002040;
+$medblue: #869DB5;
+$lightBlue: #e0f0cc;
+$xlightblue: #C3DDF9;
+$brightBlue: #0057B8;
+
+$royal: #003DA5;
+$lightRoyal: #114BAD;
+
+// There are 6 grays right now..
+$xlightgray: #f2f2f2;
+$lightgray: #e5e5e5;
+$lightergray: #e6e6e6;
+//$medgray: #9b9b9b; // extra
+$gray: #c5c5c5;
+$medgray: #666;
+$darkgray: #6a6a6b; // least used gray
+$darkestgray: #141414;  // this should be used for body & default text.
+
+
+// other colors
+$red: #B3041A;
+
+$yellow: #FCC015;
+$lightyellow: #fef2d0;
+
+$teal: #84DCB4;
+$lightteal: #C4F7E0;
+
+$green: #66B200; // doesn't work with accessibility
+$lightgreen: #e0f0cc;
+//$green: #4D8501; // was #6EAE17;
+//$greendarkened: #498000 ; // was #6AA816;
+
+// other blues Aleni has used:
+//$lightestblue: #C4CFDA;
+//$lightblue: #A6B6C7;
+//$lightmedblue: #889FB7;
+$medblue: #697F96;  // was #889FB7  but it couldn't have white on it with enough contrast
+//$darkmedblue: #5B728A;  // #5B728A is enough contrast for small white text
+
+
+  /* ------------- Headings Etc -------------------- */
+
+h1, h2, h3, h4, .h1, .h2, .h3, .h4, .h8, .h9, .h10, .h11, .h12 {
+  color: #002e5d;
+}
+h5, .h5 {
+  color: #767676;
+}
+h6, .h6, .h7,.h8.white, .h9.white, .h11.white, .h12.white, .h13  {
+  color: #fff;
+}
+h1, h2, .h1, .h2 {
+  font-family: "Vitesse A", "Vitesse B", serif;
+}
+h3, h5, h6, .h3, .h5, .h6, .h7, .h8, .h9, .h10, .h11, .h12, .h13 {
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+}
+
+h1, .h1 {
+  font-size: 35px;
+  line-height: 34px;
+  text-align: center;
+}
+h2, .h2 {
+  font-size: 25px;
+  line-height: 34px;
+  text-align: center;
+}
+h3, .h3 {
+  font-size: 15px;
+  letter-spacing: -.2px;
+  line-height: 19px;
+  a:hover {
+    font-weight: bold;
+  }
+}
+h4 {
+  font-size: 18px;
+  line-height: 20px;
+  a:hover {
+    color: #003DA5;
+  }
+}
+h5 {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: .33px;
+}
+h6 {
+  font-size: 25px;
+  line-height: 27px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.h7 {
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.h8 {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -.2px;
+  text-align: center;
+}
+
+.h9 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: .4px;
+  a:hover {
+    color: #003DA5;
+  }
+}
+.h10 {
+  font-size: 35px;
+  line-height: 40px;
+  font-weight: bold;
+  &.white {
+    color: #fff;
+  }
+}
+.h11 {
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 40px;
+}
+.h12 {
+  font-size: 16px;
+  line-height: 18px;
+  /*letter-spacing:*/
+}
+.h13 {
+  font-size: 45px;
+  /*line-height:*/
+}
+
+@media screen and (min-width: 768px) {
+  .h13 {
+    font-size: 90px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 17px;
+    /*line-height: ??;*/
+  }
+  .h13 {
+    font-size: 120px;
+  }
+
+
+}
+@media screen and (min-width: 1224px) {
+  h1 {
+    font-size: 40px;
+    text-align: left;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  /* we may not do this this way */
+  .h8 {
+    font-size: 16px;
+    line-height: 17px;
+  }
+  .h9 {
+    font-size: 20px;
+    letter-spacing: .5px;
+    line-height: 48px;
+  }
+  .h10 {
+    font-size: 60px;
+    line-height: 82px;
+    letter-spacing: -2.5px;
+    font-weight: 500;
+  }
+  .h13 {
+    font-size: 135px;
+  }
+}
+@media screen and (min-width: 1824px) {
+  .h13 {
+    font-size: 200px;
+  }
+}
+
+.quote-icon {
+  font-weight: bold;
+  font-size: 200px;
+  font-family: "Vitesse A", "Vitesse B", serif;
+  color: $lightgray;
+}
+.and-icon {
+  font-weight: 500;
+  font-size: 130px;
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+  color: $navy;
+}
+
+
+/* ----- helpful classes ----------- */
+.normal-weight {
+  font-weight: normal;
+}
+.bold {
+  font-weight: bold;
+}
+.semibold {
+  font-weight: 500;
+}
+.all-caps {
+  text-transform: uppercase;
+}
+
+.navy-button {
+  background: #002e5d;
+  color: #fff;
+  padding: 12px 25px;
+}
+.medblue-button {
+  background: #002e5d; /* change to medium blue */
+  color: #fff;
+  padding: 12px 25px;
+}
+
+
+.bg-lightgray {
+  background: $lightgray;
+}
+
+
+
+/* --------- Regions ---------- */
+
+.main.main-4-page {
+  padding: 20px 0px;
+  .node__content > :not(.full-width-bar) {
+    max-width: 1224px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .full-width-bar {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+  }
+}
+
+
+/* ----------- Front Page ------- */
+
+
+
+
+/* ------------ About Page ---------- */
+
+
+// ------ Gender Bars
+.bars-container {
+  display: flex;
+  width: 100%;
+
+}
+.bar-2 {
+  text-align: end;
+}
+.bar-2 .progress {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+.bar-wrapper {
+  width: 55%;
+}
+.bar-wrapper.bar-2 {
+  width: 45%;
+}
+.tooltip{
+  position:relative;
+  float:right;
+  background-color: none;
+}
+.tooltip > .tooltip-inner {background: none; padding: 15px 15px; color:rgb(23,44,66); font-weight:bold; font-size:13px;}
+.popOver + .tooltip > .tooltip-arrow {	border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #eebf3f;}
+
+section{
+  margin:100px auto;
+  height:1000px;
+}
+.progress{
+  border-radius:0;
+  overflow:visible;
+  width: 200px;
+}
+.bar-2 .progress {
+  width: 180px;
+}
+.field--name-field-gender .progress-bar {
+  background: $teal;
+  -webkit-transition: width 1.5s ease-in-out;
+  transition: width 1.5s ease-in-out;
+}
+.field--name-field-gender .progress-bar.color-2 {
+  background: $lightteal;
+}
+
+// ----- Demographics & map area
+.states-label, .countries-label {
+  display: inline;
+}
+
+
+/* ---- Admissions Page ---------- */
+
+
+
+
+
+
+
+/* ----- Academics Page ------------ */
+
+
+
+/* ------------ Campus Life Page ------------ */
+
+
+
+
+
+/* -------- Basic Pages ------------- */

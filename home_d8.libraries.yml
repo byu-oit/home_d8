@@ -1,0 +1,66 @@
+global-styling:
+  version: 8.x
+  css:
+    base:
+      css/homepage.css: {}
+  js:
+    js/homepage.js: {}
+fonts-basic:
+  remote: https://cloud.typography.com/75214/7683772/css/fonts.css
+  version: 1.0.0
+  license:
+    name: BYU Fonts Basic
+    url: http://cloud.typography.com/75214/7683772/css/fonts.css
+    gpl-compatible: true
+  css:
+    theme:
+      https://cloud.typography.com/75214/7683772/css/fonts.css: { type: external, minified: true }
+fonts-full:
+  remote: https://cloud.typography.com/75214/6517752/css/fonts.css
+  version: 1.0.0
+  license:
+    name: BYU Fonts Basic
+    url: http://cloud.typography.com/75214/6517752/css/fonts.css
+    gpl-compatible: true
+  css:
+    theme:
+      https://cloud.typography.com/75214/6517752/css/fonts.css: { type: external, minified: true }
+libre-baskerville:
+  remote: https://fonts.googleapis.com/css?family=Libre Baskerville
+  version: 4.5.0
+  license:
+    name: Google
+    url: https://fonts.googleapis.com/css?family=Libre Baskerville
+    gpl-compatible: true
+  css:
+    theme:
+      https://fonts.googleapis.com/css?family=Libre Baskerville: { type: external, minified: true }
+components-latest-js:
+  remote: https://github.com/byuweb/byu-theme-components/
+  version: 1.x.x
+  license:
+    name: BYUWeb
+    url: https://github.com/byuweb/byu-theme-components/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+     https://cdn.byu.edu/byu-theme-components/unstable/byu-theme-components.min.js: { type: external, minified: true }
+components-latest-css:
+  remote: https://github.com/byuweb/byu-theme-components/
+  version: 1.x.x
+  license:
+    name: BYUWebCSS
+    url: https://github.com/byuweb/byu-theme-components/blob/master/LICENSE
+    gpl-compatible: true
+  css:
+    theme:
+      https://cdn.byu.edu/byu-theme-components/latest/byu-theme-components.min.css: { type: external, minified: true }
+font-awesome:
+  remote: https://fortawesome.github.io/Font-Awesome/
+  version: 4.5.0
+  license:
+    name: MIT
+    url: https://fortawesome.github.io/Font-Awesome/license/
+    gpl-compatible: true
+  css:
+    theme:
+      https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css: { type: external, minified: true }

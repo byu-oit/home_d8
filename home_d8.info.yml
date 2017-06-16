@@ -1,0 +1,68 @@
+name: BYU Theme
+type: theme
+base theme: byu_d8
+description: 'Responsive BYU Homepage Theme using web components.'
+package: Custom
+# version: VERSION
+# core: 8.x
+libraries:
+  - homepage/global-styling
+  - homepage/components-latest-js
+  - homepage/components-latest-css
+#  - homepage/font-awesome
+
+regions:
+  header: 'Header'
+  header_actions: 'Header Actions'
+  nav_top: 'Nav Top'
+  search: 'Search'
+  language_switcher : 'Language Switcher'
+  primary_menu: 'Primary menu'
+  after_menu: 'After menu'
+  header_social: 'Header Social'
+  slide_show: 'Slide Show'
+  slider_contact_form: 'Slider Contact Form'
+  breadcrumb: 'Breadcrumb'
+  before_content : 'Before Content'
+  content: 'Content'
+  after_content: 'After Content'
+  left_sidebar: 'Left Sidebar'
+  right_sidebar: 'Right Sidebar'
+  label_footer: 'Label Footer'
+#  footer_top    : 'Footer Top'
+  footer_11: 'Footer 1'
+  footer_21: 'Footer 2'
+  footer_31: 'Footer 3'
+  footer_41: 'Footer 4'
+
+#  footer_12: 'Footer 1.2'
+#  footer_22: 'Footer 2.2'
+#  footer_32: 'Footer 3.2'
+#  footer_42: 'Footer 4.2'
+#  footer_52: 'Footer 5.2'
+#
+#  footer_53: 'Footer 5.3'
+#
+#  footer_15: 'Footer 1.5'
+#  footer_25: 'Footer 2.5'
+#
+#  footer_16: 'Footer 1.6'
+#  footer_26: 'Footer 2.6'
+#  footer_36: 'Footer 3.6'
+#  footer_46: 'Footer 4.6'
+#
+#  footer_17: 'Footer 1.7'
+#  footer_37: 'Footer 3.7'
+#  footer_47: 'Footer 4.7'
+
+
+#  footer_bottom_1: 'Footer bottom 1'
+#  footer_bottom_237: 'Footer bottom 2.3.7'
+#  footer_bottom_5: 'Footer bottom 5'
+#  footer_bottom_6: 'Footer bottom 6'
+
+# Information added by Drupal.org packaging script on 2016-09-07
+version: '1.0.1'
+core: '8.x'
+project: 'drupal'
+datestamp: 1473276445
