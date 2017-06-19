@@ -100,18 +100,8 @@ function home_d8_preprocess_page(&$variables) {
 
     $variables['logopath'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
 
-//    $searchBlock = \Drupal\block\Entity\Block::load('search_form_block');
-//    $variables['search_block_output'] = $searchBlock;
-//    kint($variables);
-//    $variables['search_block_output'] = \Drupal::entityTypeManager()->getViewBuilder('block')->view($searchBlock);
-//    $variables['search_block_output'] = getSearch();
-//    $search_block_output = getSearch();
-//    dpm($search_block_output);
-
+// idk if this is needed 
     $searchBlock = \Drupal\block\Entity\Block::load('searchform');
-//    $variables['search_block'] = \Drupal::entityManager()
-//        ->getViewBuilder('block')
-//        ->view($searchBlock);
 
 
     /* -- Load Theme settings ---- */
@@ -169,25 +159,7 @@ function home_d8_preprocess_page(&$variables) {
 
 }
 
-function getSearch(&$variables) {
-//    $block_manager = \Drupal::service('plugin.manager.block');
-//// You can hard code configuration or you load from settings.
-//    $config = [];
-//    $plugin_block = $block_manager->createInstance('searchform', $config);
-//// Some blocks might implement access check.
-//    $access_result = $block_plugin->access(\Drupal::currentUser());
-//// Return empty render array if user doesn't have access.
-//    if ($access_result->isForbidden()) {
-//        // You might need to add some cache tags/contexts.
-//        return [];
-//    }
-//    $render = $plugin_block->build();
-//// In some cases, you need to add the cache tags/context depending on
-//// the block implemention. As it's possible to add the cache tags and
-//// contexts in the render method and in ::getCacheTags and
-//// ::getCacheContexts methods.
-//    return $render;
-}
+
 
 //
 //function home_d8_theme_suggestions_page_alter(array &$suggestions, array $variables) {

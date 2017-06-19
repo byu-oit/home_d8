@@ -1,0 +1,34 @@
+{% if footer_color_option == 'normal' %}
+    <byu-footer id="footer" class="{% if arg == 'index-footer-color-primary' %}color color-primary {% elseif arg == 'index-footer-color-tertiary' %}color color-tertiary {% elseif arg == 'index-footer-color-quaternary' %} color color-quaternary {% elseif arg == 'index-footer-color-secondary' %}color color-secondary{% endif %}">
+{% else %}
+    <byu-footer id="footer" class="color {{ footer_option }}">
+        {% endif %}
+
+        {% if page.footer_11 %}
+            {{ page.footer_11 }}
+        {% endif %}
+
+        {% if page.footer_21 %}
+            {{ page.footer_21 }}
+        {% endif %}
+
+        {% if page.footer_31 %}
+            {{ page.footer_31 }}
+        {% endif %}
+
+        {% if footer_option == 'normal' %}
+            {% if page.footer_41 %}
+                {{ page.footer_41 }}
+            {% endif %}
+        {% endif %}
+
+        {#{% if page.footer_bottom_1 %}#}
+        {#<div class="footer-copyright">#}
+        {#<div class="container">#}
+        {#<div class="row">#}
+        {#{{ page.footer_bottom_1 }}#}
+        {#</div>#}
+        {#</div>#}
+        {#</div>#}
+        {#{% endif %}#}
+    </byu-footer>

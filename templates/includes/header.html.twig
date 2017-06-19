@@ -1,0 +1,96 @@
+{% if header_sticky_option == 'always_sticky' %}
+    <byu-header id="header" {%  if full_width == TRUE %}full-width {% endif %} data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 0, "stickySetTop": "0", "stickyChangeLogo": false}'>
+{% else %}
+    <byu-header id="header"  {%  if full_width == TRUE %}full-width {% endif %} class="" data-plugin-options='{"stickyEnabled": false, "stickyEnableOnBoxed": false, "stickyEnableOnMobile": true, "stickyStartAt": 0, "stickySetTop": "0"}'>
+        {% endif %}
+
+
+        {% if subtitle_above == TRUE %}
+            {% if subtitle_use == TRUE %}
+                <div slot="site-title" class="subtitle {%  if subtitle_italic == TRUE %}italic {% endif %}" >{{ subtitle_text }}</div>
+            {% endif %}
+        {% endif %}
+
+
+        <a slot="site-title" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+
+        {% if subtitle_above == FALSE %}
+            {% if subtitle_use == true %}
+                <div slot="site-title" class="subtitle {%  if subtitle_italic == TRUE %}italic {% endif %}" >{{ subtitle_text }}</div>
+            {% endif %}
+        {% endif %}
+
+        {% if search_use == TRUE %}
+            <byu-search  slot="search" action="click" >
+                {#{% if page.content.searchform %}#}
+                    {#{{ page.content.searchform }}#}
+                {#{% endif %}#}
+                {% if page.search %}
+                        {{ page.search }}
+                {% endif %}
+            </byu-search>
+        {% endif %}
+
+        {% if menu_disable == FALSE %}
+            <byu-menu slot="nav" class="{%  if transparent == TRUE %} transparent {% endif %}">
+                {% if page.primary_menu %}
+                    {{ page.primary_menu }}
+                {% endif %}
+            </byu-menu>
+        {% endif %}
+
+        {% if page.header_actions %}
+            <div slot="actions" class="{{ actions_bg }}">{{ page.header_actions }}</div>
+        {% endif %}
+
+        {% if login_use == TRUE %}
+            <byu-user-info slot="user">
+                {%  if login_url %}
+                    <a slot="login" href="{{ login_url }}">Sign In</a>
+                {%  else %}
+                    <a slot="login" href="../user">Sign In</a>
+                {% endif %}
+                <!-- if you are using CAS, use the CAS sign out link instead: -->
+                <!--      <a slot="logout" href="/caslogout">Sign Out</a>-->
+                {%  if logout_url %}
+                    <a slot="logout" href="{{ logout_url }}">Sign Out</a>
+                {% else %}
+                    <a slot="logout" href="../logout">Sign Out</a>
+                {% endif %}
+                {% if user.name.0.value %}
+                    {% if myaccount_use %}
+                        <a href="{{  myaccount_url }}" slot="user-name">{{ user.name.0.value }}</a>
+                    {% else %}
+                        <span slot="user-name">{{ user.name.0.value }}</span>
+                    {% endif %}
+                {% endif %}
+
+            </byu-user-info>
+        {% endif %}
+                {#<byu-search slot="search">#}
+                {#{{ search_form }}#}
+                {#</byu-search>#}
+
+    </byu-header>
+
+
+{#{% if header_option == 'none' %}#}
+
+    {#{% if arg == 'index-header-center-identity' %}#}
+        {#{% include directory ~ '/templates/includes/header_option/h_center_identity.html.twig' %}#}
+    {#{% elseif arg == 'index-header-full-width' %}#}
+        {#{% include directory ~ '/templates/includes/header_option/h_fullwidth.html.twig' %}#}
+  {##}
+    {#{% else %}#}
+        {#{% include directory ~ '/templates/includes/header_option/h_default.html.twig' %}#}
+    {#{% endif %}#}
+{#{% else %}#}
+    {#{% if header_option == 'h_center_identity' %}#}
+        {#{% include directory ~ '/templates/includes/header_option/h_center_identity.html.twig' %}#}
+    {#{% elseif header_option == 'h_fullwidth' %}#}
+        {#{% include directory ~ '/templates/includes/header_option/h_fullwidth.html.twig' %}#}
+  {##}
+    {#{% else %}#}
+        {#{% include directory ~ '/templates/includes/header_option/h_default.html.twig' %}#}
+    {#{% endif %}#}
+{#{% endif %}#}
