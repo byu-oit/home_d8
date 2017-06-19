@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html{{ html_attributes }} class="{% if h_semi_transparent_option == 1 %}{{ 'side-header side-header-semi-transparent ' }}{% else %}{% if arg == 'index-header-side-header-semi-transparent' %}{{ 'side-header side-header-semi-transparent' }}{% endif %}{% endif %}{% if header_option == 'h_left' %}{{ 'side-header' }}{% elseif header_option == 'h_right' %}{{ 'side-header side-header-right' }}{% else %}{% if arg == 'index-header-side-header-left' %}{{ 'side-header' }}{% elseif arg == 'index-header-side-header-right' %}{{ 'side-header side-header-right' }}{% endif %}{% endif %} {% if arg == 'index-layout-boxed' %}{{ 'boxed' }}{% elseif arg == 'index-layout-dark' %}{{ 'dark' }}{% else %}{{ layout_option }}{% endif %}">
+
+  <head>
+    <head-placeholder token="{{ placeholder_token|raw }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+    <css-placeholder token="{{ placeholder_token|raw }}">
+    {% if skin_option == 'none' %}
+    {% if arg == 'index-corporate-3' %}
+        <link rel='stylesheet' href='{{ theme_root }}/css/skins/skin-corporate-3.css' type='text/css' media='all' />
+    {% elseif arg == 'index-corporate-4' %}
+        <link rel='stylesheet' href='{{ theme_root }}/css/skins/skin-corporate-4.css' type='text/css' media='all' />
+    {% elseif arg == 'index-corporate-5' %}
+        <link rel='stylesheet' href='{{ theme_root }}/css/skins/skin-corporate-5.css' type='text/css' media='all' />
+    {% elseif arg == 'index-corporate-6' %}
+        <link rel='stylesheet' href='{{ theme_root }}/css/skins/skin-corporate-6.css' type='text/css' media='all' />
+    {% elseif arg == 'index-corporate-7' %}
+        <link rel='stylesheet' href='{{ theme_root }}/css/skins/skin-corporate-7.css' type='text/css' media='all' />
+    {% elseif arg == 'index-corporate-8' %}
+        <link rel='stylesheet' href='{{ theme_root }}/css/skins/skin-corporate-8.css' type='text/css' media='all' />
+    {% elseif arg == 'index-corporate-hosting' %}
+        <link rel='stylesheet' href='{{ theme_root }}/css/skins/skin-corporate-hosting.css' type='text/css' media='all' />
+   {#{% else %}
+        <link rel='stylesheet' href='{{ theme_root }}/ css/skins/default.css' type='text/css' media='all' />#}
+    {% endif %}
+    {% else %}
+        <link rel='stylesheet' href='{{ theme_root }}/css/skins/{{ skin_option }}.css' type='text/css' media='all' />
+    {% endif %}
+    {% if rtl == 1 %}
+        <link rel='stylesheet' href='{{ theme_root }}/css/rtl-theme.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='{{ theme_root }}/css/rtl-theme-elements.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='{{ theme_root }}/css/rtl-theme-blog.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='{{ theme_root }}/css/rtl-theme-shop.css' type='text/css' media='all' />
+    {% endif %}
+    {% if your_css is not empty %}
+        <style>
+            {{ your_css }}
+        </style>
+    {% endif %}
+    <js-placeholder token="{{ placeholder_token|raw }}">
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="apple-touch-fullscreen" content="YES" />
+  </head>
+
+
+  <body{{ attributes }} {{ attributes.addClass(body_classes) }}{% if arg == 'index-one-page' %} class="one-page" {% endif %} data-target="{% if arg == 'index-corporate-hosting' %}#navSecondary{% else %}#header{% endif %}" data-spy="scroll" data-offset="100">
+  {% if loader == 1 %}
+  <div class="preloader">
+      <div class="status">&nbsp;</div>
+  </div>
+  {% endif %}
+    <a href="#main-content" class="visually-hidden focusable">
+      {{ 'Skip to main content'|t }}
+    </a>
+    <div class="body">
+        {{ page_top }}
+        {{ page }}
+        {{ page_bottom }}
+    </div>
+    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+  </body>
+</html>
+

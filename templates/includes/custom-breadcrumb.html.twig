@@ -1,0 +1,61 @@
+{% if page_title %}
+    <!--breadcrumbs-->
+    {% if page.breadcrumb %}
+        {% if page_header_option == 'none' %}
+            {% if arg == 'index-page-header-light' %}
+                <section class="page-header page-header-light page-header-more-padding ">
+            {% elseif arg == 'index-page-header-light-reverse' %}
+                <section class="page-header page-header-light page-header-reverse page-header-more-padding">
+            {% elseif arg == 'index-page-header-parallax' %}
+                <section class="page-header page-header-custom-background parallax" data-plugin-parallax data-plugin-options='{"speed": 1.5}' data-image-src="{{ theme_root }}/img/parallax.jpg">
+            {% elseif arg == 'index-page-header-center' %}
+                <section class="page-header page-header-center page-header-more-padding page-header-no-title-border">
+            {% elseif arg == 'index-page-header-color-primary' %}
+                <section class="page-header page-header-color page-header-primary page-header-more-padding">
+            {% elseif arg == 'index-page-header-color-quaternary' %}
+                <section class="page-header page-header-color page-header-quaternary page-header-more-padding">
+            {% elseif arg == 'index-page-header-color-secondary' %}
+                <section class="page-header page-header-color page-header-secondary page-header-more-padding">
+            {% elseif arg == 'index-page-header-color-tertinary' %}
+                <section class="page-header page-header-color page-header-tertiary page-header-more-padding">
+            {% else %}
+                <section class="page-header">
+            {% endif %}
+        {% else %}
+            {% if page_header_option == 'ph_light' %}
+                <section class="page-header page-header-light page-header-more-padding ">
+            {% elseif page_header_option == 'ph_light_reverse' %}
+                <section class="page-header page-header-light page-header-reverse page-header-more-padding">
+            {% elseif page_header_option == 'ph_parallax' %}
+                <section class="page-header page-header-custom-background parallax" data-plugin-parallax data-plugin-options='{"speed": 1.5}' data-image-src="{{ theme_root }}/img/parallax.jpg">
+            {% elseif page_header_option == 'ph_center' %}
+                <section class="page-header page-header-center page-header-more-padding page-header-no-title-border">
+            {% else %}
+                <section class="page-header {% if page_header_color_option != 'none' %} page-header-color {{ page_header_color_option }}{% endif %}">
+            {% endif %}
+        {% endif %}
+
+        <div class="container">
+            {% if page_header_option == 'ph_light' or arg == 'index-page-header-light' or page_header_option == 'ph_parallax' or arg == 'index-page-header-parallax' or page_header_option == 'ph_center' or arg == 'index-page-header-center' or arg == 'index-page-header-color-primary' or arg == 'index-page-header-color-quaternary' or arg == 'index-page-header-color-secondary' or arg == 'index-page-header-color-tertinary' %}
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>{{ page_title | striptags }}</h1>
+                        {{ page.breadcrumb }}
+                    </div>
+                </div>
+            {% else %}
+                <div class="row">
+                    <div class="col-md-12">
+                        {{ page.breadcrumb }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>{{ page_title | striptags }}</h1>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+        </section>
+    {% endif %}
+{% endif %}
