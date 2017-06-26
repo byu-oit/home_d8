@@ -172,6 +172,10 @@ h6 {
 .bg-lightgray {
   background: #e5e5e5; }
 
+.blue-dot-after:after {
+  content: "*";
+  color: #002E5D; }
+
 /* --------- Regions ---------- */
 .main.main-4-page {
   padding: 20px 0px; }
@@ -179,6 +183,8 @@ h6 {
     max-width: 1224px;
     margin-left: auto;
     margin-right: auto; }
+  .main.main-4-page .container {
+    width: 100%; }
   .main.main-4-page .full-width-bar {
     width: 100%;
     max-width: 100%;
@@ -223,10 +229,6 @@ h6 {
   border-right: 5px solid transparent;
   border-top: 5px solid #eebf3f; }
 
-section {
-  margin: 100px auto;
-  height: 1000px; }
-
 .progress {
   border-radius: 0;
   overflow: visible;
@@ -251,6 +253,9 @@ section {
 /* ------------ Campus Life Page ------------ */
 /* -------- Basic Pages ------------- */
 /* -- AZ Index --- */
+.view-id-a_z_index .view-content {
+  padding-bottom: 20px; }
+
 .view-id-a_z_index h3 {
   margin: 25px 0px 15px; }
 

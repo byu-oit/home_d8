@@ -3,13 +3,21 @@ type: theme
 base theme: byu_d8
 description: 'Responsive BYU Homepage Theme using web components.'
 package: Custom
-# version: VERSION
-# core: 8.x
+
 libraries:
-  - homepage/global-styling
-  - homepage/components-latest-js
-  - homepage/components-latest-css
+  - home_d8/global-styling
+  - home_d8/homepage-components
+#  - home_d8/homepage-components-js
+#  - home_d8/homepage-components-css
+#  - home_d8/components-latest-js
+#  - home_d8/components-latest-css
 #  - homepage/font-awesome
+
+libraries-override:
+  byu_d8/components-latest-css: false
+  byu_d8/components-latest-js: false
+
+
 
 regions:
   header: 'Header'
