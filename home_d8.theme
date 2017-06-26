@@ -56,15 +56,17 @@ function home_d8_preprocess_page(&$variables) {
 //    if($variables['is_front']){
 //        $variables['#attached']['library'][] = 'theme_name/custom-library';
 //    }
-    $version = trim(theme_get_setting('version'));
-    if(!is_null($version ) ) {
-        $variables['#attached']['library'][] = 'home_d8/custom-library';
-//        drupal_add_css('//cdn.byu.edu/byu-theme-components/' . $version . '/byu-theme-components.min.css', array('type' => 'external'));
-//        drupal_add_js('//cdn.byu.edu/byu-theme-components/' . $version . '/byu-theme-components.min.js', 'external');
-    } else {
-        $variables['#attached']['library'][] = 'home_d8/components-latest-js';
-        $variables['#attached']['library'][] = 'home_d8/components-latest-css';
-    }
+//    $version = trim(theme_get_setting('version'));
+//    if(!is_null($version ) ) {
+//        $variables['#attached']['library'][] = 'home_d8/custom-library';
+////        drupal_add_css('//cdn.byu.edu/byu-theme-components/' . $version . '/byu-theme-components.min.css', array('type' => 'external'));
+////        drupal_add_js('//cdn.byu.edu/byu-theme-components/' . $version . '/byu-theme-components.min.js', 'external');
+//    } else {
+//        $variables['#attached']['library'][] = 'home_d8/components-latest-js';
+//        $variables['#attached']['library'][] = 'home_d8/components-latest-css';
+//    }
+    
+//    $variables['#attached']['library'][] = 'home_d8/homepage-components';
     /* --- Load Fonts ------- */
     $font_package = trim(theme_get_setting('font_package'));
     if($font_package == 'fonts-full' ) {

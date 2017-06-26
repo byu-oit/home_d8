@@ -249,7 +249,13 @@ h6 {
   background: $lightgray;
 }
 
-
+// testing if this works
+.blue-dot-after {
+  &:after {
+    content: "*";
+    color: $navy;
+  }
+}
 
 /* --------- Regions ---------- */
 
@@ -260,11 +266,16 @@ h6 {
     margin-left: auto;
     margin-right: auto;
   }
+  .container {
+    width: 100%;
+  }
+
   .full-width-bar {
     width: 100%;
     max-width: 100%;
     padding: 15px;
   }
+
 }
 
 
@@ -306,9 +317,10 @@ h6 {
 .tooltip > .tooltip-inner {background: none; padding: 15px 15px; color:rgb(23,44,66); font-weight:bold; font-size:13px;}
 .popOver + .tooltip > .tooltip-arrow {	border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #eebf3f;}
 
+// section exists in many places, be careful of too-general styling
 section{
-  margin:100px auto;
-  height:1000px;
+  //margin:100px auto;
+  //height:1000px;
 }
 .progress{
   border-radius:0;
