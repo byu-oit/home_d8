@@ -1,13 +1,13 @@
-div#block-quicktabscollegesdepartments > h2 {
-  display: none;
-}
-
-#block-quicktabscollegesdepartments > h2 {
+span.field.field--name-title.field--type-string.field--label-hidden.quickedit-field {
   color: #025;
   font-size: 35px;
   font-weight: bold;
   font-family: "Sentinel A","Sentinel B","CreteRound","Palatino","DroidSerif","Droid Serif",Georgia,serif;
   margin: 30px 0 20px 0;
+}
+
+#block-quicktabscollegesdepartments > h2 {
+  display: none;
 }
 
 ul.quicktabs-tabs > li.active {
@@ -19,10 +19,6 @@ ul.quicktabs-tabs > li {
   font-family: "Whitney SSm A","Whitney SSm B","OpenSans","Thonburi","DroidSans","Droid Sans","sans-serif","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif;
   margin: 0;
 }
-
-//.view-id-colleges .views-field.views-field-name {
-//  margin: 10px 0;
-//}
 
 .view-id-colleges a, a:link {
   color: #369;
