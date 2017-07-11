@@ -240,7 +240,7 @@ h6 {
 }
 
 // used so far on about page - don't change
-//$circle-width: 156px;
+
 
 @mixin navy-circle($circle-width) {
   background: $navy;
@@ -255,7 +255,8 @@ h6 {
 }
 
 .navy-circle {
-  @include navy-circle(156px);
+  @include navy-circle(156px); // default
+  // include this line for your specific navy-circle's and override the size for your specific circles
 }
 @mixin vertical-dots() {
   display: flex;
@@ -749,9 +750,14 @@ h6 {
   // languages
   .demographics3 {
     margin-top: -100px;
+
+    .navy-circle {
+      @include navy-circle(156px);
+    }
   }
 
   // circles
+  $about-circle-width: 156px;
   $circle-left-movement: 490px;
   $between-circles-adjustment: 130px;
 
@@ -759,11 +765,11 @@ h6 {
   $studentsSpeakingBarHeight: 28px;
   $studentsSpeakingBarWidth: 282px;
   // so that this circle is past lower circle but overlapped behind a little
-  $langTaughtMargin: $studentsSpeakingBarWidth + ($circle-width / 2) - 30px;
+  $langTaughtMargin: $studentsSpeakingBarWidth + ($about-circle-width / 2) - 30px;
 
   .vertical-dots.before-languages {
     //position: relative;
-    margin-left: $langTaughtMargin + ($circle-width / 2) - 8px; // - 8 for width of small dots
+    margin-left: $langTaughtMargin + ($about-circle-width / 2) - 8px; // - 8 for width of small dots
   }
 
   .languages-taught-circle {
@@ -779,7 +785,7 @@ h6 {
   }
   .languages-spoken-circle {
     //position: relative;
-    margin-left: $studentsSpeakingBarWidth - ($circle-width / 2);
+    margin-left: $studentsSpeakingBarWidth - ($about-circle-width / 2);
     margin-top: -80px;
   }
 
