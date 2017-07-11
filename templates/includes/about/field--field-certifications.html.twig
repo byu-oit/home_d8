@@ -38,18 +38,18 @@
  */
 #}
 {%
-set classes = [
-'field',
-'field--name-' ~ field_name|clean_class,
-'field--type-' ~ field_type|clean_class,
-'field--label-' ~ label_display,
-]
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+  ]
 %}
 {%
-set title_classes = [
-'field__label',
-label_display == 'visually_hidden' ? 'visually-hidden',
-]
+  set title_classes = [
+    'field__label',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
 %}
 
 {% if label_hidden %}
@@ -62,23 +62,41 @@ label_display == 'visually_hidden' ? 'visually-hidden',
   {% else %}
     {#single no label#}
     {% for item in items %}
-      <div class="quote-wrapper full-width-bar-inner">
-        <div class="quote-icon">&ldquo;</div>
-        <div{{ attributes.addClass(classes, 'field__item, h9') }}>{{ item.content }}</div>
-      </div>
+        <div class="certifications-text-wrapper">
+          <span{{ attributes.addClass('h9') }}>{{ item.content }}</span>
+          <span class="h12">Certifications Available In</span>
+        </div>
+
+        <div class="award-icon-wrapper">
+        {# print out icons in the correct number#}
+        {#{% set k = 14 %}#}
+        {#{% for i in k %}#}
+            {#{% if i <= item.content|round %}#}
+              {#{{ i }}#}
+            {#<img class="award-icon" src="/sites/default/files/award-medallion-opt.svg">#}
+
+            {#{% endif %}#}
+        {#{% endfor %}#}
+
+        {% set k =  14 %}
+        {% for i in 1..k %}
+            <img class="award-icon" src="../sites/default/files/images/award-medallion-opt.svg">
+        {% endfor %}
+        </div>
+
     {% endfor %}
   {% endif %}
 {% else %}
   <div{{ attributes.addClass(classes) }}>
     <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% if multiple %}
-    <div class="field__items">
-      {% endif %}
-      {% for item in items %}
-        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
-      {% endfor %}
-      {% if multiple %}
-    </div>
+      <div class="field__items">
+    {% endif %}
+    {% for item in items %}
+      <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+    {% endfor %}
+    {% if multiple %}
+      </div>
     {% endif %}
   </div>
 {% endif %}
