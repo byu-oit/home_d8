@@ -148,6 +148,26 @@ h6 {
     font-size: 200px; } }
 
 /* ---- general mixins ----------- */
+.navy-circle {
+  background: #002E5D;
+  padding: 25px;
+  border: 2px solid #666;
+  border-radius: 50%;
+  width: 156px;
+  height: 156px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.vertical-dots {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0px; }
+  .vertical-dots .gray-dot {
+    color: #666;
+    font-size: 60px;
+    margin: 0px; }
+
 /* ----- helpful classes ----------- */
 .normal-weight {
   font-weight: normal; }
@@ -194,26 +214,6 @@ h6 {
 
 .bg-darkgray {
   background: #6a6a6b; }
-
-.navy-circle {
-  background: #002E5D;
-  padding: 25px;
-  border: 2px solid #666;
-  border-radius: 50%;
-  width: 156px;
-  height: 156px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
-
-.vertical-dots {
-  display: flex;
-  flex-direction: column;
-  margin: 15px 0px; }
-  .vertical-dots .gray-dot {
-    color: #666;
-    font-size: 60px;
-    margin: 0px; }
 
 .blue-dot-after:after {
   content: "*";
@@ -500,6 +500,16 @@ h6 {
 
 .main.main-4-page .demographics3 {
   margin-top: -100px; }
+  .main.main-4-page .demographics3 .navy-circle {
+    background: #002E5D;
+    padding: 25px;
+    border: 2px solid #666;
+    border-radius: 50%;
+    width: 156px;
+    height: 156px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
 
 .main.main-4-page .vertical-dots.before-languages {
   margin-left: 400px; }
