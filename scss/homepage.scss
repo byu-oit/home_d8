@@ -3,7 +3,7 @@
 
 
 
-/* --- BYU COlors --- */
+/* --- BYU Colors --- */
 
 // blues
 $navy: #002E5D;
@@ -20,7 +20,7 @@ $lightRoyal: #114BAD;
 $xlightgray: #f2f2f2;
 $lightgray: #e5e5e5;
 $lightergray: #e6e6e6;
-$medgray: #767676; // extra
+//$medgray: #9b9b9b; // extra
 $gray: #c5c5c5;
 $medgray: #666;
 $darkgray: #6a6a6b; // least used gray
@@ -49,38 +49,22 @@ $medblue: #697F96;  // was #889FB7  but it couldn't have white on it with enough
 //$darkmedblue: #5B728A;  // #5B728A is enough contrast for small white text
 
 
-a {
-  color: $navy;
-}
-a:hover {
-  color: $royal;
-}
-
-/* ---- fonts
- */
-$gotham: "Gotham A", "Gotham B", Arial, sans-serif;
-$vitesse: "Vitesse A", "Vitesse B", serif;
-
-
   /* ------------- Headings Etc -------------------- */
 
-h1, h2, h3, h4, .h1, .h2, .h3, .h4, .h8, .h9, .h10, .h11, .h12,
-h1 a, h2 a, h3 a, h4 a, .h1 a, .h2 a, .h3 a, .h4 a, .h8 a, .h9 a, .h10 a, .h11 a, .h12 a {
+h1, h2, h3, h4, .h1, .h2, .h3, .h4, .h8, .h9, .h10, .h11, .h12 {
   color: #002e5d;
 }
-h5 a, .h5 a,
-h5, .h5, .h9.gray, .h9.gray a, .h11.gray, .h11.gray a {
-  color: $medgray;
+h5, .h5 {
+  color: #767676;
 }
-h6 a, .h6 a, .h7 a,.h8.white a, .h9.white a, .h11.white a, .h12.white a, .h13 a,
-h6, .h6, .h7,.h8.white, .h9.white, .h10.white, .h10.white a, .h11.white, .h12.white, .h13  {
+h6, .h6, .h7,.h8.white, .h9.white, .h11.white, .h12.white, .h13  {
   color: #fff;
 }
 h1, h2, .h1, .h2 {
-  font-family: $vitesse;
+  font-family: "Vitesse A", "Vitesse B", serif;
 }
 h3, h5, h6, .h3, .h5, .h6, .h7, .h8, .h9, .h10, .h11, .h12, .h13 {
-  font-family: $gotham;
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
 }
 
 h1, .h1 {
@@ -150,24 +134,14 @@ h6 {
     color: #fff;
   }
 }
-
-// one case i couldn't add the class, so need a mixin
-// no mobile adjustment
-@mixin h11() {
-  font-family: $gotham;
+.h11 {
   font-size: 35px;
   font-weight: bold;
   line-height: 40px;
-
-}
-.h11 {
-  @include h11();
 }
 .h12 {
   font-size: 16px;
   line-height: 18px;
-  text-transform: uppercase;
-  font-weight: 500;
   /*letter-spacing:*/
 }
 .h13 {
@@ -231,53 +205,18 @@ h6 {
   }
 }
 
-/* ---- general mixins ----------- */
-
-@mixin fieldWithMaxWidth() {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+.quote-icon {
+  font-weight: bold;
+  font-size: 200px;
+  font-family: "Vitesse A", "Vitesse B", serif;
+  color: $lightgray;
 }
-
-// used so far on about page - don't change
-
-
-@mixin navy-circle($circle-width) {
-  background: $navy;
-  padding: 25px ;
-  border: 2px solid $medgray;
-  border-radius: 50%;
-  width: $circle-width;
-  height: $circle-width;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.and-icon {
+  font-weight: 500;
+  font-size: 130px;
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+  color: $navy;
 }
-
-.navy-circle {
-  @include navy-circle(156px); // default
-  // include this line for your specific navy-circle's and override the size for your specific circles
-}
-@mixin vertical-dots() {
-  display: flex;
-  //flex-wrap: wrap;
-  flex-direction: column;
-  margin: 15px 0px;
-}
-@mixin gray-dot() {
-  color: $medgray;
-  font-size: 60px;
-  margin: 0px;
-}
-
-.vertical-dots {
-  @include vertical-dots();
-  .gray-dot {
-    @include gray-dot();
-  }
-}
-
-
 
 
 /* ----- helpful classes ----------- */
@@ -293,72 +232,26 @@ h6 {
 .all-caps {
   text-transform: uppercase;
 }
-.left-text {
-  text-align: left;
-}
-.right-text {
-  text-align: right;
-}
-.centered-text {
-  text-align: center;
-}
-.centered-margin {
-  margin-left: auto;
-  margin-right: auto;
-}
 
-@mixin button() {
-  padding: 12px 25px;
-  a:hover {
-    text-decoration: none;
-  }
-}
-
-.royal-button {
-  @include button();
-  background: $royal;
+.navy-button {
+  background: #002e5d;
   color: #fff;
-
+  padding: 12px 25px;
 }
 .medblue-button {
-  @include button();
   background: #002e5d; /* change to medium blue */
   color: #fff;
+  padding: 12px 25px;
 }
 
-// background
+
 .bg-lightgray {
   background: $lightgray;
 }
-.bg-darkgray {
-  background: $darkgray;
-}
 
 
-
-// testing if this works
-.blue-dot-after {
-  &:after {
-    content: "*";
-    color: $navy;
-  }
-}
 
 /* --------- Regions ---------- */
-
-
-/* ---- header --- */
-.byu-search .visually-hidden,
-.byu-search input#edit-submit {
-  display: none;
-}
-.byu-search .form-control.__byu-search-selected-input {
-  width: 100%;
-  height: 35px;
-}
-
-
-/* ----- main page --------- */
 
 .main.main-4-page {
   padding: 20px 0px;
@@ -367,28 +260,11 @@ h6 {
     margin-left: auto;
     margin-right: auto;
   }
-  .container {
-    width: 100%;
-    padding: 0px;
-  }
-
   .full-width-bar {
     width: 100%;
     max-width: 100%;
-    padding: 30px 15px;
-    // default constrained width settings, override for specific fields
-
-    .field, .full-width-bar-inner {
-      @include fieldWithMaxWidth();
-    }
-    // use if the bar has several fields that aren't 100% width and you
-    // want to display them nicely in columns or with flex (add this div inside the
-    // group's template file - see field-group-html-element--about-bar as an example
-    .full-width-bar-inner {
-      display: flex;
-    }
+    padding: 15px;
   }
-
 }
 
 
@@ -398,512 +274,64 @@ h6 {
 
 
 /* ------------ About Page ---------- */
-.main.main-4-page {
-  // quote
-  .quote-wrapper.full-width-bar-inner {
-    display: flex;
-    margin-top: 50px;
-  }
-
-  .quote-icon {
-    font-weight: bold;
-    font-size: 200px;
-    font-family: $vitesse;
-    color: $lightgray;
-    margin-top: 30px;
-    // come back to this for smaller sizes/bg instead/overlap
-  }
-
-  // Links
-  .full-width-bar.links-video-group {
-    margin-top: 30px;
-    padding: 40px 15px 60px;
-
-    iframe {
-      // large screen
-      width: 766px;
-      height: 405px;
-    }
-  }
-
-  .field--name-field-links {
-    width: 30%;
-    //margin-top: -20px; // moving up to have links exactly aligned w video top
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  // video field
-  .field--name-field-video {
-    width: 70%;
-    margin-top: 20px;
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
-  //
-  //.field--name-field-links a:hover, .field--name-field-links a:active {
-  //  color: $royal;
-  //  text-decoration: none;
-  //}
-
-  //yfacts bar
-  .full-width-bar.yfacts-about {
-    height: 400px;
-    padding-top: 250px;
-
-    font-family: $gotham;
-    font-style: italic;
-    font-size: 22px;
-    line-height: 28px;
-    margin: 0px 0px 60px 0px;
-    p {
-      color: $xlightgray;
-    }
-    .larger-p, .larger-p2 {
-      white-space: nowrap;
-      overflow: hidden;
-      //width: 30em;
-      line-height: 30px;
-      width: 100%;
-      display: none;
-      @media screen and (min-width: 768px) {
-        //animation: type 4s steps(70, end);
-      }
-    }
-    .larger-p2 {
-      @media screen and (min-width: 768px) {
-        //animation: type2 4s steps(50, end);
-      }
-    }
-    .larger-text {
-      font-size: 36px;
-      color: #fff;
-      font-weight: 500;
-    }
-  }
-  // change to trigger on scroll to bar
-  @keyframes type {
-    from {
-      width: 0;
-    }
-  }
-
-  @keyframes type2 {
-    0% {
-      width: 0;
-    }
-    50% {
-      width: 50;
-    }
-    100% {
-      width: 100;
-    }
-  }
-
-  @keyframes blink {
-    to {
-      opacity: .0;
-    }
-  }
-
-  // students facts
-  .students-group {
-    .barWrapper {
-      padding: 0px;
-    }
-    .tooltip {
-      position: relative;
-      float: right;
-      background-color: none;
-      opacity: 1 !important;
-    }
-    .tooltip > .tooltip-inner {
-      background: none;
-      padding: 15px 15px;
-      @include h11();
-    }
-    .popOver + .tooltip > .tooltip-arrow {
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      border-top: 5px solid #eebf3f; // katria come back to
-    }
-    .assets-wrap {
-      opacity: 1;
-    }
-    .tooltip.bottom .tooltip-arrow {
-      margin-left: -10px;
-      border-width: 0px 10px 20px;
-      border-left: 10px solid $navy;
-      border-right: 10px solid $navy;
-      border-color: $navy;
-      opacity: 1;
-      border-radius: 36px;
-      margin-top: -9px;
-    }
-    .color-2 .tooltip.bottom .tooltip-arrow {
-      border-color: $medgray;
-
-    }
-    .progress {
-      border-radius: 0;
-      overflow: visible;
-      height: 8px;
-      background-color: #e6e6e6; // katria come back to
-      box-shadow: none;
-    }
-    .progress-bar {
-      background: rgb(0, 46, 93);
-      -webkit-transition: width 1.5s ease-in-out;
-      transition: width 1.5s ease-in-out;
-
-    }
-    .progress-bar.color-2 {
-      background: $medgray;
-    }
-
-  }
-  // student group layout
-  $totalStudentsHeight: 170px;
-  $totalStudentsWidth: 23%;
-  .students-group.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 75px;
-  }
-  .grad-wrapper {
-    order: 3;
-
-    margin-top: -($totalStudentsHeight / 2);
-  }
-
-  .field--name-field-undergrads,
-  .field--name-field-grads {
-    width: 100% - $totalStudentsWidth;
-  }
-
-  // total students
-  .field--name-field-total-students {
-    width: $totalStudentsWidth;
-  }
-
-  .field--name-field-total-students .field__label {
-    line-height: 20px;
-    text-align: right;
-  }
-
-  .field--name-field-total-students {
-    background: $xlightgray;
-    display: inline;
-    height: $totalStudentsHeight;
-    padding: 25px 45px;
-    .field__item {
-      font-size: 55px;
-      color: $navy;
-      font-weight: bold;
-      text-align: right;
-      padding: 25px 0px 0px;
-    }
-  }
-
-  // ------ Gender Bars
-  $genderBarHeight: 50px;
-  .field--name-field-gender {
-    display: flex;
-    margin-bottom: 80px;
-    .bar2 {
-      text-align: end;
-    }
-    .bar2 .progress {
-      -moz-transform: scale(-1, 1);
-      -webkit-transform: scale(-1, 1);
-      -o-transform: scale(-1, 1);
-      -ms-transform: scale(-1, 1);
-      transform: scale(-1, 1);
-    }
-    .tooltip {
-      position: relative;
-      float: right;
-      background-color: none;
-      /*   opacity: 1!important; */
-    }
-    .tooltip > .tooltip-inner {
-      background: none;
-      padding: 15px 15px;
-      color: rgb(23, 44, 66);
-      font-weight: bold;
-      font-size: 13px;
-    }
-    .popOver + .tooltip > .tooltip-arrow {
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      border-top: 5px solid #eebf3f;
-    }
-
-    .progress {
-      border-radius: 0;
-      overflow: visible;
-      height: $genderBarHeight;
-      box-shadow: none;
-      background: none;
-      //z-index: 1;
-    }
-    .bar2 .progress {
-      //z-index: 0;
-    }
-    .progress-bar {
-      background: $teal;
-      -webkit-transition: width 1.5s ease-in-out;
-      transition: width 1.5s ease-in-out;
-      border-radius: 0px;
-      height: $genderBarHeight;
-      border: none;
-    }
-    .progress-bar.color-2 {
-      background: $lightteal;
-      z-index: 1;
-    }
-    .progressText {
-      // smaller screens just have it show above
-      @media screen and (min-width: 1224px) {
-        display: none;
-        margin-top: 1px;
-        margin-bottom: -($genderBarHeight+3);
-        padding: 0px 15px;
-        z-index: 100;
-        position: relative;
-      }
-
-    }
-    .progressText2.h9 {
-      padding-left: 3px;
-    }
-  }
-
-  // ----- Demographics & map area
-  $mapWidth: 816px;
-  $innerMapTopContentWidth: $mapWidth - 60px; // for states & countries etc
-  $innerMapBottomContentWidth: 600px;
-  div#about-demographics { // all of demographics limited to this width
-    max-width: $mapWidth;
-  }
-
-  //.demographics1-large-wrapper {
-  //  max-width: 800px;
-  //}
-  // states & countries
-  .demographics1 {
-    display: flex;
-    //justify-content: flex-start;
-    //width: $innerMapContentWidth;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-  }
-
-  .demographics1-top-label {
-    //width: $innerMapContentWidth;
-    margin-left: auto;
-    margin-right: auto;
-    //padding-left: 19px;
-  }
-
-  .states-cont, .countries-cont {
-    display: flex;
-  }
-
-  .states-label, .countries-label {
-    display: inline;
-    padding: 0px 5px;
-  }
-
-  .and-icon {
-    font-weight: 500;
-    font-size: 130px;
-    font-family: $gotham;
-    color: $navy;
-    padding: 0px 25px;
-  }
-
-  // state percentages
-  .state-percents-group {
-    max-width: 230px;
-    .field.h12 {
-      text-transform: none;
-      display: inline;
-    }
-    .field.h12:after {
-      content: "\2022";
-      color: $navy;
-      font-size: 20px;
-      padding-left: 3px;
-      position: relative;
-      top: 2px;
-    }
-    // arizona block
-    .h12.field.field--name-field-percent-arizona {
-      display: block;
-    }
-  }
 
 
-
-  // languages
-  .demographics3 {
-    margin-top: -100px;
-
-    .navy-circle {
-      @include navy-circle(156px);
-    }
-  }
-
-  // circles
-  $about-circle-width: 156px;
-  $circle-left-movement: 490px;
-  $between-circles-adjustment: 130px;
-
-  // below variables:
-  $studentsSpeakingBarHeight: 28px;
-  $studentsSpeakingBarWidth: 282px;
-  // so that this circle is past lower circle but overlapped behind a little
-  $langTaughtMargin: $studentsSpeakingBarWidth + ($about-circle-width / 2) - 30px;
-
-  .vertical-dots.before-languages {
-    //position: relative;
-    margin-left: $langTaughtMargin + ($about-circle-width / 2) - 8px; // - 8 for width of small dots
-  }
-
-  .languages-taught-circle {
-    //position: relative;
-    margin-left: $langTaughtMargin;
-  }
-  .field--name-field-languages-taught {
-    line-height: 55px;
-  }
-  .languages-taught-text {
-    line-height: 17px;
-    text-align: center;
-  }
-  .languages-spoken-circle {
-    //position: relative;
-    margin-left: $studentsSpeakingBarWidth - ($about-circle-width / 2);
-    margin-top: -80px;
-  }
-
-  .field--name-field-languages-spoken {
-    line-height: 55px;
-  }
-  .languages-spoken-text {
-    line-height: 17px;
-    text-align: center;
-  }
-  .vertical-dots.after-spoken {
-    //position: relative;
-    margin-left: $studentsSpeakingBarWidth - 8px; // back 8 for width of small dots
-  }
-
-// students speaking & certifications
-  .demographics4 {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-top: -120px;
-  }
-
-
-  // --- certifications section
-  .award-icon-wrapper {
-    width: 290px;
-  }
-  .award-icon {
-    width: 13%; // 7 in a row
-    padding: 4px 0px;
-  }
-
-
-
-  //----- students speaking
-
-
-  .field--name-field-students-speaking {
-
-    .students-speaking-text-wrapper {
-      width: $studentsSpeakingBarWidth;
-      line-height: 18px; // necessary to override Aleni's default big spacing
-      padding-bottom: 10px;
-      .h9 {
-        line-height: 22px;
-      }
-
-    }
-
-  }
-
-  .barWrapper.students-speaking {
-    display: flex;
-    margin-bottom: 40px;
-    width: $studentsSpeakingBarWidth;
-    //.tooltip {
-    //  position: relative;
-    //  float: right;
-    //  background-color: none;
-    //  /*   opacity: 1!important; */
-    //}
-    //.tooltip > .tooltip-inner {
-    //  background: none;
-    //  padding: 15px 15px;
-    //  color: rgb(23, 44, 66);
-    //  font-weight: bold;
-    //  font-size: 13px;
-    //}
-    //.popOver + .tooltip > .tooltip-arrow {
-    //  border-left: 5px solid transparent;
-    //  border-right: 5px solid transparent;
-    //  border-top: 5px solid #eebf3f;
-    //}
-
-    .progress {
-      border-radius: 0;
-      overflow: visible;
-      height: $studentsSpeakingBarHeight;
-      width: $studentsSpeakingBarWidth;
-      box-shadow: none;
-      background: $lightgray;
-      //z-index: 1;
-    }
-    .progress-bar {
-      background: $medblue;
-      -webkit-transition: width 1.5s ease-in-out;
-      transition: width 1.5s ease-in-out;
-      border-radius: 0px;
-      height: $studentsSpeakingBarHeight;
-      border: none;
-    }
-    //
-    //.progressText {
-    //  // smaller screens just have it show above
-    //  @media screen and (min-width: 1224px) {
-    //    display: none;
-    //    margin-top: 1px;
-    //    //margin-bottom: -($BarHeight+3);
-    //    //padding: 0px 15px;
-    //    //z-index: 100;
-    //    //position: relative;
-    //  }
-    //
-    //}
-
-  }
-
-
-
-  // more link
-  .field--name-field-more-facts {
-    width: 250px;
-    margin-top: 60px;
-    margin-bottom: 60px;
-  }
+// ------ Gender Bars
+.bars-container {
+  display: flex;
+  width: 100%;
 
 }
+.bar-2 {
+  text-align: end;
+}
+.bar-2 .progress {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+.bar-wrapper {
+  width: 55%;
+}
+.bar-wrapper.bar-2 {
+  width: 45%;
+}
+.tooltip{
+  position:relative;
+  float:right;
+  background-color: none;
+}
+.tooltip > .tooltip-inner {background: none; padding: 15px 15px; color:rgb(23,44,66); font-weight:bold; font-size:13px;}
+.popOver + .tooltip > .tooltip-arrow {	border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #eebf3f;}
+
+section{
+  margin:100px auto;
+  height:1000px;
+}
+.progress{
+  border-radius:0;
+  overflow:visible;
+  width: 200px;
+}
+.bar-2 .progress {
+  width: 180px;
+}
+.field--name-field-gender .progress-bar {
+  background: $teal;
+  -webkit-transition: width 1.5s ease-in-out;
+  transition: width 1.5s ease-in-out;
+}
+.field--name-field-gender .progress-bar.color-2 {
+  background: $lightteal;
+}
+
+// ----- Demographics & map area
+.states-label, .countries-label {
+  display: inline;
+}
+
 
 /* ---- Admissions Page ---------- */
 
@@ -924,15 +352,3 @@ h6 {
 
 
 /* -------- Basic Pages ------------- */
-
-
-
-/* -- AZ Index --- */
-.view-id-a_z_index {
-  .view-content {
-    padding-bottom: 20px;
-  }
- h3 {
-   margin: 25px 0px 15px;
- }
-}
