@@ -38,18 +38,18 @@
  */
 #}
 {%
-set classes = [
-'field',
-'field--name-' ~ field_name|clean_class,
-'field--type-' ~ field_type|clean_class,
-'field--label-' ~ label_display,
-]
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+  ]
 %}
 {%
-set title_classes = [
-'field__label',
-label_display == 'visually_hidden' ? 'visually-hidden',
-]
+  set title_classes = [
+    'field__label',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
 %}
 
 {% if label_hidden %}
@@ -60,11 +60,16 @@ label_display == 'visually_hidden' ? 'visually-hidden',
       {% endfor %}
     </div>
   {% else %}
-    {#single no label#}
+      {#single, no label#}
     {% for item in items %}
-      <div class="quote-wrapper full-width-bar-inner">
-        <div class="quote-icon">&ldquo;</div>
-        <div{{ attributes.addClass(classes, 'field__item, h9') }}>{{ item.content }}</div>
+        <div class="navy-circle languages-spoken-circle">
+          <div{{ attributes.addClass(classes, 'field__item', 'h10', 'white') }}>{{ item.content }}</div>
+          <div class="languages-spoken-text h12 white all-caps">Languages Spoken On Campus</div>
+        </div>
+      <div class="vertical-dots after-spoken">
+        <p class="gray-dot dot-1">&middot;</p>
+        <p class="gray-dot dot-2">&middot;</p>
+        <p class="gray-dot dot-3">&middot;</p>
       </div>
     {% endfor %}
   {% endif %}
@@ -72,13 +77,13 @@ label_display == 'visually_hidden' ? 'visually-hidden',
   <div{{ attributes.addClass(classes) }}>
     <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% if multiple %}
-    <div class="field__items">
-      {% endif %}
-      {% for item in items %}
-        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
-      {% endfor %}
-      {% if multiple %}
-    </div>
+      <div class="field__items">
+    {% endif %}
+    {% for item in items %}
+      <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+    {% endfor %}
+    {% if multiple %}
+      </div>
     {% endif %}
   </div>
 {% endif %}
