@@ -239,6 +239,43 @@ h6 {
   margin-right: auto;
 }
 
+// used so far on about page - don't change
+//$circle-width: 156px;
+
+@mixin navy-circle($circle-width) {
+  background: $navy;
+  padding: 25px ;
+  border: 2px solid $medgray;
+  border-radius: 50%;
+  width: $circle-width;
+  height: $circle-width;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navy-circle {
+  @include navy-circle(156px);
+}
+@mixin vertical-dots() {
+  display: flex;
+  //flex-wrap: wrap;
+  flex-direction: column;
+  margin: 15px 0px;
+}
+@mixin gray-dot() {
+  color: $medgray;
+  font-size: 60px;
+  margin: 0px;
+}
+
+.vertical-dots {
+  @include vertical-dots();
+  .gray-dot {
+    @include gray-dot();
+  }
+}
+
 
 
 
@@ -294,32 +331,6 @@ h6 {
 }
 .bg-darkgray {
   background: $darkgray;
-}
-
-// used so far on about page - don't change
-$circle-width: 156px;
-.navy-circle {
-  background: $navy;
-  padding: 25px ;
-  border: 2px solid $medgray;
-  border-radius: 50%;
-  width: $circle-width;
-  height: $circle-width;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.vertical-dots {
-  display: flex;
-  //flex-wrap: wrap;
-  flex-direction: column;
-  margin: 15px 0px;
-  .gray-dot {
-    color: $medgray;
-    font-size: 60px;
-    margin: 0px;
-  }
 }
 
 
