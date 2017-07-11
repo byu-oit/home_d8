@@ -1,0 +1,55 @@
+@import "homepage";
+
+.field--name-field-somethings {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .field--name-field-something-to-type::before {
+        content: "Something to ";
+    }
+    > .field__item {
+        width: 247px;
+        cursor: pointer;
+        border: 1px solid $gray;
+        .field--name-field-something-to-type {
+            text-align: center;
+            text-transform: uppercase;
+            padding: 15px 5px;
+            color: white;
+            background-color: $medgray;
+        }
+        .something-to-do {
+            background-color: $navy;
+        }
+        .something-to-read {
+            background-color: $medblue;
+        }
+        .something-to-see {
+            background-color: $gray;
+        }
+        span.something-to-type {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .field--name-field-image {
+            overflow: hidden;
+        }
+
+        .field--name-field-link {
+            padding: 0px 15px;
+            margin-top: 10px;
+            a:hover {
+                text-decoration: none;
+                font-weight: inherit;
+            }
+        }
+    }
+    > .field__item:hover {
+        box-shadow: 3px 3px 1px $lightgray;
+    }
+}
+
+section.page-header {
+    display: none;
+}

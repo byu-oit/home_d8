@@ -5,6 +5,13 @@ global-styling:
       css/homepage.css: {}
   js:
     js/homepage.js: {}
+frontpage:
+  version: 8.x
+  css:
+    base:
+      css/frontpage.css: {}
+  js:
+    js/frontpage.js: {}
 fonts-basic:
   remote: https://cloud.typography.com/75214/7683772/css/fonts.css
   version: 1.0.0
