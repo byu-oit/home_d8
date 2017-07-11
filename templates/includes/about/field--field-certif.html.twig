@@ -62,8 +62,10 @@ label_display == 'visually_hidden' ? 'visually-hidden',
   {% else %}
     {#single no label#}
     {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field__item, h12') }}>{{ item.content }}</div>
-      <div{{ attributes.addClass(classes, 'h12') }}>Different Languages</div>
+      <div class="certifications-text-wrapper">
+        <span{{ attributes.addClass(classes, 'field__item', 'h9') }}>{{ item.content }}</span>
+        <span class="h12">Different Languages</span>
+      </div>
     {% endfor %}
   {% endif %}
 {% else %}

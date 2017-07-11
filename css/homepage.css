@@ -1,13 +1,24 @@
 /* ----------- BYU HOMEPAGE SPECIFIC--------- */
 /* --- BYU COlors --- */
+a {
+  color: #002E5D; }
+
+a:hover {
+  color: #003DA5; }
+
+/* ---- fonts
+ */
 /* ------------- Headings Etc -------------------- */
-h1, h2, h3, h4, .h1, .h2, .h3, .h4, .h8, .h9, .h10, .h11, .h12 {
+h1, h2, h3, h4, .h1, .h2, .h3, .h4, .h8, .h9, .h10, .h11, .h12,
+h1 a, h2 a, h3 a, h4 a, .h1 a, .h2 a, .h3 a, .h4 a, .h8 a, .h9 a, .h10 a, .h11 a, .h12 a {
   color: #002e5d; }
 
-h5, .h5 {
-  color: #767676; }
+h5 a, .h5 a,
+h5, .h5, .h9.gray, .h9.gray a, .h11.gray, .h11.gray a {
+  color: #666; }
 
-h6, .h6, .h7, .h8.white, .h9.white, .h11.white, .h12.white, .h13 {
+h6 a, .h6 a, .h7 a, .h8.white a, .h9.white a, .h11.white a, .h12.white a, .h13 a,
+h6, .h6, .h7, .h8.white, .h9.white, .h10.white, .h10.white a, .h11.white, .h12.white, .h13 {
   color: #fff; }
 
 h1, h2, .h1, .h2 {
@@ -79,6 +90,7 @@ h6 {
     color: #fff; }
 
 .h11 {
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
   font-size: 35px;
   font-weight: bold;
   line-height: 40px; }
@@ -86,6 +98,8 @@ h6 {
 .h12 {
   font-size: 16px;
   line-height: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
   /*letter-spacing:*/ }
 
 .h13 {
@@ -133,18 +147,7 @@ h6 {
   .h13 {
     font-size: 200px; } }
 
-.quote-icon {
-  font-weight: bold;
-  font-size: 200px;
-  font-family: "Vitesse A", "Vitesse B", serif;
-  color: #e5e5e5; }
-
-.and-icon {
-  font-weight: 500;
-  font-size: 130px;
-  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
-  color: #002E5D; }
-
+/* ---- general mixins ----------- */
 /* ----- helpful classes ----------- */
 .normal-weight {
   font-weight: normal; }
@@ -158,99 +161,425 @@ h6 {
 .all-caps {
   text-transform: uppercase; }
 
-.navy-button {
-  background: #002e5d;
-  color: #fff;
-  padding: 12px 25px; }
+.left-text {
+  text-align: left; }
+
+.right-text {
+  text-align: right; }
+
+.centered-text {
+  text-align: center; }
+
+.centered-margin {
+  margin-left: auto;
+  margin-right: auto; }
+
+.royal-button {
+  padding: 12px 25px;
+  background: #003DA5;
+  color: #fff; }
+  .royal-button a:hover {
+    text-decoration: none; }
 
 .medblue-button {
+  padding: 12px 25px;
   background: #002e5d;
   /* change to medium blue */
-  color: #fff;
-  padding: 12px 25px; }
+  color: #fff; }
+  .medblue-button a:hover {
+    text-decoration: none; }
 
 .bg-lightgray {
   background: #e5e5e5; }
 
+.bg-darkgray {
+  background: #6a6a6b; }
+
+.navy-circle {
+  background: #002E5D;
+  padding: 25px;
+  border: 2px solid #666;
+  border-radius: 50%;
+  width: 156px;
+  height: 156px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.vertical-dots {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0px; }
+  .vertical-dots .gray-dot {
+    color: #666;
+    font-size: 60px;
+    margin: 0px; }
+
+.blue-dot-after:after {
+  content: "*";
+  color: #002E5D; }
+
 /* --------- Regions ---------- */
+/* ---- header --- */
+.byu-search .visually-hidden,
+.byu-search input#edit-submit {
+  display: none; }
+
+.byu-search .form-control.__byu-search-selected-input {
+  width: 100%;
+  height: 35px; }
+
+/* ----- main page --------- */
 .main.main-4-page {
   padding: 20px 0px; }
   .main.main-4-page .node__content > :not(.full-width-bar) {
     max-width: 1224px;
     margin-left: auto;
     margin-right: auto; }
+  .main.main-4-page .container {
+    width: 100%;
+    padding: 0px; }
   .main.main-4-page .full-width-bar {
     width: 100%;
     max-width: 100%;
-    padding: 15px; }
+    padding: 30px 15px; }
+    .main.main-4-page .full-width-bar .field, .main.main-4-page .full-width-bar .full-width-bar-inner {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto; }
+    .main.main-4-page .full-width-bar .full-width-bar-inner {
+      display: flex; }
 
 /* ----------- Front Page ------- */
 /* ------------ About Page ---------- */
-.bars-container {
+.main.main-4-page .quote-wrapper.full-width-bar-inner {
   display: flex;
-  width: 100%; }
+  margin-top: 50px; }
 
-.bar-2 {
-  text-align: end; }
+.main.main-4-page .quote-icon {
+  font-weight: bold;
+  font-size: 200px;
+  font-family: "Vitesse A", "Vitesse B", serif;
+  color: #e5e5e5;
+  margin-top: 30px; }
 
-.bar-2 .progress {
-  -moz-transform: scale(-1, 1);
-  -webkit-transform: scale(-1, 1);
-  -o-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
-  transform: scale(-1, 1); }
+.main.main-4-page .full-width-bar.links-video-group {
+  margin-top: 30px;
+  padding: 40px 15px 60px; }
+  .main.main-4-page .full-width-bar.links-video-group iframe {
+    width: 766px;
+    height: 405px; }
 
-.bar-wrapper {
-  width: 55%; }
+.main.main-4-page .field--name-field-links {
+  width: 30%;
+  margin-left: 0px;
+  margin-right: 0px; }
 
-.bar-wrapper.bar-2 {
-  width: 45%; }
+.main.main-4-page .field--name-field-video {
+  width: 70%;
+  margin-top: 20px;
+  margin-left: 0px;
+  margin-right: 0px; }
 
-.tooltip {
+.main.main-4-page .full-width-bar.yfacts-about {
+  height: 400px;
+  padding-top: 250px;
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 28px;
+  margin: 0px 0px 60px 0px; }
+  .main.main-4-page .full-width-bar.yfacts-about p {
+    color: #f2f2f2; }
+  .main.main-4-page .full-width-bar.yfacts-about .larger-p, .main.main-4-page .full-width-bar.yfacts-about .larger-p2 {
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 30px;
+    width: 100%;
+    display: none; }
+  .main.main-4-page .full-width-bar.yfacts-about .larger-text {
+    font-size: 36px;
+    color: #fff;
+    font-weight: 500; }
+
+@keyframes type {
+  from {
+    width: 0; } }
+
+@keyframes type2 {
+  0% {
+    width: 0; }
+  50% {
+    width: 50; }
+  100% {
+    width: 100; } }
+
+@keyframes blink {
+  to {
+    opacity: .0; } }
+
+.main.main-4-page .students-group .barWrapper {
+  padding: 0px; }
+
+.main.main-4-page .students-group .tooltip {
   position: relative;
   float: right;
-  background-color: none; }
+  background-color: none;
+  opacity: 1 !important; }
 
-.tooltip > .tooltip-inner {
+.main.main-4-page .students-group .tooltip > .tooltip-inner {
   background: none;
   padding: 15px 15px;
-  color: #172c42;
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+  font-size: 35px;
   font-weight: bold;
-  font-size: 13px; }
+  line-height: 40px; }
 
-.popOver + .tooltip > .tooltip-arrow {
+.main.main-4-page .students-group .popOver + .tooltip > .tooltip-arrow {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid #eebf3f; }
 
-section {
-  margin: 100px auto;
-  height: 1000px; }
+.main.main-4-page .students-group .assets-wrap {
+  opacity: 1; }
 
-.progress {
+.main.main-4-page .students-group .tooltip.bottom .tooltip-arrow {
+  margin-left: -10px;
+  border-width: 0px 10px 20px;
+  border-left: 10px solid #002E5D;
+  border-right: 10px solid #002E5D;
+  border-color: #002E5D;
+  opacity: 1;
+  border-radius: 36px;
+  margin-top: -9px; }
+
+.main.main-4-page .students-group .color-2 .tooltip.bottom .tooltip-arrow {
+  border-color: #666; }
+
+.main.main-4-page .students-group .progress {
   border-radius: 0;
   overflow: visible;
-  width: 200px; }
+  height: 8px;
+  background-color: #e6e6e6;
+  box-shadow: none; }
 
-.bar-2 .progress {
-  width: 180px; }
-
-.field--name-field-gender .progress-bar {
-  background: #84DCB4;
+.main.main-4-page .students-group .progress-bar {
+  background: #002e5d;
   -webkit-transition: width 1.5s ease-in-out;
   transition: width 1.5s ease-in-out; }
 
-.field--name-field-gender .progress-bar.color-2 {
-  background: #C4F7E0; }
+.main.main-4-page .students-group .progress-bar.color-2 {
+  background: #666; }
 
-.states-label, .countries-label {
-  display: inline; }
+.main.main-4-page .students-group.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 75px; }
+
+.main.main-4-page .grad-wrapper {
+  order: 3;
+  margin-top: -85px; }
+
+.main.main-4-page .field--name-field-undergrads,
+.main.main-4-page .field--name-field-grads {
+  width: 77%; }
+
+.main.main-4-page .field--name-field-total-students {
+  width: 23%; }
+
+.main.main-4-page .field--name-field-total-students .field__label {
+  line-height: 20px;
+  text-align: right; }
+
+.main.main-4-page .field--name-field-total-students {
+  background: #f2f2f2;
+  display: inline;
+  height: 170px;
+  padding: 25px 45px; }
+  .main.main-4-page .field--name-field-total-students .field__item {
+    font-size: 55px;
+    color: #002E5D;
+    font-weight: bold;
+    text-align: right;
+    padding: 25px 0px 0px; }
+
+.main.main-4-page .field--name-field-gender {
+  display: flex;
+  margin-bottom: 80px; }
+  .main.main-4-page .field--name-field-gender .bar2 {
+    text-align: end; }
+  .main.main-4-page .field--name-field-gender .bar2 .progress {
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1); }
+  .main.main-4-page .field--name-field-gender .tooltip {
+    position: relative;
+    float: right;
+    background-color: none;
+    /*   opacity: 1!important; */ }
+  .main.main-4-page .field--name-field-gender .tooltip > .tooltip-inner {
+    background: none;
+    padding: 15px 15px;
+    color: #172c42;
+    font-weight: bold;
+    font-size: 13px; }
+  .main.main-4-page .field--name-field-gender .popOver + .tooltip > .tooltip-arrow {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #eebf3f; }
+  .main.main-4-page .field--name-field-gender .progress {
+    border-radius: 0;
+    overflow: visible;
+    height: 50px;
+    box-shadow: none;
+    background: none; }
+  .main.main-4-page .field--name-field-gender .progress-bar {
+    background: #84DCB4;
+    -webkit-transition: width 1.5s ease-in-out;
+    transition: width 1.5s ease-in-out;
+    border-radius: 0px;
+    height: 50px;
+    border: none; }
+  .main.main-4-page .field--name-field-gender .progress-bar.color-2 {
+    background: #C4F7E0;
+    z-index: 1; }
+  @media screen and (min-width: 1224px) {
+    .main.main-4-page .field--name-field-gender .progressText {
+      display: none;
+      margin-top: 1px;
+      margin-bottom: -53px;
+      padding: 0px 15px;
+      z-index: 100;
+      position: relative; } }
+  .main.main-4-page .field--name-field-gender .progressText2.h9 {
+    padding-left: 3px; }
+
+.main.main-4-page div#about-demographics {
+  max-width: 816px; }
+
+.main.main-4-page .demographics1 {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px; }
+
+.main.main-4-page .demographics1-top-label {
+  margin-left: auto;
+  margin-right: auto; }
+
+.main.main-4-page .states-cont, .main.main-4-page .countries-cont {
+  display: flex; }
+
+.main.main-4-page .states-label, .main.main-4-page .countries-label {
+  display: inline;
+  padding: 0px 5px; }
+
+.main.main-4-page .and-icon {
+  font-weight: 500;
+  font-size: 130px;
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+  color: #002E5D;
+  padding: 0px 25px; }
+
+.main.main-4-page .state-percents-group {
+  max-width: 230px; }
+  .main.main-4-page .state-percents-group .field.h12 {
+    text-transform: none;
+    display: inline; }
+  .main.main-4-page .state-percents-group .field.h12:after {
+    content: "\2022";
+    color: #002E5D;
+    font-size: 20px;
+    padding-left: 3px;
+    position: relative;
+    top: 2px; }
+  .main.main-4-page .state-percents-group .h12.field.field--name-field-percent-arizona {
+    display: block; }
+
+.main.main-4-page .demographics3 {
+  margin-top: -100px; }
+
+.main.main-4-page .vertical-dots.before-languages {
+  margin-left: 400px; }
+
+.main.main-4-page .languages-taught-circle {
+  margin-left: 330px; }
+
+.main.main-4-page .field--name-field-languages-taught {
+  line-height: 55px; }
+
+.main.main-4-page .languages-taught-text {
+  line-height: 17px;
+  text-align: center; }
+
+.main.main-4-page .languages-spoken-circle {
+  margin-left: 204px;
+  margin-top: -80px; }
+
+.main.main-4-page .field--name-field-languages-spoken {
+  line-height: 55px; }
+
+.main.main-4-page .languages-spoken-text {
+  line-height: 17px;
+  text-align: center; }
+
+.main.main-4-page .vertical-dots.after-spoken {
+  margin-left: 274px; }
+
+.main.main-4-page .demographics4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: -120px; }
+
+.main.main-4-page .award-icon-wrapper {
+  width: 290px; }
+
+.main.main-4-page .award-icon {
+  width: 13%;
+  padding: 4px 0px; }
+
+.main.main-4-page .field--name-field-students-speaking .students-speaking-text-wrapper {
+  width: 282px;
+  line-height: 18px;
+  padding-bottom: 10px; }
+  .main.main-4-page .field--name-field-students-speaking .students-speaking-text-wrapper .h9 {
+    line-height: 22px; }
+
+.main.main-4-page .barWrapper.students-speaking {
+  display: flex;
+  margin-bottom: 40px;
+  width: 282px; }
+  .main.main-4-page .barWrapper.students-speaking .progress {
+    border-radius: 0;
+    overflow: visible;
+    height: 28px;
+    width: 282px;
+    box-shadow: none;
+    background: #e5e5e5; }
+  .main.main-4-page .barWrapper.students-speaking .progress-bar {
+    background: #697F96;
+    -webkit-transition: width 1.5s ease-in-out;
+    transition: width 1.5s ease-in-out;
+    border-radius: 0px;
+    height: 28px;
+    border: none; }
+
+.main.main-4-page .field--name-field-more-facts {
+  width: 250px;
+  margin-top: 60px;
+  margin-bottom: 60px; }
 
 /* ---- Admissions Page ---------- */
 /* ----- Academics Page ------------ */
 /* ------------ Campus Life Page ------------ */
 /* -------- Basic Pages ------------- */
 /* -- AZ Index --- */
+.view-id-a_z_index .view-content {
+  padding-bottom: 20px; }
+
 .view-id-a_z_index h3 {
   margin: 25px 0px 15px; }
 

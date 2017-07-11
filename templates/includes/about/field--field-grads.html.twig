@@ -38,18 +38,18 @@
  */
 #}
 {%
-set classes = [
-'field',
-'field--name-' ~ field_name|clean_class,
-'field--type-' ~ field_type|clean_class,
-'field--label-' ~ label_display,
-]
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+  ]
 %}
 {%
-set title_classes = [
-'field__label',
-label_display == 'visually_hidden' ? 'visually-hidden',
-]
+  set title_classes = [
+    'field__label',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
 %}
 
 {% if label_hidden %}
@@ -60,25 +60,35 @@ label_display == 'visually_hidden' ? 'visually-hidden',
       {% endfor %}
     </div>
   {% else %}
-    {#single no label#}
+      {#single, no label#}
     {% for item in items %}
-      <div class="quote-wrapper full-width-bar-inner">
-        <div class="quote-icon">&ldquo;</div>
-        <div{{ attributes.addClass(classes, 'field__item, h9') }}>{{ item.content }}</div>
+
+      <div class="barWrapper grad-wrapper field--name-field-grads">
+        <span class="progressText h9 gray all-caps"><B>GRADUATE</B> Students</span>
+        <div class="progress ">
+          <div class="progress-bar bar2 color-2" role="progressbar" students-now="{{ item.content }}" aria-valuemin="0" students-max="33000" style="">
+            <span  class="popOver" data-toggle="tooltip" data-placement="bottom" title="{{ item.content }}"> </span>
+          </div>
+
+        </div>
       </div>
+      {#<div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>#}
+
+
+
     {% endfor %}
   {% endif %}
 {% else %}
-  <div{{ attributes.addClass(classes) }}>
-    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+  <div{{ attributes.addClass(classes)}}>
+    <div{{ title_attributes.addClass(title_classes, 'h9', 'gray', 'all-caps', 'bold') }}>{{ label }}</div>
     {% if multiple %}
-    <div class="field__items">
-      {% endif %}
-      {% for item in items %}
-        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
-      {% endfor %}
-      {% if multiple %}
-    </div>
+      <div class="field__items">
+    {% endif %}
+    {% for item in items %}
+      <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+    {% endfor %}
+    {% if multiple %}
+      </div>
     {% endif %}
   </div>
 {% endif %}

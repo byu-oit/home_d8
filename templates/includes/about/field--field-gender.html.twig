@@ -65,7 +65,11 @@ label_display == 'visually_hidden' ? 'visually-hidden',
         {% if loop.first %}
           {#<div{{ item.attributes.addClass('field__item', 'barWrapper') }}>#}
           <div class="barWrapper" style="width: {{ item.content }}" >
-            <span class="progressText h11 white"><B>{{ item.content }}</B></span><span class="progressText h9 white"><B>MALE</B></span>
+            <div class="progressText">
+              <span class="progressText1 h11"><B>{{ item.content }}</B></span>
+              <span class="progressText2 h9"><B>MALE</B></span>
+            </div>
+
             <div class="progress">
               <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                 <span class="popOver" data-toggle="tooltip" data-placement="bottom" title="" style="margin-top:20px"> </span>
@@ -73,8 +77,11 @@ label_display == 'visually_hidden' ? 'visually-hidden',
             </div>
           </div>
         {% else %}
-          <div class="barWrapper bar-2" style="width: {{ item.content }}" >
-            <span class="progressText h11 white"><B>{{ item.content }}</B></span><span class="progressText h9 white"><B>FEMALE</B></span>
+          <div class="barWrapper bar2" style="width: {{ item.content }}" >
+            <div class="progressText">
+              <span class="progressText1 h11"><B>{{ item.content }}</B></span>
+              <span class="progressText2 h9"><B>FEMALE</B></span>
+            </div>
             <div class="progress ">
               <div class="progress-bar  color-2" role="progressbar" aria-valuenow="100" aria-valuemin="100" aria-valuemax="100" style="">
                 <span class="popOver" data-toggle="tooltip" data-placement="bottom" title=""> </span>
