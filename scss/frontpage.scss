@@ -41,12 +41,14 @@
             margin-top: 10px;
             a:hover {
                 text-decoration: none;
-                font-weight: inherit;
             }
         }
     }
     > .field__item:hover {
         box-shadow: 3px 3px 1px $lightgray;
+        a {
+            font-weight: bold;
+        }
     }
 }
 

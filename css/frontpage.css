@@ -570,10 +570,11 @@ h6 {
       padding: 0px 15px;
       margin-top: 10px; }
       .field--name-field-somethings > .field__item .field--name-field-link a:hover {
-        text-decoration: none;
-        font-weight: inherit; }
+        text-decoration: none; }
   .field--name-field-somethings > .field__item:hover {
     box-shadow: 3px 3px 1px #e5e5e5; }
+    .field--name-field-somethings > .field__item:hover a {
+      font-weight: bold; }
 
 section.page-header {
   display: none; }
