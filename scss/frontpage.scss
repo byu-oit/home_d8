@@ -8,7 +8,15 @@
         content: "Something to ";
     }
     > .field__item {
-        width: 247px;
+        @media screen and (min-width: 320px) {
+            width: 154px;
+        }
+        @media screen and (min-width: 1024px) {
+            width: 211px;
+        }
+        @media screen and (min-width: 1224px) {
+            width: 247px;
+        }
         cursor: pointer;
         border: 1px solid $gray;
         .field--name-field-something-to-type {
@@ -17,6 +25,12 @@
             padding: 15px 5px;
             color: white;
             background-color: $medgray;
+            @media screen and (min-width: 320px) {
+                display: none;
+            }
+            @media screen and (min-width: 1024px) {
+                display: inherit;
+            }
         }
         .something-to-do {
             background-color: $navy;
@@ -34,6 +48,10 @@
 
         .field--name-field-image {
             overflow: hidden;
+            img {
+                width: 100%;
+                height: auto;
+            }
         }
 
         .field--name-field-link {
@@ -54,4 +72,15 @@
 
 section.page-header {
     display: none;
+}
+
+@media screen and (min-width: 320px) {
+}
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1024px) {
+}
+@media screen and (min-width: 1224px) {
+}
+@media screen and (min-width: 1824px) {
 }

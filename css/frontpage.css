@@ -546,15 +546,29 @@ h6 {
   .field--name-field-somethings .field--name-field-something-to-type::before {
     content: "Something to "; }
   .field--name-field-somethings > .field__item {
-    width: 247px;
     cursor: pointer;
     border: 1px solid #c5c5c5; }
+    @media screen and (min-width: 320px) {
+      .field--name-field-somethings > .field__item {
+        width: 154px; } }
+    @media screen and (min-width: 1024px) {
+      .field--name-field-somethings > .field__item {
+        width: 211px; } }
+    @media screen and (min-width: 1224px) {
+      .field--name-field-somethings > .field__item {
+        width: 247px; } }
     .field--name-field-somethings > .field__item .field--name-field-something-to-type {
       text-align: center;
       text-transform: uppercase;
       padding: 15px 5px;
       color: white;
       background-color: #666; }
+      @media screen and (min-width: 320px) {
+        .field--name-field-somethings > .field__item .field--name-field-something-to-type {
+          display: none; } }
+      @media screen and (min-width: 1024px) {
+        .field--name-field-somethings > .field__item .field--name-field-something-to-type {
+          display: inherit; } }
     .field--name-field-somethings > .field__item .something-to-do {
       background-color: #002E5D; }
     .field--name-field-somethings > .field__item .something-to-read {
@@ -566,6 +580,9 @@ h6 {
       font-style: italic; }
     .field--name-field-somethings > .field__item .field--name-field-image {
       overflow: hidden; }
+      .field--name-field-somethings > .field__item .field--name-field-image img {
+        width: 100%;
+        height: auto; }
     .field--name-field-somethings > .field__item .field--name-field-link {
       padding: 0px 15px;
       margin-top: 10px; }
