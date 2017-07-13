@@ -12,6 +12,11 @@ frontpage:
       css/frontpage.css: {}
   js:
     js/frontpage.js: {}
+campuslife:
+  version: 8.x
+  css:
+    base:
+      css/campuslife.css: {}
 fonts-basic:
   remote: https://cloud.typography.com/75214/7683772/css/fonts.css
   version: 1.0.0

@@ -1,0 +1,35 @@
+@import "homepage";
+
+.view-campus-life-links {
+    .view-content {
+        ul {
+            list-style-type: none;
+            padding-left: 10px;
+        }
+        > ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            > li {
+                width: 300px;
+                > .views-field {
+                    background-color: #5f7c9b;
+                    color: white;
+                    padding: 10px;
+                    font-family: $gotham;
+                    font-weight: bold;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                }
+                li {
+                    line-height: 40px;
+                }
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+section.page-header {
+    display: none;
+}
