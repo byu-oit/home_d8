@@ -115,14 +115,25 @@ h6 {
   font-weight: 500;
   /*letter-spacing:*/
 }
+$h13-mobile-font:45px;
+$h13-tabletp-font:90px;
+$h13-tabletl-font: 120px;
+$h13-desktop-font:135px;
+$h13-desktopw-font: 200px;
 .h13 {
-  font-size: 45px;
+  font-size: $h13-mobile-font;
   /*line-height:*/
+}
+.view-content-page-header .views-field-title {
+  margin-top: ($h13-mobile-font *.73*-1);
 }
 
 @media screen and (min-width: 768px) {
   .h13 {
-    font-size: 90px;
+    font-size: $h13-tabletp-font;
+  }
+  .view-content-page-header .views-field-title {
+    margin-top: ($h13-tabletp-font *.50*-1);
   }
 }
 @media screen and (min-width: 1024px) {
@@ -133,8 +144,12 @@ h6 {
     font-size: 17px;
     /*line-height: ??;*/
   }
+
   .h13 {
-    font-size: 120px;
+    font-size: $h13-tabletl-font;
+  }
+  .view-content-page-header .views-field-title {
+    margin-top: ($h13-tabletl-font *.50*-1);
   }
 
 
@@ -142,7 +157,6 @@ h6 {
 @media screen and (min-width: 1224px) {
   h1 {
     font-size: 40px;
-    text-align: left;
   }
   h2 {
     font-size: 35px;
@@ -167,12 +181,19 @@ h6 {
     font-weight: 500;
   }
   .h13 {
-    font-size: 135px;
+    font-size: $h13-desktop-font;
+  }
+  .view-content-page-header .views-field-title {
+    margin-top: ($h13-desktop-font *.50*-1);
   }
 }
 @media screen and (min-width: 1824px) {
+
   .h13 {
-    font-size: 200px;
+    font-size: $h13-desktopw-font;
+  }
+  .view-content-page-header .views-field-title {
+    margin-top: ($h13-desktopw-font *.50*-1);
   }
 }
 
@@ -813,22 +834,15 @@ h6 {
 
 }
 
+
+
 /* ---- Admissions Page ---------- */
-
-
-
-
-
 
 
 /* ----- Academics Page ------------ */
 
 
-
 /* ------------ Campus Life Page ------------ */
-
-
-
 
 
 /* -------- Basic Pages ------------- */
@@ -844,3 +858,4 @@ h6 {
    margin: 25px 0px 15px;
  }
 }
+

@@ -103,9 +103,15 @@ h6 {
   font-size: 45px;
   /*line-height:*/ }
 
+.view-content-page-header .views-field-title {
+  margin-top: -32.85px; }
+
 @media screen and (min-width: 768px) {
   .h13 {
-    font-size: 90px; } }
+    font-size: 90px; }
+
+  .view-content-page-header .views-field-title {
+    margin-top: -45px; } }
 @media screen and (min-width: 1024px) {
   h2 {
     font-size: 30px; }
@@ -115,11 +121,13 @@ h6 {
     /*line-height: ??;*/ }
 
   .h13 {
-    font-size: 120px; } }
+    font-size: 120px; }
+
+  .view-content-page-header .views-field-title {
+    margin-top: -60px; } }
 @media screen and (min-width: 1224px) {
   h1 {
-    font-size: 40px;
-    text-align: left; }
+    font-size: 40px; }
 
   h2 {
     font-size: 35px; }
@@ -144,10 +152,16 @@ h6 {
     font-weight: 500; }
 
   .h13 {
-    font-size: 135px; } }
+    font-size: 135px; }
+
+  .view-content-page-header .views-field-title {
+    margin-top: -67.5px; } }
 @media screen and (min-width: 1824px) {
   .h13 {
-    font-size: 200px; } }
+    font-size: 200px; }
+
+  .view-content-page-header .views-field-title {
+    margin-top: -100px; } }
 .navy-circle {
   background: #002E5D;
   padding: 25px;

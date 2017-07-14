@@ -5,7 +5,7 @@ $other-circle-size : 155px;
 //section for circles
 
 .undergrad-circle {@include navy-circle($undergrad-circle-size);}
-.other-circle {@include navy-circle($other-circle-size);margin-left:-15px;}
+.other-circle {@include navy-circle($other-circle-size);margin-left:-11px;}
 @media screen and (min-width: 1024px) {
   #academic-y-facts .col-md-6 {
     display: flex;
@@ -17,10 +17,18 @@ $other-circle-size : 155px;
 .field--name-field-academic-minor-links .h12 a {line-height: 40px;text-transform: none}
 .field--name-field-academic-minor-links {padding-top:2em;}
 .rank-prefix{color:$lightgray;display: inline;}
+.byline-prefix{color:$white;display: inline;}
 #academic-y-facts {background-color: $medgray;}
 //#academic-y-facts div {float: left;}
 div#links-and-calendar{min-height: 80em;}
 
 
 .view-content-page-header {display: flex;justify-content: center;}
+.view-content-page-header
 .h8.italic {font-style: italic;font-weight: 500}
+
+.paragraph--type--academic-highlight {
+background-color: $white;
+}
+div#academic-highlight-overlay:first-of-type {background-color: $medblue;}
+

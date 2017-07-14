@@ -19,7 +19,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-left: -15px; }
+  margin-left: -11px; }
 
 @media screen and (min-width: 1024px) {
   #academic-y-facts .col-md-6 {
@@ -41,6 +41,10 @@
   color: #e5e5e5;
   display: inline; }
 
+.byline-prefix {
+  color: #FFF;
+  display: inline; }
+
 #academic-y-facts {
   background-color: #767676; }
 
@@ -51,8 +55,15 @@ div#links-and-calendar {
   display: flex;
   justify-content: center; }
 
+.view-content-page-header
 .h8.italic {
   font-style: italic;
   font-weight: 500; }
+
+.paragraph--type--academic-highlight {
+  background-color: #FFF; }
+
+div#academic-highlight-overlay:first-of-type {
+  background-color: #697F96; }
 
 /*# sourceMappingURL=academic.css.map */
