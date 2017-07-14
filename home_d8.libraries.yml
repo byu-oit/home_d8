@@ -3,6 +3,7 @@ global-styling:
   css:
     base:
       css/homepage.css: {}
+      css/academic.css: {}
   js:
     js/homepage.js: {}
 fonts-basic:

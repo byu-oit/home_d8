@@ -1,0 +1,58 @@
+.undergrad-circle {
+  background: #002E5D;
+  padding: 25px;
+  border: 2px solid #767676;
+  border-radius: 50%;
+  width: 190px;
+  height: 190px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.other-circle {
+  background: #002E5D;
+  padding: 25px;
+  border: 2px solid #767676;
+  border-radius: 50%;
+  width: 155px;
+  height: 155px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -15px; }
+
+@media screen and (min-width: 1024px) {
+  #academic-y-facts .col-md-6 {
+    display: flex;
+    margin-top: 3em;
+    align-items: center; } }
+.field--name-field-academic-major-links {
+  border-bottom: 1px solid #767676;
+  padding-bottom: 2em; }
+
+.field--name-field-academic-minor-links .h12 a {
+  line-height: 40px;
+  text-transform: none; }
+
+.field--name-field-academic-minor-links {
+  padding-top: 2em; }
+
+.rank-prefix {
+  color: #e5e5e5;
+  display: inline; }
+
+#academic-y-facts {
+  background-color: #767676; }
+
+div#links-and-calendar {
+  min-height: 80em; }
+
+.view-content-page-header {
+  display: flex;
+  justify-content: center; }
+
+.h8.italic {
+  font-style: italic;
+  font-weight: 500; }
+
+/*# sourceMappingURL=academic.css.map */

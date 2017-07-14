@@ -1,6 +1,26 @@
-@import "homepage";
+@import "mixins";
 $undergrad-circle-size : 190px;
 $other-circle-size : 155px;
 
+//section for circles
+
+.undergrad-circle {@include navy-circle($undergrad-circle-size);}
+.other-circle {@include navy-circle($other-circle-size);margin-left:-15px;}
+@media screen and (min-width: 1024px) {
+  #academic-y-facts .col-md-6 {
+    display: flex;
+    margin-top: 3em;
+    align-items: center
+  }
+}
+.field--name-field-academic-major-links {border-bottom: 1px solid $medgray;padding-bottom: 2em;}
+.field--name-field-academic-minor-links .h12 a {line-height: 40px;text-transform: none}
+.field--name-field-academic-minor-links {padding-top:2em;}
+.rank-prefix{color:$lightgray;display: inline;}
+#academic-y-facts {background-color: $medgray;}
+//#academic-y-facts div {float: left;}
+div#links-and-calendar{min-height: 80em;}
 
 
+.view-content-page-header {display: flex;justify-content: center;}
+.h8.italic {font-style: italic;font-weight: 500}

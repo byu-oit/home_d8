@@ -1,0 +1,30 @@
+home_d8.mobile:
+  label: mobile
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+home_d8.tablet_portrait:
+  label: table portrait
+  mediaQuery: 'all and (min-width: 321px) and (max-width: 768px)'
+  weight: 1
+  multipliers:
+    - 1x
+home_d8.tablet_landscape:
+  label: tablet landscape
+  mediaQuery: 'all and (min-width: 769px) and (max-width: 1024px)'
+  weight: 1
+  multipliers:
+    - 1x
+home_d8.desktop:
+  label: desktop
+  mediaQuery: 'all and (min-width: 1025x) and (max-width: 1224px)'
+  weight: 1
+  multipliers:
+    - 1x
+home_d8.desktop_wide:
+  label: desktop wide
+  mediaQuery: 'all and (min-width: 1225px)'
+  weight: 2
+  multipliers:
+    - 1x
