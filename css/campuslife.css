@@ -576,4 +576,43 @@ h6 {
 section.page-header {
   display: none; }
 
+.field-collection-item--name-field-sober-info .content {
+  display: flex; }
+
+.field--name-field-years-sober {
+  width: 600px;
+  background-color: #c5c5c5;
+  color: white;
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: normal; }
+  .field--name-field-years-sober .sober-rank-block {
+    display: flex; }
+  .field--name-field-years-sober .sober-stone-cold-sober {
+    color: #002E5D;
+    font-style: italic; }
+  .field--name-field-years-sober .sober-university {
+    color: #002E5D;
+    text-transform: uppercase;
+    text-align: justify; }
+  .field--name-field-years-sober .sober-year-block {
+    display: flex; }
+  .field--name-field-years-sober .sober-for-the-past {
+    color: #e5e5e5;
+    font-size: 30px; }
+  .field--name-field-years-sober .sober-years-text {
+    font-size: 30px;
+    text-align: justify; }
+  .field--name-field-years-sober .sober-princeton {
+    font-style: italic;
+    color: #e5e5e5;
+    font-size: 16px; }
+
+.field--name-field-sober-image {
+  width: 400px; }
+  .field--name-field-sober-image img {
+    width: 100%;
+    height: auto; }
+
 /*# sourceMappingURL=campuslife.css.map */

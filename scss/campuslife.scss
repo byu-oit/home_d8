@@ -49,3 +49,51 @@
 section.page-header {
     display: none;
 }
+
+.field-collection-item--name-field-sober-info .content {
+    display: flex;
+}
+.field--name-field-years-sober {
+    width: 600px;
+    background-color: $gray;
+    color: white;
+    font-family: $gotham;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: normal;
+    .sober-rank-block {
+        display: flex;
+    }
+    .sober-stone-cold-sober {
+        color: $navy;
+        font-style: italic;
+    }
+    .sober-university {
+        color: $navy;
+        text-transform: uppercase;
+        text-align: justify;
+    }
+    .sober-year-block {
+        display: flex;
+    }
+    .sober-for-the-past {
+        color: $lightgray;
+        font-size: 30px;
+    }
+    .sober-years-text {
+        font-size: 30px;
+        text-align: justify;
+    }
+    .sober-princeton {
+        font-style: italic;
+        color: $lightgray;
+        font-size: 16px;
+    }
+}
+.field--name-field-sober-image {
+    width: 400px;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
