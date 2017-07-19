@@ -52,17 +52,39 @@ section.page-header {
 
 .field-collection-item--name-field-sober-info .content {
     display: flex;
+    @media screen and (max-width: 320px) {
+        flex-wrap: wrap;
+    }
 }
 .field--name-field-years-sober {
-    width: 600px;
+    width: 800px;
     background-color: $gray;
     color: white;
     font-family: $gotham;
     font-weight: bold;
     font-size: 45px;
     line-height: normal;
+    @media screen and (min-width: 768px) {
+        padding-left: 30px;
+    }
+    @media screen and (min-width: 1024px) {
+        padding-left: 100px;
+    }
+    @media screen and (min-width: 1224px) {
+        padding-left: 170px;
+    }
+
+    .sober-ranked {
+        color: $lightgray;
+    }
     .sober-rank-block {
         display: flex;
+        align-items: flex-end;
+    }
+    .sober-number-1 {
+        font-size: 85px;
+        line-height: 84px;
+        padding-left: 10px;
     }
     .sober-stone-cold-sober {
         color: $navy;
@@ -75,6 +97,7 @@ section.page-header {
     }
     .sober-year-block {
         display: flex;
+        align-items: flex-start;
     }
     .sober-for-the-past {
         color: $lightgray;
@@ -84,10 +107,17 @@ section.page-header {
         font-size: 30px;
         text-align: justify;
     }
+    .sober-years-number {
+        font-size: 85px;
+        line-height: 75px;
+        padding-left: 130px;
+    }
     .sober-princeton {
         font-style: italic;
         color: $lightgray;
         font-size: 16px;
+        padding-left: 250px;
+        font-weight: normal;
     }
 }
 .field--name-field-sober-image {
@@ -95,5 +125,30 @@ section.page-header {
     img {
         width: 100%;
         height: auto;
+    }
+}
+@media screen and (max-width: 320px) {
+    .field--name-field-years-sober {
+        font-size: 7vw;
+        padding-left: 5px;
+        .sober-number-1 {
+            font-size: 12vw;
+            line-height: 12vw;
+        }
+        .sober-years-number {
+            padding-left: 20px;
+            font-size: 17vw;
+            line-height: 14vw;
+        }
+        .sober-for-the-past {
+            font-size: 6vw;
+        }
+        .sober-years-text {
+            font-size: 6vw;
+        }
+        .sober-princeton {
+            font-size: 5vw;
+            padding-left: 65px;
+        }
     }
 }
