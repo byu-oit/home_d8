@@ -539,64 +539,68 @@ h6 {
 .view-id-a_z_index h3 {
   margin: 25px 0px 15px; }
 
-.node__content .field--name-field-links {
+.field--name-field-links {
   text-align: center; }
-  .node__content .field--name-field-links .field__label {
+  .field--name-field-links .field__label {
     margin-right: 15px; }
-  .node__content .field--name-field-links .field__item {
+  .field--name-field-links .field__item {
     margin-right: 10px; }
-  .node__content .field--name-field-links div {
+  .field--name-field-links div {
     display: inline; }
     @media screen and (max-width: 767px) {
-      .node__content .field--name-field-links div {
+      .field--name-field-links div {
         display: block; }
-        .node__content .field--name-field-links div div.field__item {
+        .field--name-field-links div div.field__item {
           display: inline; } }
-    .node__content .field--name-field-links div a {
+    .field--name-field-links div a {
       color: white;
       background-color: #002E5D;
       padding: 10px 3em; }
-  .node__content .field--name-field-links div.field__item:last-of-type a {
+  .field--name-field-links div.field__item:last-of-type a {
     background-color: #697F96;
     padding: 10px 4.5em; }
 
-.block-views-blockadmissions-links-block-1 {
+.field--name-field-freshman-profile .field__items {
+  display: flex;
+  flex-wrap: wrap; }
+
+.view-id-admissions_links.view-display-id-block_1 {
   margin-top: 20px;
   border-top: solid #c5c5c5 1px;
   padding-top: 20px; }
-  .block-views-blockadmissions-links-block-1 .view-content ul {
+  .view-id-admissions_links.view-display-id-block_1 .view-content ul {
     list-style-type: none;
     padding-left: 10px; }
-    .block-views-blockadmissions-links-block-1 .view-content ul ul ul div.views-field-name a:before {
+    .view-id-admissions_links.view-display-id-block_1 .view-content ul ul ul div.views-field-name a:before {
       content: "> "; }
-    .block-views-blockadmissions-links-block-1 .view-content ul span.field-content {
+    .view-id-admissions_links.view-display-id-block_1 .view-content ul span.field-content {
       text-transform: uppercase;
       color: #666; }
-      .block-views-blockadmissions-links-block-1 .view-content ul span.field-content a {
+      .view-id-admissions_links.view-display-id-block_1 .view-content ul span.field-content a {
         text-transform: none; }
-  .block-views-blockadmissions-links-block-1 .view-content > ul {
+  .view-id-admissions_links.view-display-id-block_1 .view-content > ul {
     padding-left: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around; }
-    .block-views-blockadmissions-links-block-1 .view-content > ul > li {
+    .view-id-admissions_links.view-display-id-block_1 .view-content > ul > li {
       width: 360px;
       border-right: solid #c5c5c5 1px; }
-      .block-views-blockadmissions-links-block-1 .view-content > ul > li > div {
+      .view-id-admissions_links.view-display-id-block_1 .view-content > ul > li > div {
         display: none; }
       @media screen and (max-width: 991px) {
-        .block-views-blockadmissions-links-block-1 .view-content > ul > li {
+        .view-id-admissions_links.view-display-id-block_1 .view-content > ul > li {
           width: 400px;
           border-right: 0;
           border-bottom: solid #c5c5c5 1px;
           padding-bottom: 10px; } }
       @media screen and (min-width: 992px) and (max-width: 1223px) {
-        .block-views-blockadmissions-links-block-1 .view-content > ul > li {
+        .view-id-admissions_links.view-display-id-block_1 .view-content > ul > li {
           width: 310px; } }
-    .block-views-blockadmissions-links-block-1 .view-content > ul > li:last-of-type {
+    .view-id-admissions_links.view-display-id-block_1 .view-content > ul > li:last-of-type {
       border-right: 0; }
       @media screen and (max-width: 991px) {
-        .block-views-blockadmissions-links-block-1 .view-content > ul > li:last-of-type {
+        .view-id-admissions_links.view-display-id-block_1 .view-content > ul > li:last-of-type {
           border-bottom: 0; } }
 
 /*# sourceMappingURL=admissions.css.map */

@@ -31,7 +31,12 @@
   {% endif %}
 
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
+    {{ content.field_links }}
   </div>
 
+  {{ drupal_view('admissions_links', 'block_1') }}
+
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ content.field_freshman_profile }}
+  </div>
 </article>
