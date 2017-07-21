@@ -1,0 +1,86 @@
+@import "homepage";
+
+.node__content {
+    .field--name-field-links {
+        text-align: center;
+        .field__label {
+            margin-right: 15px;
+        }
+        .field__item {
+            margin-right: 10px;
+        }
+        div {
+            display: inline;
+            @media screen and (max-width: 767px) {
+                display: block;
+                div.field__item {
+                    display: inline;
+                }
+            }
+            a {
+                color: white;
+                background-color: $navy;
+                padding: 10px 3em;
+            }
+        }
+        div.field__item:last-of-type {
+            a {
+                background-color: $medblue;
+                padding: 10px 4.5em;
+            }
+        }
+    }
+}
+.block-views-blockadmissions-links-block-1 {
+    margin-top: 20px;
+    border-top: solid $gray 1px;
+    padding-top: 20px;
+    .view-content {
+        ul {
+            list-style-type: none;
+            padding-left: 10px;
+            ul {
+                ul {
+                    div.views-field-name a:before {
+                        content: "> ";
+                    }
+                }
+            }
+            span.field-content {
+                text-transform: uppercase;
+                color: $medgray;
+                a {
+                    text-transform: none;
+                }
+            }
+        }
+        > ul {
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            > li {
+                > div {
+                    display: none;
+                }
+                width: 360px;
+                border-right: solid $gray 1px;
+                @media screen and (max-width: 991px) {
+                    width: 400px;
+                    border-right: 0;
+                    border-bottom: solid $gray 1px;
+                    padding-bottom: 10px;
+                }
+                @media screen and (min-width: 992px) and (max-width: 1223px) {
+                    width: 310px;
+                }
+            }
+            > li:last-of-type {
+                border-right: 0;
+                @media screen and (max-width: 991px) {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+}

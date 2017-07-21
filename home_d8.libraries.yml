@@ -19,6 +19,11 @@ campuslife:
       css/campuslife.css: {}
   js:
     js/campuslife.js: {}
+admissions:
+  version: 8.x
+  css:
+    base:
+      css/admissions.css: {}
 fonts-basic:
   remote: https://cloud.typography.com/75214/7683772/css/fonts.css
   version: 1.0.0
