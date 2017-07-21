@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ----------- BYU HOMEPAGE SPECIFIC--------- */
 /* --- BYU COlors --- */
 a {
@@ -43,53 +44,110 @@ h3, .h3 {
   line-height: 19px; }
   h3 a:hover, .h3 a:hover {
     font-weight: bold; }
+=======
+.h1, .h10, .h11, .h12, .h2, .h3, .h4, .h8, .h9, h1, h2, h3, h4 {
+    color: #002e5d
+}
+
+.h5, h5 {
+    color: #767676
+}
+
+.h11.white, .h12.white, .h13, .h6, .h7, .h8.white, .h9.white, h6 {
+    color: #fff
+}
+
+.h1, .h2, h1, h2 {
+    font-family: "Vitesse A", "Vitesse B", serif
+}
+
+.h10, .h11, .h12, .h13, .h3, .h5, .h6, .h7, .h8, .h9, h3, h5, h6 {
+    font-family: "Gotham A", "Gotham B", Arial, sans-serif
+}
+
+.h1, h1 {
+    font-size: 35px;
+    line-height: 34px;
+    text-align: center
+}
+
+.h2, h2 {
+    font-size: 25px;
+    line-height: 34px;
+    text-align: center
+}
+
+.h3, h3 {
+    font-size: 15px;
+    letter-spacing: -.2px;
+    line-height: 19px
+}
+
+.h3 a:hover, h3 a:hover {
+    font-weight: 700
+}
+>>>>>>> master
 
 h4 {
-  font-size: 18px;
-  line-height: 20px; }
-  h4 a:hover {
-    color: #003DA5; }
+    font-size: 18px;
+    line-height: 20px
+}
+
+h4 a:hover {
+    color: #003da5
+}
 
 h5 {
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: .33px; }
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: .33px
+}
 
 h6 {
-  font-size: 25px;
-  line-height: 27px;
-  text-transform: uppercase;
-  text-align: center; }
+    font-size: 25px;
+    line-height: 27px;
+    text-transform: uppercase;
+    text-align: center
+}
 
 .h7 {
-  font-size: 14px;
-  line-height: 14px;
-  text-transform: uppercase;
-  text-align: center; }
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    text-align: center
+}
 
 .h8 {
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: -.2px;
-  text-align: center; }
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -.2px;
+    text-align: center
+}
 
 .h9 {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 40px;
-  letter-spacing: .4px; }
-  .h9 a:hover {
-    color: #003DA5; }
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: .4px
+}
+
+.h9 a:hover {
+    color: #003da5
+}
 
 .h10 {
-  font-size: 35px;
-  line-height: 40px;
-  font-weight: bold; }
-  .h10.white {
-    color: #fff; }
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: 700
+}
+
+.h10.white {
+    color: #fff
+}
 
 .h11 {
+<<<<<<< HEAD
   font-family: "Gotham A", "Gotham B", Arial, sans-serif;
   font-size: 35px;
   font-weight: bold;
@@ -101,66 +159,113 @@ h6 {
   text-transform: uppercase;
   font-weight: 500;
   /*letter-spacing:*/ }
+=======
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 40px
+}
+
+.h12 {
+    font-size: 16px;
+    line-height: 18px
+}
+>>>>>>> master
 
 .h13 {
-  font-size: 45px;
-  /*line-height:*/ }
+    font-size: 45px
+}
 
 @media screen and (min-width: 768px) {
-  .h13 {
-    font-size: 90px; } }
+    .h13 {
+        font-size: 90px
+    }
+}
 
 @media screen and (min-width: 1024px) {
-  h2 {
-    font-size: 30px; }
-  h3 {
-    font-size: 17px;
-    /*line-height: ??;*/ }
-  .h13 {
-    font-size: 120px; } }
+    h2 {
+        font-size: 30px
+    }
+
+    h3 {
+        font-size: 17px
+    }
+
+    .h13 {
+        font-size: 120px
+    }
+}
 
 @media screen and (min-width: 1224px) {
-  h1 {
-    font-size: 40px;
-    text-align: left; }
-  h2 {
-    font-size: 35px; }
-  h3 {
-    font-size: 20px; }
-  /* we may not do this this way */
-  .h8 {
-    font-size: 16px;
-    line-height: 17px; }
-  .h9 {
-    font-size: 20px;
-    letter-spacing: .5px;
-    line-height: 48px; }
-  .h10 {
-    font-size: 60px;
-    line-height: 82px;
-    letter-spacing: -2.5px;
-    font-weight: 500; }
-  .h13 {
-    font-size: 135px; } }
+    h1 {
+        font-size: 40px;
+        text-align: left
+    }
+
+    h2 {
+        font-size: 35px
+    }
+
+    h3 {
+        font-size: 20px
+    }
+
+    .h8 {
+        font-size: 16px;
+        line-height: 17px
+    }
+
+    .h9 {
+        font-size: 20px;
+        letter-spacing: .5px;
+        line-height: 48px
+    }
+
+    .h10 {
+        font-size: 60px;
+        line-height: 82px;
+        letter-spacing: -2.5px;
+        font-weight: 500
+    }
+
+    .h13 {
+        font-size: 135px
+    }
+}
 
 @media screen and (min-width: 1824px) {
-  .h13 {
-    font-size: 200px; } }
+    .h13 {
+        font-size: 200px
+    }
+}
 
+<<<<<<< HEAD
 /* ---- general mixins ----------- */
 /* ----- helpful classes ----------- */
+=======
+.quote-icon {
+    font-weight: 700;
+    font-size: 200px;
+    color: #e5e5e5
+}
+
+>>>>>>> master
 .normal-weight {
-  font-weight: normal; }
+    font-weight: 400
+}
 
 .bold {
-  font-weight: bold; }
+    font-weight: 700
+}
 
 .semibold {
-  font-weight: 500; }
+    font-weight: 500
+}
 
 .all-caps {
-  text-transform: uppercase; }
+    text-transform: uppercase
+}
 
+<<<<<<< HEAD
 .left-text {
   text-align: left; }
 
@@ -584,3 +689,20 @@ h6 {
   margin: 25px 0px 15px; }
 
 /*# sourceMappingURL=homepage.css.map */
+=======
+.navy-button {
+    background: #002e5d;
+    color: #fff;
+    padding: 12px 25px
+}
+
+.medblue-button {
+    background: #002e5d;
+    color: #fff;
+    padding: 12px 25px
+}
+
+.bg-lightgray {
+    background: #e5e5e5
+}
+>>>>>>> master
