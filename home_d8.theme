@@ -153,7 +153,10 @@ function home_d8_preprocess_page(&$variables) {
     $variables['contact_us'] =  theme_get_setting('contact_us');
     $variables['breadcrumbs'] =  theme_get_setting('breadcrumbs');
 
-
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+    $suggestions[] = 'page__'.$content_type;
+  }
 
 
 
