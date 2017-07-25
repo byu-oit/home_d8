@@ -570,6 +570,13 @@ h6 {
     padding-left: 160px;
     font-family: "Vitesse A", "Vitesse B", serif;
     font-weight: normal; }
+    @media screen and (max-width: 1199px) {
+      .field--name-field-freshman-profile .field__label {
+        padding-left: 60px; } }
+    @media screen and (max-width: 991px) {
+      .field--name-field-freshman-profile .field__label {
+        padding-left: 0;
+        text-align: center; } }
   .field--name-field-freshman-profile .field__items {
     display: flex;
     flex-wrap: wrap;
@@ -580,6 +587,10 @@ h6 {
       margin: 10px;
       padding: 10px 30px;
       color: #697F96; }
+      @media screen and (max-width: 320px) {
+        .field--name-field-freshman-profile .field__items > .field__item {
+          margin: 10px -10px;
+          padding: 10px 15px; } }
       .field--name-field-freshman-profile .field__items > .field__item .field-collection-item--name-field-freshman-profile div {
         line-height: normal; }
       .field--name-field-freshman-profile .field__items > .field__item .field-collection-item--name-field-freshman-profile .field--name-field-data-type {

@@ -40,6 +40,13 @@
         padding-left: 160px;
         font-family: $vitesse;
         font-weight: normal;
+        @media screen and (max-width: 1199px) {
+            padding-left: 60px;
+        }
+        @media screen and (max-width: 991px) {
+            padding-left: 0;
+            text-align: center;
+        }
     }
     .field__items {
         display: flex;
@@ -50,6 +57,10 @@
             background-color: white;
             margin: 10px;
             padding: 10px 30px;
+            @media screen and (max-width: 320px) {
+                margin: 10px -10px;
+                padding: 10px 15px;
+            }
             color: $medblue;
             .field-collection-item--name-field-freshman-profile {
                 div {
