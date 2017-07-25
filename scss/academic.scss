@@ -18,17 +18,24 @@ $other-circle-size : 155px;
 .field--name-field-academic-minor-links {padding-top:2em;}
 .rank-prefix{color:$lightgray;display: inline;}
 .byline-prefix{color:$white;display: inline;}
-#academic-y-facts {background-color: $medgray;}
+#academic-y-facts .col-md-6{background-color: $medgray;min-height: 15em}
 //#academic-y-facts div {float: left;}
 div#links-and-calendar{min-height: 80em;}
+.academic-success .h2 {text-align: left;font-weight: 500;}
+.academic-success .h3 {text-align: left;font-weight: 400;}
 
-
-.view-content-page-header {display: flex;justify-content: center;}
+.view-content-page-header {display: flex;justify-content: center;text-transform: uppercase;}
 .view-content-page-header
 .h8.italic {font-style: italic;font-weight: 500}
 
 .paragraph--type--academic-highlight {
 background-color: $white;
 }
+div#academic-highlight-overlay {background-color: $lightBlue;}
 div#academic-highlight-overlay:first-of-type {background-color: $medblue;}
-
+div#academic-highlight-overlay .h6 {
+  font-size: 25px;
+  line-height: 27px;
+  text-transform: uppercase;
+  text-align: left;
+}

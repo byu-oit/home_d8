@@ -45,15 +45,25 @@
   color: #FFF;
   display: inline; }
 
-#academic-y-facts {
-  background-color: #767676; }
+#academic-y-facts .col-md-6 {
+  background-color: #767676;
+  min-height: 15em; }
 
 div#links-and-calendar {
   min-height: 80em; }
 
+.academic-success .h2 {
+  text-align: left;
+  font-weight: 500; }
+
+.academic-success .h3 {
+  text-align: left;
+  font-weight: 400; }
+
 .view-content-page-header {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  text-transform: uppercase; }
 
 .view-content-page-header
 .h8.italic {
@@ -63,7 +73,16 @@ div#links-and-calendar {
 .paragraph--type--academic-highlight {
   background-color: #FFF; }
 
+div#academic-highlight-overlay {
+  background-color: #e0f0cc; }
+
 div#academic-highlight-overlay:first-of-type {
   background-color: #697F96; }
+
+div#academic-highlight-overlay .h6 {
+  font-size: 25px;
+  line-height: 27px;
+  text-transform: uppercase;
+  text-align: left; }
 
 /*# sourceMappingURL=academic.css.map */
