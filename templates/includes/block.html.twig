@@ -40,7 +40,11 @@
       <span slot="header" {{ title_attributes }}>{{ label }}</span>
     {% endif %}
     {#{% block content %}#}
-      {{ content['body'][0]['#text']|t }}
+      {% if content['body'] is defined %}
+        {{ content['body'][0]['#text']|t }}
+      {% else %}
+          <em>Block body undefined</em>
+      {% endif %}
     {#{% endblock %}#}
 
 {% else %}
