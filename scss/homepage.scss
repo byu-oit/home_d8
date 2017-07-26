@@ -1,66 +1,11 @@
-
+@import "mixins";
 /* ----------- BYU HOMEPAGE SPECIFIC--------- */
-
-
-
-/* --- BYU Colors --- */
-
-// blues
-$navy: #002E5D;
-$darknavy: #002040;
-$medblue: #869DB5;
-$lightBlue: #e0f0cc;
-$xlightblue: #C3DDF9;
-$brightBlue: #0057B8;
-
-$royal: #003DA5;
-$lightRoyal: #114BAD;
-
-// There are 6 grays right now..
-$xlightgray: #f2f2f2;
-$lightgray: #e5e5e5;
-$lightergray: #e6e6e6;
-$medgray: #767676; // extra
-$gray: #c5c5c5;
-$medgray: #666;
-$darkgray: #6a6a6b; // least used gray
-$darkestgray: #141414;  // this should be used for body & default text.
-
-
-// other colors
-$red: #B3041A;
-
-$yellow: #FCC015;
-$lightyellow: #fef2d0;
-
-$teal: #84DCB4;
-$lightteal: #C4F7E0;
-
-$green: #66B200; // doesn't work with accessibility
-$lightgreen: #e0f0cc;
-//$green: #4D8501; // was #6EAE17;
-//$greendarkened: #498000 ; // was #6AA816;
-
-// other blues Aleni has used:
-//$lightestblue: #C4CFDA;
-//$lightblue: #A6B6C7;
-//$lightmedblue: #889FB7;
-$medblue: #697F96;  // was #889FB7  but it couldn't have white on it with enough contrast
-//$darkmedblue: #5B728A;  // #5B728A is enough contrast for small white text
-
-
 a {
   color: $navy;
 }
 a:hover {
   color: $royal;
 }
-
-/* ---- fonts
- */
-$gotham: "Gotham A", "Gotham B", Arial, sans-serif;
-$vitesse: "Vitesse A", "Vitesse B", serif;
-
 
   /* ------------- Headings Etc -------------------- */
 
@@ -170,14 +115,25 @@ h6 {
   font-weight: 500;
   /*letter-spacing:*/
 }
+$h13-mobile-font:45px;
+$h13-tabletp-font:90px;
+$h13-tabletl-font: 120px;
+$h13-desktop-font:135px;
+$h13-desktopw-font: 200px;
 .h13 {
-  font-size: 45px;
+  font-size: $h13-mobile-font;
   /*line-height:*/
+}
+.view-content-page-header .views-field-title {
+  margin-top: ($h13-mobile-font *.73*-1);
 }
 
 @media screen and (min-width: 768px) {
   .h13 {
-    font-size: 90px;
+    font-size: $h13-tabletp-font;
+  }
+  .view-content-page-header .views-field-title {
+    margin-top: ($h13-tabletp-font *.50*-1);
   }
 }
 @media screen and (min-width: 1024px) {
@@ -188,8 +144,12 @@ h6 {
     font-size: 17px;
     /*line-height: ??;*/
   }
+
   .h13 {
-    font-size: 120px;
+    font-size: $h13-tabletl-font;
+  }
+  .view-content-page-header .views-field-title {
+    margin-top: ($h13-tabletl-font *.50*-1);
   }
 
 
@@ -197,7 +157,6 @@ h6 {
 @media screen and (min-width: 1224px) {
   h1 {
     font-size: 40px;
-    text-align: left;
   }
   h2 {
     font-size: 35px;
@@ -222,25 +181,33 @@ h6 {
     font-weight: 500;
   }
   .h13 {
-    font-size: 135px;
+    font-size: $h13-desktop-font;
+  }
+  .view-content-page-header .views-field-title {
+    margin-top: ($h13-desktop-font *.50*-1);
   }
 }
 @media screen and (min-width: 1824px) {
+
   .h13 {
-    font-size: 200px;
+    font-size: $h13-desktopw-font;
+  }
+  .view-content-page-header .views-field-title {
+    margin-top: ($h13-desktopw-font *.45*-1);
   }
 }
 
-/* ---- general mixins ----------- */
-
-@mixin fieldWithMaxWidth() {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+.navy-circle {
+  @include navy-circle(156px); // default
+  // include this line for your specific navy-circle's and override the size for your specific circles
 }
 
-
-
+.vertical-dots {
+  @include vertical-dots();
+  .gray-dot {
+    @include gray-dot();
+  }
+}
 
 /* ----- helpful classes ----------- */
 .normal-weight {
@@ -296,32 +263,6 @@ h6 {
   background: $darkgray;
 }
 
-// used so far on about page - don't change
-$circle-width: 156px;
-.navy-circle {
-  background: $navy;
-  padding: 25px ;
-  border: 2px solid $medgray;
-  border-radius: 50%;
-  width: $circle-width;
-  height: $circle-width;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.vertical-dots {
-  display: flex;
-  //flex-wrap: wrap;
-  flex-direction: column;
-  margin: 15px 0px;
-  .gray-dot {
-    color: $medgray;
-    font-size: 60px;
-    margin: 0px;
-  }
-}
-
 
 
 // testing if this works
@@ -347,39 +288,38 @@ $circle-width: 156px;
 
 
 /* ----- main page --------- */
-//4 main content types that have stretch-full-width with bars
-.type-about, .type-academic, .type-admissions, .type-campus-life {
-  .main {
-    padding: 20px 0px;
-    .node__content > :not(.full-width-bar) {
-      max-width: 1224px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .container {
-      width: 100%;
-      padding: 0px;
-    }
 
-    .full-width-bar {
-      width: 100%;
-      max-width: 100%;
-      padding: 30px 15px;
-      // default constrained width settings, override for specific fields
-
-      .field, .full-width-bar-inner {
-        @include fieldWithMaxWidth();
-      }
-      // use if the bar has several fields that aren't 100% width and you
-      // want to display them nicely in columns or with flex (add this div inside the
-      // group's template file - see field-group-html-element--about-bar as an example
-      .full-width-bar-inner {
-        display: flex;
-      }
-    }
-
+.main.main-4-page {
+  padding: 20px 0px;
+  .node__content > :not(.full-width-bar) {
+    max-width: 1224px;
+    margin-left: auto;
+    margin-right: auto;
   }
+  .container {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .full-width-bar {
+    width: 100%;
+    max-width: 100%;
+    padding: 30px 15px;
+    // default constrained width settings, override for specific fields
+
+    .field, .full-width-bar-inner {
+      @include fieldWithMaxWidth();
+    }
+    // use if the bar has several fields that aren't 100% width and you
+    // want to display them nicely in columns or with flex (add this div inside the
+    // group's template file - see field-group-html-element--about-bar as an example
+    .full-width-bar-inner {
+      display: flex;
+    }
+  }
+
 }
+
 
 /* ----------- Front Page ------- */
 
@@ -387,7 +327,7 @@ $circle-width: 156px;
 
 
 /* ------------ About Page ---------- */
-.type-about .main {
+.main.main-4-page {
   // quote
   .quote-wrapper.full-width-bar-inner {
     display: flex;
@@ -482,10 +422,10 @@ $circle-width: 156px;
       width: 0;
     }
     50% {
-      width: 50;
+      width: 50%;
     }
     100% {
-      width: 100;
+      width: 100%;
     }
   }
 
@@ -503,7 +443,7 @@ $circle-width: 156px;
     .tooltip {
       position: relative;
       float: right;
-      background-color: none;
+      background-color: unset;
       opacity: 1 !important;
     }
     .tooltip > .tooltip-inner {
@@ -612,7 +552,7 @@ $circle-width: 156px;
     .tooltip {
       position: relative;
       float: right;
-      background-color: none;
+      background-color: unset;
       /*   opacity: 1!important; */
     }
     .tooltip > .tooltip-inner {
@@ -739,9 +679,14 @@ $circle-width: 156px;
   // languages
   .demographics3 {
     margin-top: -100px;
+
+    .navy-circle {
+      @include navy-circle(156px);
+    }
   }
 
   // circles
+  $about-circle-width: 156px;
   $circle-left-movement: 490px;
   $between-circles-adjustment: 130px;
 
@@ -749,11 +694,11 @@ $circle-width: 156px;
   $studentsSpeakingBarHeight: 28px;
   $studentsSpeakingBarWidth: 282px;
   // so that this circle is past lower circle but overlapped behind a little
-  $langTaughtMargin: $studentsSpeakingBarWidth + ($circle-width / 2) - 30px;
+  $langTaughtMargin: $studentsSpeakingBarWidth + ($about-circle-width / 2) - 30px;
 
   .vertical-dots.before-languages {
     //position: relative;
-    margin-left: $langTaughtMargin + ($circle-width / 2) - 8px; // - 8 for width of small dots
+    margin-left: $langTaughtMargin + ($about-circle-width / 2) - 8px; // - 8 for width of small dots
   }
 
   .languages-taught-circle {
@@ -769,7 +714,7 @@ $circle-width: 156px;
   }
   .languages-spoken-circle {
     //position: relative;
-    margin-left: $studentsSpeakingBarWidth - ($circle-width / 2);
+    margin-left: $studentsSpeakingBarWidth - ($about-circle-width / 2);
     margin-top: -80px;
   }
 
@@ -889,22 +834,28 @@ $circle-width: 156px;
 
 }
 
+
+
 /* ---- Admissions Page ---------- */
-
-
-
-
-
 
 
 /* ----- Academics Page ------------ */
 
 
-
 /* ------------ Campus Life Page ------------ */
 
 
-
-
-
 /* -------- Basic Pages ------------- */
+
+
+
+/* -- AZ Index --- */
+.view-id-a_z_index {
+  .view-content {
+    padding-bottom: 20px;
+  }
+ h3 {
+   margin: 25px 0px 15px;
+ }
+}
+

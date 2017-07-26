@@ -1,580 +1,88 @@
-/* ----------- BYU HOMEPAGE SPECIFIC--------- */
-/* --- BYU Colors --- */
-a {
-  color: #002E5D; }
-
-a:hover {
-  color: #003DA5; }
-
-/* ---- fonts
- */
-/* ------------- Headings Etc -------------------- */
-h1, h2, h3, h4, .h1, .h2, .h3, .h4, .h8, .h9, .h10, .h11, .h12,
-h1 a, h2 a, h3 a, h4 a, .h1 a, .h2 a, .h3 a, .h4 a, .h8 a, .h9 a, .h10 a, .h11 a, .h12 a {
-  color: #002e5d; }
-
-h5 a, .h5 a,
-h5, .h5, .h9.gray, .h9.gray a, .h11.gray, .h11.gray a {
-  color: #666; }
-
-h6 a, .h6 a, .h7 a, .h8.white a, .h9.white a, .h11.white a, .h12.white a, .h13 a,
-h6, .h6, .h7, .h8.white, .h9.white, .h10.white, .h10.white a, .h11.white, .h12.white, .h13 {
-  color: #fff; }
-
-h1, h2, .h1, .h2 {
-  font-family: "Vitesse A", "Vitesse B", serif; }
-
-h3, h5, h6, .h3, .h5, .h6, .h7, .h8, .h9, .h10, .h11, .h12, .h13 {
-  font-family: "Gotham A", "Gotham B", Arial, sans-serif; }
-
-h1, .h1 {
-  font-size: 35px;
-  line-height: 34px;
-  text-align: center; }
-
-h2, .h2 {
-  font-size: 25px;
-  line-height: 34px;
-  text-align: center; }
-
-h3, .h3 {
-  font-size: 15px;
-  letter-spacing: -.2px;
-  line-height: 19px; }
-  h3 a:hover, .h3 a:hover {
-    font-weight: bold; }
-
-h4 {
-  font-size: 18px;
-  line-height: 20px; }
-  h4 a:hover {
-    color: #003DA5; }
-
-h5 {
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: .33px; }
-
-h6 {
-  font-size: 25px;
-  line-height: 27px;
-  text-transform: uppercase;
-  text-align: center; }
-
-.h7 {
-  font-size: 14px;
-  line-height: 14px;
-  text-transform: uppercase;
-  text-align: center; }
-
-.h8 {
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: -.2px;
-  text-align: center; }
-
-.h9 {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 40px;
-  letter-spacing: .4px; }
-  .h9 a:hover {
-    color: #003DA5; }
-
-.h10 {
-  font-size: 35px;
-  line-height: 40px;
-  font-weight: bold; }
-  .h10.white {
-    color: #fff; }
-
-.h11 {
-  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
-  font-size: 35px;
-  font-weight: bold;
-  line-height: 40px; }
-
-.h12 {
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  font-weight: 500;
-  /*letter-spacing:*/ }
-
-.h13 {
-  font-size: 45px;
-  /*line-height:*/ }
-
-@media screen and (min-width: 768px) {
-  .h13 {
-    font-size: 90px; } }
-
-@media screen and (min-width: 1024px) {
-  h2 {
-    font-size: 30px; }
-  h3 {
-    font-size: 17px;
-    /*line-height: ??;*/ }
-  .h13 {
-    font-size: 120px; } }
-
-@media screen and (min-width: 1224px) {
-  h1 {
-    font-size: 40px;
-    text-align: left; }
-  h2 {
-    font-size: 35px; }
-  h3 {
-    font-size: 20px; }
-  /* we may not do this this way */
-  .h8 {
-    font-size: 16px;
-    line-height: 17px; }
-  .h9 {
-    font-size: 20px;
-    letter-spacing: .5px;
-    line-height: 48px; }
-  .h10 {
-    font-size: 60px;
-    line-height: 82px;
-    letter-spacing: -2.5px;
-    font-weight: 500; }
-  .h13 {
-    font-size: 135px; } }
-
-@media screen and (min-width: 1824px) {
-  .h13 {
-    font-size: 200px; } }
-
-/* ---- general mixins ----------- */
-/* ----- helpful classes ----------- */
-.normal-weight {
-  font-weight: normal; }
-
-.bold {
-  font-weight: bold; }
-
-.semibold {
-  font-weight: 500; }
-
-.all-caps {
-  text-transform: uppercase; }
-
-.left-text {
-  text-align: left; }
-
-.right-text {
-  text-align: right; }
-
-.centered-text {
-  text-align: center; }
-
-.centered-margin {
-  margin-left: auto;
-  margin-right: auto; }
-
-.royal-button {
-  padding: 12px 25px;
-  background: #003DA5;
-  color: #fff; }
-  .royal-button a:hover {
-    text-decoration: none; }
-
-.medblue-button {
-  padding: 12px 25px;
-  background: #002e5d;
-  /* change to medium blue */
-  color: #fff; }
-  .medblue-button a:hover {
-    text-decoration: none; }
-
-.bg-lightgray {
-  background: #e5e5e5; }
-
-.bg-darkgray {
-  background: #6a6a6b; }
-
-.navy-circle {
+.undergrad-circle {
   background: #002E5D;
   padding: 25px;
-  border: 2px solid #666;
+  border: 2px solid #767676;
   border-radius: 50%;
-  width: 156px;
-  height: 156px;
+  width: 190px;
+  height: 190px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
 
-.vertical-dots {
-  display: flex;
-  flex-direction: column;
-  margin: 15px 0px; }
-  .vertical-dots .gray-dot {
-    color: #666;
-    font-size: 60px;
-    margin: 0px; }
-
-.blue-dot-after:after {
-  content: "*";
-  color: #002E5D; }
-
-/* --------- Regions ---------- */
-/* ---- header --- */
-.byu-search .visually-hidden,
-.byu-search input#edit-submit {
-  display: none; }
-
-.byu-search .form-control.__byu-search-selected-input {
-  width: 100%;
-  height: 35px; }
-
-/* ----- main page --------- */
-.type-about .main, .type-academic .main, .type-admissions .main, .type-campus-life .main {
-  padding: 20px 0px; }
-  .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar) {
-    max-width: 1224px;
-    margin-left: auto;
-    margin-right: auto; }
-  .type-about .main .container, .type-academic .main .container, .type-admissions .main .container, .type-campus-life .main .container {
-    width: 100%;
-    padding: 0px; }
-  .type-about .main .full-width-bar, .type-academic .main .full-width-bar, .type-admissions .main .full-width-bar, .type-campus-life .main .full-width-bar {
-    width: 100%;
-    max-width: 100%;
-    padding: 30px 15px; }
-    .type-about .main .full-width-bar .field, .type-about .main .full-width-bar .full-width-bar-inner, .type-academic .main .full-width-bar .field, .type-academic .main .full-width-bar .full-width-bar-inner, .type-admissions .main .full-width-bar .field, .type-admissions .main .full-width-bar .full-width-bar-inner, .type-campus-life .main .full-width-bar .field, .type-campus-life .main .full-width-bar .full-width-bar-inner {
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto; }
-    .type-about .main .full-width-bar .full-width-bar-inner, .type-academic .main .full-width-bar .full-width-bar-inner, .type-admissions .main .full-width-bar .full-width-bar-inner, .type-campus-life .main .full-width-bar .full-width-bar-inner {
-      display: flex; }
-
-/* ----------- Front Page ------- */
-/* ------------ About Page ---------- */
-.type-about .main .quote-wrapper.full-width-bar-inner {
-  display: flex;
-  margin-top: 50px; }
-
-.type-about .main .quote-icon {
-  font-weight: bold;
-  font-size: 200px;
-  font-family: "Vitesse A", "Vitesse B", serif;
-  color: #e5e5e5;
-  margin-top: 30px; }
-
-.type-about .main .full-width-bar.links-video-group {
-  margin-top: 30px;
-  padding: 40px 15px 60px; }
-  .type-about .main .full-width-bar.links-video-group iframe {
-    width: 766px;
-    height: 405px; }
-
-.type-about .main .field--name-field-links {
-  width: 30%;
-  margin-left: 0px;
-  margin-right: 0px; }
-
-.type-about .main .field--name-field-video {
-  width: 70%;
-  margin-top: 20px;
-  margin-left: 0px;
-  margin-right: 0px; }
-
-.type-about .main .full-width-bar.yfacts-about {
-  height: 400px;
-  padding-top: 250px;
-  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
-  font-style: italic;
-  font-size: 22px;
-  line-height: 28px;
-  margin: 0px 0px 60px 0px; }
-  .type-about .main .full-width-bar.yfacts-about p {
-    color: #f2f2f2; }
-  .type-about .main .full-width-bar.yfacts-about .larger-p, .type-about .main .full-width-bar.yfacts-about .larger-p2 {
-    white-space: nowrap;
-    overflow: hidden;
-    line-height: 30px;
-    width: 100%;
-    display: none; }
-  .type-about .main .full-width-bar.yfacts-about .larger-text {
-    font-size: 36px;
-    color: #fff;
-    font-weight: 500; }
-
-@keyframes type {
-  from {
-    width: 0; } }
-
-@keyframes type2 {
-  0% {
-    width: 0; }
-  50% {
-    width: 50; }
-  100% {
-    width: 100; } }
-
-@keyframes blink {
-  to {
-    opacity: .0; } }
-
-.type-about .main .students-group .barWrapper {
-  padding: 0px; }
-
-.type-about .main .students-group .tooltip {
-  position: relative;
-  float: right;
-  background-color: none;
-  opacity: 1 !important; }
-
-.type-about .main .students-group .tooltip > .tooltip-inner {
-  background: none;
-  padding: 15px 15px;
-  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
-  font-size: 35px;
-  font-weight: bold;
-  line-height: 40px; }
-
-.type-about .main .students-group .popOver + .tooltip > .tooltip-arrow {
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #eebf3f; }
-
-.type-about .main .students-group .assets-wrap {
-  opacity: 1; }
-
-.type-about .main .students-group .tooltip.bottom .tooltip-arrow {
-  margin-left: -10px;
-  border-width: 0px 10px 20px;
-  border-left: 10px solid #002E5D;
-  border-right: 10px solid #002E5D;
-  border-color: #002E5D;
-  opacity: 1;
-  border-radius: 36px;
-  margin-top: -9px; }
-
-.type-about .main .students-group .color-2 .tooltip.bottom .tooltip-arrow {
-  border-color: #666; }
-
-.type-about .main .students-group .progress {
-  border-radius: 0;
-  overflow: visible;
-  height: 8px;
-  background-color: #e6e6e6;
-  box-shadow: none; }
-
-.type-about .main .students-group .progress-bar {
-  background: #002e5d;
-  -webkit-transition: width 1.5s ease-in-out;
-  transition: width 1.5s ease-in-out; }
-
-.type-about .main .students-group .progress-bar.color-2 {
-  background: #666; }
-
-.type-about .main .students-group.row {
+.other-circle {
+  background: #002E5D;
+  padding: 25px;
+  border: 2px solid #767676;
+  border-radius: 50%;
+  width: 155px;
+  height: 155px;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 75px; }
+  justify-content: center;
+  margin-left: -11px; }
 
-.type-about .main .grad-wrapper {
-  order: 3;
-  margin-top: -85px; }
+@media screen and (min-width: 1024px) {
+  #academic-y-facts .col-md-6 {
+    display: flex;
+    margin-top: 3em;
+    align-items: center; } }
+.field--name-field-academic-major-links {
+  border-bottom: 1px solid #767676;
+  padding-bottom: 2em; }
 
-.type-about .main .field--name-field-undergrads,
-.type-about .main .field--name-field-grads {
-  width: 77%; }
+.field--name-field-academic-minor-links .h12 a {
+  line-height: 40px;
+  text-transform: none; }
 
-.type-about .main .field--name-field-total-students {
-  width: 23%; }
+.field--name-field-academic-minor-links {
+  padding-top: 2em; }
 
-.type-about .main .field--name-field-total-students .field__label {
-  line-height: 20px;
-  text-align: right; }
+.rank-prefix {
+  color: #e5e5e5;
+  display: inline; }
 
-.type-about .main .field--name-field-total-students {
-  background: #f2f2f2;
-  display: inline;
-  height: 170px;
-  padding: 25px 45px; }
-  .type-about .main .field--name-field-total-students .field__item {
-    font-size: 55px;
-    color: #002E5D;
-    font-weight: bold;
-    text-align: right;
-    padding: 25px 0px 0px; }
+.byline-prefix {
+  color: #FFF;
+  display: inline; }
 
-.type-about .main .field--name-field-gender {
+#academic-y-facts .col-md-6 {
+  background-color: #767676;
+  min-height: 15em; }
+
+div#links-and-calendar {
+  min-height: 80em; }
+
+.academic-success .h2 {
+  text-align: left;
+  font-weight: 500; }
+
+.academic-success .h3 {
+  text-align: left;
+  font-weight: 400; }
+
+.view-content-page-header {
   display: flex;
-  margin-bottom: 80px; }
-  .type-about .main .field--name-field-gender .bar2 {
-    text-align: end; }
-  .type-about .main .field--name-field-gender .bar2 .progress {
-    -moz-transform: scale(-1, 1);
-    -webkit-transform: scale(-1, 1);
-    -o-transform: scale(-1, 1);
-    -ms-transform: scale(-1, 1);
-    transform: scale(-1, 1); }
-  .type-about .main .field--name-field-gender .tooltip {
-    position: relative;
-    float: right;
-    background-color: none;
-    /*   opacity: 1!important; */ }
-  .type-about .main .field--name-field-gender .tooltip > .tooltip-inner {
-    background: none;
-    padding: 15px 15px;
-    color: #172c42;
-    font-weight: bold;
-    font-size: 13px; }
-  .type-about .main .field--name-field-gender .popOver + .tooltip > .tooltip-arrow {
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid #eebf3f; }
-  .type-about .main .field--name-field-gender .progress {
-    border-radius: 0;
-    overflow: visible;
-    height: 50px;
-    box-shadow: none;
-    background: none; }
-  .type-about .main .field--name-field-gender .progress-bar {
-    background: #84DCB4;
-    -webkit-transition: width 1.5s ease-in-out;
-    transition: width 1.5s ease-in-out;
-    border-radius: 0px;
-    height: 50px;
-    border: none; }
-  .type-about .main .field--name-field-gender .progress-bar.color-2 {
-    background: #C4F7E0;
-    z-index: 1; }
-  @media screen and (min-width: 1224px) {
-    .type-about .main .field--name-field-gender .progressText {
-      display: none;
-      margin-top: 1px;
-      margin-bottom: -53px;
-      padding: 0px 15px;
-      z-index: 100;
-      position: relative; } }
-  .type-about .main .field--name-field-gender .progressText2.h9 {
-    padding-left: 3px; }
+  justify-content: center;
+  text-transform: uppercase; }
 
-.type-about .main div#about-demographics {
-  max-width: 816px; }
+.view-content-page-header
+.h8.italic {
+  font-style: italic;
+  font-weight: 500; }
 
-.type-about .main .demographics1 {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px; }
+.paragraph--type--academic-highlight {
+  background-color: #FFF; }
 
-.type-about .main .demographics1-top-label {
-  margin-left: auto;
-  margin-right: auto; }
+div#academic-highlight-overlay {
+  background-color: #e0f0cc; }
 
-.type-about .main .states-cont, .type-about .main .countries-cont {
-  display: flex; }
+div#academic-highlight-overlay:first-of-type {
+  background-color: #697F96; }
 
-.type-about .main .states-label, .type-about .main .countries-label {
-  display: inline;
-  padding: 0px 5px; }
-
-.type-about .main .and-icon {
-  font-weight: 500;
-  font-size: 130px;
-  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
-  color: #002E5D;
-  padding: 0px 25px; }
-
-.type-about .main .state-percents-group {
-  max-width: 230px; }
-  .type-about .main .state-percents-group .field.h12 {
-    text-transform: none;
-    display: inline; }
-  .type-about .main .state-percents-group .field.h12:after {
-    content: "\2022";
-    color: #002E5D;
-    font-size: 20px;
-    padding-left: 3px;
-    position: relative;
-    top: 2px; }
-  .type-about .main .state-percents-group .h12.field.field--name-field-percent-arizona {
-    display: block; }
-
-.type-about .main .demographics3 {
-  margin-top: -100px; }
-
-.type-about .main .vertical-dots.before-languages {
-  margin-left: 400px; }
-
-.type-about .main .languages-taught-circle {
-  margin-left: 330px; }
-
-.type-about .main .field--name-field-languages-taught {
-  line-height: 55px; }
-
-.type-about .main .languages-taught-text {
-  line-height: 17px;
-  text-align: center; }
-
-.type-about .main .languages-spoken-circle {
-  margin-left: 204px;
-  margin-top: -80px; }
-
-.type-about .main .field--name-field-languages-spoken {
-  line-height: 55px; }
-
-.type-about .main .languages-spoken-text {
-  line-height: 17px;
-  text-align: center; }
-
-.type-about .main .vertical-dots.after-spoken {
-  margin-left: 274px; }
-
-.type-about .main .demographics4 {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-top: -120px; }
-
-.type-about .main .award-icon-wrapper {
-  width: 290px; }
-
-.type-about .main .award-icon {
-  width: 13%;
-  padding: 4px 0px; }
-
-.type-about .main .field--name-field-students-speaking .students-speaking-text-wrapper {
-  width: 282px;
-  line-height: 18px;
-  padding-bottom: 10px; }
-  .type-about .main .field--name-field-students-speaking .students-speaking-text-wrapper .h9 {
-    line-height: 22px; }
-
-.type-about .main .barWrapper.students-speaking {
-  display: flex;
-  margin-bottom: 40px;
-  width: 282px; }
-  .type-about .main .barWrapper.students-speaking .progress {
-    border-radius: 0;
-    overflow: visible;
-    height: 28px;
-    width: 282px;
-    box-shadow: none;
-    background: #e5e5e5; }
-  .type-about .main .barWrapper.students-speaking .progress-bar {
-    background: #697F96;
-    -webkit-transition: width 1.5s ease-in-out;
-    transition: width 1.5s ease-in-out;
-    border-radius: 0px;
-    height: 28px;
-    border: none; }
-
-.type-about .main .field--name-field-more-facts {
-  width: 250px;
-  margin-top: 60px;
-  margin-bottom: 60px; }
-
-/* ---- Admissions Page ---------- */
-/* ----- Academics Page ------------ */
-/* ------------ Campus Life Page ------------ */
-/* -------- Basic Pages ------------- */
+div#academic-highlight-overlay .h6 {
+  font-size: 25px;
+  line-height: 27px;
+  text-transform: uppercase;
+  text-align: left; }
 
 /*# sourceMappingURL=academic.css.map */

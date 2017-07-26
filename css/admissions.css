@@ -1,13 +1,10 @@
 /* ----------- BYU HOMEPAGE SPECIFIC--------- */
-/* --- BYU COlors --- */
 a {
   color: #002E5D; }
 
 a:hover {
   color: #003DA5; }
 
-/* ---- fonts
- */
 /* ------------- Headings Etc -------------------- */
 h1, h2, h3, h4, .h1, .h2, .h3, .h4, .h8, .h9, .h10, .h11, .h12,
 h1 a, h2 a, h3 a, h4 a, .h1 a, .h2 a, .h3 a, .h4 a, .h8 a, .h9 a, .h10 a, .h11 a, .h12 a {
@@ -15,7 +12,7 @@ h1 a, h2 a, h3 a, h4 a, .h1 a, .h2 a, .h3 a, .h4 a, .h8 a, .h9 a, .h10 a, .h11 a
 
 h5 a, .h5 a,
 h5, .h5, .h9.gray, .h9.gray a, .h11.gray, .h11.gray a {
-  color: #666; }
+  color: #767676; }
 
 h6 a, .h6 a, .h7 a, .h8.white a, .h9.white a, .h11.white a, .h12.white a, .h13 a,
 h6, .h6, .h7, .h8.white, .h9.white, .h10.white, .h10.white a, .h11.white, .h12.white, .h13 {
@@ -106,9 +103,15 @@ h6 {
   font-size: 45px;
   /*line-height:*/ }
 
+.view-content-page-header .views-field-title {
+  margin-top: -32.85px; }
+
 @media screen and (min-width: 768px) {
   .h13 {
-    font-size: 90px; } }
+    font-size: 90px; }
+
+  .view-content-page-header .views-field-title {
+    margin-top: -45px; } }
 @media screen and (min-width: 1024px) {
   h2 {
     font-size: 30px; }
@@ -118,11 +121,13 @@ h6 {
     /*line-height: ??;*/ }
 
   .h13 {
-    font-size: 120px; } }
+    font-size: 120px; }
+
+  .view-content-page-header .views-field-title {
+    margin-top: -60px; } }
 @media screen and (min-width: 1224px) {
   h1 {
-    font-size: 40px;
-    text-align: left; }
+    font-size: 40px; }
 
   h2 {
     font-size: 35px; }
@@ -147,11 +152,36 @@ h6 {
     font-weight: 500; }
 
   .h13 {
-    font-size: 135px; } }
+    font-size: 135px; }
+
+  .view-content-page-header .views-field-title {
+    margin-top: -67.5px; } }
 @media screen and (min-width: 1824px) {
   .h13 {
-    font-size: 200px; } }
-/* ---- general mixins ----------- */
+    font-size: 200px; }
+
+  .view-content-page-header .views-field-title {
+    margin-top: -90px; } }
+.navy-circle {
+  background: #002E5D;
+  padding: 25px;
+  border: 2px solid #767676;
+  border-radius: 50%;
+  width: 156px;
+  height: 156px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.vertical-dots {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0px; }
+  .vertical-dots .gray-dot {
+    color: #767676;
+    font-size: 60px;
+    margin: 0px; }
+
 /* ----- helpful classes ----------- */
 .normal-weight {
   font-weight: normal; }
@@ -198,26 +228,6 @@ h6 {
 
 .bg-darkgray {
   background: #6a6a6b; }
-
-.navy-circle {
-  background: #002E5D;
-  padding: 25px;
-  border: 2px solid #666;
-  border-radius: 50%;
-  width: 156px;
-  height: 156px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
-
-.vertical-dots {
-  display: flex;
-  flex-direction: column;
-  margin: 15px 0px; }
-  .vertical-dots .gray-dot {
-    color: #666;
-    font-size: 60px;
-    margin: 0px; }
 
 .blue-dot-after:after {
   content: "*";
@@ -307,9 +317,9 @@ h6 {
   0% {
     width: 0; }
   50% {
-    width: 50; }
+    width: 50%; }
   100% {
-    width: 100; } }
+    width: 100%; } }
 @keyframes blink {
   to {
     opacity: .0; } }
@@ -318,7 +328,7 @@ h6 {
 .main.main-4-page .students-group .tooltip {
   position: relative;
   float: right;
-  background-color: none;
+  background-color: unset;
   opacity: 1 !important; }
 .main.main-4-page .students-group .tooltip > .tooltip-inner {
   background: none;
@@ -343,7 +353,7 @@ h6 {
   border-radius: 36px;
   margin-top: -9px; }
 .main.main-4-page .students-group .color-2 .tooltip.bottom .tooltip-arrow {
-  border-color: #666; }
+  border-color: #767676; }
 .main.main-4-page .students-group .progress {
   border-radius: 0;
   overflow: visible;
@@ -355,7 +365,7 @@ h6 {
   -webkit-transition: width 1.5s ease-in-out;
   transition: width 1.5s ease-in-out; }
 .main.main-4-page .students-group .progress-bar.color-2 {
-  background: #666; }
+  background: #767676; }
 .main.main-4-page .students-group.row {
   display: flex;
   flex-wrap: wrap;
@@ -396,7 +406,7 @@ h6 {
   .main.main-4-page .field--name-field-gender .tooltip {
     position: relative;
     float: right;
-    background-color: none;
+    background-color: unset;
     /*   opacity: 1!important; */ }
   .main.main-4-page .field--name-field-gender .tooltip > .tooltip-inner {
     background: none;
@@ -471,6 +481,16 @@ h6 {
     display: block; }
 .main.main-4-page .demographics3 {
   margin-top: -100px; }
+  .main.main-4-page .demographics3 .navy-circle {
+    background: #002E5D;
+    padding: 25px;
+    border: 2px solid #767676;
+    border-radius: 50%;
+    width: 156px;
+    height: 156px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
 .main.main-4-page .vertical-dots.before-languages {
   margin-left: 400px; }
 .main.main-4-page .languages-taught-circle {
@@ -613,7 +633,7 @@ h6 {
       content: "> "; }
     .view-id-admissions_links.view-display-id-block_1 .view-content ul span.field-content {
       text-transform: uppercase;
-      color: #666; }
+      color: #767676; }
       .view-id-admissions_links.view-display-id-block_1 .view-content ul span.field-content a {
         text-transform: none; }
   .view-id-admissions_links.view-display-id-block_1 .view-content > ul {
