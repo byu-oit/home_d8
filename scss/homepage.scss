@@ -347,38 +347,39 @@ $circle-width: 156px;
 
 
 /* ----- main page --------- */
-
-.main.main-4-page {
-  padding: 20px 0px;
-  .node__content > :not(.full-width-bar) {
-    max-width: 1224px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .container {
-    width: 100%;
-    padding: 0px;
-  }
-
-  .full-width-bar {
-    width: 100%;
-    max-width: 100%;
-    padding: 30px 15px;
-    // default constrained width settings, override for specific fields
-
-    .field, .full-width-bar-inner {
-      @include fieldWithMaxWidth();
+//4 main content types that have stretch-full-width with bars
+.type-about, .type-academic, .type-admissions, .type-campus-life {
+  .main {
+    padding: 20px 0px;
+    .node__content > :not(.full-width-bar) {
+      max-width: 1224px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    // use if the bar has several fields that aren't 100% width and you
-    // want to display them nicely in columns or with flex (add this div inside the
-    // group's template file - see field-group-html-element--about-bar as an example
-    .full-width-bar-inner {
-      display: flex;
+    .container {
+      width: 100%;
+      padding: 0px;
     }
-  }
 
+    .full-width-bar {
+      width: 100%;
+      max-width: 100%;
+      padding: 30px 15px;
+      // default constrained width settings, override for specific fields
+
+      .field, .full-width-bar-inner {
+        @include fieldWithMaxWidth();
+      }
+      // use if the bar has several fields that aren't 100% width and you
+      // want to display them nicely in columns or with flex (add this div inside the
+      // group's template file - see field-group-html-element--about-bar as an example
+      .full-width-bar-inner {
+        display: flex;
+      }
+    }
+
+  }
 }
-
 
 /* ----------- Front Page ------- */
 
@@ -386,7 +387,7 @@ $circle-width: 156px;
 
 
 /* ------------ About Page ---------- */
-.main.main-4-page {
+.type-about .main {
   // quote
   .quote-wrapper.full-width-bar-inner {
     display: flex;

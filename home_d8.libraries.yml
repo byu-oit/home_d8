@@ -3,6 +3,8 @@ global-styling:
   css:
     base:
       css/homepage.css: {}
+    theme:
+      css/animate.css: {}
   js:
     js/homepage.js: {}
 fonts-basic:
