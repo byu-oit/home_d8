@@ -3,7 +3,7 @@
 
 
 
-/* --- BYU COlors --- */
+/* --- BYU Colors --- */
 
 // blues
 $navy: #002E5D;
@@ -239,44 +239,6 @@ h6 {
   margin-right: auto;
 }
 
-// used so far on about page - don't change
-
-
-@mixin navy-circle($circle-width) {
-  background: $navy;
-  padding: 25px ;
-  border: 2px solid $medgray;
-  border-radius: 50%;
-  width: $circle-width;
-  height: $circle-width;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.navy-circle {
-  @include navy-circle(156px); // default
-  // include this line for your specific navy-circle's and override the size for your specific circles
-}
-@mixin vertical-dots() {
-  display: flex;
-  //flex-wrap: wrap;
-  flex-direction: column;
-  margin: 15px 0px;
-}
-@mixin gray-dot() {
-  color: $medgray;
-  font-size: 60px;
-  margin: 0px;
-}
-
-.vertical-dots {
-  @include vertical-dots();
-  .gray-dot {
-    @include gray-dot();
-  }
-}
-
 
 
 
@@ -332,6 +294,32 @@ h6 {
 }
 .bg-darkgray {
   background: $darkgray;
+}
+
+// used so far on about page - don't change
+$circle-width: 156px;
+.navy-circle {
+  background: $navy;
+  padding: 25px ;
+  border: 2px solid $medgray;
+  border-radius: 50%;
+  width: $circle-width;
+  height: $circle-width;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.vertical-dots {
+  display: flex;
+  //flex-wrap: wrap;
+  flex-direction: column;
+  margin: 15px 0px;
+  .gray-dot {
+    color: $medgray;
+    font-size: 60px;
+    margin: 0px;
+  }
 }
 
 
@@ -750,14 +738,9 @@ h6 {
   // languages
   .demographics3 {
     margin-top: -100px;
-
-    .navy-circle {
-      @include navy-circle(156px);
-    }
   }
 
   // circles
-  $about-circle-width: 156px;
   $circle-left-movement: 490px;
   $between-circles-adjustment: 130px;
 
@@ -765,11 +748,11 @@ h6 {
   $studentsSpeakingBarHeight: 28px;
   $studentsSpeakingBarWidth: 282px;
   // so that this circle is past lower circle but overlapped behind a little
-  $langTaughtMargin: $studentsSpeakingBarWidth + ($about-circle-width / 2) - 30px;
+  $langTaughtMargin: $studentsSpeakingBarWidth + ($circle-width / 2) - 30px;
 
   .vertical-dots.before-languages {
     //position: relative;
-    margin-left: $langTaughtMargin + ($about-circle-width / 2) - 8px; // - 8 for width of small dots
+    margin-left: $langTaughtMargin + ($circle-width / 2) - 8px; // - 8 for width of small dots
   }
 
   .languages-taught-circle {
@@ -785,7 +768,7 @@ h6 {
   }
   .languages-spoken-circle {
     //position: relative;
-    margin-left: $studentsSpeakingBarWidth - ($about-circle-width / 2);
+    margin-left: $studentsSpeakingBarWidth - ($circle-width / 2);
     margin-top: -80px;
   }
 
@@ -924,15 +907,3 @@ h6 {
 
 
 /* -------- Basic Pages ------------- */
-
-
-
-/* -- AZ Index --- */
-.view-id-a_z_index {
-  .view-content {
-    padding-bottom: 20px;
-  }
- h3 {
-   margin: 25px 0px 15px;
- }
-}
