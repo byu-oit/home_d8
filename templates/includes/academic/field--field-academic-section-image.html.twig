@@ -60,20 +60,18 @@
       {% endfor %}
     </div>
   {% else %}
-      {#single, no label#}
     {% for item in items %}
       <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
-  <div{{ attributes.addClass(classes)}}>
-    <div{{ title_attributes.addClass(title_classes, 'h9', 'all-caps', 'bold') }}>{{ label }}</div>
-    <div{{ title_attributes.addClass('total-students-label', 'h9', 'all-caps', 'normal-weight') }}>Students</div>
+  <div{{ attributes.addClass(classes) }}>
+    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% if multiple %}
       <div class="field__items">
     {% endif %}
     {% for item in items %}
-      <div{{ item.attributes.addClass('field__item', 'counter') }}>{{ item.content }}</div>
+      <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
       </div>

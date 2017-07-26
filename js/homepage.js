@@ -74,9 +74,36 @@ $( window ).scroll(function() {
             $(this).width(percent + '%');
             showStudentNumbers();
         });
+        $('.counter').each(function() {
+            var $this = $(this),
+                countTo = $this.attr('content');
 
+            $({ countNum: $this.text()}).animate({
+                    countNum: countTo
+                },
+
+                {
+
+                    duration: 2000,
+                    easing:'linear',
+                    step: function() {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function() {
+                        $this.text(this.countNum);
+                        //alert('finished');
+                    }
+
+                });
+
+
+
+        });
     }
 });
+
+
+
 // gender
 
 $( window ).scroll(function() {

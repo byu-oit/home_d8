@@ -164,31 +164,39 @@ function home_d8_preprocess_page(&$variables) {
 
 
 //
-//function home_d8_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+function home_d8_theme_suggestions_page_alter(array &$suggestions, array $variables) {
 //    $request = \Drupal::routeMatch()->getRouteObject()->getDefault('view_id');
 //    //Override Panels Page
 //    $current_uri = \Drupal::request()->getRequestUri();
 //    if(stristr($current_uri,'index') || stristr($current_uri,'index-corporate') || stristr($current_uri,'about') || stristr($current_uri,'contact-us') || stristr($current_uri,'shortcodes') || stristr($current_uri,'page-our-office')){
 //        $suggestions[]= 'page__panels';
 //    }
-//    $node = \Drupal::request()->attributes->get('node');
-//    if ($node) {
-//        $nodeType = $node->getType();
-//        switch ($nodeType) {
-//            case 'portfolio':
-//                $suggestions[] =  'page__portfolio';
-//                break;
-//
-//            case 'product':
-//                $suggestions[] =  'page__product';
-//                break;
-//
-//            default:
-//                # code...
-//                break;
-//        }
-//    }
-//
+    $node = \Drupal::request()->attributes->get('node');
+    if ($node) {
+        $nodeType = $node->getType();
+        $variables['attributes']['class'][] = $nodeType;
+        switch ($nodeType) {
+            case 'about':
+                $variables['attributes']['class'][] =  'type-about';
+                break;
+
+            case 'academic':
+                $variables['attributes']['class'][] =  'type-academic';
+                break;
+            case 'admissions':
+                $variables['attributes']['class'][] =  'type-admissions';
+                break;
+            case 'campuslife':
+                $variables['attributes']['class'][] =  'type-campuslife';
+                break;
+
+
+            default:
+                $variables['attributes']['class'][] = 'not-main-4-types';
+                break;
+        }
+    }
+
 //    if( $request == 'product_pages') {
 //        $suggestions[] =  'page__productlist';
 //    }
@@ -197,7 +205,7 @@ function home_d8_preprocess_page(&$variables) {
 //        $suggestions[] =  'page__portfoliolist';
 //    }
 //
-//}
+}
 //function home_d8_theme_suggestions_block_alter(&$suggestions, $variables) {
 //    //Override Block Type
 //    $content = $variables['elements']['content'];
@@ -321,6 +329,26 @@ function home_d8_preprocess_html(&$variables) {
 //    node_type ? 'page-node-type-' ~ node_type|clean_class,
 //    db_offline ? 'db-offline',
 //    ];
+
+
+    $path_class = !$variables['root_path'] ? 'path-frontpage' : 'path-notfront';
+    if (isset($path_class)) {
+        $variables['attributes']['class'][] = $path_class;
+    }
+//    node_type ? 'page-node-type-' ~ node_type
+
+    // might break/have wrong formatting if a content type's machien name is 2+ words maybe
+    $typeName = str_replace("_", "-",($variables['node_type']));
+    $content_type = !$variables['node_type'] ? 'not-node' : 'type-' . $typeName;
+    if (isset($content_type)) {
+        $variables['attributes']['class'][] = $content_type;
+    }
+
+//    logged_in ? 'user-logged-in',
+    $logged_in = !$variables['logged_in'] ? 'user-logged-in' : 'anonymous-user';
+    if (isset($logged_in)) {
+        $variables['attributes']['class'][] = $logged_in;
+    }
 
 
 }
