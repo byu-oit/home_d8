@@ -30,7 +30,7 @@
     }
 }
 
-.field--name-field-freshman-profile {
+.node__content.freshman_profile {
     background-color: $lightgray;
     margin-left: -2000px;
     margin-right: -2000px;
@@ -134,6 +134,128 @@
                     border-bottom: 0;
                 }
             }
+        }
+    }
+}
+
+.field-collection-item--name-field-tuition-info {
+    margin-top: 50px;
+    text-align: center;
+    line-height: normal;
+    .h9 {
+        line-height: normal;
+    }
+    .subsidies {
+        color: $medgray;
+        font-style: italic;
+        font-weight: normal;
+        font-size: 12px;
+        text-align: left;
+        margin-top: 1em;
+    }
+    .tuition-header {
+        display: inline-block;
+        width: 400px;
+        padding: 20px;
+        background-color: $darkgray;
+        color: white;
+        font-weight: normal;
+        .how-much {
+            font-style: italic;
+            font-size: 25px;
+        }
+        .for-full-time {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+    }
+    .grad-split {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .undergrad-header {
+            background-color: $navy;
+            color: white;
+            padding: 10px;
+            margin: 0 50px;
+        }
+        .graduate-header {
+            background-color: $medblue;
+            color: white;
+            padding: 10px;
+            margin: 0 50px;
+        }
+        .management-law-header {
+            width: 550px;
+            @media screen and (max-width: 320px) {
+                width: auto;
+            }
+            @media screen and (min-width: 321px) and (max-width: 991px) {
+                width: 400px;
+            }
+            color: $darkgray;
+        }
+        > div {
+            width: 400px;
+            .lds-split {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                > div {
+                    position: relative;
+                    width: 150px;
+                    margin: 10px;
+                }
+                .credits {
+                    background-color: $lightgray;
+                    color: $darkgray;
+                    width: 400px;
+                    padding: 5px 1em;
+                    position: absolute;
+                    top: 35px;
+                    z-index: -1000;
+                    @media screen and (max-width: 991px) {
+                        display: none;
+                    }
+                }
+                .undergrad-credits {
+                    text-align: left;
+                    left: -8em;
+                }
+                .grad-credits {
+                    text-align: right;
+                    left: 4.5em;
+                }
+                .per-semester {
+                    font-size: 12px;
+                    font-weight: normal;
+                    text-transform: uppercase;
+                }
+                .tuition-price {
+                    padding: 10px 0;
+                }
+                .lds-left {
+                    .tuition-price {
+                        background-color: #ffe7a2;
+                    }
+                }
+                .non-lds-right {
+                    .tuition-price {
+                        background-color: #fcc015;
+                    }
+                }
+            }
+        }
+    }
+    .field--name-field-more-tuition-details-link {
+        margin-top: 50px;
+        a {
+            color: white;
+            background-color: $brightBlue;
+            padding: 10px 20px;
+        }
+        a:hover {
+            text-decoration: none;
         }
     }
 }

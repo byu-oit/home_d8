@@ -560,6 +560,7 @@ h6 {
   margin: 25px 0px 15px; }
 
 .field--name-field-somethings {
+  margin-top: 50px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap; }

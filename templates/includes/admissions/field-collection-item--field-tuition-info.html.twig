@@ -1,0 +1,142 @@
+{#
+/**
+ * @file
+ * Default theme implementation for field collection items.
+ *
+ * Available variables:
+ * - content: An array of comment items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {% hide(content.field_example) %} to temporarily suppress the printing
+ *   of a given element.
+ * - title: The (sanitized) field collection item label.
+ * - url: Direct url of the current entity if specified.
+ * - page: Flag for the full page state.
+ * - attributes: HTML attributes for the surrounding element.
+ *    Attributes include the 'class' information.
+ * - content_attributes: HTML attributes for the content element.
+ *
+ * @see template_preprocess()
+ * @see template_preprocess_entity()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'field-collection-item',
+    'field-collection-item--name-' ~ field_collection_item.name|clean_class,
+    'field-collection-item--view-mode-' ~ field_collection_item.view_mode|clean_class,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+    <div class="tuition-header">
+        <div class="how-much">
+            How much is tuition?
+        </div>
+        <div class="for-full-time">
+            For a full-time student
+        </div>
+    </div>
+    <div class="grad-split">
+        <div class="undergraduate">
+            <div class="undergrad-header h12">
+                Undergraduate
+            </div>
+            <div class="lds-split">
+                <div class="lds-left">
+                    <div class="h9">
+                        LDS
+                    </div>
+                    <div class="undergrad-credits credits">
+                        12+ Credits
+                    </div>
+                    <div class="tuition-price">
+                        {{ content.field_undergrad_lds }}
+                        <div class="per-semester">
+                            per semester
+                        </div>
+                    </div>
+                </div>
+                <div class="non-lds-right">
+                    <div class="h9">
+                        NON-LDS
+                    </div>
+                    <div class="tuition-price">
+                        {{ content.field_undergrad_non_lds }}
+                        <div class="per-semester">
+                            per semester
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subsidies">
+                As BYU's sponsor, the Church of Jesus Christ of Latter-day Saints
+                subsidizes tuition prices with its members' tithing funds.
+                In principle, each student attending BYU is on scholarship.
+            </div>
+        </div>
+        <div class="graduate">
+            <div class="graduate-header h12">
+                Graduate
+            </div>
+            <div class="lds-split">
+                <div class="lds-left">
+                    <div class="h9">
+                        LDS
+                    </div>
+                    <div class="grad-credits credits">
+                        8.5+ Credits
+                    </div>
+                    <div class="tuition-price">
+                        {{ content.field_graduate_lds }}
+                        <div class="per-semester">
+                            per semester
+                        </div>
+                    </div>
+                </div>
+                <div class="non-lds-right">
+                    <div class="h9">
+                        NON-LDS
+                    </div>
+                    <div class="tuition-price">
+                        {{ content.field_graduate_non_lds }}
+                        <div class="per-semester">
+                            per semester
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="management-law-header h9">
+                School of Management and Law School Students
+            </div>
+            <div class="lds-split management-law">
+                <div class="lds-left">
+                    <div class="h9">
+                        LDS
+                    </div>
+                    <div class="grad-credits credits">
+                        8.5+ Credits
+                    </div>
+                    <div class="tuition-price">
+                        {{ content.field_management_law_lds }}
+                        <div class="per-semester">
+                            per semester
+                        </div>
+                    </div>
+                </div>
+                <div class="non-lds-right">
+                    <div class="h9">
+                        NON-LDS
+                    </div>
+                    <div class="tuition-price">
+                        {{ content.field_management_law_non_lds }}
+                        <div class="per-semester">
+                            per semester
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ content.field_more_tuition_details_link }}
+</div>
