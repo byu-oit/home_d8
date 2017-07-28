@@ -127,6 +127,7 @@ $h13-desktopw-font: 200px;
 .view-content-page-header .views-field-title {
   margin-top: ($h13-mobile-font *.73*-1);
 }
+div#wrapper {margin-top:-17px};
 
 @media screen and (min-width: 768px) {
   .h13 {
@@ -135,6 +136,7 @@ $h13-desktopw-font: 200px;
   .view-content-page-header .views-field-title {
     margin-top: ($h13-tabletp-font *.50*-1);
   }
+  div#wrapper {margin-top:1px};
 }
 @media screen and (min-width: 1024px) {
   h2 {
@@ -151,7 +153,7 @@ $h13-desktopw-font: 200px;
   .view-content-page-header .views-field-title {
     margin-top: ($h13-tabletl-font *.50*-1);
   }
-
+  div#wrapper {margin-top:11px};
 
 }
 @media screen and (min-width: 1224px) {
@@ -186,6 +188,7 @@ $h13-desktopw-font: 200px;
   .view-content-page-header .views-field-title {
     margin-top: ($h13-desktop-font *.50*-1);
   }
+  div#wrapper {margin-top:-16px};
 }
 @media screen and (min-width: 1824px) {
 
@@ -195,6 +198,7 @@ $h13-desktopw-font: 200px;
   .view-content-page-header .views-field-title {
     margin-top: ($h13-desktopw-font *.45*-1);
   }
+  div#wrapper {margin-top:-16px};
 }
 
 .navy-circle {
@@ -834,7 +838,11 @@ $h13-desktopw-font: 200px;
 
 }
 
+//Page Header
 
+.views-field.views-field-field-header-image {
+  margin-top: -4vw;
+}
 
 /* ---- Admissions Page ---------- */
 

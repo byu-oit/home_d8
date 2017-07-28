@@ -106,12 +106,18 @@ h6 {
 .view-content-page-header .views-field-title {
   margin-top: -32.85px; }
 
+div#wrapper {
+  margin-top: -17px; }
+
 @media screen and (min-width: 768px) {
   .h13 {
     font-size: 90px; }
 
   .view-content-page-header .views-field-title {
-    margin-top: -45px; } }
+    margin-top: -45px; }
+
+  div#wrapper {
+    margin-top: 1px; } }
 @media screen and (min-width: 1024px) {
   h2 {
     font-size: 30px; }
@@ -124,7 +130,10 @@ h6 {
     font-size: 120px; }
 
   .view-content-page-header .views-field-title {
-    margin-top: -60px; } }
+    margin-top: -60px; }
+
+  div#wrapper {
+    margin-top: 11px; } }
 @media screen and (min-width: 1224px) {
   h1 {
     font-size: 40px; }
@@ -155,13 +164,19 @@ h6 {
     font-size: 135px; }
 
   .view-content-page-header .views-field-title {
-    margin-top: -67.5px; } }
+    margin-top: -67.5px; }
+
+  div#wrapper {
+    margin-top: -16px; } }
 @media screen and (min-width: 1824px) {
   .h13 {
     font-size: 200px; }
 
   .view-content-page-header .views-field-title {
-    margin-top: -90px; } }
+    margin-top: -90px; }
+
+  div#wrapper {
+    margin-top: -16px; } }
 .navy-circle {
   background: #002E5D;
   padding: 25px;
@@ -548,6 +563,9 @@ h6 {
   width: 250px;
   margin-top: 60px;
   margin-bottom: 60px; }
+
+.views-field.views-field-field-header-image {
+  margin-top: -4vw; }
 
 /* ---- Admissions Page ---------- */
 /* ----- Academics Page ------------ */
