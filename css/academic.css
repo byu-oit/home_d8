@@ -29,9 +29,11 @@ div.other-circle .h10 {
     display: flex;
     margin-top: 3em;
     align-items: center; } }
+
 @media screen and (min-width: 1224px) {
   div.other-circle .h10 {
     line-height: 70px; } }
+
 .field--name-field-academic-major-links {
   border-bottom: 1px solid #767676;
   padding-bottom: 2em; }
