@@ -3,7 +3,12 @@ global-styling:
   css:
     base:
       css/homepage.css: {}
+<<<<<<< HEAD
+    theme:
+      css/animate.css: {}
+=======
       css/colleges.css: {}
+>>>>>>> master
   js:
     js/homepage.js: {}
 fonts-basic:

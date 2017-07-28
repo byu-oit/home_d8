@@ -10,10 +10,18 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
+<<<<<<< HEAD
+    "gulp": "^3.9.1",
+=======
+>>>>>>> master
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "^3.0.4",
     "gulp-concat": "^2.6.1",
     "gulp-inject": "^4.2.0",
+<<<<<<< HEAD
+    "gulp-install": "^1.1.0",
+=======
+>>>>>>> master
     "gulp-minify": "0.0.15",
     "gulp-notify": "^2.2.0",
     "gulp-sass": "^3.1.0",
