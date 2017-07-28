@@ -341,8 +341,8 @@ function home_d8_preprocess_html(&$variables) {
 //    node_type ? 'page-node-type-' ~ node_type
 
     // might break/have wrong formatting if a content type's machien name is 2+ words maybe
-    $typeName = str_replace("_", "-",($variables['node_type']));
-    $content_type = !$variables['node_type'] ? 'not-node' : 'type-' . $typeName;
+//    $typeName = str_replace("_", "-",($variables['node_type']));
+    $content_type = !$variables['node_type'] ? 'not-node' : 'type-' . str_replace("_", "-",($variables['node_type']));
     if (isset($content_type)) {
         $variables['attributes']['class'][] = $content_type;
     }

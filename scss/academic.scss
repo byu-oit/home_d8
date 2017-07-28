@@ -6,11 +6,17 @@ $other-circle-size : 155px;
 
 .undergrad-circle {@include navy-circle($undergrad-circle-size);}
 .other-circle {@include navy-circle($other-circle-size);margin-left:-11px;}
+div.other-circle .h10 {line-height:70px;}
 @media screen and (min-width: 1024px) {
   #academic-y-facts .col-md-6 {
     display: flex;
     margin-top: 3em;
     align-items: center
+  }
+}
+@media screen and (min-width: 1224px) {
+  div.other-circle .h10 {
+    line-height: 70px;
   }
 }
 .field--name-field-academic-major-links {border-bottom: 1px solid $medgray;padding-bottom: 2em;}
@@ -31,7 +37,7 @@ div#links-and-calendar{min-height: 80em;}
 .paragraph--type--academic-highlight {
 background-color: $white;
 }
-div#academic-highlight-overlay {background-color: $lightBlue;}
+div#academic-highlight-overlay {background-color: $xlightblue;}
 div#academic-highlight-overlay:first-of-type {background-color: $medblue;}
 div#academic-highlight-overlay .h6 {
   font-size: 25px;

@@ -24,7 +24,6 @@
   },
   "devDependencies": {
     "bootstrap": "^3.3.7",
-    "gulp": "^3.9.1",
     "jquery": "^3.2.1"
   }
 }

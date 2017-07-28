@@ -21,11 +21,17 @@
   justify-content: center;
   margin-left: -11px; }
 
+div.other-circle .h10 {
+  line-height: 70px; }
+
 @media screen and (min-width: 1024px) {
   #academic-y-facts .col-md-6 {
     display: flex;
     margin-top: 3em;
     align-items: center; } }
+@media screen and (min-width: 1224px) {
+  div.other-circle .h10 {
+    line-height: 70px; } }
 .field--name-field-academic-major-links {
   border-bottom: 1px solid #767676;
   padding-bottom: 2em; }
@@ -74,7 +80,7 @@ div#links-and-calendar {
   background-color: #FFF; }
 
 div#academic-highlight-overlay {
-  background-color: #e0f0cc; }
+  background-color: #C3DDF9; }
 
 div#academic-highlight-overlay:first-of-type {
   background-color: #697F96; }
