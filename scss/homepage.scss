@@ -1,53 +1,11 @@
-
+@import "mixins";
 /* ----------- BYU HOMEPAGE SPECIFIC--------- */
-
-
-
-/* --- BYU Colors --- */
-
-// blues
-$navy: #002E5D;
-$darknavy: #002040;
-$medblue: #869DB5;
-$lightBlue: #e0f0cc;
-$xlightblue: #C3DDF9;
-$brightBlue: #0057B8;
-
-$royal: #003DA5;
-$lightRoyal: #114BAD;
-
-// There are 6 grays right now..
-$xlightgray: #f2f2f2;
-$lightgray: #e5e5e5;
-$lightergray: #e6e6e6;
-$medgray: #767676; // extra
-$gray: #c5c5c5;
-$medgray: #666;
-$darkgray: #6a6a6b; // least used gray
-$darkestgray: #141414;  // this should be used for body & default text.
-
-
-// other colors
-$red: #B3041A;
-
-$yellow: #FCC015;
-$lightyellow: #fef2d0;
-
-$teal: #84DCB4;
-$lightteal: #C4F7E0;
-
-$green: #66B200; // doesn't work with accessibility
-$lightgreen: #e0f0cc;
-//$green: #4D8501; // was #6EAE17;
-//$greendarkened: #498000 ; // was #6AA816;
-
-// other blues Aleni has used:
-//$lightestblue: #C4CFDA;
-//$lightblue: #A6B6C7;
-//$lightmedblue: #889FB7;
-$medblue: #697F96;  // was #889FB7  but it couldn't have white on it with enough contrast
-//$darkmedblue: #5B728A;  // #5B728A is enough contrast for small white text
-
+a {
+  color: $navy;
+}
+a:hover {
+  color: $royal;
+}
 
 a {
   color: $navy;
@@ -173,15 +131,28 @@ h6 {
   font-weight: 500;
   /*letter-spacing:*/
 }
+$h13-mobile-font:45px;
+$h13-tabletp-font:90px;
+$h13-tabletl-font: 120px;
+$h13-desktop-font:135px;
+$h13-desktopw-font: 200px;
 .h13 {
-  font-size: 45px;
+  font-size: $h13-mobile-font;
   /*line-height:*/
 }
+.view-content-page-header .views-field-title {
+  margin-top: ($h13-mobile-font *.73*-1);
+}
+div#wrapper {margin-top:-17px};
 
 @media screen and (min-width: 768px) {
   .h13 {
-    font-size: 90px;
+    font-size: $h13-tabletp-font;
   }
+ .view-content-page-header .views-field-title {
+    margin-top: ($h13-tabletp-font *.50*-1);
+  }
+  div#wrapper {margin-top:1px};
 }
 @media screen and (min-width: 1024px) {
   h2 {
@@ -192,15 +163,17 @@ h6 {
     /*line-height: ??;*/
   }
   .h13 {
-    font-size: 120px;
+    font-size: $h13-tabletl-font;
   }
-
+  .view-content-page-header .views-field-title {
+    margin-top: ($h13-tabletl-font *.50*-1);
+  }
+  div#wrapper {margin-top:11px};
 
 }
 @media screen and (min-width: 1224px) {
   h1 {
     font-size: 40px;
-    text-align: left;
   }
   h2 {
     font-size: 35px;
@@ -225,25 +198,35 @@ h6 {
     font-weight: 500;
   }
   .h13 {
-    font-size: 135px;
+    font-size: $h13-desktop-font;
   }
+  .view-content-page-header .views-field-title {
+    margin-top: ($h13-desktop-font *.50*-1);
+  }
+  div#wrapper {margin-top:-16px};
 }
 @media screen and (min-width: 1824px) {
+
   .h13 {
-    font-size: 200px;
+    font-size: $h13-desktopw-font;
+  }
+  .view-content-page-header .views-field-title {
+    margin-top: ($h13-desktopw-font *.45*-1);
+  }
+  div#wrapper {margin-top:-16px};
+}
+
+.navy-circle {
+  @include navy-circle(156px); // default
+  // include this line for your specific navy-circle's and override the size for your specific circles
+}
+
+.vertical-dots {
+  @include vertical-dots();
+  .gray-dot {
+    @include gray-dot();
   }
 }
-
-/* ---- general mixins ----------- */
-
-@mixin fieldWithMaxWidth() {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-
 
 /* ----- helpful classes ----------- */
 .normal-weight {
@@ -289,6 +272,7 @@ h6 {
   @include button();
   background: #002e5d; /* change to medium blue */
   color: #fff;
+  padding: 12px 25px;
 }
 
 // background
@@ -729,6 +713,196 @@ $circle-width: 156px;
       padding-left: 3px;
     }
   }
+  @keyframes type2 {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 50%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink {
+    to {
+      opacity: .0;
+    }
+  }
+
+  // students facts
+  .students-group {
+    .barWrapper {
+      padding: 0px;
+    }
+    .tooltip {
+      position: relative;
+      float: right;
+      background-color: unset;
+      opacity: 1 !important;
+    }
+    .tooltip > .tooltip-inner {
+      background: none;
+      padding: 15px 15px;
+      @include h11();
+    }
+    .popOver + .tooltip > .tooltip-arrow {
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid #eebf3f; // katria come back to
+    }
+    .assets-wrap {
+      opacity: 1;
+    }
+    .tooltip.bottom .tooltip-arrow {
+      margin-left: -10px;
+      border-width: 0px 10px 20px;
+      border-left: 10px solid $navy;
+      border-right: 10px solid $navy;
+      border-color: $navy;
+      opacity: 1;
+      border-radius: 36px;
+      margin-top: -9px;
+    }
+    .color-2 .tooltip.bottom .tooltip-arrow {
+      border-color: $medgray;
+
+    }
+    .progress {
+      border-radius: 0;
+      overflow: visible;
+      height: 8px;
+      background-color: #e6e6e6; // katria come back to
+      box-shadow: none;
+    }
+    .progress-bar {
+      background: rgb(0, 46, 93);
+      -webkit-transition: width 1.5s ease-in-out;
+      transition: width 1.5s ease-in-out;
+
+    }
+    .progress-bar.color-2 {
+      background: $medgray;
+    }
+
+  }
+  // student group layout
+  $totalStudentsHeight: 170px;
+  $totalStudentsWidth: 23%;
+  .students-group.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 75px;
+  }
+  .grad-wrapper {
+    order: 3;
+
+    margin-top: -($totalStudentsHeight / 2);
+  }
+
+  .field--name-field-undergrads,
+  .field--name-field-grads {
+    width: 100% - $totalStudentsWidth;
+  }
+
+  // total students
+  .field--name-field-total-students {
+    width: $totalStudentsWidth;
+  }
+
+  .field--name-field-total-students .field__label {
+    line-height: 20px;
+    text-align: right;
+  }
+
+  .field--name-field-total-students {
+    background: $xlightgray;
+    display: inline;
+    height: $totalStudentsHeight;
+    padding: 25px 45px;
+    .field__item {
+      font-size: 55px;
+      color: $navy;
+      font-weight: bold;
+      text-align: right;
+      padding: 25px 0px 0px;
+    }
+  }
+
+  // ------ Gender Bars
+  $genderBarHeight: 50px;
+  .field--name-field-gender {
+    display: flex;
+    margin-bottom: 80px;
+    .bar2 {
+      text-align: end;
+    }
+    .bar2 .progress {
+      -moz-transform: scale(-1, 1);
+      -webkit-transform: scale(-1, 1);
+      -o-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+      transform: scale(-1, 1);
+    }
+    .tooltip {
+      position: relative;
+      float: right;
+      background-color: unset;
+      /*   opacity: 1!important; */
+    }
+    .tooltip > .tooltip-inner {
+      background: none;
+      padding: 15px 15px;
+      color: rgb(23, 44, 66);
+      font-weight: bold;
+      font-size: 13px;
+    }
+    .popOver + .tooltip > .tooltip-arrow {
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid #eebf3f;
+    }
+
+    .progress {
+      border-radius: 0;
+      overflow: visible;
+      height: $genderBarHeight;
+      box-shadow: none;
+      background: none;
+      //z-index: 1;
+    }
+    .bar2 .progress {
+      //z-index: 0;
+    }
+    .progress-bar {
+      background: $teal;
+      -webkit-transition: width 1.5s ease-in-out;
+      transition: width 1.5s ease-in-out;
+      border-radius: 0px;
+      height: $genderBarHeight;
+      border: none;
+    }
+    .progress-bar.color-2 {
+      background: $lightteal;
+      z-index: 1;
+    }
+    .progressText {
+      // smaller screens just have it show above
+      @media screen and (min-width: 1224px) {
+        display: none;
+        margin-top: 1px;
+        margin-bottom: -($genderBarHeight+3);
+        padding: 0px 15px;
+        z-index: 100;
+        position: relative;
+      }
+
+    }
+    .progressText2.h9 {
+      padding-left: 3px;
+    }
+  }
 
   // ----- Demographics & map area
   $mapWidth: 816px;
@@ -807,6 +981,200 @@ $circle-width: 156px;
     //width: 100%; // is a test
   }
 
+  .and-icon {
+    font-weight: 500;
+    font-size: 130px;
+    font-family: $gotham;
+    color: $navy;
+    padding: 0px 25px;
+  }
+
+  // state percentages
+  .state-percents-group {
+    max-width: 230px;
+    .field.h12 {
+      text-transform: none;
+      display: inline;
+    }
+    .field.h12:after {
+      content: "\2022";
+      color: $navy;
+      font-size: 20px;
+      padding-left: 3px;
+      position: relative;
+      top: 2px;
+    }
+    // arizona block
+    .h12.field.field--name-field-percent-arizona {
+      display: block;
+    }
+  }
+
+
+
+  // languages
+  .demographics3 {
+    margin-top: -100px;
+
+    .navy-circle {
+      @include navy-circle(156px);
+    }
+  }
+
+  // circles
+  $about-circle-width: 156px;
+  $circle-left-movement: 490px;
+  $between-circles-adjustment: 130px;
+
+  // below variables:
+  $studentsSpeakingBarHeight: 28px;
+  $studentsSpeakingBarWidth: 282px;
+  // so that this circle is past lower circle but overlapped behind a little
+  $langTaughtMargin: $studentsSpeakingBarWidth + ($about-circle-width / 2) - 30px;
+
+  .vertical-dots.before-languages {
+    //position: relative;
+    margin-left: $langTaughtMargin + ($about-circle-width / 2) - 8px; // - 8 for width of small dots
+  }
+
+  .languages-taught-circle {
+    //position: relative;
+    margin-left: $langTaughtMargin;
+  }
+  .field--name-field-languages-taught {
+    line-height: 55px;
+  }
+  .languages-taught-text {
+    line-height: 17px;
+    text-align: center;
+  }
+  .languages-spoken-circle {
+    //position: relative;
+    margin-left: $studentsSpeakingBarWidth - ($about-circle-width / 2);
+    margin-top: -80px;
+  }
+
+  .field--name-field-languages-spoken {
+    line-height: 55px;
+  }
+  .languages-spoken-text {
+    line-height: 17px;
+    text-align: center;
+  }
+  .vertical-dots.after-spoken {
+    //position: relative;
+    margin-left: $studentsSpeakingBarWidth - 8px; // back 8 for width of small dots
+  }
+
+// students speaking & certifications
+  .demographics4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: -120px;
+  }
+
+
+  // --- certifications section
+  .award-icon-wrapper {
+    width: 290px;
+  }
+  .award-icon {
+    width: 13%; // 7 in a row
+    padding: 4px 0px;
+  }
+
+
+
+  //----- students speaking
+
+
+  .field--name-field-students-speaking {
+
+    .students-speaking-text-wrapper {
+      width: $studentsSpeakingBarWidth;
+      line-height: 18px; // necessary to override Aleni's default big spacing
+      padding-bottom: 10px;
+      .h9 {
+        line-height: 22px;
+      }
+
+    }
+
+  }
+
+  .barWrapper.students-speaking {
+    display: flex;
+    margin-bottom: 40px;
+    width: $studentsSpeakingBarWidth;
+    //.tooltip {
+    //  position: relative;
+    //  float: right;
+    //  background-color: none;
+    //  /*   opacity: 1!important; */
+    //}
+    //.tooltip > .tooltip-inner {
+    //  background: none;
+    //  padding: 15px 15px;
+    //  color: rgb(23, 44, 66);
+    //  font-weight: bold;
+    //  font-size: 13px;
+    //}
+    //.popOver + .tooltip > .tooltip-arrow {
+    //  border-left: 5px solid transparent;
+    //  border-right: 5px solid transparent;
+    //  border-top: 5px solid #eebf3f;
+    //}
+
+    .progress {
+      border-radius: 0;
+      overflow: visible;
+      height: $studentsSpeakingBarHeight;
+      width: $studentsSpeakingBarWidth;
+      box-shadow: none;
+      background: $lightgray;
+      //z-index: 1;
+    }
+    .progress-bar {
+      background: $medblue;
+      -webkit-transition: width 1.5s ease-in-out;
+      transition: width 1.5s ease-in-out;
+      border-radius: 0px;
+      height: $studentsSpeakingBarHeight;
+      border: none;
+    }
+    //
+    //.progressText {
+    //  // smaller screens just have it show above
+    //  @media screen and (min-width: 1224px) {
+    //    display: none;
+    //    margin-top: 1px;
+    //    //margin-bottom: -($BarHeight+3);
+    //    //padding: 0px 15px;
+    //    //z-index: 100;
+    //    //position: relative;
+    //  }
+    //
+    //}
+
+  }
+
+
+
+  // more link
+  .field--name-field-more-facts {
+    width: 250px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+}
+
+//Page Header
+
+.views-field.views-field-field-header-image {
+  margin-top: -4vw;
+}
   .states-label, .countries-label {
     //display: inline;
     padding: 0px 5px;
@@ -1068,19 +1436,10 @@ $circle-width: 156px;
 /* ---- Admissions Page ---------- */
 
 
-
-
-
-
-
 /* ----- Academics Page ------------ */
 
 
-
 /* ------------ Campus Life Page ------------ */
-
-
-
 
 
 /* -------- Basic Pages ------------- */

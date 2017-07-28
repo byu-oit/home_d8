@@ -5,6 +5,7 @@ global-styling:
       css/homepage.css: {}
     theme:
       css/animate.css: {}
+      css/academic.css: {}
   js:
     js/homepage.js: {}
 fonts-basic:
