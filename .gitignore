@@ -1,9 +1,7 @@
 node_modules
-<<<<<<< HEAD
-.idea/*
-=======
 .idea/home_d8.iml
 .idea/vcs.xml
 .idea/modules.xml
 .idea/workspace.xml
->>>>>>> master
+.idea/*
+.sass-cache

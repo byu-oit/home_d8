@@ -1,6 +1,47 @@
-@import "homepage";
+@import "mixins";
 $undergrad-circle-size : 190px;
 $other-circle-size : 155px;
 
+//section for circles
 
+.undergrad-circle {@include navy-circle($undergrad-circle-size);}
+.other-circle {@include navy-circle($other-circle-size);margin-left:-11px;}
+div.other-circle .h10 {line-height:70px;}
+@media screen and (min-width: 1024px) {
+  #academic-y-facts .col-md-6 {
+    display: flex;
+    margin-top: 3em;
+    align-items: center
+  }
+}
+@media screen and (min-width: 1224px) {
+  div.other-circle .h10 {
+    line-height: 70px;
+  }
+}
+.field--name-field-academic-major-links {border-bottom: 1px solid $medgray;padding-bottom: 2em;}
+.field--name-field-academic-minor-links .h12 a {line-height: 40px;text-transform: none}
+.field--name-field-academic-minor-links {padding-top:2em;}
+.rank-prefix{color:$lightgray;display: inline;}
+.byline-prefix{color:$white;display: inline;}
+#academic-y-facts .col-md-6{background-color: $medgray;min-height: 15em}
+//#academic-y-facts div {float: left;}
+div#links-and-calendar{min-height: 80em;}
+.academic-success .h2 {text-align: left;font-weight: 500;}
+.academic-success .h3 {text-align: left;font-weight: 400;}
 
+.view-content-page-header {display: flex;justify-content: center;text-transform: uppercase;}
+.view-content-page-header
+.h8.italic {font-style: italic;font-weight: 500}
+
+.paragraph--type--academic-highlight {
+background-color: $white;
+}
+div#academic-highlight-overlay {background-color: $xlightblue;}
+div#academic-highlight-overlay:first-of-type {background-color: $medblue;}
+div#academic-highlight-overlay .h6 {
+  font-size: 25px;
+  line-height: 27px;
+  text-transform: uppercase;
+  text-align: left;
+}
