@@ -1,3 +1,7 @@
 node_modules
+.idea/home_d8.iml
+.idea/vcs.xml
+.idea/modules.xml
+.idea/workspace.xml
 .idea/*
 .sass-cache
