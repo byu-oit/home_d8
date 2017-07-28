@@ -954,67 +954,70 @@ div#wrapper {
     .field--name-field-links div a {
       color: white;
       background-color: #002E5D;
-      padding: 10px 3em; }
+      padding: 10px 2em; }
   .field--name-field-links div.field__item:last-of-type a {
     background-color: #697F96;
-    padding: 10px 4.5em; }
+    padding: 10px 3.5em; }
 
-.node__content.freshman_profile {
-  background-color: #e5e5e5;
-  position: relative;
-  width: 100vw;
-  margin-left: -50vw;
-  left: 50%; }
-  .node__content.freshman_profile .field--name-field-freshman-profile {
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto; }
-  .node__content.freshman_profile .field__label {
-    padding-left: 160px;
-    font-family: "Vitesse A", "Vitesse B", serif;
-    font-weight: normal; }
-    @media screen and (max-width: 1199px) {
-      .node__content.freshman_profile .field__label {
-        padding-left: 60px; } }
-    @media screen and (max-width: 991px) {
-      .node__content.freshman_profile .field__label {
-        padding-left: 0;
-        text-align: center; } }
-  .node__content.freshman_profile .field__items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; }
-    .node__content.freshman_profile .field__items > .field__item {
-      width: 400px;
-      background-color: white;
-      margin: 10px;
-      padding: 10px 30px;
-      color: #697F96; }
-      @media screen and (max-width: 320px) {
-        .node__content.freshman_profile .field__items > .field__item {
-          width: 310px;
-          margin: 10px -10px;
-          padding: 10px 15px; } }
-      .node__content.freshman_profile .field__items > .field__item .field-collection-item--name-field-freshman-profile div {
-        line-height: normal; }
-      .node__content.freshman_profile .field__items > .field__item .field-collection-item--name-field-freshman-profile .field--name-field-data-type {
-        font-size: 14px;
-        font-weight: normal;
-        text-transform: uppercase; }
-      .node__content.freshman_profile .field__items > .field__item .field-collection-item--name-field-freshman-profile img.freshman-profile-icon {
-        float: left;
-        padding-right: 10px;
-        height: 40px; }
+.freshman_profile_wrapper {
+  background-color: #e5e5e5; }
+
+.node__content.freshman_profile .field__label {
+  padding-left: 160px;
+  font-family: "Vitesse A", "Vitesse B", serif;
+  font-weight: normal; }
+  @media screen and (max-width: 1199px) {
+    .node__content.freshman_profile .field__label {
+      padding-left: 60px; } }
+  @media screen and (max-width: 991px) {
+    .node__content.freshman_profile .field__label {
+      padding-left: 0;
+      text-align: center; } }
+.node__content.freshman_profile .field__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .node__content.freshman_profile .field__items > .field__item {
+    width: 400px;
+    background-color: white;
+    margin: 10px;
+    padding: 10px 30px;
+    color: #697F96; }
+    @media screen and (min-width: 321px) and (max-width: 1223px) {
+      .node__content.freshman_profile .field__items > .field__item {
+        width: 350px; } }
+    @media screen and (max-width: 320px) {
+      .node__content.freshman_profile .field__items > .field__item {
+        width: 310px;
+        margin: 10px -10px;
+        padding: 10px 15px; } }
+    .node__content.freshman_profile .field__items > .field__item .field-collection-item--name-field-freshman-profile div {
+      line-height: normal; }
+    .node__content.freshman_profile .field__items > .field__item .field-collection-item--name-field-freshman-profile .field--name-field-data-type {
+      font-size: 14px;
+      font-weight: normal;
+      text-transform: uppercase; }
+    .node__content.freshman_profile .field__items > .field__item .field-collection-item--name-field-freshman-profile img.freshman-profile-icon {
+      float: left;
+      padding-right: 10px;
+      height: 40px; }
 
 .view-id-admissions_links.view-display-id-block_1 {
   margin-top: 20px;
   border-top: solid #c5c5c5 1px;
   padding-top: 20px; }
+  .view-id-admissions_links.view-display-id-block_1 li {
+    line-height: normal; }
   .view-id-admissions_links.view-display-id-block_1 .view-content ul {
     list-style-type: none;
     padding-left: 10px; }
+    .view-id-admissions_links.view-display-id-block_1 .view-content ul span.h9 {
+      line-height: normal; }
     .view-id-admissions_links.view-display-id-block_1 .view-content ul ul ul div.views-field-name a:before {
       content: "> "; }
+    .view-id-admissions_links.view-display-id-block_1 .view-content ul ul ul li {
+      margin-left: 1em;
+      text-indent: -1em; }
     .view-id-admissions_links.view-display-id-block_1 .view-content ul span.field-content {
       text-transform: uppercase;
       color: #767676; }
@@ -1023,8 +1026,10 @@ div#wrapper {
   .view-id-admissions_links.view-display-id-block_1 .view-content > ul {
     padding-left: 0;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around; }
+    @media screen and (max-width: 991px) {
+      .view-id-admissions_links.view-display-id-block_1 .view-content > ul {
+        flex-wrap: wrap; } }
     .view-id-admissions_links.view-display-id-block_1 .view-content > ul > li {
       width: 360px;
       border-right: solid #c5c5c5 1px; }
@@ -1039,6 +1044,9 @@ div#wrapper {
       @media screen and (min-width: 992px) and (max-width: 1223px) {
         .view-id-admissions_links.view-display-id-block_1 .view-content > ul > li {
           width: 310px; } }
+      .view-id-admissions_links.view-display-id-block_1 .view-content > ul > li .views-field-name {
+        padding-top: 15px;
+        padding-bottom: 5px; }
     .view-id-admissions_links.view-display-id-block_1 .view-content > ul > li:last-of-type {
       border-right: 0; }
       @media screen and (max-width: 991px) {

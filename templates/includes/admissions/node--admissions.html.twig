@@ -34,11 +34,15 @@
     {{ content.field_links }}
   </div>
 
-  {{ drupal_view('admissions_links', 'block_1') }}
+  <div{{ content_attributes }}>
+    {{ drupal_view('admissions_links', 'block_1') }}
+  </div>
 
   <div class="freshman_and_tuition">
-    <div{{ content_attributes.addClass('freshman_profile') }}>
-      {{ content.field_freshman_profile }}
+    <div class="freshman_profile_wrapper">
+      <div{{ content_attributes.addClass('freshman_profile') }}>
+        {{ content.field_freshman_profile }}
+      </div>
     </div>
     <div{{ content_attributes.removeClass('freshman_profile').addClass('tuition_info') }}>
       {{ content.field_tuition_info }}

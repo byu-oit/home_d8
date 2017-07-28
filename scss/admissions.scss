@@ -19,28 +19,21 @@
         a {
             color: white;
             background-color: $navy;
-            padding: 10px 3em;
+            padding: 10px 2em;
         }
     }
     div.field__item:last-of-type {
         a {
             background-color: $medblue;
-            padding: 10px 4.5em;
+            padding: 10px 3.5em;
         }
     }
 }
 
-.node__content.freshman_profile {
+.freshman_profile_wrapper {
     background-color: $lightgray;
-    position:relative;
-    width: 100vw;
-    margin-left: -50vw;
-    left: 50%;
-    .field--name-field-freshman-profile {
-        max-width: 1170px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+}
+.node__content.freshman_profile {
     .field__label {
         padding-left: 160px;
         font-family: $vitesse;
@@ -62,6 +55,9 @@
             background-color: white;
             margin: 10px;
             padding: 10px 30px;
+            @media screen and (min-width: 321px) and (max-width: 1223px) {
+                width: 350px;
+            }
             @media screen and (max-width: 320px) {
                 width: 310px;
                 margin: 10px -10px;
@@ -94,14 +90,24 @@
     margin-top: 20px;
     border-top: solid $gray 1px;
     padding-top: 20px;
+    li {
+        line-height: normal;
+    }
     .view-content {
         ul {
             list-style-type: none;
             padding-left: 10px;
+            span.h9 {
+                line-height: normal;
+            }
             ul {
                 ul {
                     div.views-field-name a:before {
                         content: "> ";
+                    }
+                    li {
+                        margin-left: 1em;
+                        text-indent: -1em;
                     }
                 }
             }
@@ -116,8 +122,10 @@
         > ul {
             padding-left: 0;
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-around;
+            @media screen and (max-width: 991px) {
+                flex-wrap: wrap;
+            }
             > li {
                 > div {
                     display: none;
@@ -132,6 +140,10 @@
                 }
                 @media screen and (min-width: 992px) and (max-width: 1223px) {
                     width: 310px;
+                }
+                .views-field-name {
+                    padding-top: 15px;
+                    padding-bottom: 5px;
                 }
             }
             > li:last-of-type {
