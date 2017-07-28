@@ -42,6 +42,9 @@
             <div class="undergrad-header h12">
                 Undergraduate
             </div>
+            <div class="undergrad-header-small h12">
+                Under-<br>graduate
+            </div>
             <div class="lds-split">
                 <div class="lds-left">
                     <div class="h9">
@@ -61,6 +64,9 @@
                     <div class="h9">
                         NON-LDS
                     </div>
+                    <div class="undergrad-credits credits">
+                        12+ Credits
+                    </div>
                     <div class="tuition-price">
                         {{ content.field_undergrad_non_lds }}
                         <div class="per-semester">
@@ -69,7 +75,7 @@
                     </div>
                 </div>
             </div>
-            <div class="subsidies">
+            <div class="subsidies subsidies-left">
                 As BYU's sponsor, the Church of Jesus Christ of Latter-day Saints
                 subsidizes tuition prices with its members' tithing funds.
                 In principle, each student attending BYU is on scholarship.
@@ -94,9 +100,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="non-lds-right">
+                <div class="non-lds-right smaller-border">
                     <div class="h9">
                         NON-LDS
+                    </div>
+                    <div class="grad-credits credits">
+                        8.5+ Credits
                     </div>
                     <div class="tuition-price">
                         {{ content.field_graduate_non_lds }}
@@ -128,6 +137,9 @@
                     <div class="h9">
                         NON-LDS
                     </div>
+                    <div class="grad-credits credits">
+                        8.5+ Credits
+                    </div>
                     <div class="tuition-price">
                         {{ content.field_management_law_non_lds }}
                         <div class="per-semester">
@@ -137,6 +149,11 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="subsidies subsidies-bottom">
+        As BYU's sponsor, the Church of Jesus Christ of Latter-day Saints
+        subsidizes tuition prices with its members' tithing funds.
+        In principle, each student attending BYU is on scholarship.
     </div>
     {{ content.field_more_tuition_details_link }}
 </div>

@@ -32,10 +32,15 @@
 
 .node__content.freshman_profile {
     background-color: $lightgray;
-    margin-left: -2000px;
-    margin-right: -2000px;
-    padding-left: 2000px;
-    padding-right: 2000px;
+    position:relative;
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;
+    .field--name-field-freshman-profile {
+        max-width: 1170px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .field__label {
         padding-left: 160px;
         font-family: $vitesse;
@@ -58,6 +63,7 @@
             margin: 10px;
             padding: 10px 30px;
             @media screen and (max-width: 320px) {
+                width: 310px;
                 margin: 10px -10px;
                 padding: 10px 15px;
             }
@@ -142,6 +148,10 @@
     margin-top: 50px;
     text-align: center;
     line-height: normal;
+    @media screen and (max-width: 320px) {
+        margin-left: -40px;
+        width: 310px;
+    }
     .h9 {
         line-height: normal;
     }
@@ -153,10 +163,23 @@
         text-align: left;
         margin-top: 1em;
     }
+    @media screen and (max-width: 991px) {
+        .subsidies-left {
+            display: none;
+        }
+    }
+    @media screen and (min-width: 992px) {
+        .subsidies-bottom {
+            display: none;
+        }
+    }
     .tuition-header {
         display: inline-block;
         width: 400px;
         padding: 20px;
+        @media screen and (max-width: 767px) {
+            width: auto;
+        }
         background-color: $darkgray;
         color: white;
         font-weight: normal;
@@ -173,30 +196,52 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        .undergrad-header {
+        .undergrad-header, .undergrad-header-small, .graduate-header {
             background-color: $navy;
             color: white;
             padding: 10px;
             margin: 0 50px;
         }
+        .undergrad-header-small {
+            display: none;
+        }
         .graduate-header {
             background-color: $medblue;
-            color: white;
-            padding: 10px;
-            margin: 0 50px;
+        }
+        @media screen and (max-width: 1223px) {
+            .undergrad-header {
+                display: none;
+            }
+            .undergrad-header-small {
+                display: block;
+                height: 60px;
+            }
+            .graduate-header {
+                height: 60px;
+                line-height: 40px;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            .undergrad-header-small, .graduate-header {
+                margin: 0 10px;
+            }
         }
         .management-law-header {
             width: 550px;
-            @media screen and (max-width: 320px) {
+            @media screen and (max-width: 1223px) {
                 width: auto;
-            }
-            @media screen and (min-width: 321px) and (max-width: 991px) {
-                width: 400px;
+                text-align: right;
             }
             color: $darkgray;
         }
         > div {
             width: 400px;
+            @media screen and (max-width: 1223px) {
+                width: 250px;
+            }
+            @media screen and (max-width: 767px) {
+                width: 150px;
+            }
             .lds-split {
                 display: flex;
                 flex-wrap: wrap;
@@ -217,6 +262,10 @@
                     @media screen and (max-width: 991px) {
                         display: none;
                     }
+                    @media screen and (min-width: 992px) and (max-width: 1223px) {
+                        top: 30px;
+                        width: 150px;
+                    }
                 }
                 .undergrad-credits {
                     text-align: left;
@@ -225,6 +274,9 @@
                 .grad-credits {
                     text-align: right;
                     left: 4.5em;
+                    @media screen and (min-width: 992px) and (max-width: 1223px) {
+                        left: 8.5em;
+                    }
                 }
                 .per-semester {
                     font-size: 12px;
@@ -242,6 +294,28 @@
                 .non-lds-right {
                     .tuition-price {
                         background-color: #fcc015;
+                    }
+                    @media screen and (min-width: 1224px) {
+                        .credits {
+                            display: none;
+                        }
+                    }
+                }
+                .non-lds-right.smaller-border {
+                    @media screen and (max-width: 1223px) {
+                        border-bottom: 1px solid $gray;
+                        padding-bottom: 10px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            .lds-split.management-law {
+                @media screen and (min-width: 1224px) {
+                    .h9 {
+                        display: none;
+                    }
+                    .grad-credits {
+                        top: 12px;
                     }
                 }
             }
