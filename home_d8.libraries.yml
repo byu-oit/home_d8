@@ -3,6 +3,7 @@ global-styling:
   css:
     base:
       css/homepage.css: {}
+      css/about.css: {}
       css/colleges.css: {}
     theme:
       css/animate.css: {}

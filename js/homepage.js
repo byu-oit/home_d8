@@ -201,9 +201,11 @@ $( window ).scroll(function() {
                 .delay(5500)
                 .queue(function (next) {
                     $(this).css('display', 'inline');
+                    // need arizona to be display:  block for 1023px and down
                     $(this).css('animation' , '1s fadein');
                     next();
                 });
+
 
             // us map
             $("#dots1")
