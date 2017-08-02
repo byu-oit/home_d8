@@ -28,6 +28,9 @@ admissions:
   css:
     base:
       css/admissions.css: {}
+  js:
+    js/snap.svg-min.js: {}
+    js/admissions.js: {}
 fonts-basic:
   remote: https://cloud.typography.com/75214/7683772/css/fonts.css
   version: 1.0.0

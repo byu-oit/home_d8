@@ -956,43 +956,25 @@ div#wrapper {
   text-align: center;
   line-height: normal; }
   .field-collection-item--name-field-tuition-info div.branchpath {
-    margin: 10px 0;
+    margin: 0px 0;
     display: flex;
     justify-content: center; }
-    .field-collection-item--name-field-tuition-info div.branchpath table {
+    .field-collection-item--name-field-tuition-info div.branchpath div.branchpath-svg-container {
       width: 400px;
-      height: 100px;
-      border-collapse: collapse; }
-      .field-collection-item--name-field-tuition-info div.branchpath table td {
-        border: 10px dotted #c5c5c5; }
-      .field-collection-item--name-field-tuition-info div.branchpath table td.branch-ul {
-        border-top-color: transparent;
-        border-left-color: transparent; }
-      .field-collection-item--name-field-tuition-info div.branchpath table td.branch-ur {
-        border-top-color: transparent;
-        border-right-color: transparent; }
-      .field-collection-item--name-field-tuition-info div.branchpath table td.branch-bl {
-        border-right-color: transparent;
-        border-bottom-color: transparent; }
-      .field-collection-item--name-field-tuition-info div.branchpath table td.branch-br {
-        border-left-color: transparent;
-        border-bottom-color: transparent; }
+      height: 100px; }
       @media screen and (max-width: 1223px) {
-        .field-collection-item--name-field-tuition-info div.branchpath table {
+        .field-collection-item--name-field-tuition-info div.branchpath div.branchpath-svg-container {
           width: 262px;
           height: 60px; } }
       @media screen and (max-width: 767px) {
-        .field-collection-item--name-field-tuition-info div.branchpath table {
+        .field-collection-item--name-field-tuition-info div.branchpath div.branchpath-svg-container {
           width: 160px; } }
-  .field-collection-item--name-field-tuition-info div.branchpath.sub-branch table {
+  .field-collection-item--name-field-tuition-info div.branchpath.sub-branch div.branchpath-svg-container {
     width: 180px; }
     @media screen and (max-width: 1223px) {
-      .field-collection-item--name-field-tuition-info div.branchpath.sub-branch table {
-        height: 30px; }
-        .field-collection-item--name-field-tuition-info div.branchpath.sub-branch table tr:last-of-type {
-          display: none; }
-        .field-collection-item--name-field-tuition-info div.branchpath.sub-branch table td {
-          border-bottom-color: transparent; } }
+      .field-collection-item--name-field-tuition-info div.branchpath.sub-branch div.branchpath-svg-container {
+        margin-top: 5px;
+        height: 30px; } }
   @media screen and (max-width: 320px) {
     .field-collection-item--name-field-tuition-info {
       width: 310px; } }
