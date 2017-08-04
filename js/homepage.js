@@ -8,6 +8,7 @@ var $animation_elements = $('.animation-element');
 var $window = $(window);
 $window.trigger('scroll');
 $window.on('scroll resize', check_if_in_view);
+$(document).ready(check_if_in_view);
 
 function check_if_in_view() {
     var window_height = $window.height();
