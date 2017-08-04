@@ -6,8 +6,30 @@
   .quote-wrapper.full-width-bar-inner {
     display: flex;
     margin-top: 50px;
-  }
+    @media screen and (max-width: 767px) {
 
+      padding: 0px 25px;
+
+      .h9 {
+        text-align: left;
+        line-height: 24px;
+        font-weight: normal;
+        //color: $medgray;
+      }
+
+
+    }
+  }
+  // switch to background for mobile/tablet
+  @media screen and (max-width: 1023px) {
+    .quote-wrapper.full-width-bar-inner:before {
+      font-weight: bold;
+      font-size: 200px;
+      font-family: $vitesse;
+      color: $lightgray;
+      margin-top: 30px;
+    }
+  }
   .quote-icon {
     font-weight: bold;
     font-size: 200px;
@@ -15,17 +37,43 @@
     color: $lightgray;
     margin-top: 30px;
     // come back to this for smaller sizes/bg instead/overlap
+    @media screen and (max-width: 1023px) {
+      display: none;
+
+    }
+  }
+  /// quote source mobile
+  @media screen and (max-width: 767px) {
+    .field--name-field-quote-source.h3 {
+      //color: $medgray;
+      padding: 0px 25px;
+    }
   }
 
   // Links
   .full-width-bar.links-video-group {
     margin-top: 30px;
     padding: 40px 15px 60px;
+    @media screen and (max-width: 767px) {
+      padding: 0px 0px 40px;
+    }
 
     iframe {
       // large screen
-      width: 766px;
-      height: 405px;
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+        //width: 766px;
+        //height: 405px;
+        width: 90%;
+      }
+      @media screen and (min-width: 1024px) {
+        width: 766px;
+        height: 405px;
+      }
+    }
+  }
+  .about-video-links-group {
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
     }
   }
 
@@ -34,6 +82,11 @@
     //margin-top: -20px; // moving up to have links exactly aligned w video top
     margin-left: 0px;
     margin-right: 0px;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      padding: 0px 25px;
+      order: 2;
+    }
   }
   // video field
   .field--name-field-video {
@@ -41,6 +94,11 @@
     margin-top: 20px;
     margin-left: 0px;
     margin-right: 0px;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      order: 1;
+      margin-top: 0px;
+    }
   }
 
   //
@@ -154,6 +212,9 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 75px;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
   }
   .grad-wrapper {
     order: 3;
@@ -164,11 +225,17 @@
   .field--name-field-undergrads,
   .field--name-field-grads {
     width: 100% - $totalStudentsWidth;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
   }
 
   // total students
   .field--name-field-total-students {
     width: $totalStudentsWidth;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
   }
 
   .field--name-field-total-students .field__label {
@@ -472,11 +539,26 @@
 
   $largeLeftMapContentMargin: 80px; // top left content w states info - 1024px+
 
+  @media screen and (max-width: 767px) {
+    h2.demographics-main-top-label.left-text {
+      margin-bottom: -60px;
+      text-align: center;
+    }
+  }
 
   div#about-demographics { // all of demographics limited to this width
-    background: $lightgray;
-    @media screen and (max-width: 1023px) {
+    @media screen and (max-width: 767px) {
+      background: $lightgray;
+      background: -moz-linear-gradient(top, $lightgray 0%, #ffffff 100%);
+      background: -webkit-linear-gradient(top, $lightgray 0%,#ffffff 100%);
+      background: linear-gradient(to bottom, $lightgray 0%,#ffffff 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#ffffff',GradientType=0 );
       padding: 30px 0px; // left & right need to be 0 for full width children inside this
+    }
+
+    @media screen and (max-width: 1023px) {
+      background: $lightgray;
+      padding: 80px 0px 30px; // left & right need to be 0 for full width children inside this
     }
 
     @media screen and (min-width: 1024px) {
@@ -548,7 +630,7 @@
     //padding-left: 19px;
   }
   .states-cont {
-    width: 168px;
+    width: 188px;
     height: 40px;
     // adjust for mobile/responsive
   }
@@ -581,6 +663,13 @@
   .states-cont, .countries-cont {
     display: flex;
   }
+  .countries-cont {
+    @media screen and (max-width: 767px) {
+      position: relative;
+      top: 285px; //$mobileUSHeight + 30px;
+      margin-bottom: 0px;
+    }
+  }
 
   .states-label, .countries-label {
     white-space: nowrap;
@@ -593,6 +682,9 @@
   .and-icon {
 
     display: none;
+    @media screen and (max-width: 767px) {
+      display: none!important;
+    }
 
     font-weight: 500;
     font-size: 130px;
@@ -609,16 +701,23 @@
     max-width: 285px;
     width: 285px;
     height: 64px;
-    @media screen and (min-width: 1024px) {
-      margin-left: $largeLeftMapContentMargin;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      max-width: 100%;
+      margin-top: -30px;
+      padding-right: 40%;
     }
-    @media screen and (max-width: 1023px) {
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
       margin-left: auto;
       margin-right: auto;
       width: 550px;
       max-width: 550px;
       margin-top: -30px;
       padding-right: 315px;
+    }
+    @media screen and (min-width: 1024px) {
+      margin-left: $largeLeftMapContentMargin;
     }
     //height: 164px;
     //background: url('http://localhost.byu.edu:7070/sites/default/files/images/US-map-opt.svg') no-repeat;
@@ -671,7 +770,7 @@
   $tabletWorldWidth: 450px;
   $tabletUSHeight: 255px;
   $mobileUSWidth: 300px;
-  $mobileUSHeight: 200px;
+  $mobileUSHeight: 255px;
   svg.us-dots-1 {
     width: $largeUSWidth;
     height: $largeUSHeight;
@@ -683,6 +782,10 @@
     float: left;
     margin-top: -22px;
     margin-left: 52px;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      margin: 0px;
+    }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       width: 50%;
       margin: 0px;
@@ -691,15 +794,18 @@
     }
   }
   .world-map-mobile-wrapper {
-    @media screen and (min-width: 1024px) {
-      display: none;
-    }
+
     width: $largeUSWidth;
     float: right;
     width: 50%;
     margin: 0px;
     text-align: center;
-   
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
   }
   #dots1, #dots2, #dots3, #dots4, #dots5, #dots6, #dots7 {
     display: none;
@@ -719,7 +825,10 @@
   @media screen and (max-width: 767px) {
     svg.us-dots-1, #world-map-mobile {
       width: $mobileUSWidth;
-      height: $tabletUSHeight;
+      height: $mobileUSHeight;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -826,11 +935,15 @@
     margin-top: -120px;
     @media screen and (max-width: 1023px) {
       margin-top: -180px;
-      height: 300px;
+      height: 330px;
       background: #fff;
-      flex-direction: column;
       width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
       padding-right: 50%;
+      justify-content: flex-start;
+      align-content: flex-start;
+      padding-left: 7%;
     }
   }
 
@@ -903,6 +1016,13 @@
     width: 250px;
     margin-top: 60px;
     margin-bottom: 60px;
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        width: 250px;
+        margin-top: -130px;
+        margin-bottom: -10px;
+        margin-left: 62%;
+
+    }
   }
 
 }

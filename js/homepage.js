@@ -145,6 +145,7 @@ $( window ).scroll(function() {
                     $(this).css('animation', 'type2 1000ms steps(6, end)');
                     next();
                 });
+            // should only run for 768px and above:
             $('.and-icon')
                 .delay(2400)
                 .queue(function (next) {
