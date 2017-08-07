@@ -33,7 +33,7 @@
   ]
 %}
 {{ attach_library('home_d8/campuslife') }}
-<div{{ attributes.addClass(classes) }}>
+<div{{ attributes.addClass(classes).addClass('node__content') }}>
 {% block content %}
   {{ content }}
 {% endblock %}

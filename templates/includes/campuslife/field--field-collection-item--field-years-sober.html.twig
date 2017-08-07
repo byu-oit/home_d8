@@ -54,21 +54,23 @@
 
 {% for item in items %}
     <div{{ attributes.addClass(classes, 'field__item') }}>
-        <div class="sober-rank-block">
-            <div class="sober-ranked">Ranked</div>
-            <div class="sober-number-1">#1</div>
-        </div>
-        <div class="sober-stone-cold-sober">&ldquo;stone cold sober&rdquo;</div>
-        <div class="sober-university">U N I V E R S I T Y</div>
-        <div class="sober-year-block">
-            <div>
-                <div class="sober-years-number">{{ item.content }}</div>
+        <div class="sober-center">
+            <div class="sober-rank-block">
+                <div class="sober-ranked">Ranked</div>
+                <div class="sober-number-1">#1</div>
             </div>
-            <div>
-                <div class="sober-for-the-past">for the past</div>
-                <div class="sober-years-text">Y &nbsp;E &nbsp;A &nbsp;R &nbsp;S</div>
+            <div class="sober-stone-cold-sober">&ldquo;stone cold sober&rdquo;</div>
+            <div class="sober-university">U N I V E R S I T Y</div>
+            <div class="sober-year-block">
+                <div>
+                    <div class="sober-years-number">{{ item.content }}</div>
+                </div>
+                <div>
+                    <div class="sober-for-the-past">for the past</div>
+                    <div class="sober-years-text">Y &nbsp;E &nbsp;A &nbsp;R &nbsp;S</div>
+                </div>
             </div>
+            <div class="sober-princeton">-Princeton Review</div>
         </div>
-        <div class="sober-princeton">-Princeton Review</div>
     </div>
 {% endfor %}

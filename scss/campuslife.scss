@@ -50,6 +50,18 @@ section.page-header {
     display: none;
 }
 
+.campus-life-main-content-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    @media screen and (max-width: 991px) {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    @media screen and (max-width: 767px) {
+        display: block;
+    }
+}
+
 .field-collection-item--name-field-sober-info .content {
     display: flex;
     @media screen and (max-width: 700px) {
@@ -58,21 +70,22 @@ section.page-header {
     }
 }
 .field--name-field-years-sober {
-    width: 800px;
+    grid-column-end: span 2;
+    @media screen and (max-width: 991px) {
+        grid-column-end: span 4;
+    }
+    display: flex;
+    justify-content: center;
     background-color: $gray;
     color: white;
     font-family: $gotham;
     font-weight: bold;
     font-size: 45px;
     line-height: normal;
-    @media screen and (min-width: 768px) {
-        padding-left: 30px;
-    }
-    @media screen and (min-width: 1024px) {
-        padding-left: 100px;
-    }
-    @media screen and (min-width: 1224px) {
-        padding-left: 170px;
+
+    .sober-center {
+        margin-top: auto;
+        margin-bottom: auto;
     }
 
     .sober-ranked {
@@ -122,45 +135,54 @@ section.page-header {
     }
 }
 .field--name-field-sober-image {
-    width: 400px;
-    height: 10px;
+    @media screen and (min-width: 992px) {
+        grid-row-end: span 2;
+    }
+    @media screen and (max-width: 991px) {
+        grid-column-end: span 2;
+    }
     img {
         width: 100%;
         height: auto;
-        padding-right: 5px;
     }
 }
 
-.field--name-field-promo-link {
-    display: flex;
-    > .field__item {
-        width: 380px;
-        padding: 5px;
-        padding-left: 0;
-        background: white;
-        cursor: pointer;
-        @media screen and (min-width: 992px) and (max-width: 1024px) {
-            width: 317px;
-        }
+.promo-link-item.field__item {
+    padding: 5px;
+    padding-left: 0;
+    background: white;
+    cursor: pointer;
+    @media screen and (max-width: 767px) {
+        padding-right: 0;
+    }
+    @media screen and (max-width: 991px) {
+        padding-top: 10px;
+        grid-column-end: span 3;
+    }
 
-        img {
-            width: 100%;
-            height: auto;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .field--name-field-link {
+        background: $gray;
+        padding: 10px;
+        text-align: center;
+        a {
+            color: white;
+            font-family: $gotham;
+            font-size: 25px;
+            font-weight: 500;
         }
-        .field--name-field-link {
-            background: $gray;
-            padding: 10px;
-            text-align: center;
-            a {
-                color: white;
-                font-family: $gotham;
-                font-size: 25px;
-                font-weight: 500;
-            }
-            a:hover {
-                text-decoration: none;
-            }
+        a:hover {
+            text-decoration: none;
         }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .promo-link-item.field__item:last-of-type {
+        padding-right: 0;
+        padding-left: 5px;
     }
 }
 
