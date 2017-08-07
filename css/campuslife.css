@@ -388,9 +388,8 @@ section.page-header {
 
 .campus-life-main-content-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr; }
-  @media screen and (max-width: 991px) {
+  grid-template-columns: 1fr 1fr 1fr; }
+  @media screen and (max-width: 1023px) {
     .campus-life-main-content-layout {
       grid-template-columns: repeat(6, 1fr); } }
   @media screen and (max-width: 767px) {
@@ -413,8 +412,10 @@ section.page-header {
   font-family: "Gotham A", "Gotham B", Arial, sans-serif;
   font-weight: bold;
   font-size: 45px;
-  line-height: normal; }
-  @media screen and (max-width: 991px) {
+  line-height: normal;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  @media screen and (max-width: 1023px) {
     .field--name-field-years-sober {
       grid-column-end: span 4; } }
   .field--name-field-years-sober .sober-center {
@@ -456,25 +457,26 @@ section.page-header {
     padding-left: 250px;
     font-weight: normal; }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
   .field--name-field-sober-image {
     grid-row-end: span 2; } }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1023px) {
   .field--name-field-sober-image {
     grid-column-end: span 2; } }
 .field--name-field-sober-image img {
   width: 100%;
-  height: auto; }
+  height: 100%; }
 
 .promo-link-item.field__item {
   padding: 5px;
+  padding-bottom: 0;
   padding-left: 0;
   background: white;
   cursor: pointer; }
   @media screen and (max-width: 767px) {
     .promo-link-item.field__item {
       padding-right: 0; } }
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: 1023px) {
     .promo-link-item.field__item {
       padding-top: 10px;
       grid-column-end: span 3; } }
@@ -493,7 +495,7 @@ section.page-header {
     .promo-link-item.field__item .field--name-field-link a:hover {
       text-decoration: none; }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .promo-link-item.field__item:last-of-type {
     padding-right: 0;
     padding-left: 5px; } }
@@ -520,9 +522,7 @@ section.page-header {
       font-size: 5vw;
       padding-left: 65px; }
 
-  .field--name-field-sober-image {
-    height: auto; }
-    .field--name-field-sober-image img {
-      padding-right: 0; } }
+  .field--name-field-sober-image img {
+    padding-right: 0; } }
 
 /*# sourceMappingURL=campuslife.css.map */
