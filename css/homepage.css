@@ -233,8 +233,7 @@ div#wrapper {
   padding: 12px 25px;
   background: #002e5d;
   /* change to medium blue */
-  color: #fff;
-  padding: 12px 25px; }
+  color: #fff; }
   .medblue-button a:hover {
     text-decoration: none; }
 
@@ -311,40 +310,42 @@ div#wrapper {
   height: 35px; }
 
 /* ----- main page --------- */
-.type-about .main, .type-academic .main, .type-admissions .main, .type-campus-life .main {
+.type-about .main, .type-academic .main, .type-admissions .main, .type-campus-life .main, .type-yfacts-test .main {
   padding: 20px 0px; }
-  .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar) {
+  .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar), .type-yfacts-test .main .node__content > :not(.full-width-bar) {
     max-width: 1224px;
     margin-left: auto;
     margin-right: auto; }
     @media screen and (max-width: 1424px) and (min-width: 1224px) {
-      .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar) {
+      .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar), .type-yfacts-test .main .node__content > :not(.full-width-bar) {
         max-width: 1020px; } }
     @media screen and (max-width: 1223px) and (min-width: 1024px) {
-      .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar) {
+      .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar), .type-yfacts-test .main .node__content > :not(.full-width-bar) {
         max-width: 824px; } }
     @media screen and (max-width: 1023px) and (min-width: 768px) {
-      .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar) {
+      .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar), .type-yfacts-test .main .node__content > :not(.full-width-bar) {
         max-width: 600px; } }
     @media screen and (max-width: 767px) and (min-width: 400px) {
-      .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar) {
+      .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar), .type-yfacts-test .main .node__content > :not(.full-width-bar) {
         max-width: 90%; } }
     @media screen and (max-width: 400px) {
-      .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar) {
+      .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar), .type-yfacts-test .main .node__content > :not(.full-width-bar) {
         max-width: 300px; } }
-  .type-about .main .container, .type-academic .main .container, .type-admissions .main .container, .type-campus-life .main .container {
+  .type-about .main .container, .type-academic .main .container, .type-admissions .main .container, .type-campus-life .main .container, .type-yfacts-test .main .container {
     width: 100%;
     padding: 0px; }
-  .type-about .main .full-width-bar, .type-academic .main .full-width-bar, .type-admissions .main .full-width-bar, .type-campus-life .main .full-width-bar {
+  .type-about .main .full-width-bar, .type-academic .main .full-width-bar, .type-admissions .main .full-width-bar, .type-campus-life .main .full-width-bar, .type-yfacts-test .main .full-width-bar {
     width: 100%;
     max-width: 100%;
     padding: 30px 15px; }
-    .type-about .main .full-width-bar .field, .type-about .main .full-width-bar .full-width-bar-inner, .type-academic .main .full-width-bar .field, .type-academic .main .full-width-bar .full-width-bar-inner, .type-admissions .main .full-width-bar .field, .type-admissions .main .full-width-bar .full-width-bar-inner, .type-campus-life .main .full-width-bar .field, .type-campus-life .main .full-width-bar .full-width-bar-inner {
+    .type-about .main .full-width-bar .field, .type-about .main .full-width-bar .full-width-bar-inner, .type-academic .main .full-width-bar .field, .type-academic .main .full-width-bar .full-width-bar-inner, .type-admissions .main .full-width-bar .field, .type-admissions .main .full-width-bar .full-width-bar-inner, .type-campus-life .main .full-width-bar .field, .type-campus-life .main .full-width-bar .full-width-bar-inner, .type-yfacts-test .main .full-width-bar .field, .type-yfacts-test .main .full-width-bar .full-width-bar-inner {
       max-width: 1200px;
       margin-left: auto;
       margin-right: auto; }
-    .type-about .main .full-width-bar .full-width-bar-inner, .type-academic .main .full-width-bar .full-width-bar-inner, .type-admissions .main .full-width-bar .full-width-bar-inner, .type-campus-life .main .full-width-bar .full-width-bar-inner {
+    .type-about .main .full-width-bar .full-width-bar-inner, .type-academic .main .full-width-bar .full-width-bar-inner, .type-admissions .main .full-width-bar .full-width-bar-inner, .type-campus-life .main .full-width-bar .full-width-bar-inner, .type-yfacts-test .main .full-width-bar .full-width-bar-inner {
       display: flex; }
+  .type-about .main .full-width-bar.has-yfacts, .type-academic .main .full-width-bar.has-yfacts, .type-admissions .main .full-width-bar.has-yfacts, .type-campus-life .main .full-width-bar.has-yfacts, .type-yfacts-test .main .full-width-bar.has-yfacts {
+    padding: 0; }
 
 /* ----------- Front Page ------- */
 /* ------------ About Page ---------- */
@@ -550,9 +551,9 @@ div#wrapper {
   0% {
     width: 0; }
   50% {
-    width: 50%; }
+    width: 50; }
   100% {
-    width: 100%; } }
+    width: 100; } }
 
 @keyframes blink {
   to {
@@ -573,7 +574,8 @@ div#wrapper {
   font-family: "Gotham A", "Gotham B", Arial, sans-serif;
   font-size: 35px;
   font-weight: bold;
-  line-height: 40px; }
+  line-height: 40px;
+  padding-right: 50px !important; }
   @media screen and (max-width: 1024px) {
     .type-about .main .students-group .tooltip > .tooltip-inner {
       font-size: 26px; } }
@@ -587,6 +589,7 @@ div#wrapper {
   opacity: 1; }
 
 .type-about .main .students-group .tooltip.bottom .tooltip-arrow {
+  margin-left: -20px;
   margin-left: -10px;
   border-width: 0px 10px 20px;
   border-left: 10px solid #002E5D;
@@ -639,12 +642,18 @@ div#wrapper {
   display: inline;
   height: 170px;
   padding: 25px 45px; }
+  @media screen and (max-width: 1024px) {
+    .type-about .main .field--name-field-total-students {
+      padding: 25px 25px 25px 20px; } }
   .type-about .main .field--name-field-total-students .field__item {
     font-size: 55px;
     color: #002E5D;
     font-weight: bold;
     text-align: right;
     padding: 25px 0px 0px; }
+    @media screen and (max-width: 1024px) {
+      .type-about .main .field--name-field-total-students .field__item {
+        font-size: 30px; } }
 
 .type-about .main .field--name-field-gender {
   display: flex;
@@ -732,27 +741,64 @@ div#wrapper {
   overflow: hidden;
   display: none; }
 
-.type-about .main .and-icon {
+.type-about .main .states-label .states-cont, .type-about .main .states-label .countries-cont, .type-about .main .countries-label .states-cont, .type-about .main .countries-label .countries-cont {
+  display: flex; }
+
+.type-about .main .states-label .states-label, .type-about .main .states-label .countries-label, .type-about .main .countries-label .states-label, .type-about .main .countries-label .countries-label {
+  white-space: nowrap;
+  overflow: hidden;
+  display: none; }
+
+.type-about .main .states-label .and-icon, .type-about .main .countries-label .and-icon {
+  display: none;
   font-weight: 500;
   font-size: 130px;
   font-family: "Gotham A", "Gotham B", Arial, sans-serif;
   color: #002E5D;
   padding: 0px 25px; }
 
-.type-about .main .state-percents-group {
-  max-width: 230px; }
-  .type-about .main .state-percents-group .field.h12 {
+.type-about .main .states-label .state-percents-group, .type-about .main .countries-label .state-percents-group {
+  max-width: 230px;
+  width: 230px;
+  height: 64px;
+  display: block; }
+  .type-about .main .states-label .state-percents-group .field.h12, .type-about .main .countries-label .state-percents-group .field.h12 {
+    text-transform: none;
+    display: none; }
+  .type-about .main .states-label .state-percents-group .field.h12, .type-about .main .countries-label .state-percents-group .field.h12 {
     text-transform: none;
     display: inline; }
-  .type-about .main .state-percents-group .field.h12:after {
+  .type-about .main .states-label .state-percents-group .field.h12:after, .type-about .main .countries-label .state-percents-group .field.h12:after {
     content: "\2022";
     color: #002E5D;
     font-size: 20px;
     padding-left: 3px;
     position: relative;
     top: 2px; }
-  .type-about .main .state-percents-group .h12.field.field--name-field-percent-arizona {
-    display: block; }
+  .type-about .main .states-label .state-percents-group .h12.field.field--name-field-percent-arizona, .type-about .main .countries-label .state-percents-group .h12.field.field--name-field-percent-arizona {
+    display: none; }
+  .type-about .main .states-label .state-percents-group .state-percents-group > .state-2, .type-about .main .countries-label .state-percents-group .state-percents-group > .state-2 {
+    animation-delay: 300ms; }
+  .type-about .main .states-label .state-percents-group .state-percents-group > .state-3, .type-about .main .countries-label .state-percents-group .state-percents-group > .state-3 {
+    animation-delay: 1600ms; }
+  .type-about .main .states-label .state-percents-group .state-percents-group > .state-4, .type-about .main .countries-label .state-percents-group .state-percents-group > .state-4 {
+    animation-delay: 2900ms; }
+  .type-about .main .states-label .state-percents-group .state-percents-group > .state-5, .type-about .main .countries-label .state-percents-group .state-percents-group > .state-5 {
+    animation-delay: 3200ms; }
+  .type-about .main .states-label .state-percents-group svg.us-dots-1, .type-about .main .countries-label .state-percents-group svg.us-dots-1 {
+    width: 140px;
+    height: 100px; }
+  .type-about .main .states-label .state-percents-group .us-map-wrapper, .type-about .main .countries-label .state-percents-group .us-map-wrapper {
+    width: 140px;
+    float: left; }
+  .type-about .main .states-label .state-percents-group #dots1, .type-about .main .states-label .state-percents-group #dots2, .type-about .main .states-label .state-percents-group #dots3, .type-about .main .states-label .state-percents-group #dots4, .type-about .main .states-label .state-percents-group #dots5, .type-about .main .states-label .state-percents-group #dots6, .type-about .main .states-label .state-percents-group #dots7, .type-about .main .countries-label .state-percents-group #dots1, .type-about .main .countries-label .state-percents-group #dots2, .type-about .main .countries-label .state-percents-group #dots3, .type-about .main .countries-label .state-percents-group #dots4, .type-about .main .countries-label .state-percents-group #dots5, .type-about .main .countries-label .state-percents-group #dots6, .type-about .main .countries-label .state-percents-group #dots7 {
+    display: none; }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .type-about .main .states-label .state-percents-group svg.us-dots-1, .type-about .main .countries-label .state-percents-group svg.us-dots-1 {
+      width: 360px; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .type-about .main .states-label .state-percents-group svg.us-dots-1, .type-about .main .countries-label .state-percents-group svg.us-dots-1 {
+      width: 300px; } }
 
 .type-about .main .demographics3 {
   margin-top: -100px; }
@@ -919,7 +965,8 @@ div#wrapper {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-top: -100px; }
+    margin-top: -100px;
+    margin-top: -120px; }
   .state-percents-group .certifications-group-wrapper {
     display: none; }
   .state-percents-group .award-icon-wrapper {

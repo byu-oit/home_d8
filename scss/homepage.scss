@@ -388,7 +388,7 @@ $circle-width: 156px;
 
 /* ----- main page --------- */
 //4 main content types that have stretch-full-width with bars
-.type-about, .type-academic, .type-admissions, .type-campus-life {
+.type-about, .type-academic, .type-admissions, .type-campus-life, .type-yfacts-test {
   .main {
     padding: 20px 0px;
     .node__content > :not(.full-width-bar) {
@@ -431,6 +431,10 @@ $circle-width: 156px;
       .full-width-bar-inner {
         display: flex;
       }
+    }
+
+    .full-width-bar.has-yfacts {
+      padding: 0;
     }
 
   }

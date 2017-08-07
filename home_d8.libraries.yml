@@ -4,6 +4,7 @@ global-styling:
     base:
       css/homepage.css: {}
       css/colleges.css: {}
+      css/yfacts.css: {}
     theme:
       css/animate.css: {}
       css/academic.css: {}
