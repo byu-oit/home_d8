@@ -32,36 +32,10 @@
     'block-' ~ plugin_id|clean_class,
   ]
 %}
+{{ attach_library('home_d8/campuslife') }}
+<div{{ attributes.addClass(classes).addClass('node__content') }}>
+{% block content %}
+  {{ content }}
+{% endblock %}
 
-  {{ title_prefix }}
-{% if 'byu-footer' in attributes['class'] %}
-
-    {% if label %}
-      <span slot="header" {{ title_attributes }}>{{ label }}</span>
-    {% endif %}
-    {#{% block content %}#}
-      {% if content['body'] is defined %}
-        {{ content['body'][0]['#text']|t }}
-      {% else %}
-          <em>Block body undefined</em>
-      {% endif %}
-    {#{% endblock %}#}
-
-{% else %}
-    {#{% if label %}#}
-      {#<span slot="header" {{ title_attributes }}>Test {{ label }}</span>#}
-    {#{% endif %}#}
-    {#{{ title_suffix }}#}
-    {#{% block content %}#}
-      {#{{ content }}#}
-    {#{% endblock %}#}
-    <div{{ attributes.addClass(classes) }}>
-    {% if label %}
-      <h2>{{ label }}</h2>
-    {% endif %}
-    {% block content %}
-      {{ content }}
-    {% endblock %}
-
-    </div>
-{% endif %}
+</div>

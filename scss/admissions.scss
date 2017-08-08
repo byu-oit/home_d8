@@ -1,0 +1,373 @@
+@import "homepage";
+
+.field--name-field-links {
+    text-align: center;
+    .field__label {
+        margin-right: 15px;
+    }
+    .field__item {
+        margin-right: 10px;
+    }
+    div {
+        display: inline;
+        @media screen and (max-width: 767px) {
+            display: block;
+            div.field__item {
+                display: inline;
+            }
+        }
+        a {
+            color: white;
+            background-color: $navy;
+            padding: 10px 2em;
+        }
+    }
+    div.field__item:last-of-type {
+        a {
+            background-color: $medblue;
+            padding: 10px 3.5em;
+        }
+    }
+}
+
+.freshman_profile_wrapper {
+    background-color: $lightgray;
+}
+.node__content.freshman_profile {
+    .field__label {
+        padding-left: 160px;
+        font-family: $vitesse;
+        font-weight: normal;
+        @media screen and (max-width: 1199px) {
+            padding-left: 60px;
+        }
+        @media screen and (max-width: 991px) {
+            padding-left: 0;
+            text-align: center;
+        }
+    }
+    .field__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        > .field__item {
+            width: 400px;
+            background-color: white;
+            margin: 10px;
+            padding: 10px 30px;
+            @media screen and (min-width: 321px) and (max-width: 1223px) {
+                width: 350px;
+            }
+            @media screen and (max-width: 320px) {
+                width: 310px;
+                margin: 10px -10px;
+                padding: 10px 15px;
+            }
+            color: $medblue;
+            .field-collection-item--name-field-freshman-profile {
+                div {
+                    line-height: normal;
+                }
+                .field--name-field-data-text {
+
+                }
+                .field--name-field-data-type {
+                    font-size: 14px;
+                    font-weight: normal;
+                    text-transform: uppercase;
+                }
+                img.freshman-profile-icon {
+                    float: left;
+                    padding-right: 10px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
+
+.view-id-admissions_links.view-display-id-block_1 {
+    margin-top: 20px;
+    border-top: solid $gray 1px;
+    padding-top: 20px;
+    li {
+        line-height: normal;
+    }
+    .view-content {
+        ul {
+            list-style-type: none;
+            padding-left: 10px;
+            span.h9 {
+                line-height: normal;
+            }
+            ul {
+                ul {
+                    div.views-field-name a:before {
+                        content: "> ";
+                    }
+                    li {
+                        margin-left: 1em;
+                        text-indent: -1em;
+                    }
+                }
+            }
+            span.field-content {
+                text-transform: uppercase;
+                color: $medgray;
+                a {
+                    text-transform: none;
+                }
+            }
+        }
+        > ul {
+            padding-left: 0;
+            display: flex;
+            justify-content: space-around;
+            @media screen and (max-width: 991px) {
+                flex-wrap: wrap;
+            }
+            > li {
+                > div {
+                    display: none;
+                }
+                width: 360px;
+                border-right: solid $gray 1px;
+                @media screen and (max-width: 991px) {
+                    width: 400px;
+                    border-right: 0;
+                    border-bottom: solid $gray 1px;
+                    padding-bottom: 10px;
+                }
+                @media screen and (min-width: 992px) and (max-width: 1223px) {
+                    width: 310px;
+                }
+                .views-field-name {
+                    padding-top: 15px;
+                    padding-bottom: 5px;
+                }
+            }
+            > li:last-of-type {
+                border-right: 0;
+                @media screen and (max-width: 991px) {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.field-collection-item--name-field-tuition-info {
+    margin-top: 50px;
+    text-align: center;
+    line-height: normal;
+
+    div.branchpath {
+        margin: 0px 0;
+        display: flex;
+        justify-content: center;
+        div.branchpath-svg-container {
+            width: 400px;
+            height: 100px;
+            @media screen and (max-width: 1223px) {
+                width: 262px;
+                height: 60px;
+            }
+            @media screen and (max-width: 767px) {
+                width: 160px;
+            }
+        }
+    }
+    div.branchpath.sub-branch {
+        div.branchpath-svg-container {
+            width: 180px;
+            @media screen and (max-width: 1223px) {
+                margin-top: 5px;
+                height: 30px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        width: 310px;
+    }
+    .h9 {
+        line-height: normal;
+    }
+    .subsidies {
+        color: $medgray;
+        font-style: italic;
+        font-weight: normal;
+        font-size: 12px;
+        text-align: left;
+        margin-top: 1em;
+    }
+    @media screen and (max-width: 991px) {
+        .subsidies-left {
+            display: none;
+        }
+    }
+    @media screen and (min-width: 992px) {
+        .subsidies-bottom {
+            display: none;
+        }
+    }
+    .tuition-header {
+        display: inline-block;
+        width: 400px;
+        padding: 20px;
+        @media screen and (max-width: 767px) {
+            width: auto;
+        }
+        background-color: $darkgray;
+        color: white;
+        font-weight: normal;
+        .how-much {
+            font-style: italic;
+            font-size: 25px;
+        }
+        .for-full-time {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+    }
+    .grad-split {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .undergrad-header, .undergrad-header-small, .graduate-header {
+            background-color: $navy;
+            color: white;
+            padding: 10px;
+            margin: 0 50px;
+        }
+        .undergrad-header-small {
+            display: none;
+        }
+        .graduate-header {
+            background-color: $medblue;
+        }
+        @media screen and (max-width: 1223px) {
+            .undergrad-header {
+                display: none;
+            }
+            .undergrad-header-small {
+                display: block;
+                height: 60px;
+            }
+            .graduate-header {
+                height: 60px;
+                line-height: 40px;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            .undergrad-header-small, .graduate-header {
+                margin: 0 10px;
+            }
+        }
+        .management-law-header {
+            width: 550px;
+            @media screen and (max-width: 1223px) {
+                width: auto;
+                text-align: right;
+            }
+            color: $darkgray;
+        }
+        > div {
+            width: 400px;
+            @media screen and (max-width: 1223px) {
+                width: 250px;
+            }
+            @media screen and (max-width: 767px) {
+                width: 150px;
+            }
+            .lds-split {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                > div {
+                    position: relative;
+                    width: 150px;
+                    margin: 10px;
+                }
+                .credits {
+                    background-color: $lightgray;
+                    color: $darkgray;
+                    width: 400px;
+                    padding: 5px 1em;
+                    position: absolute;
+                    top: 35px;
+                    z-index: -1000;
+                    @media screen and (max-width: 991px) {
+                        display: none;
+                    }
+                    @media screen and (min-width: 992px) and (max-width: 1223px) {
+                        top: 30px;
+                        width: 150px;
+                    }
+                }
+                .undergrad-credits {
+                    text-align: left;
+                    left: -8em;
+                }
+                .grad-credits {
+                    text-align: right;
+                    left: 4.5em;
+                    @media screen and (min-width: 992px) and (max-width: 1223px) {
+                        left: 8.5em;
+                    }
+                }
+                .per-semester {
+                    font-size: 12px;
+                    font-weight: normal;
+                    text-transform: uppercase;
+                }
+                .tuition-price {
+                    padding: 10px 0;
+                }
+                .lds-left {
+                    .tuition-price {
+                        background-color: #ffe7a2;
+                    }
+                }
+                .non-lds-right {
+                    .tuition-price {
+                        background-color: #fcc015;
+                    }
+                    @media screen and (min-width: 1224px) {
+                        .credits {
+                            display: none;
+                        }
+                    }
+                }
+                .non-lds-right.smaller-border {
+                    @media screen and (max-width: 1223px) {
+                        border-bottom: 1px solid $gray;
+                        padding-bottom: 10px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            .lds-split.management-law {
+                @media screen and (min-width: 1224px) {
+                    .h9 {
+                        display: none;
+                    }
+                    .grad-credits {
+                        top: 12px;
+                    }
+                }
+            }
+        }
+    }
+    .field--name-field-more-tuition-details-link {
+        margin-top: 50px;
+        a {
+            color: white;
+            background-color: $brightBlue;
+            padding: 10px 20px;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+    }
+}

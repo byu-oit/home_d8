@@ -44,9 +44,207 @@ $medblue: #697F96;  // was #889FB7  but it couldn't have white on it with enough
 //$darkmedblue: #5B728A;  // #5B728A is enough contrast for small white text
 $white: #FFF;
 
-// fonts
+/* ---- fonts ---- */
 $gotham: "Gotham A", "Gotham B", Arial, sans-serif;
 $vitesse: "Vitesse A", "Vitesse B", serif;
+
+
+/* ------------- Headings Etc -------------------- */
+
+h1, h2, h3, h4, .h1, .h2, .h3, .h4, .h8, .h9, .h10, .h11, .h12,
+h1 a, h2 a, h3 a, h4 a, .h1 a, .h2 a, .h3 a, .h4 a, .h8 a, .h9 a, .h10 a, .h11 a, .h12 a {
+  color: #002e5d;
+}
+h5 a, .h5 a,
+h5, .h5, .h9.gray, .h9.gray a, .h11.gray, .h11.gray a {
+  color: $medgray;
+}
+h6 a, .h6 a, .h7 a,.h8.white a, .h9.white a, .h11.white a, .h12.white a, .h13 a,
+h6, .h6, .h7,.h8.white, .h9.white, .h10.white, .h10.white a, .h11.white, .h12.white, .h13  {
+  color: #fff;
+}
+h1, h2, .h1, .h2 {
+  font-family: $vitesse;
+}
+h3, h5, h6, .h3, .h5, .h6, .h7, .h8, .h9, .h10, .h11, .h12, .h13 {
+  font-family: $gotham;
+}
+
+h1, .h1 {
+  font-size: 35px;
+  line-height: 34px;
+  text-align: center;
+}
+h2, .h2 {
+  font-size: 25px;
+  line-height: 34px;
+  text-align: center;
+}
+h3, .h3 {
+  font-size: 15px;
+  letter-spacing: -.2px;
+  line-height: 19px;
+  a:hover {
+    font-weight: bold;
+  }
+}
+h4 {
+  font-size: 18px;
+  line-height: 20px;
+  a:hover {
+    color: #003DA5;
+  }
+}
+h5 {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: .33px;
+}
+h6 {
+  font-size: 25px;
+  line-height: 27px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.h7 {
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.h8 {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -.2px;
+  text-align: center;
+}
+
+.h9 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: .4px;
+  a:hover {
+    color: #003DA5;
+  }
+}
+.h10 {
+  font-size: 35px;
+  line-height: 40px;
+  font-weight: bold;
+  &.white {
+    color: #fff;
+  }
+}
+
+// one case i couldn't add the class, so need a mixin
+// no mobile adjustment
+@mixin h11() {
+  font-family: $gotham;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 40px;
+  @media screen and (max-width: 1024px){
+    font-size: 26px;
+  }
+
+}
+.h11 {
+  @include h11();
+}
+.h12 {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+  /*letter-spacing:*/
+}
+$h13-mobile-font:45px;
+$h13-tabletp-font:90px;
+$h13-tabletl-font: 120px;
+$h13-desktop-font:135px;
+$h13-desktopw-font: 200px;
+.h13 {
+  font-size: $h13-mobile-font;
+  /*line-height:*/
+}
+.view-content-page-header .views-field-title {
+  margin-top: ($h13-mobile-font *.73*-1);
+}
+div#wrapper {margin-top:-17px};
+
+@media screen and (min-width: 768px) {
+  .h13 {
+    font-size: $h13-tabletp-font;
+  }
+  .view-content-page-header .views-field-title {
+    margin-top: ($h13-tabletp-font *.50*-1);
+  }
+  div#wrapper {margin-top:1px};
+}
+@media screen and (min-width: 1024px) {
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 17px;
+    /*line-height: ??;*/
+  }
+  .h13 {
+    font-size: $h13-tabletl-font;
+  }
+  .view-content-page-header .views-field-title {
+    margin-top: ($h13-tabletl-font *.50*-1);
+  }
+  div#wrapper {margin-top:11px};
+
+}
+@media screen and (min-width: 1224px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  /* we may not do this this way */
+  .h8 {
+    font-size: 16px;
+    line-height: 17px;
+  }
+  .h9 {
+    font-size: 20px;
+    letter-spacing: .5px;
+    line-height: 48px;
+  }
+  .h10 {
+    font-size: 60px;
+    line-height: 82px;
+    letter-spacing: -2.5px;
+    font-weight: 500;
+  }
+  .h13 {
+    font-size: $h13-desktop-font;
+  }
+  .view-content-page-header .views-field-title {
+    margin-top: ($h13-desktop-font *.50*-1);
+  }
+  div#wrapper {margin-top:-16px};
+}
+@media screen and (min-width: 1824px) {
+
+  .h13 {
+    font-size: $h13-desktopw-font;
+  }
+  .view-content-page-header .views-field-title {
+    margin-top: ($h13-desktopw-font *.45*-1);
+  }
+  div#wrapper {margin-top:-16px};
+}
+
 
 // general mixins
 

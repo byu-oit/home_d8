@@ -351,5 +351,62 @@ a:hover {
 /* ----- Academics Page ------------ */
 /* ------------ Campus Life Page ------------ */
 /* -------- Basic Pages ------------- */
+.field--name-field-somethings {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .field--name-field-somethings .field--name-field-something-to-type::before {
+    content: "Something to "; }
+  .field--name-field-somethings > .field__item {
+    cursor: pointer;
+    border: 1px solid #c5c5c5; }
+    @media screen and (min-width: 320px) {
+      .field--name-field-somethings > .field__item {
+        width: 154px; } }
+    @media screen and (min-width: 1024px) {
+      .field--name-field-somethings > .field__item {
+        width: 211px; } }
+    @media screen and (min-width: 1224px) {
+      .field--name-field-somethings > .field__item {
+        width: 247px; } }
+    .field--name-field-somethings > .field__item .field--name-field-something-to-type {
+      text-align: center;
+      text-transform: uppercase;
+      padding: 15px 5px;
+      color: white;
+      background-color: #767676; }
+      @media screen and (min-width: 320px) {
+        .field--name-field-somethings > .field__item .field--name-field-something-to-type {
+          display: none; } }
+      @media screen and (min-width: 1024px) {
+        .field--name-field-somethings > .field__item .field--name-field-something-to-type {
+          display: inherit; } }
+    .field--name-field-somethings > .field__item .something-to-do {
+      background-color: #002E5D; }
+    .field--name-field-somethings > .field__item .something-to-read {
+      background-color: #697F96; }
+    .field--name-field-somethings > .field__item .something-to-see {
+      background-color: #c5c5c5; }
+    .field--name-field-somethings > .field__item span.something-to-type {
+      font-weight: bold;
+      font-style: italic; }
+    .field--name-field-somethings > .field__item .field--name-field-image {
+      overflow: hidden; }
+      .field--name-field-somethings > .field__item .field--name-field-image img {
+        width: 100%;
+        height: auto; }
+    .field--name-field-somethings > .field__item .field--name-field-link {
+      padding: 0px 15px;
+      margin-top: 10px; }
+      .field--name-field-somethings > .field__item .field--name-field-link a:hover {
+        text-decoration: none; }
+  .field--name-field-somethings > .field__item:hover {
+    box-shadow: 3px 3px 1px #e5e5e5; }
+    .field--name-field-somethings > .field__item:hover a {
+      font-weight: bold; }
 
-/*# sourceMappingURL=homepage.css.map */
+section.page-header {
+  display: none; }
+
+/*# sourceMappingURL=frontpage.css.map */

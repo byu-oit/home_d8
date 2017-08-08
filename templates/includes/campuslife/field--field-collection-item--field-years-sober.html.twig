@@ -38,51 +38,39 @@
  */
 #}
 {%
-set classes = [
-'field',
-'field--name-' ~ field_name|clean_class,
-'field--type-' ~ field_type|clean_class,
-'field--label-' ~ label_display,
-]
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+  ]
 %}
 {%
-set title_classes = [
-'field__label',
-label_display == 'visually_hidden' ? 'visually-hidden',
-]
+  set title_classes = [
+    'field__label',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
 %}
 
-{% if label_hidden %}
-  {% if multiple %}
-    <div{{ attributes.addClass(classes, 'field__items') }}>
-      {% for item in items %}
-        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
-      {% endfor %}
-    </div>
-  {% else %}
-    {#single#}
-    {% for item in items %}
-      <div class="and-icon">&</div>
-      <div class="countries-cont">
-        <div class="countries-field-wrapper">
-          <div{{ attributes.addClass(classes, 'field__item', 'h11') }}>{{ item.content }}</div>
+{% for item in items %}
+    <div{{ attributes.addClass(classes, 'field__item') }}>
+        <div class="sober-center">
+            <div class="sober-rank-block">
+                <div class="sober-ranked">Ranked</div>
+                <div class="sober-number-1">#1</div>
+            </div>
+            <div class="sober-stone-cold-sober">&ldquo;stone cold sober&rdquo;</div>
+            <div class="sober-university">U N I V E R S I T Y</div>
+            <div class="sober-year-block">
+                <div>
+                    <div class="sober-years-number">{{ item.content }}</div>
+                </div>
+                <div>
+                    <div class="sober-for-the-past">for the past</div>
+                    <div class="sober-years-text">Y &nbsp;E &nbsp;A &nbsp;R &nbsp;S</div>
+                </div>
+            </div>
+            <div class="sober-princeton">-Princeton Review</div>
         </div>
-        <div class="h11 semibold countries-label"> Countries</div>
-      </div>
-
-    {% endfor %}
-  {% endif %}
-{% else %}
-  <div{{ attributes.addClass(classes) }}>
-    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
-    {% if multiple %}
-    <div class="field__items">
-      {% endif %}
-      {% for item in items %}
-        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
-      {% endfor %}
-      {% if multiple %}
     </div>
-    {% endif %}
-  </div>
-{% endif %}
+{% endfor %}
