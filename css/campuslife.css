@@ -312,34 +312,36 @@ a:hover {
   height: 35px; }
 
 /* ----- main page --------- */
-.type-about .main, .type-academic .main, .type-admissions .main, .type-campus-life .main {
+.type-about .main, .type-academic .main, .type-admissions .main, .type-campus-life .main, .type-yfacts-test .main {
   padding: 20px 0px; }
   @media screen and (min-width: 1024px) {
-    .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar) {
+    .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar), .type-yfacts-test .main .node__content > :not(.full-width-bar) {
       margin-left: auto;
       margin-right: auto; } }
   @media screen and (min-width: 1424px) {
-    .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar) {
+    .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar), .type-yfacts-test .main .node__content > :not(.full-width-bar) {
       max-width: 1224px; } }
   @media screen and (max-width: 1424px) and (min-width: 1224px) {
-    .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar) {
+    .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar), .type-yfacts-test .main .node__content > :not(.full-width-bar) {
       max-width: 1020px; } }
   @media screen and (max-width: 1223px) and (min-width: 1024px) {
-    .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar) {
+    .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar), .type-yfacts-test .main .node__content > :not(.full-width-bar) {
       max-width: 824px; } }
-  .type-about .main .container, .type-academic .main .container, .type-admissions .main .container, .type-campus-life .main .container {
+  .type-about .main .container, .type-academic .main .container, .type-admissions .main .container, .type-campus-life .main .container, .type-yfacts-test .main .container {
     width: 100%;
     padding: 0px; }
-  .type-about .main .full-width-bar, .type-academic .main .full-width-bar, .type-admissions .main .full-width-bar, .type-campus-life .main .full-width-bar {
+  .type-about .main .full-width-bar, .type-academic .main .full-width-bar, .type-admissions .main .full-width-bar, .type-campus-life .main .full-width-bar, .type-yfacts-test .main .full-width-bar {
     width: 100%;
     max-width: 100%;
     padding: 30px 15px; }
-    .type-about .main .full-width-bar .field, .type-about .main .full-width-bar .full-width-bar-inner, .type-academic .main .full-width-bar .field, .type-academic .main .full-width-bar .full-width-bar-inner, .type-admissions .main .full-width-bar .field, .type-admissions .main .full-width-bar .full-width-bar-inner, .type-campus-life .main .full-width-bar .field, .type-campus-life .main .full-width-bar .full-width-bar-inner {
+    .type-about .main .full-width-bar .field, .type-about .main .full-width-bar .full-width-bar-inner, .type-academic .main .full-width-bar .field, .type-academic .main .full-width-bar .full-width-bar-inner, .type-admissions .main .full-width-bar .field, .type-admissions .main .full-width-bar .full-width-bar-inner, .type-campus-life .main .full-width-bar .field, .type-campus-life .main .full-width-bar .full-width-bar-inner, .type-yfacts-test .main .full-width-bar .field, .type-yfacts-test .main .full-width-bar .full-width-bar-inner {
       max-width: 1200px;
       margin-left: auto;
       margin-right: auto; }
-    .type-about .main .full-width-bar .full-width-bar-inner, .type-academic .main .full-width-bar .full-width-bar-inner, .type-admissions .main .full-width-bar .full-width-bar-inner, .type-campus-life .main .full-width-bar .full-width-bar-inner {
+    .type-about .main .full-width-bar .full-width-bar-inner, .type-academic .main .full-width-bar .full-width-bar-inner, .type-admissions .main .full-width-bar .full-width-bar-inner, .type-campus-life .main .full-width-bar .full-width-bar-inner, .type-yfacts-test .main .full-width-bar .full-width-bar-inner {
       display: flex; }
+  .type-about .main .full-width-bar.has-yfacts, .type-academic .main .full-width-bar.has-yfacts, .type-admissions .main .full-width-bar.has-yfacts, .type-campus-life .main .full-width-bar.has-yfacts, .type-yfacts-test .main .full-width-bar.has-yfacts {
+    padding: 0; }
 
 /* ----------- Front Page ------- */
 .views-field.views-field-field-header-image {
