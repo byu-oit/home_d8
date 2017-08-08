@@ -373,15 +373,25 @@ a:hover {
     padding: 10px 3.5em; }
 
 .freshman_profile_wrapper {
-  background-color: #e5e5e5; }
+  background-color: #e5e5e5;
+  padding-top: 100px; }
+  @media screen and (max-width: 1223px) {
+    .freshman_profile_wrapper {
+      padding-top: 130px; } }
 
 .node__content.freshman_profile .field__label {
-  padding-left: 160px;
+  padding-left: 200px;
   font-family: "Vitesse A", "Vitesse B", serif;
   font-weight: normal; }
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1424px) {
     .node__content.freshman_profile .field__label {
-      padding-left: 60px; } }
+      padding-left: 100px; } }
+  @media screen and (max-width: 1223px) {
+    .node__content.freshman_profile .field__label {
+      padding-left: 52px; } }
+  @media screen and (max-width: 1023px) {
+    .node__content.freshman_profile .field__label {
+      padding-left: 152px; } }
   @media screen and (max-width: 991px) {
     .node__content.freshman_profile .field__label {
       padding-left: 0;
@@ -627,5 +637,58 @@ a:hover {
       padding: 10px 20px; }
     .field-collection-item--name-field-tuition-info .field--name-field-more-tuition-details-link a:hover {
       text-decoration: none; }
+
+.backFiller {
+  border-left-color: #e5e5e5; }
+
+/* big ugly page re-ordering for 768-991 px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .view-id-admissions_links.view-display-id-block_1 .view-content > ul {
+    flex-direction: column;
+    align-items: center; }
+
+  .backFiller {
+    border-left-color: transparent; }
+
+  .more-tuition-details {
+    display: none; }
+
+  .more-tuition-details-bottom {
+    display: block; }
+
+  .freshman_and_tuition {
+    display: flex;
+    flex-direction: row-reverse; }
+    .freshman_and_tuition > div {
+      width: 50%; }
+    .freshman_and_tuition .freshman_profile_wrapper {
+      padding-top: 200px; }
+    .freshman_and_tuition .field-collection-item--name-field-tuition-info {
+      margin-top: 110px; }
+      .freshman_and_tuition .field-collection-item--name-field-tuition-info .tuition-header {
+        width: 300px;
+        padding: 20px 10px; }
+      .freshman_and_tuition .field-collection-item--name-field-tuition-info div.branchpath div.branchpath-svg-container {
+        width: 182px; }
+      .freshman_and_tuition .field-collection-item--name-field-tuition-info .grad-split > div {
+        width: 160px; }
+      .freshman_and_tuition .field-collection-item--name-field-tuition-info .grad-split .undergrad-header, .freshman_and_tuition .field-collection-item--name-field-tuition-info .grad-split .undergrad-header-small, .freshman_and_tuition .field-collection-item--name-field-tuition-info .grad-split .graduate-header {
+        margin: 10px;
+        width: 140px; }
+      .freshman_and_tuition .field-collection-item--name-field-tuition-info .grad-split .management-law-header {
+        position: relative;
+        width: 150%;
+        right: 55%; }
+      .freshman_and_tuition .field-collection-item--name-field-tuition-info .tuition-bottom-area {
+        position: relative;
+        width: 200%;
+        background-color: white;
+        padding-top: 30px; }
+        .freshman_and_tuition .field-collection-item--name-field-tuition-info .tuition-bottom-area .subsidies {
+          width: 600px;
+          margin-left: auto;
+          margin-right: auto; }
+        .freshman_and_tuition .field-collection-item--name-field-tuition-info .tuition-bottom-area .field--name-field-more-tuition-details-link {
+          margin-top: 30px; } }
 
 /*# sourceMappingURL=admissions.css.map */

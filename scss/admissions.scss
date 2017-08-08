@@ -32,14 +32,24 @@
 
 .freshman_profile_wrapper {
     background-color: $lightgray;
+    padding-top: 100px;
+    @media screen and (max-width: 1223px) {
+        padding-top: 130px;
+    }
 }
 .node__content.freshman_profile {
     .field__label {
-        padding-left: 160px;
+        padding-left: 200px;
         font-family: $vitesse;
         font-weight: normal;
-        @media screen and (max-width: 1199px) {
-            padding-left: 60px;
+        @media screen and (max-width: 1424px) {
+            padding-left: 100px;
+        }
+        @media screen and (max-width: 1223px) {
+            padding-left: 52px;
+        }
+        @media screen and (max-width: 1023px) {
+            padding-left: 152px;
         }
         @media screen and (max-width: 991px) {
             padding-left: 0;
@@ -368,6 +378,77 @@
         }
         a:hover {
             text-decoration: none;
+        }
+    }
+}
+.backFiller {
+    border-left-color: $lightgray;
+}
+
+/* big ugly page re-ordering for 768-991 px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .view-id-admissions_links.view-display-id-block_1 .view-content > ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .backFiller {
+        border-left-color: transparent;
+    }
+
+    .more-tuition-details {
+        display: none;
+    }
+    .more-tuition-details-bottom {
+        display: block;
+    }
+    .freshman_and_tuition {
+        display: flex;
+        flex-direction: row-reverse;
+        > div {
+            width: 50%;
+        }
+        .freshman_profile_wrapper {
+            padding-top: 200px;
+        }
+
+        .field-collection-item--name-field-tuition-info {
+            margin-top: 110px;
+            .tuition-header {
+                width: 300px;
+                padding: 20px 10px;
+            }
+            div.branchpath div.branchpath-svg-container {
+                width: 182px;
+            }
+            .grad-split {
+                > div {
+                    width: 160px;
+                }
+                .undergrad-header, .undergrad-header-small, .graduate-header {
+                    margin: 10px;
+                    width: 140px;
+                }
+                .management-law-header {
+                    position: relative;
+                    width: 150%;
+                    right: 55%;
+                }
+            }
+            .tuition-bottom-area {
+                position: relative;
+                width: 200%;
+                background-color: white;
+                padding-top: 30px;
+                .subsidies {
+                    width: 600px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                .field--name-field-more-tuition-details-link {
+                    margin-top: 30px;
+                }
+            }
         }
     }
 }
