@@ -390,7 +390,14 @@ section.page-header {
 
 .campus-life-main-content-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; }
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  top: -25px;
+  padding-top: 85px;
+  background-color: #c5c5c5; }
+  @media screen and (max-width: 1223px) {
+    .campus-life-main-content-layout {
+      top: 0; } }
   @media screen and (max-width: 1023px) {
     .campus-life-main-content-layout {
       grid-template-columns: repeat(6, 1fr); } }

@@ -53,6 +53,13 @@ section.page-header {
 .campus-life-main-content-layout {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+    top: -25px;
+    padding-top: 85px;
+    background-color: $gray;
+    @media screen and (max-width: 1223px) {
+        top: 0;
+    }
     @media screen and (max-width: 1023px) {
         grid-template-columns: repeat(6, 1fr);
     }

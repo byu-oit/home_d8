@@ -94,9 +94,10 @@
   <div{{ content_attributes.addClass('node__content') }}>
     {{ drupal_view('campus_life_links', 'block_1') }}
   </div>
+  {{ content.field_yfacts }}
   <div{{ content_attributes }}>
       <div class="campus-life-main-content-layout">
-        {{ content }}
+        {{ content|without('field_yfacts') }}
       </div>
   </div>
 
