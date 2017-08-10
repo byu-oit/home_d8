@@ -3,34 +3,35 @@
 .field--name-field-somethings {
     margin-top: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    @media screen and (max-width: 767px) {
+        justify-content: space-around;
+    }
     flex-wrap: wrap;
     .field--name-field-something-to-type::before {
         content: "Something to ";
     }
     > .field__item {
-        @media screen and (min-width: 320px) {
-            width: 154px;
-        }
-        @media screen and (min-width: 1024px) {
-            width: 211px;
-        }
-        @media screen and (min-width: 1224px) {
-            width: 247px;
-        }
         cursor: pointer;
         border: 1px solid $gray;
+        width: 250px;
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            width: 154px;
+        }
+        @media screen and (min-width: 992px) and (max-width: 1199px) {
+            width: 211px;
+        }
+        @media screen and (max-width: 768px) {
+            margin-bottom: 30px;
+        }
         .field--name-field-something-to-type {
             text-align: center;
             text-transform: uppercase;
             padding: 15px 5px;
             color: white;
             background-color: $medgray;
-            @media screen and (min-width: 320px) {
+            @media screen and (max-width: 991px) {
                 display: none;
-            }
-            @media screen and (min-width: 1024px) {
-                display: inherit;
             }
         }
         .something-to-do {
@@ -73,15 +74,4 @@
 
 section.page-header {
     display: none;
-}
-
-@media screen and (min-width: 320px) {
-}
-@media screen and (min-width: 768px) {
-}
-@media screen and (min-width: 1024px) {
-}
-@media screen and (min-width: 1224px) {
-}
-@media screen and (min-width: 1824px) {
 }

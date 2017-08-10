@@ -354,34 +354,35 @@ a:hover {
 .field--name-field-somethings {
   margin-top: 50px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap; }
+  @media screen and (max-width: 767px) {
+    .field--name-field-somethings {
+      justify-content: space-around; } }
   .field--name-field-somethings .field--name-field-something-to-type::before {
     content: "Something to "; }
   .field--name-field-somethings > .field__item {
     cursor: pointer;
-    border: 1px solid #c5c5c5; }
-    @media screen and (min-width: 320px) {
+    border: 1px solid #c5c5c5;
+    width: 250px; }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
       .field--name-field-somethings > .field__item {
         width: 154px; } }
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
       .field--name-field-somethings > .field__item {
         width: 211px; } }
-    @media screen and (min-width: 1224px) {
+    @media screen and (max-width: 768px) {
       .field--name-field-somethings > .field__item {
-        width: 247px; } }
+        margin-bottom: 30px; } }
     .field--name-field-somethings > .field__item .field--name-field-something-to-type {
       text-align: center;
       text-transform: uppercase;
       padding: 15px 5px;
       color: white;
       background-color: #767676; }
-      @media screen and (min-width: 320px) {
+      @media screen and (max-width: 991px) {
         .field--name-field-somethings > .field__item .field--name-field-something-to-type {
           display: none; } }
-      @media screen and (min-width: 1024px) {
-        .field--name-field-somethings > .field__item .field--name-field-something-to-type {
-          display: inherit; } }
     .field--name-field-somethings > .field__item .something-to-do {
       background-color: #002E5D; }
     .field--name-field-somethings > .field__item .something-to-read {
