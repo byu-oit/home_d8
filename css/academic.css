@@ -249,8 +249,7 @@ div#links-and-calendar {
   justify-content: center;
   text-transform: uppercase; }
 
-.view-content-page-header
-.h8.italic {
+.view-content-page-header .h8.italic {
   font-style: italic;
   font-weight: 500; }
 
@@ -268,5 +267,25 @@ div#academic-highlight-overlay .h6 {
   line-height: 27px;
   text-transform: uppercase;
   text-align: left; }
+
+@media screen and (max-width: 1023px) {
+  #circle-wrapper {
+    display: grid;
+    justify-content: flex-end;
+    align-items: center; }
+  .undergrad-circle {
+    grid-column: 1;
+    grid-row: 1/span 2; }
+  .masters-circle {
+    height: 170px;
+    width: 170px;
+    grid-column: 2;
+    grid-row: 1;
+    margin-left: -30px;
+    margin-bottom: -20px; }
+  .doctorate-circle {
+    grid-column: 2;
+    grid-row: 2;
+    margin-left: -25px; } }
 
 /*# sourceMappingURL=academic.css.map */
