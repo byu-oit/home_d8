@@ -54,7 +54,7 @@ label_display == 'visually_hidden' ? 'visually-hidden',
 
 {% if label_hidden %}
     {% if multiple %}
-        <div{{ attributes.addClass(classes, 'field__items','other-circle') }}>
+        <div{{ attributes.addClass(classes, 'field__items','masters-circle') }}>
             {% for item in items %}
                 <div{{ item.attributes.addClass('field__item','h10','white') }}>{{ item.content }}</div>
             {% endfor %}
@@ -65,7 +65,7 @@ label_display == 'visually_hidden' ? 'visually-hidden',
         {% endfor %}
     {% endif %}
 {% else %}
-    <div{{ attributes.addClass(classes,'other-circle') }}>
+    <div{{ attributes.addClass(classes,'masters-circle') }}>
         {% if multiple %}
         <div class="field__items">
             {% endif %}

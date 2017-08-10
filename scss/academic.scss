@@ -1,12 +1,14 @@
 @import "mixins";
 $undergrad-circle-size : 190px;
-$other-circle-size : 155px;
+$masters-circle-size : 155px;
+$doctorate-circle-size : 155px;
 
 //section for circles
 
 .undergrad-circle {@include navy-circle($undergrad-circle-size);}
-.other-circle {@include navy-circle($other-circle-size);margin-left:-11px;}
-div.other-circle .h10 {line-height:70px;}
+.masters-circle {@include navy-circle($masters-circle-size);margin-left:-11px;}
+.doctorate-circle {@include navy-circle($doctorate-circle-size);margin-left:-11px;}
+div.masters-circle .h10, div.doctorate-circle .h10 {line-height:70px;}
 @media screen and (min-width: 1024px) {
   #academic-y-facts .col-md-6 {
     display: flex;
@@ -15,7 +17,7 @@ div.other-circle .h10 {line-height:70px;}
   }
 }
 @media screen and (min-width: 1224px) {
-  div.other-circle .h10 {
+  div.masters-circle .h10, div.doctorate-circle .h10 {
     line-height: 70px;
   }
 }
@@ -24,7 +26,7 @@ div.other-circle .h10 {line-height:70px;}
 .field--name-field-academic-minor-links {padding-top:2em;}
 .rank-prefix{color:$lightgray;display: inline;}
 .byline-prefix{color:$white;display: inline;}
-#academic-y-facts .col-md-6{background-color: $medgray;min-height: 15em}
+#academic-y-facts .col-md-6{background-color: $gray;min-height: 15em}
 //#academic-y-facts div {float: left;}
 div#links-and-calendar{min-height: 80em;}
 .academic-success .h2 {text-align: left;font-weight: 500;}
