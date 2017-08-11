@@ -1,0 +1,26 @@
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+  ]
+%}
+{%
+  set title_classes = [
+    'field__label',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
+
+{% if multiple %}
+  <div{{ attributes.addClass(classes, 'field__items') }}>
+    {% for item in items %}
+      <div{{ item.attributes.addClass('animation-element', 'field__item') }}>{{ item.content }}</div>
+    {% endfor %}
+  </div>
+{% else %}
+  {% for item in items %}
+    <div{{ attributes.addClass(classes, 'animation-element', 'field__item') }}>{{ item.content }}</div>
+  {% endfor %}
+{% endif %}

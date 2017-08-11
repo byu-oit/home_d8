@@ -9,6 +9,40 @@
         padding: 0;
     }
 }
+
+.come-in {
+  transform: translateX(-100px);
+  animation: come-in 1s ease forwards;
+}
+.come-in:nth-child(2) {
+    transform: translateX(-200px);
+}
+.come-in:nth-child(3) {
+    transform: translateX(-300px);
+}
+.come-in:nth-child(4) {
+    transform: translateX(-400px);
+}
+@keyframes come-in {
+  from { opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.hero-div {
+    line-height: normal;
+    .hero-title {
+        padding-bottom: 0.2em;
+    }
+    color: $navy;
+    p {
+        line-height: normal;
+        color: $navy;
+    }
+}
+.hero-title {
+    font-family: $vitesse;
+}
+
 .field--name-field-hero-video {
     position: relative;
     top: -55px;
