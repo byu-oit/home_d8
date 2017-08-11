@@ -262,8 +262,9 @@ div#wrapper {margin-top:-17px};
   width: $circle-width;
   height: $circle-width;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  align-items: center;
 }
 
 @mixin vertical-dots() {

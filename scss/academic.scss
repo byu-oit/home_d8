@@ -5,41 +5,128 @@ $doctorate-circle-size : 155px;
 
 //section for circles
 
-.undergrad-circle {@include navy-circle($undergrad-circle-size);}
-.masters-circle {@include navy-circle($masters-circle-size);margin-left:-11px;}
-.doctorate-circle {@include navy-circle($doctorate-circle-size);margin-left:-11px;}
-div.masters-circle .h10, div.doctorate-circle .h10 {line-height:70px;}
-@media screen and (min-width: 1024px) {
-  #academic-y-facts .col-md-6 {
-    display: flex;
-    margin-top: 3em;
-    align-items: center
-  }
-}
-@media screen and (min-width: 1224px) {
-  div.masters-circle .h10, div.doctorate-circle .h10 {
-    line-height: 70px;
-  }
-}
-.field--name-field-academic-major-links {border-bottom: 1px solid $medgray;padding-bottom: 2em;}
-.field--name-field-academic-minor-links .h12 a {line-height: 40px;text-transform: none}
-.field--name-field-academic-minor-links {padding-top:2em;}
-.rank-prefix{color:$lightgray;display: inline;}
-.byline-prefix{color:$white;display: inline;}
-#academic-y-facts .col-md-6{background-color: $gray;min-height: 15em}
-//#academic-y-facts div {float: left;}
-div#links-and-calendar{min-height: 80em;}
-.academic-success .h2 {text-align: left;font-weight: 500;}
-.academic-success .h3 {text-align: left;font-weight: 400;}
 
-.view-content-page-header {display: flex;justify-content: center;text-transform: uppercase;}
-.view-content-page-header .h8.italic {font-style: italic;font-weight: 500}
+.circles-h10 {
+  font-family: $gotham;
+  font-size: 60px;
+  line-height: 82px;
+  letter-spacing: -2.5px;
+  font-weight: 500;
+  &.white {
+    color: #fff;
+  }
+}
+
+.undergrad-circle {
+  @include navy-circle($undergrad-circle-size);
+}
+
+.masters-circle {
+  @include navy-circle($masters-circle-size);
+  margin-left:-11px;
+}
+
+.doctorate-circle {
+  @include navy-circle($doctorate-circle-size);
+  margin-left:-11px;
+}
+
+div.masters-circle .circles-h10, div.doctorate-circle .circles-h10 {
+  line-height:70px;
+}
+
+#academic-yfacts-wrapper {
+  background: $gray;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#academic-y-facts {
+  max-width: 1224px;
+  align-items: center;
+  margin: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#circle-wrapper {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.field--name-field-academic-major-links {
+  border-bottom: 1px solid $medgray;
+  padding-bottom: 2em;
+}
+
+.field--name-field-academic-minor-links .h12 a {
+  line-height: 40px;
+  text-transform: none;
+}
+
+.field--name-field-academic-minor-links {
+  padding-top: 2em;
+}
+
+.rank-prefix {
+  color:$lightgray;
+  display: inline;
+}
+
+.byline-prefix {
+  color:$white;
+  display: inline;
+}
+
+#circle-wrapper, #academic-success {
+  //background-color: $gray;
+  min-height: 15em;
+}
+
+//#academic-y-facts div {float: left;}
+div#links-and-calendar {
+  min-height: 80em;
+}
+
+.academic-success .h2 {
+  text-align: left;
+  font-weight: 500;
+}
+
+.academic-success .h3 {
+  text-align: left;
+  font-weight: 400;
+}
+
+.academic-success p {
+  color: $navy;
+}
+
+.view-content-page-header {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.view-content-page-header .h8.italic {
+  font-style: italic;
+  font-weight: 500;
+}
 
 .paragraph--type--academic-highlight {
-background-color: $white;
+  background-color: $white;
 }
-div#academic-highlight-overlay {background-color: $xlightblue;}
-div#academic-highlight-overlay:first-of-type {background-color: $medblue;}
+
+div#academic-highlight-overlay {
+  background-color: $xlightblue;
+}
+
+div#academic-highlight-overlay:first-of-type {
+  background-color: $medblue;
+}
+
 div#academic-highlight-overlay .h6 {
   font-size: 25px;
   line-height: 27px;
@@ -47,13 +134,28 @@ div#academic-highlight-overlay .h6 {
   text-align: left;
 }
 
+
+@media screen and (min-width: 1024px) {
+  #circle-wrapper, #academic-success {
+    display: flex;
+    margin-top: 3em;
+    align-items: center
+  }
+}
+
+
+@media screen and (min-width: 1224px) {
+  div.masters-circle .circles-h10, div.doctorate-circle .circles-h10 {
+    line-height: 70px;
+  }
+}
+
+
 @media screen and (max-width: 1023px) {
   $masters-circle-size : 170px;
 
   #circle-wrapper {
     display: grid;
-    justify-content: flex-end;
-    align-items: center;
   }
 
   .undergrad-circle {

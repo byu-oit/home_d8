@@ -790,8 +790,9 @@ div#wrapper {
   width: 156px;
   height: 156px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  align-items: center; }
   @media screen and (max-width: 1023px) {
     .type-about .main .demographics3 .navy-circle {
       margin-left: 0px;

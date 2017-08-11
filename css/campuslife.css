@@ -177,8 +177,9 @@ a:hover {
   width: 156px;
   height: 156px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  align-items: center; }
 
 .vertical-dots {
   display: flex;
