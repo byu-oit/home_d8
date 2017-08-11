@@ -1,5 +1,31 @@
 @import "homepage";
 
+@media screen and (max-width: 767px) {
+    .main {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .container {
+        padding: 0;
+    }
+}
+.field--name-field-hero-video {
+    position: relative;
+    top: -55px;
+    @media screen and (max-width: 1223px) {
+        top: -81px;
+    }
+    @media screen and (max-width: 1024px) {
+        top: -46px;
+    }
+    @media screen and (max-width: 1023px) {
+        top: -36px;
+    }
+    @media screen and (max-width: 767px) {
+        top: -18px;
+    }
+}
+
 .field--name-field-somethings {
     margin-top: 50px;
     display: flex;
@@ -14,7 +40,7 @@
     > .field__item {
         cursor: pointer;
         border: 1px solid $gray;
-        width: 250px;
+        width: 260px;
         @media screen and (min-width: 768px) and (max-width: 991px) {
             width: 154px;
         }
