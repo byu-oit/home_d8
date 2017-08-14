@@ -3,24 +3,19 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
-var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
-var inject = require('gulp-inject');
 var minify = require('gulp-minify');
+//var concat = require('gulp-concat');
+//var inject = require('gulp-inject');
 
 
-gulp.task('styles', function() {
-    gulp.src('./scss/*.scss')
+gulp.task('css', function() {
+    return gulp.src(['./scss/*.scss', '!./scss/mixins.scss'])
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./css/'));
-});
-// maybe comment later?
-gulp.task('minify-css', function() {
-  return gulp.src('./css/*.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('./css/'));
 });
 
 //gulp.task('index', function () {
@@ -45,10 +40,6 @@ gulp.task('minify-css', function() {
 //});
 
 //Watch task
-gulp.task('default',['styles'], function() {
-  gulp.watch('scss/**/*.scss');
+gulp.task('default', function() {
+  gulp.watch('scss/**/*.scss', ['css']);
 });
-
-//Distribution task
-gulp.task('css', ['styles', 'minify-css',]);
-
