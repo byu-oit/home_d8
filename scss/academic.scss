@@ -1,47 +1,233 @@
 @import "mixins";
 $undergrad-circle-size : 190px;
-$other-circle-size : 155px;
+$masters-circle-size : 155px;
+$doctorate-circle-size : 155px;
 
 //section for circles
 
-.undergrad-circle {@include navy-circle($undergrad-circle-size);}
-.other-circle {@include navy-circle($other-circle-size);margin-left:-11px;}
-div.other-circle .h10 {line-height:70px;}
-@media screen and (min-width: 1024px) {
-  #academic-y-facts .col-md-6 {
-    display: flex;
-    margin-top: 3em;
-    align-items: center
-  }
-}
-@media screen and (min-width: 1224px) {
-  div.other-circle .h10 {
-    line-height: 70px;
-  }
-}
-.field--name-field-academic-major-links {border-bottom: 1px solid $medgray;padding-bottom: 2em;}
-.field--name-field-academic-minor-links .h12 a {line-height: 40px;text-transform: none}
-.field--name-field-academic-minor-links {padding-top:2em;}
-.rank-prefix{color:$lightgray;display: inline;}
-.byline-prefix{color:$white;display: inline;}
-#academic-y-facts .col-md-6{background-color: $medgray;min-height: 15em}
-//#academic-y-facts div {float: left;}
-div#links-and-calendar{min-height: 80em;}
-.academic-success .h2 {text-align: left;font-weight: 500;}
-.academic-success .h3 {text-align: left;font-weight: 400;}
 
-.view-content-page-header {display: flex;justify-content: center;text-transform: uppercase;}
-.view-content-page-header
-.h8.italic {font-style: italic;font-weight: 500}
+.circles-h10 {
+  font-family: $gotham;
+  font-size: 60px;
+  line-height: 82px;
+  letter-spacing: -2.5px;
+  font-weight: 500;
+  &.white {
+    color: #fff;
+  }
+}
+
+.undergrad-circle {
+  @include navy-circle($undergrad-circle-size);
+}
+
+.masters-circle {
+  @include navy-circle($masters-circle-size);
+  margin-left:-11px;
+}
+
+.doctorate-circle {
+  @include navy-circle($doctorate-circle-size);
+  margin-left:-11px;
+}
+
+div.masters-circle .circles-h10, div.doctorate-circle .circles-h10 {
+  line-height:70px;
+}
+
+#academic-yfacts-wrapper {
+  background: $gray;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#academic-y-facts {
+  max-width: 1224px;
+  align-items: center;
+  margin: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#circle-wrapper {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.field--name-field-academic-major-links {
+  border-bottom: 1px solid $medgray;
+  padding-bottom: 2em;
+}
+
+.field--name-field-academic-minor-links .h12 a {
+  line-height: 40px;
+  text-transform: none;
+}
+
+.field--name-field-academic-minor-links {
+  padding-top: 2em;
+}
+
+.rank-prefix {
+  color:$lightgray;
+  display: inline;
+}
+
+.byline-prefix {
+  color:$white;
+  display: inline;
+}
+
+#circle-wrapper, #academic-success {
+  //background-color: $gray;
+  min-height: 15em;
+}
+
+//#academic-y-facts div {float: left;}
+div#links-and-calendar {
+  min-height: 80em;
+}
+
+.academic-success .h2 {
+  text-align: left;
+  font-weight: 500;
+}
+
+.academic-success .h3 {
+  text-align: left;
+  font-weight: 400;
+}
+
+.academic-success p {
+  color: $navy;
+}
+
+.view-content-page-header {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.view-content-page-header .h8.italic {
+  font-style: italic;
+  font-weight: 500;
+}
 
 .paragraph--type--academic-highlight {
-background-color: $white;
+  background-color: $white;
 }
-div#academic-highlight-overlay {background-color: $xlightblue;}
-div#academic-highlight-overlay:first-of-type {background-color: $medblue;}
+
+div#academic-highlight-overlay {
+  background-color: $xlightblue;
+}
+
+div#academic-highlight-overlay:first-of-type {
+  background-color: $medblue;
+}
+
 div#academic-highlight-overlay .h6 {
   font-size: 25px;
   line-height: 27px;
   text-transform: uppercase;
   text-align: left;
+}
+
+
+@media screen and (min-width: 1024px) {
+  #circle-wrapper, #academic-success {
+    display: flex;
+    margin-top: 3em;
+    align-items: center
+  }
+}
+
+
+@media screen and (min-width: 1224px) {
+  div.masters-circle .circles-h10, div.doctorate-circle .circles-h10 {
+    line-height: 70px;
+  }
+}
+
+
+@media screen and (max-width: 1023px) {
+  $masters-circle-size : 170px;
+
+  #circle-wrapper {
+    display: grid;
+  }
+
+  .undergrad-circle {
+    grid-column: 1;
+    grid-row: 1/span 2;
+  }
+
+  .masters-circle {
+    height: $masters-circle-size;
+    width: $masters-circle-size;
+    grid-column: 2;
+    grid-row: 1;
+    margin-left: -30px;
+    margin-bottom: -20px;
+  }
+
+  .doctorate-circle {
+    grid-column: 2;
+    grid-row: 2;
+    margin-left: -25px;
+  }
+}
+
+@media screen and (min-width: 1824px) {
+  #academic-yfacts-wrapper {
+    padding-top: 240px;
+    position: relative;
+    top: -200px;
+  }
+}
+
+@media screen and (max-width: 1823px) {
+  #academic-yfacts-wrapper {
+    padding-top: 205px;
+    position: relative;
+    top: -150px;
+  }
+}
+
+@media screen and (max-width: 1223px) {
+  #academic-yfacts-wrapper {
+    padding-top: 160px;
+    position: relative;
+    top: -70px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  #academic-yfacts-wrapper {
+    padding-top: 190px;
+    position: relative;
+    top: -50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #academic-yfacts-wrapper {
+    padding-top: 110px;
+    position: relative;
+    top: -30px;
+  }
+
+  #academic-y-facts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .academic-success {
+    padding: 20px;
+  }
+
+  .academic-success .h2 {
+    text-align: center;
+  }
 }
