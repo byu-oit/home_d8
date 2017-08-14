@@ -178,3 +178,56 @@ div#academic-highlight-overlay .h6 {
     margin-left: -25px;
   }
 }
+
+@media screen and (min-width: 1824px) {
+  #academic-yfacts-wrapper {
+    padding-top: 240px;
+    position: relative;
+    top: -200px;
+  }
+}
+
+@media screen and (max-width: 1823px) {
+  #academic-yfacts-wrapper {
+    padding-top: 205px;
+    position: relative;
+    top: -150px;
+  }
+}
+
+@media screen and (max-width: 1223px) {
+  #academic-yfacts-wrapper {
+    padding-top: 160px;
+    position: relative;
+    top: -70px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  #academic-yfacts-wrapper {
+    padding-top: 190px;
+    position: relative;
+    top: -50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #academic-yfacts-wrapper {
+    padding-top: 110px;
+    position: relative;
+    top: -30px;
+  }
+
+  #academic-y-facts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .academic-success {
+    padding: 20px;
+  }
+
+  .academic-success .h2 {
+    text-align: center;
+  }
+}
