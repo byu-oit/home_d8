@@ -109,59 +109,71 @@ div#wrapper {
 @media screen and (min-width: 768px) {
   .h13 {
     font-size: 90px; }
+
   .view-content-page-header .views-field-title {
     margin-top: -45px; }
+
   div#wrapper {
     margin-top: 1px; } }
-
 @media screen and (min-width: 1024px) {
   h2 {
     font-size: 30px; }
+
   h3 {
     font-size: 17px;
     /*line-height: ??;*/ }
+
   .h13 {
     font-size: 120px; }
+
   .view-content-page-header .views-field-title {
     margin-top: -60px; }
+
   div#wrapper {
     margin-top: 11px; } }
-
 @media screen and (min-width: 1224px) {
   h1 {
     font-size: 40px; }
+
   h2 {
     font-size: 35px; }
+
   h3 {
     font-size: 20px; }
+
   /* we may not do this this way */
   .h8 {
     font-size: 16px;
     line-height: 17px; }
+
   .h9 {
     font-size: 20px;
     letter-spacing: .5px;
     line-height: 48px; }
+
   .h10 {
     font-size: 60px;
     line-height: 82px;
     letter-spacing: -2.5px;
     font-weight: 500; }
+
   .h13 {
     font-size: 135px; }
+
   .view-content-page-header .views-field-title {
     margin-top: -67.5px; }
+
   div#wrapper {
     margin-top: -16px; } }
-
 @media screen and (min-width: 1824px) {
   .h13 {
     font-size: 200px; }
+
   .view-content-page-header .views-field-title {
     margin-top: -90px; }
+
   div#wrapper {
     margin-top: -16px; } }
-
 .circles-h10 {
   font-family: "Gotham A", "Gotham B", Arial, sans-serif;
   font-size: 60px;
@@ -295,17 +307,17 @@ div#academic-highlight-overlay .h6 {
     display: flex;
     margin-top: 3em;
     align-items: center; } }
-
 @media screen and (min-width: 1224px) {
   div.masters-circle .circles-h10, div.doctorate-circle .circles-h10 {
     line-height: 70px; } }
-
 @media screen and (max-width: 1023px) {
   #circle-wrapper {
     display: grid; }
+
   .undergrad-circle {
     grid-column: 1;
     grid-row: 1/span 2; }
+
   .masters-circle {
     height: 170px;
     width: 170px;
@@ -313,45 +325,44 @@ div#academic-highlight-overlay .h6 {
     grid-row: 1;
     margin-left: -30px;
     margin-bottom: -20px; }
+
   .doctorate-circle {
     grid-column: 2;
     grid-row: 2;
     margin-left: -25px; } }
-
 @media screen and (min-width: 1824px) {
   #academic-yfacts-wrapper {
     padding-top: 240px;
     position: relative;
     top: -200px; } }
-
 @media screen and (max-width: 1823px) {
   #academic-yfacts-wrapper {
     padding-top: 205px;
     position: relative;
     top: -150px; } }
-
 @media screen and (max-width: 1223px) {
   #academic-yfacts-wrapper {
     padding-top: 160px;
     position: relative;
     top: -70px; } }
-
 @media screen and (max-width: 1023px) {
   #academic-yfacts-wrapper {
     padding-top: 190px;
     position: relative;
     top: -50px; } }
-
 @media screen and (max-width: 767px) {
   #academic-yfacts-wrapper {
     padding-top: 110px;
     position: relative;
     top: -30px; }
+
   #academic-y-facts {
     display: flex;
     flex-direction: column; }
+
   .academic-success {
     padding: 20px; }
+
   .academic-success .h2 {
     text-align: center; } }
 

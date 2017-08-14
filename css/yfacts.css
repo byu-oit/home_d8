@@ -109,59 +109,71 @@ div#wrapper {
 @media screen and (min-width: 768px) {
   .h13 {
     font-size: 90px; }
+
   .view-content-page-header .views-field-title {
     margin-top: -45px; }
+
   div#wrapper {
     margin-top: 1px; } }
-
 @media screen and (min-width: 1024px) {
   h2 {
     font-size: 30px; }
+
   h3 {
     font-size: 17px;
     /*line-height: ??;*/ }
+
   .h13 {
     font-size: 120px; }
+
   .view-content-page-header .views-field-title {
     margin-top: -60px; }
+
   div#wrapper {
     margin-top: 11px; } }
-
 @media screen and (min-width: 1224px) {
   h1 {
     font-size: 40px; }
+
   h2 {
     font-size: 35px; }
+
   h3 {
     font-size: 20px; }
+
   /* we may not do this this way */
   .h8 {
     font-size: 16px;
     line-height: 17px; }
+
   .h9 {
     font-size: 20px;
     letter-spacing: .5px;
     line-height: 48px; }
+
   .h10 {
     font-size: 60px;
     line-height: 82px;
     letter-spacing: -2.5px;
     font-weight: 500; }
+
   .h13 {
     font-size: 135px; }
+
   .view-content-page-header .views-field-title {
     margin-top: -67.5px; }
+
   div#wrapper {
     margin-top: -16px; } }
-
 @media screen and (min-width: 1824px) {
   .h13 {
     font-size: 200px; }
+
   .view-content-page-header .views-field-title {
     margin-top: -90px; }
+
   div#wrapper {
     margin-top: -16px; } }
-
 .factsBanner {
   background-color: #002E5D;
   height: 150px;
@@ -228,14 +240,17 @@ div#wrapper {
   .factsBanner {
     height: 150px;
     top: 110px; }
+
   .yText {
     font-size: 170px;
     top: -31px; }
+
   .factsText {
     font-size: 80px;
     padding-left: 15px;
     padding-right: 200px;
     top: 5px; }
+
   .backFiller {
     border-top: 255px solid #fff;
     border-left: 1500px solid transparent;
@@ -243,22 +258,25 @@ div#wrapper {
     left: -500px;
     width: 150%;
     margin-bottom: -200px; }
+
   .field--name-field-yfacts-body {
     margin: 0 !important;
     padding: 30px; } }
-
 @media screen and (max-width: 1823px) {
   .factsBanner {
     height: 120px;
     top: 115px; }
+
   .yText {
     font-size: 135px;
     top: -22px; }
+
   .factsText {
     font-size: 65px;
     padding-left: 0;
     padding-right: 120px;
     top: 8px; }
+
   .backFiller {
     border-top: 250px solid #fff;
     border-left: 2000px solid transparent;
@@ -266,66 +284,76 @@ div#wrapper {
     left: -500px;
     width: 150%;
     margin-bottom: -200px; }
+
   .field--name-field-yfacts-body {
     margin: 50px 0 0 0 !important;
     padding: 30px; } }
-
 @media screen and (max-width: 1223px) {
   .factsBanner {
     height: 100px;
     top: 80px; }
+
   .yText {
     font-size: 110px;
     top: -18px; }
+
   .factsText {
     font-size: 55px;
     padding-left: 0;
     padding-right: 80px;
     top: 5px; }
+
   .backFiller {
     border-top: 175px solid #fff;
     border-left: 1500px solid transparent;
     top: -100px; }
+
   .field--name-field-yfacts-body {
     margin: 100px 0 0 0 !important;
     padding: 30px; } }
-
 @media screen and (max-width: 1023px) {
   .factsBanner {
     height: 100px;
     top: 65px; }
+
   .yText {
     font-size: 110px;
     top: -17px; }
+
   .factsText {
     font-size: 55px;
     padding-left: 0;
     padding-right: 70px;
     top: 5px; }
+
   .backFiller {
     border-top: 155px solid #fff;
     border-left: 1500px solid transparent;
     top: -100px; }
+
   .field--name-field-yfacts-body {
     margin: 125px 0 0 0 !important;
     padding: 30px; } }
-
 @media screen and (max-width: 767px) {
   .factsBanner {
     height: 80px;
     top: 50px; }
+
   .yText {
     font-size: 90px;
     top: -11px; }
+
   .factsText {
     font-size: 45px;
     padding-left: 0;
     padding-right: 15px;
     top: 5px; }
+
   .backFiller {
     border-top: 155px solid #fff;
     border-left: 1500px solid transparent;
     top: -80px; }
+
   .field--name-field-yfacts-body {
     margin: 85px 0 0 0 !important;
     padding: 30px; } }
