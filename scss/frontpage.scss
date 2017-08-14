@@ -1,5 +1,65 @@
 @import "homepage";
 
+@media screen and (max-width: 767px) {
+    .main {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .container {
+        padding: 0;
+    }
+}
+
+.come-in {
+  transform: translateX(-100px);
+  animation: come-in 1s ease forwards;
+}
+.come-in:nth-child(2) {
+    transform: translateX(-200px);
+}
+.come-in:nth-child(3) {
+    transform: translateX(-300px);
+}
+.come-in:nth-child(4) {
+    transform: translateX(-400px);
+}
+@keyframes come-in {
+  from { opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.hero-div {
+    line-height: normal;
+    .hero-title {
+        padding-bottom: 0.2em;
+    }
+    color: $navy;
+    p {
+        line-height: normal;
+        color: $navy;
+    }
+}
+.hero-title {
+    font-family: $vitesse;
+}
+
+.field--name-field-hero-video {
+    position: relative;
+    top: -55px;
+    @media screen and (max-width: 1223px) {
+        top: -81px;
+    }
+    @media screen and (max-width: 1024px) {
+        top: -46px;
+    }
+    @media screen and (max-width: 1023px) {
+        top: -36px;
+    }
+    @media screen and (max-width: 767px) {
+        top: -18px;
+    }
+}
+
 .field--name-field-somethings {
     margin-top: 50px;
     display: flex;
@@ -14,7 +74,7 @@
     > .field__item {
         cursor: pointer;
         border: 1px solid $gray;
-        width: 250px;
+        width: 260px;
         @media screen and (min-width: 768px) and (max-width: 991px) {
             width: 154px;
         }

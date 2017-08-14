@@ -345,6 +345,60 @@ a:hover {
 /* ----- Academics Page ------------ */
 /* ------------ Campus Life Page ------------ */
 /* -------- Basic Pages ------------- */
+@media screen and (max-width: 767px) {
+  .main {
+    padding-left: 0;
+    padding-right: 0; }
+
+  .container {
+    padding: 0; } }
+.come-in {
+  transform: translateX(-100px);
+  animation: come-in 1s ease forwards; }
+
+.come-in:nth-child(2) {
+  transform: translateX(-200px); }
+
+.come-in:nth-child(3) {
+  transform: translateX(-300px); }
+
+.come-in:nth-child(4) {
+  transform: translateX(-400px); }
+
+@keyframes come-in {
+  from {
+    opacity: 0; }
+  to {
+    transform: translateX(0);
+    opacity: 1; } }
+.hero-div {
+  line-height: normal;
+  color: #002E5D; }
+  .hero-div .hero-title {
+    padding-bottom: 0.2em; }
+  .hero-div p {
+    line-height: normal;
+    color: #002E5D; }
+
+.hero-title {
+  font-family: "Vitesse A", "Vitesse B", serif; }
+
+.field--name-field-hero-video {
+  position: relative;
+  top: -55px; }
+  @media screen and (max-width: 1223px) {
+    .field--name-field-hero-video {
+      top: -81px; } }
+  @media screen and (max-width: 1024px) {
+    .field--name-field-hero-video {
+      top: -46px; } }
+  @media screen and (max-width: 1023px) {
+    .field--name-field-hero-video {
+      top: -36px; } }
+  @media screen and (max-width: 767px) {
+    .field--name-field-hero-video {
+      top: -18px; } }
+
 .field--name-field-somethings {
   margin-top: 50px;
   display: flex;
@@ -358,7 +412,7 @@ a:hover {
   .field--name-field-somethings > .field__item {
     cursor: pointer;
     border: 1px solid #c5c5c5;
-    width: 250px; }
+    width: 260px; }
     @media screen and (min-width: 768px) and (max-width: 991px) {
       .field--name-field-somethings > .field__item {
         width: 154px; } }
