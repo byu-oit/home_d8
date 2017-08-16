@@ -171,6 +171,7 @@ $h13-desktopw-font: 200px;
 }
 .view-content-page-header .views-field-title {
   margin-top: ($h13-mobile-font *.73*-1);
+  margin-bottom: ($h13-mobile-font *.73);
 }
 div#wrapper {margin-top:-17px};
 
@@ -180,6 +181,7 @@ div#wrapper {margin-top:-17px};
   }
   .view-content-page-header .views-field-title {
     margin-top: ($h13-tabletp-font *.50*-1);
+    margin-bottom: ($h13-tabletp-font *.50);
   }
   div#wrapper {margin-top:1px};
 }
@@ -196,6 +198,7 @@ div#wrapper {margin-top:-17px};
   }
   .view-content-page-header .views-field-title {
     margin-top: ($h13-tabletl-font *.50*-1);
+    margin-bottom: ($h13-tabletl-font *.50);
   }
   div#wrapper {margin-top:11px};
 
@@ -231,6 +234,7 @@ div#wrapper {margin-top:-17px};
   }
   .view-content-page-header .views-field-title {
     margin-top: ($h13-desktop-font *.50*-1);
+    margin-bottom: ($h13-desktop-font *.50);
   }
   div#wrapper {margin-top:-16px};
 }
@@ -241,6 +245,7 @@ div#wrapper {margin-top:-17px};
   }
   .view-content-page-header .views-field-title {
     margin-top: ($h13-desktopw-font *.45*-1);
+    margin-bottom: ($h13-desktopw-font *.45);
   }
   div#wrapper {margin-top:-16px};
 }
