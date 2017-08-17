@@ -54,6 +54,8 @@
   /// quote source mobile
   .field--name-field-quote-source {
     max-width: 430px!important;
+    margin-left: auto;
+    margin-right: auto;
 
     @media screen and (max-width: 767px) {
       //color: $medgray;
@@ -68,6 +70,7 @@
     @media screen and (max-width: 767px) {
       padding: 0px 0px 40px;
     }
+
     &.bg-lightgray {
       @media screen and (max-width: 1223px) {
         background: none;
@@ -124,6 +127,7 @@
       column-count: 2;
       background: $lightgray;
       padding: 40px 25px;
+      height: 330px; // might have to change if links length changes
     }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       width: 50%;
@@ -132,7 +136,7 @@
       display: inline-block; // to get instagram block up on same line
       //order: 2;
       background: $lightgray;
-      padding: 40px 25px;
+      padding: 40px 25px 20px;
     }
     @media screen and (max-width: 767px) {
       width: 100%;
@@ -167,25 +171,28 @@
     margin-left: auto;
     margin-right: 0px!important;
     height: 235px; // for large, 1 row of 3 sections
-    background: gray; // temp for positioning
+    @media screen and (min-width: 1224px) and (max-width: 1423px) {
+      height: 380px; // img at 185 now
+    }
+    //background: gray; // temp for positioning
     @media screen and (min-width: 1024px) and (max-width: 1223px) {
-      height: 480px; // 235px + 235px + 10px - 2 rows
+      height: 380px; // 185 * 2 + 10px - 2 rows
       order: 3;
       width: 40%;
-      margin-top: 30px;
+      padding-top: 30px;
     }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       width: 48%;
       order: 3;
-      height: 725px; // may change to auto when you put in instagram
-      margin-top: 10px;
+      height: 425px; // may change to auto when you put in instagram
+      padding-top: 10px;
     }
 
     @media screen and (max-width: 767px) {
       order: 3;
-      width: 480px;
-      max-width: 100%;
-      height: 725px; // 3 rows w spacing between  // may change to auto when you put in instagram
+      max-width: 500px!important;
+      width: 100%;
+      height: auto; // don't know exact rows
       margin-right: auto!important;
     }
   }
@@ -238,14 +245,18 @@
 
   // students facts
   .students-group {
+    @include tabletAreaWithMaxWidth();
     .barWrapper {
       padding: 0px;
     }
     .tooltip {
       position: relative;
       float: right;
-      background-color: none;
+      //background-color: none;
       opacity: 1 !important;
+      @media screen and (max-width: 767px) {
+        margin-right: -10px;
+      }
     }
     .tooltip > .tooltip-inner {
       background: none;
@@ -253,7 +264,8 @@
       @include h11();
       padding-right: 35px !important; // strangely needed to center number now.. wasn't needed before
       @media screen and (max-width: 767px) {
-        top: -39px;
+        //top: -39px;
+        top: 0px;
         position: relative;
       }
       @media screen and (max-width: 1023px) {
@@ -332,7 +344,7 @@
     flex-wrap: wrap;
     margin-bottom: 75px;
     @media screen and (min-width: 768px) and (max-width: 1023px) {
-      padding: 0px 35px;
+      padding: 0px 0px;
     }
     @media screen and (max-width: 767px) {
       flex-direction: column;
@@ -354,6 +366,10 @@
     @media screen and (max-width: 767px) {
       width: 100%;
       padding: 0px 35px!important;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      width: 55%;
+      padding: 0px 35px 0px 0px !important;
     }
   }
 
@@ -383,6 +399,8 @@
     }
     @media screen and (min-width: 768px) and (max-width: 1024px) {
       padding: 25px 25px 25px 20px;
+      width: 40%;
+      margin-left: 5%;
     }
     .field__item {
       font-size: 55px;
@@ -484,6 +502,7 @@
   .field--name-field-gender {
     display: flex;
     margin-bottom: 80px;
+    @include tabletAreaWithMaxWidth();
     @media screen and (max-width:1023px) {
       padding: 0px 25px;
     }
@@ -931,6 +950,13 @@
   $studentsSpeakingBarHeight: 28px;
   //$studentsSpeakingBarWidth: 282px;
   $studentsSpeakingBarWidth: 362px;
+  $tabletStudentsSpeakingBarWidth: 285px;
+  @mixin studentSpeakingWidth() {
+    width: $studentsSpeakingBarWidth;
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      width: $tabletStudentsSpeakingBarWidth;
+    }
+  }
   // so that this circle is past lower circle but overlapped behind a little
   //$langTaughtMargin: $studentsSpeakingBarWidth + ($about-circle-width / 2) - 30px;
   $langTaughtMargin: $studentsSpeakingBarWidth + ($about-circle-width / 2) - 30px;
@@ -1038,11 +1064,14 @@
     .students-speaking-text-wrapper {
       //display: none; // displayed w animation
       visibility: hidden;
-      width: $studentsSpeakingBarWidth;
+      @include studentSpeakingWidth();
       line-height: 18px; // necessary to override Aleni's default big spacing
       padding-bottom: 10px;
       .h9 {
         line-height: 22px;
+      }
+      @media screen and (max-width: 767px) {
+        visibility: visible;
       }
       @media screen and (max-width: 1023px) {
         visibility: visible;
@@ -1054,14 +1083,17 @@
   .barWrapper.students-speaking {
     //display: flex;
     display: none; // displayed w animation
+    @media screen and (max-width: 1024px) {
+      display: flex;
+    }
     margin-bottom: 0px;
-    width: $studentsSpeakingBarWidth;
+    @include studentSpeakingWidth();
 
     .progress {
       border-radius: 0;
       overflow: visible;
       height: $studentsSpeakingBarHeight;
-      width: $studentsSpeakingBarWidth;
+      @include studentSpeakingWidth();
       box-shadow: none;
       background: $lightgray;
       //z-index: 1;

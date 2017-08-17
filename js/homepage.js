@@ -8,6 +8,7 @@ var $animation_elements = $('.animation-element');
 var $window = $(window);
 $window.trigger('scroll');
 $window.on('scroll resize', check_if_in_view);
+$window.on('resize', moveUpInstagram);
 
 function check_if_in_view() {
     var window_height = $window.height();
@@ -30,21 +31,41 @@ function check_if_in_view() {
     });
 }
 
-
+function moveUpInstagram() {
+    if ($('body').hasClass('type-about') ) {
+        if (window.matchMedia('(min-width: 1224px)').matches) {
+            var linksHeight = $('.field--name-field-links').height();
+            console.log('checking link height: ');
+            console.log(linksHeight);
+            var videoHeight = $('#youtube-field-player').height();
+            console.log('checking video height: ');
+            console.log(videoHeight);
+            var instagramUp = (videoHeight - linksHeight) + 40;
+            console.log('checking adjustment height: ');
+            console.log(instagramUp);
+            $('.field--name-field-block').css('margin-top', instagramUp);
+        } else {
+            $('.field--name-field-block').css('margin-top', '0px');
+        }
+        // on resize set margin to 0 and recheck?
+    }
+}
 
 
 
 /* ----- About page -------- */
+// if ($('body').hasClass('type-about') ) {
+//     moveUpInstagram();
 
     $(function () {
         $('[data-toggle="tooltip"]').tooltip({trigger: 'manual'}).tooltip('show');
     });
 
 // scroll effects
-    $( window ).scroll(function() {
+    $(window).scroll(function () {
 //about yfacts
 
-        if( $('.yfacts-about').hasClass('in-view')) {
+        if ($('.yfacts-about').hasClass('in-view')) {
             //add  if large screen
             // $('.larger-p').css('animation', 'type 4s steps(50, end)');
             $('.larger-p')
@@ -67,61 +88,60 @@ function check_if_in_view() {
 
 // students stats
 
-$( window ).scroll(function() {
-    if($('.students-group').hasClass('in-view')) {
-        $(".students-group .progress-bar").each(function(){
-            each_bar_width = $(this).attr('students-now');
-            total = $(this).attr('students-max');
-            percent =  each_bar_width / total *100 ;
-            $(this).width(percent + '%');
-            showStudentNumbers();
-        });
-        $('.counter:not(".done-counting")').each(function() {
-            var $this = $(this),
-                countTo = $this.attr('content');
+    $(window).scroll(function () {
+        if ($('.students-group').hasClass('in-view')) {
+            $(".students-group .progress-bar").each(function () {
+                each_bar_width = $(this).attr('students-now');
+                total = $(this).attr('students-max');
+                percent = each_bar_width / total * 100;
+                $(this).width(percent + '%');
+                showStudentNumbers();
+            });
+            $('.counter:not(".done-counting")').each(function () {
+                var $this = $(this),
+                    countTo = $this.attr('content');
 
-            $({ countNum: $this.text()}).animate({
-                    countNum: countTo
-                },
-
-                {
-                    duration: 2000,
-                    easing:'linear',
-                    step: function() {
-                        $this.html((Math.floor(this.countNum)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                $({countNum: $this.text()}).animate({
+                        countNum: countTo
                     },
-                    complete: function() {
-                        $this.html((this.countNum).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-                        //alert('finished');
-                    }
 
-                });
-            $(this).addClass('done-counting');
+                    {
+                        duration: 2000,
+                        easing: 'linear',
+                        step: function () {
+                            $this.html((Math.floor(this.countNum)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                        },
+                        complete: function () {
+                            $this.html((this.countNum).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                            //alert('finished');
+                        }
 
-        });
-    }
-});
+                    });
+                $(this).addClass('done-counting');
 
+            });
+        }
+    });
 
 
 // gender
 
-$( window ).scroll(function() {
-    if($('.field--name-field-gender').hasClass('in-view')) {  // scroll down abit and get the action
-        $(".field--name-field-gender .progress-bar").each(function(){
-            each_bar_width = $(this).attr('aria-valuenow');
-            $(this).width(each_bar_width + '%');
-            showGenderLabels();
-        });
-    }
-});
+    $(window).scroll(function () {
+        if ($('.field--name-field-gender').hasClass('in-view')) {  // scroll down abit and get the action
+            $(".field--name-field-gender .progress-bar").each(function () {
+                each_bar_width = $(this).attr('aria-valuenow');
+                $(this).width(each_bar_width + '%');
+                showGenderLabels();
+            });
+        }
+    });
 
 // Demographics & Map area
 
-    $( window ).scroll(function() {
-        if($('.demographics1').hasClass('in-view')) {  // scroll down abit and get the action
+    $(window).scroll(function () {
+        if ($('.demographics1').hasClass('in-view')) {  // scroll down abit and get the action
 
-            console.log('the demo 1 was viewed');
+            // console.log('the demo 1 was viewed');
             // focus map
             // $('#about-demographics:before')
             //     .delay(600)
@@ -176,28 +196,28 @@ $( window ).scroll(function() {
                 .delay(3500)
                 .queue(function (next) {
                     $(this).css('display', 'inline');
-                    $(this).css('animation' , '1s fadein');
+                    $(this).css('animation', '1s fadein');
                     next();
-            });
+                });
             $(".state-percents-group .state-2")
                 .delay(4000)
                 .queue(function (next) {
                     $(this).css('display', 'inline');
-                    $(this).css('animation' , '1s fadein');
+                    $(this).css('animation', '1s fadein');
                     next();
                 });
             $(".state-percents-group .state-3")
                 .delay(4500)
                 .queue(function (next) {
                     $(this).css('display', 'inline-block');
-                    $(this).css('animation' , '1s fadein');
+                    $(this).css('animation', '1s fadein');
                     next();
                 });
             $(".state-percents-group .state-4")
                 .delay(5000)
                 .queue(function (next) {
                     $(this).css('display', 'inline');
-                    $(this).css('animation' , '1s fadein');
+                    $(this).css('animation', '1s fadein');
                     next();
                 });
             $(".state-percents-group .state-5")
@@ -205,7 +225,7 @@ $( window ).scroll(function() {
                 .queue(function (next) {
                     $(this).css('display', 'inline');
                     // need arizona to be display:  block for 1023px and down
-                    $(this).css('animation' , '1s fadein');
+                    $(this).css('animation', '1s fadein');
                     next();
                 });
 
@@ -215,82 +235,82 @@ $( window ).scroll(function() {
                 .delay(600)
                 .queue(function (next) {
                     $(this).css('display', 'block');
-                    $(this).css('animation' , '1s fadein');
+                    $(this).css('animation', '1s fadein');
                     next();
                 });
             $("#dots2")
                 .delay(900)
                 .queue(function (next) {
                     $(this).css('display', 'block');
-                    $(this).css('animation' , '1s fadein');
+                    $(this).css('animation', '1s fadein');
                     next();
                 });
             $("#dots3")
                 .delay(1200)
                 .queue(function (next) {
                     $(this).css('display', 'block');
-                    $(this).css('animation' , '1s fadein');
+                    $(this).css('animation', '1s fadein');
                     next();
                 });
             $("#dots4")
                 .delay(1500)
                 .queue(function (next) {
                     $(this).css('display', 'block');
-                    $(this).css('animation' , '1s fadein');
+                    $(this).css('animation', '1s fadein');
                     next();
                 });
             $("#dots5")
                 .delay(1800)
                 .queue(function (next) {
                     $(this).css('display', 'block');
-                    $(this).css('animation' , '1s fadein');
+                    $(this).css('animation', '1s fadein');
                     next();
                 });
             $("#dots6")
                 .delay(2100)
                 .queue(function (next) {
                     $(this).css('display', 'block');
-                    $(this).css('animation' , '1s fadein');
+                    $(this).css('animation', '1s fadein');
                     next();
                 });
             $("#dots7")
                 .delay(2400)
                 .queue(function (next) {
                     $(this).css('display', 'block');
-                    $(this).css('animation' , '1s fadein');
+                    $(this).css('animation', '1s fadein');
                     next();
                 });
 
 
             // languages navy circles
-            if($('.demographics3').hasClass('in-view')) {  // scroll down abit and get the action
-                console.log('the demo 3 was viewed');
+            if ($('.demographics3').hasClass('in-view')) {  // scroll down abit and get the action
+                // console.log('the demo 3 was viewed');
                 // change this to AFTER states stats have appeared
                 if (window.matchMedia('(min-width: 1024px)').matches) {
                     $(".vertical-dots.before-languages .gray-dot.dot-1")
                         .delay(6000)
                         .queue(function (next) {
                             $(this).css('display', 'block');
-                            $(this).css('animation' , '1s fadein');
+                            $(this).css('animation', '1s fadein');
                             next();
 
-                    });
+                        });
                     $(".vertical-dots.before-languages .gray-dot.dot-2")
                         .delay(6200)
                         .queue(function (next) {
                             $(this).css('display', 'block');
-                            $(this).css('animation' , '1s fadein');
+                            $(this).css('animation', '1s fadein');
                             next();
 
-                    });
+                        });
                     $(".vertical-dots.before-languages .gray-dot.dot-3")
                         .delay(6400)
                         .queue(function (next) {
                             $(this).css('display', 'block');
-                            $(this).css('animation' , '1s fadein');
+                            $(this).css('animation', '1s fadein');
                             next();
 
-                    });
+                        });
                     $(".languages-taught-circle")
                         .delay(6800)
                         .queue(function (next) {
@@ -309,64 +329,65 @@ $( window ).scroll(function() {
                             next();
 
                         });
+                    // if($('.demographics4').hasClass('in-view')) {  // scroll down abit and get the action
+
+                    // show certifications first
+                    $(".certifications-group-wrapper")
+                        .delay(7500)
+                        .queue(function (next) {
+                            $(this).css('display', 'block');
+                            $(this).css('animation-name', 'bounceInRight');
+                            // animation-name:bounceInRight
+                            next();
+
+                        });
+
+                    $(".vertical-dots.after-spoken .gray-dot.dot-1")
+                        .delay(8400)
+                        .queue(function (next) {
+                            $(this).css('display', 'block');
+                            $(this).css('animation', '1s fadein');
+                            next();
+
+                        });
+                    $(".vertical-dots.after-spoken .gray-dot.dot-2")
+                        .delay(8600)
+                        .queue(function (next) {
+                            $(this).css('display', 'block');
+                            $(this).css('animation', '1s fadein');
+                            next();
+
+                        });
+                    $(".vertical-dots.after-spoken .gray-dot.dot-3")
+                        .delay(8800)
+                        .queue(function (next) {
+                            $(this).css('display', 'block');
+                            $(this).css('animation', '1s fadein');
+                            next();
+
+                        });
+
+                    // then students speaking %
+
+                    $(".field--name-field-students-speaking .students-speaking-text-wrapper")
+                        .delay(9000)
+                        .queue(function (next) {
+                            $(this).css('visibility', 'visible');
+                            $(this).css('animation', '1s fadeinfast');
+                            next();
+
+                        });
+                    $(".field--name-field-students-speaking .barWrapper.students-speaking")
+                        .delay(9000)
+                        .queue(function (next) {
+                            $(this).css('display', 'flex');
+                            $(this).css('animation', '1s fadeinfast');
+                            next();
+
+                        });
                 }
 
-                // if($('.demographics4').hasClass('in-view')) {  // scroll down abit and get the action
 
-                // show certifications first
-                $(".certifications-group-wrapper")
-                    .delay(7500)
-                    .queue(function (next) {
-                        $(this).css('display', 'block');
-                        $(this).css('animation-name' , 'bounceInRight');
-                        // animation-name:bounceInRight
-                        next();
-
-                    });
-
-                $(".vertical-dots.after-spoken .gray-dot.dot-1")
-                    .delay(8400)
-                    .queue(function (next) {
-                        $(this).css('display', 'block');
-                        $(this).css('animation' , '1s fadein');
-                        next();
-
-                    });
-                $(".vertical-dots.after-spoken .gray-dot.dot-2")
-                    .delay(8600)
-                    .queue(function (next) {
-                        $(this).css('display', 'block');
-                        $(this).css('animation' , '1s fadein');
-                        next();
-
-                    });
-                $(".vertical-dots.after-spoken .gray-dot.dot-3")
-                    .delay(8800)
-                    .queue(function (next) {
-                        $(this).css('display', 'block');
-                        $(this).css('animation' , '1s fadein');
-                        next();
-
-                    });
-
-                // then students speaking %
-
-                $(".field--name-field-students-speaking .students-speaking-text-wrapper")
-                    .delay(9000)
-                    .queue(function (next) {
-                        $(this).css('visibility', 'visible');
-                        $(this).css('animation' , '1s fadeinfast');
-                        next();
-
-                    });
-                $(".field--name-field-students-speaking .barWrapper.students-speaking")
-                    .delay(9000)
-                    .queue(function (next) {
-                        $(this).css('display', 'flex');
-                        $(this).css('animation' , '1s fadeinfast');
-                        next();
-
-                    });
                 if (window.matchMedia('(min-width: 1024px)').matches) {
                     $(".field--name-field-students-speaking .progress-bar")
                         .delay(9200)
@@ -389,7 +410,6 @@ $( window ).scroll(function() {
                 }
 
 
-
                 // }
 
             }
@@ -402,11 +422,7 @@ $( window ).scroll(function() {
         }
     });
 
-
-
-
-
-
+// }
     // end of About page, on scroll events
 
 // several functions for about page:
@@ -435,11 +451,5 @@ $( window ).scroll(function() {
             });
 
     }
-
-
-
-// demographics
-
-
 
 })(jQuery);

@@ -244,17 +244,6 @@ a:hover {
 .bg-darkgray {
   background: #6a6a6b; }
 
-.navy-circle {
-  background: #002E5D;
-  padding: 25px;
-  border: 2px solid #767676;
-  border-radius: 50%;
-  width: 156px;
-  height: 156px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
-
 .vertical-dots {
   display: flex;
   flex-direction: column;
@@ -337,6 +326,15 @@ a:hover {
       max-width: 1200px;
       margin-left: auto;
       margin-right: auto; }
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+        .type-about .main .full-width-bar .field, .type-about .main .full-width-bar .full-width-bar-inner, .type-academic .main .full-width-bar .field, .type-academic .main .full-width-bar .full-width-bar-inner, .type-admissions .main .full-width-bar .field, .type-admissions .main .full-width-bar .full-width-bar-inner, .type-campus-life .main .full-width-bar .field, .type-campus-life .main .full-width-bar .full-width-bar-inner {
+          max-width: 700px; } }
+      @media screen and (min-width: 1024px) and (max-width: 1223px) {
+        .type-about .main .full-width-bar .field, .type-about .main .full-width-bar .full-width-bar-inner, .type-academic .main .full-width-bar .field, .type-academic .main .full-width-bar .full-width-bar-inner, .type-admissions .main .full-width-bar .field, .type-admissions .main .full-width-bar .full-width-bar-inner, .type-campus-life .main .full-width-bar .field, .type-campus-life .main .full-width-bar .full-width-bar-inner {
+          max-width: 900px; } }
+      @media screen and (min-width: 1224px) and (max-width: 1423px) {
+        .type-about .main .full-width-bar .field, .type-about .main .full-width-bar .full-width-bar-inner, .type-academic .main .full-width-bar .field, .type-academic .main .full-width-bar .full-width-bar-inner, .type-admissions .main .full-width-bar .field, .type-admissions .main .full-width-bar .full-width-bar-inner, .type-campus-life .main .full-width-bar .field, .type-campus-life .main .full-width-bar .full-width-bar-inner {
+          max-width: 1024px; } }
     .type-about .main .full-width-bar .full-width-bar-inner, .type-academic .main .full-width-bar .full-width-bar-inner, .type-admissions .main .full-width-bar .full-width-bar-inner, .type-campus-life .main .full-width-bar .full-width-bar-inner {
       display: flex; }
 

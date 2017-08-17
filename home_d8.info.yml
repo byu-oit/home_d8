@@ -42,6 +42,7 @@ regions:
   footer_21: 'Footer 2'
   footer_31: 'Footer 3'
   footer_41: 'Footer 4'
+  hidden: Hidden Region
 
 #  footer_12: 'Footer 1.2'
 #  footer_22: 'Footer 2.2'

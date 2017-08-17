@@ -85,15 +85,15 @@ a:hover {
 // used so far on about page - don't change
 $circle-width: 156px;
 .navy-circle {
-  background: $navy;
-  padding: 25px ;
-  border: 2px solid $medgray;
-  border-radius: 50%;
-  width: $circle-width;
-  height: $circle-width;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  //background: $navy;
+  //padding: 25px ;
+  //border: 2px solid $medgray;
+  //border-radius: 50%;
+  //width: $circle-width;
+  //height: $circle-width;
+  //display: flex;
+  //flex-wrap: wrap;
+  //justify-content: center;
 }
 
 .vertical-dots {
@@ -211,6 +211,7 @@ $circle-width: 156px;
         max-width: 824px;
       }
       // we don't set a max-width on mobile ones now because a lot of them are full width for mobile & Tablet:
+
       @media screen and (max-width: 1023px) and (min-width: 768px) {
         //max-width: 600px;
       }

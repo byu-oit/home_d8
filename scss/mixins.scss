@@ -252,6 +252,26 @@ div#wrapper {margin-top:-17px};
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  // katria added these max-width adjustments for mobile & tablet - need to make sure this works for everyone's.
+  // Aleni has told me specifics for some of these numbers and others are guesses based on the mockups.
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    max-width: 700px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1223px) {
+    max-width: 900px;
+  }
+  @media screen and (min-width: 1224px) and (max-width: 1423px) {
+    max-width: 1024px;
+  }
+}
+
+@mixin tabletAreaWithMaxWidth() {
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px!important;
+  }
 }
 
 @mixin navy-circle($circle-width) {
@@ -265,6 +285,9 @@ div#wrapper {margin-top:-17px};
   flex-wrap: wrap;
   justify-content: center;
 }
+
+
+
 
 @mixin vertical-dots() {
   display: flex;

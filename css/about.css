@@ -203,7 +203,9 @@ div#wrapper {
       display: none; } }
 
 .type-about .main .field--name-field-quote-source {
-  max-width: 430px !important; }
+  max-width: 430px !important;
+  margin-left: auto;
+  margin-right: auto; }
   @media screen and (max-width: 767px) {
     .type-about .main .field--name-field-quote-source {
       padding: 0px 25px; } }
@@ -251,7 +253,8 @@ div#wrapper {
       margin-top: 30px;
       column-count: 2;
       background: #e5e5e5;
-      padding: 40px 25px; } }
+      padding: 40px 25px;
+      height: 330px; } }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .type-about .main .field--name-field-links {
       width: 50%;
@@ -259,7 +262,7 @@ div#wrapper {
       margin-top: 10px;
       display: inline-block;
       background: #e5e5e5;
-      padding: 40px 25px; } }
+      padding: 40px 25px 20px; } }
   @media screen and (max-width: 767px) {
     .type-about .main .field--name-field-links {
       width: 100%;
@@ -287,26 +290,28 @@ div#wrapper {
   width: 70%;
   margin-left: auto;
   margin-right: 0px !important;
-  height: 235px;
-  background: gray; }
+  height: 235px; }
+  @media screen and (min-width: 1224px) and (max-width: 1423px) {
+    .type-about .main .field--name-field-block {
+      height: 380px; } }
   @media screen and (min-width: 1024px) and (max-width: 1223px) {
     .type-about .main .field--name-field-block {
-      height: 480px;
+      height: 380px;
       order: 3;
       width: 40%;
-      margin-top: 30px; } }
+      padding-top: 30px; } }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .type-about .main .field--name-field-block {
       width: 48%;
       order: 3;
-      height: 725px;
-      margin-top: 10px; } }
+      height: 425px;
+      padding-top: 10px; } }
   @media screen and (max-width: 767px) {
     .type-about .main .field--name-field-block {
       order: 3;
-      width: 480px;
-      max-width: 100%;
-      height: 725px;
+      max-width: 500px !important;
+      width: 100%;
+      height: auto;
       margin-right: auto !important; } }
 
 .type-about .main .full-width-bar.yfacts-about {
@@ -330,14 +335,23 @@ div#wrapper {
     color: #fff;
     font-weight: 500; }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .type-about .main .students-group {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px !important; } }
+
 .type-about .main .students-group .barWrapper {
   padding: 0px; }
 
 .type-about .main .students-group .tooltip {
   position: relative;
   float: right;
-  background-color: none;
   opacity: 1 !important; }
+  @media screen and (max-width: 767px) {
+    .type-about .main .students-group .tooltip {
+      margin-right: -10px; } }
 
 .type-about .main .students-group .tooltip > .tooltip-inner {
   background: none;
@@ -352,7 +366,7 @@ div#wrapper {
       font-size: 26px; } }
   @media screen and (max-width: 767px) {
     .type-about .main .students-group .tooltip > .tooltip-inner {
-      top: -39px;
+      top: 0px;
       position: relative; } }
   @media screen and (max-width: 1023px) {
     .type-about .main .students-group .tooltip > .tooltip-inner {
@@ -414,7 +428,7 @@ div#wrapper {
   margin-bottom: 75px; }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .type-about .main .students-group.row {
-      padding: 0px 35px; } }
+      padding: 0px 0px; } }
   @media screen and (max-width: 767px) {
     .type-about .main .students-group.row {
       flex-direction: column;
@@ -436,6 +450,11 @@ div#wrapper {
     .type-about .main .field--name-field-grads {
       width: 100%;
       padding: 0px 35px !important; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .type-about .main .field--name-field-undergrads,
+    .type-about .main .field--name-field-grads {
+      width: 55%;
+      padding: 0px 35px 0px 0px !important; } }
 
 .type-about .main .field--name-field-total-students .field__label {
   line-height: 20px;
@@ -459,7 +478,9 @@ div#wrapper {
       padding: 25px 35px; } }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     .type-about .main .field--name-field-total-students {
-      padding: 25px 25px 25px 20px; } }
+      padding: 25px 25px 25px 20px;
+      width: 40%;
+      margin-left: 5%; } }
   .type-about .main .field--name-field-total-students .field__item {
     font-size: 55px;
     color: #002E5D;
@@ -478,6 +499,12 @@ div#wrapper {
 .type-about .main .field--name-field-gender {
   display: flex;
   margin-bottom: 80px; }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .type-about .main .field--name-field-gender {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0px !important; } }
   @media screen and (max-width: 1023px) {
     .type-about .main .field--name-field-gender {
       padding: 0px 25px; } }
@@ -885,8 +912,14 @@ div#wrapper {
   width: 362px;
   line-height: 18px;
   padding-bottom: 10px; }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .type-about .main .field--name-field-students-speaking .students-speaking-text-wrapper {
+      width: 285px; } }
   .type-about .main .field--name-field-students-speaking .students-speaking-text-wrapper .h9 {
     line-height: 22px; }
+  @media screen and (max-width: 767px) {
+    .type-about .main .field--name-field-students-speaking .students-speaking-text-wrapper {
+      visibility: visible; } }
   @media screen and (max-width: 1023px) {
     .type-about .main .field--name-field-students-speaking .students-speaking-text-wrapper {
       visibility: visible; } }
@@ -895,6 +928,12 @@ div#wrapper {
   display: none;
   margin-bottom: 0px;
   width: 362px; }
+  @media screen and (max-width: 1024px) {
+    .type-about .main .barWrapper.students-speaking {
+      display: flex; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .type-about .main .barWrapper.students-speaking {
+      width: 285px; } }
   .type-about .main .barWrapper.students-speaking .progress {
     border-radius: 0;
     overflow: visible;
@@ -902,6 +941,9 @@ div#wrapper {
     width: 362px;
     box-shadow: none;
     background: #e5e5e5; }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      .type-about .main .barWrapper.students-speaking .progress {
+        width: 285px; } }
   .type-about .main .barWrapper.students-speaking .progress-bar {
     background: #697F96;
     -webkit-transition: width 1.5s ease-in-out;
