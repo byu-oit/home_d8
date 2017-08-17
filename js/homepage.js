@@ -54,8 +54,9 @@ function moveUpInstagram() {
 
 
 /* ----- About page -------- */
-// if ($('body').hasClass('type-about') ) {
-//     moveUpInstagram();
+if ($('body').hasClass('type-about') ) {
+    moveUpInstagram();
+}
 
     $(function () {
         $('[data-toggle="tooltip"]').tooltip({trigger: 'manual'}).tooltip('show');
