@@ -301,7 +301,7 @@ a:hover {
 
 /* ----- main page --------- */
 .type-about .main, .type-academic .main, .type-admissions .main, .type-campus-life .main {
-  padding: 20px 0px; }
+  padding: 30px 0px; }
   @media screen and (min-width: 1024px) {
     .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar) {
       margin-left: auto;
@@ -342,9 +342,8 @@ a:hover {
 .views-field.views-field-field-header-image {
   margin-top: -4vw; }
 
-/* ---- Admissions Page ---------- */
-/* ----- Academics Page ------------ */
-/* ------------ Campus Life Page ------------ */
 /* -------- Basic Pages ------------- */
+.main {
+  padding: 30px 0px; }
 
 /*# sourceMappingURL=homepage.css.map */

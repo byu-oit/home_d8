@@ -208,7 +208,7 @@ div#wrapper {
   margin-right: auto; }
   @media screen and (max-width: 767px) {
     .type-about .main .field--name-field-quote-source {
-      padding: 0px 25px; } }
+      padding: 0px 25px 15px; } }
 
 .type-about .main .full-width-bar.links-video-group {
   margin-top: 30px;
@@ -220,6 +220,10 @@ div#wrapper {
     .type-about .main .full-width-bar.links-video-group.bg-lightgray {
       background: none;
       margin-top: 0px; } }
+  @media screen and (max-width: 767px) {
+    .type-about .main .full-width-bar.links-video-group figure.youtube-container {
+      display: flex;
+      justify-content: center; } }
   @media screen and (max-width: 767px) {
     .type-about .main .full-width-bar.links-video-group iframe {
       max-width: 100%; } }
@@ -254,7 +258,7 @@ div#wrapper {
       column-count: 2;
       background: #e5e5e5;
       padding: 40px 25px;
-      height: 330px; } }
+      height: 340px; } }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .type-about .main .field--name-field-links {
       width: 50%;
@@ -262,7 +266,11 @@ div#wrapper {
       margin-top: 10px;
       display: inline-block;
       background: #e5e5e5;
-      padding: 40px 25px 20px; } }
+      padding: 20px 30px 20px;
+      min-height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; } }
   @media screen and (max-width: 767px) {
     .type-about .main .field--name-field-links {
       width: 100%;
@@ -274,8 +282,11 @@ div#wrapper {
 .type-about .main .field--name-field-video {
   width: 70%;
   margin-top: 20px;
-  margin-left: 0px;
-  margin-right: 0px; }
+  margin-left: auto !important;
+  margin-right: 0px !important; }
+  @media screen and (min-width: 1424px) {
+    .type-about .main .field--name-field-video {
+      width: 63%; } }
   @media screen and (min-width: 768px) and (max-width: 1223px) {
     .type-about .main .field--name-field-video {
       width: 100%;
@@ -291,9 +302,12 @@ div#wrapper {
   margin-left: auto;
   margin-right: 0px !important;
   height: 235px; }
-  @media screen and (min-width: 1224px) and (max-width: 1423px) {
+  @media screen and (min-width: 1424px) {
     .type-about .main .field--name-field-block {
-      height: 380px; } }
+      width: 63%; } }
+  @media screen and (min-width: 1224px) {
+    .type-about .main .field--name-field-block {
+      height: 480px; } }
   @media screen and (min-width: 1024px) and (max-width: 1223px) {
     .type-about .main .field--name-field-block {
       height: 380px;
@@ -315,21 +329,34 @@ div#wrapper {
       margin-right: auto !important; } }
 
 .type-about .main .full-width-bar.yfacts-about {
-  height: 400px;
-  padding-top: 250px;
+  height: 350px;
+  padding-top: 0px;
   font-family: "Gotham A", "Gotham B", Arial, sans-serif;
   font-style: italic;
   font-size: 22px;
   line-height: 28px;
   margin: 0px 0px 60px 0px; }
+  @media screen and (max-width: 359px) {
+    .type-about .main .full-width-bar.yfacts-about {
+      height: 370px; } }
+  @media screen and (min-width: 360px) and (max-width: 1023px) {
+    .type-about .main .full-width-bar.yfacts-about {
+      height: 310px; } }
+  .type-about .main .full-width-bar.yfacts-about .field--name-field-quote-bar {
+    padding-top: 130px; }
+    @media screen and (max-width: 1023px) {
+      .type-about .main .full-width-bar.yfacts-about .field--name-field-quote-bar {
+        padding: 130px 20px 0px;
+        margin-bottom: 30px; } }
   .type-about .main .full-width-bar.yfacts-about p {
     color: #f2f2f2; }
   .type-about .main .full-width-bar.yfacts-about .larger-p, .type-about .main .full-width-bar.yfacts-about .larger-p2 {
-    white-space: nowrap;
-    overflow: hidden;
     line-height: 30px;
     width: 100%;
     display: none; }
+    @media screen and (max-width: 1023px) {
+      .type-about .main .full-width-bar.yfacts-about .larger-p, .type-about .main .full-width-bar.yfacts-about .larger-p2 {
+        display: block; } }
   .type-about .main .full-width-bar.yfacts-about .larger-text {
     font-size: 36px;
     color: #fff;
@@ -348,10 +375,11 @@ div#wrapper {
 .type-about .main .students-group .tooltip {
   position: relative;
   float: right;
-  opacity: 1 !important; }
+  opacity: 1 !important;
+  margin-right: -10px; }
   @media screen and (max-width: 767px) {
     .type-about .main .students-group .tooltip {
-      margin-right: -10px; } }
+      margin-right: -20px; } }
 
 .type-about .main .students-group .tooltip > .tooltip-inner {
   background: none;
@@ -456,6 +484,14 @@ div#wrapper {
       width: 55%;
       padding: 0px 35px 0px 0px !important; } }
 
+@media screen and (max-width: 767px) {
+  .type-about .main .field--name-field-grads {
+    margin: 35px 0px 50px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .type-about .main .field--name-field-grads {
+    margin-bottom: 40px; } }
+
 .type-about .main .field--name-field-total-students .field__label {
   line-height: 20px;
   text-align: right; }
@@ -469,7 +505,7 @@ div#wrapper {
   background: #f2f2f2;
   display: inline;
   height: 170px;
-  padding: 25px 45px; }
+  padding: 25px 30px 25px 20px; }
   @media screen and (max-width: 767px) {
     .type-about .main .field--name-field-total-students {
       height: 100px;
@@ -778,7 +814,7 @@ div#wrapper {
     height: 255px;
     margin-top: -25px; }
   .type-about .main #world-map-mobile {
-    width: 450px; } }
+    width: 400px; } }
 
 @media screen and (max-width: 767px) {
   .type-about .main svg.us-dots-1, .type-about .main #world-map-mobile {
@@ -960,7 +996,7 @@ div#wrapper {
     .type-about .main .field--name-field-more-facts {
       width: 250px;
       margin-top: -140px;
-      margin-bottom: 0px;
+      margin-bottom: 40px;
       margin-left: 62%; } }
   @media screen and (max-width: 767px) {
     .type-about .main .field--name-field-more-facts {

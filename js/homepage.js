@@ -67,37 +67,46 @@ if ($('body').hasClass('type-about') ) {
 //about yfacts
 
         if ($('.yfacts-about').hasClass('in-view')) {
-            //add  if large screen
-            // $('.larger-p').css('animation', 'type 4s steps(50, end)');
-            $('.larger-p')
-                .delay(600)
-                .queue(function (next) {
-                    $(this).css('animation', 'type 4s steps(50, end)');
-                    $(this).css('display', 'block');
-                    next();
-                });
-            // $('.larger-p2').css('animation', 'type2 2s steps(60, end)');
-            $('.larger-p2')
-                .delay(1800)
-                .queue(function (next) {
-                    $(this).css('display', 'block');
-                    $(this).css('animation', 'type 4s steps(40, end)');
-                    next();
-                });
+            if (window.matchMedia('(min-width: 1024px)').matches) {
+                //add  if large screen
+                // $('.larger-p').css('animation', 'type 4s steps(50, end)');
+                $('.larger-p')
+                    .delay(600)
+                    .queue(function (next) {
+                        // $(this).css('animation', 'type 4s steps(50, end)');
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
+                        next();
+                    });
+                // $('.larger-p2').css('animation', 'type2 2s steps(60, end)');
+                $('.larger-p2')
+                    .delay(600)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
+                        // $(this).css('animation', 'type 4s steps(40, end)');
+                        next();
+                    });
+            }
         }
     });
 
 // students stats
 
     $(window).scroll(function () {
-        if ($('.students-group').hasClass('in-view')) {
+        if ($('.field--name-field-gender').hasClass('in-view')) {
             $(".students-group .progress-bar").each(function () {
                 each_bar_width = $(this).attr('students-now');
+                console.log('student width is:');
+                console.log(each_bar_width);
                 total = $(this).attr('students-max');
                 percent = each_bar_width / total * 100;
                 $(this).width(percent + '%');
                 showStudentNumbers();
             });
+            // add comma w js since twig filters weren't working
+
+            // count up total number
             $('.counter:not(".done-counting")').each(function () {
                 var $this = $(this),
                     countTo = $this.attr('content');
@@ -107,7 +116,7 @@ if ($('body').hasClass('type-about') ) {
                     },
 
                     {
-                        duration: 2000,
+                        duration: 1200,
                         easing: 'linear',
                         step: function () {
                             $this.html((Math.floor(this.countNum)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
@@ -131,7 +140,13 @@ if ($('body').hasClass('type-about') ) {
         if ($('.field--name-field-gender').hasClass('in-view')) {  // scroll down abit and get the action
             $(".field--name-field-gender .progress-bar").each(function () {
                 each_bar_width = $(this).attr('aria-valuenow');
-                $(this).width(each_bar_width + '%');
+                $(".field--name-field-gender .progress-bar")
+                    .delay(1500)
+                    .queue(function (next) {
+                        $(".field--name-field-gender .progress-bar").width(each_bar_width + '%');
+                        next();
+                    });
+                // $(this).width(each_bar_width + '%');
                 showGenderLabels();
             });
         }
@@ -140,7 +155,7 @@ if ($('body').hasClass('type-about') ) {
 // Demographics & Map area
 
     $(window).scroll(function () {
-        if ($('.demographics1').hasClass('in-view')) {  // scroll down abit and get the action
+        if ($('.demographics3').hasClass('in-view')) {  // scroll down abit and get the action
 
             // console.log('the demo 1 was viewed');
             // focus map
@@ -156,20 +171,22 @@ if ($('body').hasClass('type-about') ) {
                 $('.field--name-field-states')
                     .delay(600)
                     .queue(function (next) {
-                        $(this).css('animation', 'type2 500ms steps(2, end)');
+                        // $(this).css('animation', 'type2 500ms steps(2, end)');
+                        $(this).css('animation', '1s fadein');
                         $(this).css('display', 'block');
                         next();
                     });
                 $('.states-label')
-                    .delay(1800)
+                    .delay(600)
                     .queue(function (next) {
                         $(this).css('display', 'inline');
-                        $(this).css('animation', 'type2 1000ms steps(6, end)');
+                        // $(this).css('animation', 'type2 1000ms steps(6, end)');
+                        $(this).css('animation', '1s fadein');
                         next();
                     });
                 // should only run for 768px and above:
                 $('.and-icon')
-                    .delay(2400)
+                    .delay(1200)
                     .queue(function (next) {
                         $(this).css('display', 'block');
                         $(this).css('animation', '1s fadein');
@@ -178,110 +195,112 @@ if ($('body').hasClass('type-about') ) {
 
 
                 $('.field--name-field-countries')
-                    .delay(2700)
+                    .delay(1500)
                     .queue(function (next) {
-                        $(this).css('animation', 'type2 500ms steps(2, end)');
+                        $(this).css('animation', '1s fadein');
+                        // $(this).css('animation', 'type2 500ms steps(2, end)');
                         $(this).css('display', 'block');
                         next();
                     });
                 $('.countries-label')
-                    .delay(3100)
+                    .delay(1500)
                     .queue(function (next) {
                         $(this).css('display', 'inline');
-                        $(this).css('animation', 'type2 1200ms steps(8, end)');
+                        $(this).css('animation', '1s fadein');
+                        // $(this).css('animation', 'type2 1200ms steps(8, end)');
+                        next();
+                    });
+
+                // state percentages
+                $(".state-percents-group .state-1")
+                    .delay(1800)
+                    .queue(function (next) {
+                        $(this).css('display', 'inline');
+                        $(this).css('animation', '1s fadein');
+                        next();
+                    });
+                $(".state-percents-group .state-2")
+                    .delay(2200)
+                    .queue(function (next) {
+                        $(this).css('display', 'inline');
+                        $(this).css('animation', '1s fadein');
+                        next();
+                    });
+                $(".state-percents-group .state-3")
+                    .delay(2600)
+                    .queue(function (next) {
+                        $(this).css('display', 'inline-block');
+                        $(this).css('animation', '1s fadein');
+                        next();
+                    });
+                $(".state-percents-group .state-4")
+                    .delay(3000)
+                    .queue(function (next) {
+                        $(this).css('display', 'inline');
+                        $(this).css('animation', '1s fadein');
+                        next();
+                    });
+                $(".state-percents-group .state-5")
+                    .delay(3400)
+                    .queue(function (next) {
+                        $(this).css('display', 'inline');
+                        // need arizona to be display:  block for 1023px and down
+                        $(this).css('animation', '1s fadein');
+                        next();
+                    });
+
+
+                // us map
+                $("#dots1")
+                    .delay(2000)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
+                        next();
+                    });
+                $("#dots2")
+                    .delay(2500)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
+                        next();
+                    });
+                $("#dots3")
+                    .delay(3000)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
+                        next();
+                    });
+                $("#dots4")
+                    .delay(3500)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
+                        next();
+                    });
+                $("#dots5")
+                    .delay(4000)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
+                        next();
+                    });
+                $("#dots6")
+                    .delay(4500)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
+                        next();
+                    });
+                $("#dots7")
+                    .delay(5000)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
                         next();
                     });
             }
-            // state percentages
-            $(".state-percents-group .state-1")
-                .delay(3500)
-                .queue(function (next) {
-                    $(this).css('display', 'inline');
-                    $(this).css('animation', '1s fadein');
-                    next();
-                });
-            $(".state-percents-group .state-2")
-                .delay(4000)
-                .queue(function (next) {
-                    $(this).css('display', 'inline');
-                    $(this).css('animation', '1s fadein');
-                    next();
-                });
-            $(".state-percents-group .state-3")
-                .delay(4500)
-                .queue(function (next) {
-                    $(this).css('display', 'inline-block');
-                    $(this).css('animation', '1s fadein');
-                    next();
-                });
-            $(".state-percents-group .state-4")
-                .delay(5000)
-                .queue(function (next) {
-                    $(this).css('display', 'inline');
-                    $(this).css('animation', '1s fadein');
-                    next();
-                });
-            $(".state-percents-group .state-5")
-                .delay(5500)
-                .queue(function (next) {
-                    $(this).css('display', 'inline');
-                    // need arizona to be display:  block for 1023px and down
-                    $(this).css('animation', '1s fadein');
-                    next();
-                });
-
-
-            // us map
-            $("#dots1")
-                .delay(600)
-                .queue(function (next) {
-                    $(this).css('display', 'block');
-                    $(this).css('animation', '1s fadein');
-                    next();
-                });
-            $("#dots2")
-                .delay(900)
-                .queue(function (next) {
-                    $(this).css('display', 'block');
-                    $(this).css('animation', '1s fadein');
-                    next();
-                });
-            $("#dots3")
-                .delay(1200)
-                .queue(function (next) {
-                    $(this).css('display', 'block');
-                    $(this).css('animation', '1s fadein');
-                    next();
-                });
-            $("#dots4")
-                .delay(1500)
-                .queue(function (next) {
-                    $(this).css('display', 'block');
-                    $(this).css('animation', '1s fadein');
-                    next();
-                });
-            $("#dots5")
-                .delay(1800)
-                .queue(function (next) {
-                    $(this).css('display', 'block');
-                    $(this).css('animation', '1s fadein');
-                    next();
-                });
-            $("#dots6")
-                .delay(2100)
-                .queue(function (next) {
-                    $(this).css('display', 'block');
-                    $(this).css('animation', '1s fadein');
-                    next();
-                });
-            $("#dots7")
-                .delay(2400)
-                .queue(function (next) {
-                    $(this).css('display', 'block');
-                    $(this).css('animation', '1s fadein');
-                    next();
-                });
-
 
             // languages navy circles
             if ($('.demographics3').hasClass('in-view')) {  // scroll down abit and get the action
@@ -331,10 +350,34 @@ if ($('body').hasClass('type-about') ) {
 
                         });
                     // if($('.demographics4').hasClass('in-view')) {  // scroll down abit and get the action
+                    $(".vertical-dots.after-spoken .gray-dot.dot-1")
+                        .delay(7500)
+                        .queue(function (next) {
+                            $(this).css('display', 'block');
+                            $(this).css('animation', '1s fadein');
+                            next();
+
+                        });
+                    $(".vertical-dots.after-spoken .gray-dot.dot-2")
+                        .delay(7700)
+                        .queue(function (next) {
+                            $(this).css('display', 'block');
+                            $(this).css('animation', '1s fadein');
+                            next();
+
+                        });
+                    $(".vertical-dots.after-spoken .gray-dot.dot-3")
+                        .delay(7900)
+                        .queue(function (next) {
+                            $(this).css('display', 'block');
+                            $(this).css('animation', '1s fadein');
+                            next();
+
+                        });
 
                     // show certifications first
                     $(".certifications-group-wrapper")
-                        .delay(7500)
+                        .delay(8200)
                         .queue(function (next) {
                             $(this).css('display', 'block');
                             $(this).css('animation-name', 'bounceInRight');
@@ -343,35 +386,11 @@ if ($('body').hasClass('type-about') ) {
 
                         });
 
-                    $(".vertical-dots.after-spoken .gray-dot.dot-1")
-                        .delay(8400)
-                        .queue(function (next) {
-                            $(this).css('display', 'block');
-                            $(this).css('animation', '1s fadein');
-                            next();
-
-                        });
-                    $(".vertical-dots.after-spoken .gray-dot.dot-2")
-                        .delay(8600)
-                        .queue(function (next) {
-                            $(this).css('display', 'block');
-                            $(this).css('animation', '1s fadein');
-                            next();
-
-                        });
-                    $(".vertical-dots.after-spoken .gray-dot.dot-3")
-                        .delay(8800)
-                        .queue(function (next) {
-                            $(this).css('display', 'block');
-                            $(this).css('animation', '1s fadein');
-                            next();
-
-                        });
 
                     // then students speaking %
 
                     $(".field--name-field-students-speaking .students-speaking-text-wrapper")
-                        .delay(9000)
+                        .delay(8400)
                         .queue(function (next) {
                             $(this).css('visibility', 'visible');
                             $(this).css('animation', '1s fadeinfast');
@@ -379,7 +398,7 @@ if ($('body').hasClass('type-about') ) {
 
                         });
                     $(".field--name-field-students-speaking .barWrapper.students-speaking")
-                        .delay(9000)
+                        .delay(8400)
                         .queue(function (next) {
                             $(this).css('display', 'flex');
                             $(this).css('animation', '1s fadeinfast');
@@ -391,17 +410,7 @@ if ($('body').hasClass('type-about') ) {
 
                 if (window.matchMedia('(min-width: 1024px)').matches) {
                     $(".field--name-field-students-speaking .progress-bar")
-                        .delay(9200)
-                        .queue(function (next) {
-                            each_bar_width = $(this).attr('aria-valuenow');
-                            $(this).width(each_bar_width); // already has % included
-                            next();
-
-                        });
-                }
-                if (window.matchMedia('(max-width: 1023px)').matches) {
-                    $(".field--name-field-students-speaking .progress-bar")
-                        .delay(7200)
+                        .delay(8400)
                         .queue(function (next) {
                             each_bar_width = $(this).attr('aria-valuenow');
                             $(this).width(each_bar_width); // already has % included
@@ -421,6 +430,75 @@ if ($('body').hasClass('type-about') ) {
             // % students speaking
 
         }
+
+        // mobile & tablet adjustments
+        if (window.matchMedia('(max-width: 1023px)').matches) {
+        // us map
+            if ($('.state-percents-group').hasClass('in-view')) {
+                $("#dots1")
+                    // .delay(00)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
+                        next();
+                    });
+                $("#dots2")
+                    .delay(300)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
+                        next();
+                    });
+                $("#dots3")
+                    .delay(600)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
+                        next();
+                    });
+                $("#dots4")
+                    .delay(900)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
+                        next();
+                    });
+                $("#dots5")
+                    .delay(1200)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
+                        next();
+                    });
+                $("#dots6")
+                    .delay(1500)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
+                        next();
+                    });
+                $("#dots7")
+                    .delay(1800)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
+                        next();
+                    });
+            }
+
+        if ($('.field--name-field-students-speaking').hasClass('in-view')) {
+
+            $(".field--name-field-students-speaking .progress-bar")
+                .delay(300)
+                .queue(function (next) {
+                    each_bar_width = $(this).attr('aria-valuenow');
+                    $(this).width(each_bar_width); // already has % included
+                    next();
+
+                });
+            }
+        }
+
     });
 
 // }
