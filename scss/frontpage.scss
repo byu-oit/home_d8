@@ -11,9 +11,10 @@
 }
 
 .come-in {
-  transform: translateX(-100px);
-  animation: come-in 1s ease forwards;
+  transform: translateY(100px);
+  animation: come-in 0.5s ease forwards;
 }
+/*
 .come-in:nth-child(2) {
     transform: translateX(-200px);
 }
@@ -23,9 +24,10 @@
 .come-in:nth-child(4) {
     transform: translateX(-400px);
 }
+*/
 @keyframes come-in {
   from { opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 .hero-div {
@@ -101,7 +103,7 @@
             background-color: $medblue;
         }
         .something-to-see {
-            background-color: $gray;
+            background-color: $darkestgray;
         }
         span.something-to-type {
             font-weight: bold;
@@ -123,11 +125,14 @@
                 text-decoration: none;
             }
         }
+        a {
+            font-weight: normal;
+        }
     }
     > .field__item:hover {
         box-shadow: 3px 3px 1px $lightgray;
         a {
-            font-weight: bold;
+            font-weight: 500;
         }
     }
 }
