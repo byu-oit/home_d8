@@ -36,14 +36,8 @@ function moveUpInstagram() {
     if ($('body').hasClass('type-about') ) {
         if (window.matchMedia('(min-width: 1224px)').matches) {
             var linksHeight = $('.field--name-field-links').height();
-            console.log('checking link height: ');
-            console.log(linksHeight);
             var videoHeight = $('#youtube-field-player').height();
-            console.log('checking video height: ');
-            console.log(videoHeight);
             var instagramUp = (videoHeight - linksHeight) + 40;
-            console.log('checking adjustment height: ');
-            console.log(instagramUp);
             $('.field--name-field-block').css('margin-top', instagramUp);
         } else {
             $('.field--name-field-block').css('margin-top', '0px');
@@ -143,7 +137,6 @@ if ($('body').hasClass('type-about') ) {
     $(window).scroll(function () {
         if ($('.demographics1').hasClass('in-view')) {  // scroll down abit and get the action
 
-            // console.log('the demo 1 was viewed');
             // focus map
             // $('#about-demographics:before')
             //     .delay(600)
@@ -286,7 +279,6 @@ if ($('body').hasClass('type-about') ) {
 
             // languages navy circles
             if ($('.demographics3').hasClass('in-view')) {  // scroll down abit and get the action
-                // console.log('the demo 3 was viewed');
                 // change this to AFTER states stats have appeared
                 if (window.matchMedia('(min-width: 1024px)').matches) {
                     $(".vertical-dots.before-languages .gray-dot.dot-1")
