@@ -67,7 +67,8 @@
   {% endif %}
 {% else %}
   <div{{ attributes.addClass(classes)}}>
-    <div{{ title_attributes.addClass(title_classes, 'h9', 'all-caps', 'bold') }}>{{ label }}</div>
+      {% set array = label|split(' ', 2) %}
+    <div{{ title_attributes.addClass(title_classes, 'h9', 'all-caps') }}><b>{{ attribute(array, 0) }}</b> {{ attribute(array, 1) }}</div>
     <div{{ title_attributes.addClass('total-students-label', 'h9', 'all-caps', 'normal-weight') }}>Students</div>
     {% if multiple %}
       <div class="field__items">

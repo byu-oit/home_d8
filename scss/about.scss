@@ -59,7 +59,7 @@
 
     @media screen and (max-width: 767px) {
       //color: $medgray;
-      padding: 0px 25px;
+      padding: 0px 25px 15px;
     }
   }
 
@@ -77,7 +77,12 @@
         margin-top: 0px;
       }
     }
-
+    @media screen and (max-width: 767px) {
+      figure.youtube-container {
+        display: flex;
+        justify-content: center;
+      }
+    }
     iframe {
       @media screen and (max-width: 767px) {
         max-width: 100%;
@@ -127,7 +132,7 @@
       column-count: 2;
       background: $lightgray;
       padding: 40px 25px;
-      height: 330px; // might have to change if links length changes
+      height: 340px; // might have to change if links length changes
     }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       width: 50%;
@@ -136,7 +141,11 @@
       display: inline-block; // to get instagram block up on same line
       //order: 2;
       background: $lightgray;
-      padding: 40px 25px 20px;
+      padding: 20px 30px 20px;
+      min-height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     @media screen and (max-width: 767px) {
       width: 100%;
@@ -151,8 +160,11 @@
   .field--name-field-video {
     width: 70%;
     margin-top: 20px;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: auto!important;
+    margin-right: 0px!important;
+    @media screen and (min-width: 1424px) {
+      width: 63%;
+    }
     @media screen and (min-width: 768px) and (max-width: 1223px) {
       width: 100%;
       order: 1;
@@ -171,8 +183,11 @@
     margin-left: auto;
     margin-right: 0px!important;
     height: 235px; // for large, 1 row of 3 sections
-    @media screen and (min-width: 1224px) and (max-width: 1423px) {
-      height: 380px; // img at 185 now
+    @media screen and (min-width: 1424px) {
+      width: 63%;
+    }
+    @media screen and (min-width: 1224px)  {
+      height: 480px; // img at 185 now
     }
     //background: gray; // temp for positioning
     @media screen and (min-width: 1024px) and (max-width: 1223px) {
@@ -208,26 +223,43 @@
 
   //yfacts bar
   .full-width-bar.yfacts-about {
-    height: 400px;
-    padding-top: 250px;
+    height: 350px;
+    @media screen and (max-width: 359px) {
+      height: 370px;
+    }
+    @media screen and (min-width: 360px) and (max-width: 1023px) {
+      height: 310px;
+    }
+    padding-top: 0px;
 
     font-family: $gotham;
     font-style: italic;
     font-size: 22px;
     line-height: 28px;
     margin: 0px 0px 60px 0px;
+    .field--name-field-quote-bar {
+      padding-top: 130px;
+      @media screen and (max-width: 1023px) {
+        padding: 130px 20px 0px;
+        margin-bottom: 30px;
+      }
+    }
+
     p {
       color: $xlightgray;
     }
     .larger-p, .larger-p2 {
-      white-space: nowrap;
-      overflow: hidden;
+      //white-space: nowrap;
+      //overflow: hidden;
       //width: 30em;
       line-height: 30px;
       width: 100%;
       display: none;
       @media screen and (min-width: 768px) {
         //animation: type 4s steps(70, end);
+      }
+      @media screen and (max-width: 1023px) {
+        display: block;
       }
     }
     .larger-p2 {
@@ -254,8 +286,9 @@
       float: right;
       //background-color: none;
       opacity: 1 !important;
+      margin-right: -10px;
       @media screen and (max-width: 767px) {
-        margin-right: -10px;
+        margin-right: -20px;
       }
     }
     .tooltip > .tooltip-inner {
@@ -371,6 +404,16 @@
       width: 55%;
       padding: 0px 35px 0px 0px !important;
     }
+
+  }
+  .field--name-field-grads {
+    @media screen and (max-width: 767px) {
+      margin: 35px 0px 50px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      margin-bottom: 40px;
+    }
+
   }
 
   // total students
@@ -389,7 +432,8 @@
     background: $xlightgray;
     display: inline;
     height: $totalStudentsHeight;
-    padding: 25px 45px;
+    //padding: 25px 45px;    // too much padding messes up right alignment
+    padding: 25px 30px 25px 20px;
 
     @media screen and (max-width: 767px) {
       height: $totalStudentsHeightMobile;
@@ -766,7 +810,7 @@
   $largeUSWidth: 130px;
   $largeUSHeight: 100px;
   $tabletUSWidth: 360px;
-  $tabletWorldWidth: 450px;
+  $tabletWorldWidth: 400px;
   $tabletUSHeight: 255px;
   $mobileUSWidth: 300px;
   $mobileUSHeight: 255px;
@@ -1043,7 +1087,7 @@
     @media screen and (min-width: 768px) and (max-width: 1023px) {
         width: 250px;
         margin-top: -140px;
-        margin-bottom: 0px;
+        margin-bottom: 40px;
         margin-left: 62%;
     }
     @media screen and (max-width: 767px) {
