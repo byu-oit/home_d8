@@ -26,40 +26,26 @@
  */
 #}
 {%
-  set classes = [
-    'block',
-    'block-' ~ configuration.provider|clean_class,
-    'block-' ~ plugin_id|clean_class,
-  ]
+set classes = [
+'block',
+'block-' ~ configuration.provider|clean_class,
+'block-' ~ plugin_id|clean_class,
+]
 %}
 
-  {{ title_prefix }}
-{% if 'byu-footer' in attributes['class'] %}
-
+  {#{{ title_prefix }}#}
     {% if label %}
-      <span slot="header" {{ title_attributes }}>{{ label }}</span>
+        <span slot="header" {{ title_attributes }}>{{ label }}</span>
     {% endif %}
-    {#{% block content %}#}
-      {% if content['body'] is defined %}
-        {{ content['body'][0]['#text']|t }}
-      {% else %}
-          <em>Block body undefined</em>
-      {% endif %}
-    {#{% endblock %}#}
+    {#{{ title_suffix }}#}
 
-{% else %}
-    {% if label %}
-      <span slot="header" {{ title_attributes }}>{{ label }}</span>
-    {% endif %}
-    {{ title_suffix }}
-
-    <div{{ attributes.addClass(classes) }}>
+    {#<div{{ attributes.addClass(classes) }}>#}
         {% if label %}
-          <h2>{{ label }}</h2>
+            <h2>{{ label }}</h2>
         {% endif %}
         {% block content %}
-          {{ content }}
+            {{ content }}
         {% endblock %}
 
-    </div>
-{% endif %}
+    {#</div>#}
+

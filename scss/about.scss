@@ -259,7 +259,7 @@
         padding-top: 130px;
       }
       @media screen and (min-width: 1224px) {
-        padding-top: 60px;
+        padding-top: 80px;
       }
     }
 
@@ -310,6 +310,7 @@
       //background-color: none;
       opacity: 1 !important;
       margin-right: -10px;
+      z-index: 10;
       @media screen and (max-width: 767px) {
         margin-right: -20px;
       }
@@ -410,6 +411,7 @@
   .grad-wrapper {
     order: 3;
     margin-top: -($totalStudentsHeight / 2);
+    z-index: 100;
     @media screen and (max-width: 767px) {
       order: 2;
       margin-top: 0px;

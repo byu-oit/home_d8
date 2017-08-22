@@ -3,7 +3,6 @@ global-styling:
   css:
     base:
       css/homepage.css: {}
-      css/about.css: {}
       css/colleges.css: {}
       css/yfacts.css: {}
     theme:
@@ -33,6 +32,13 @@ admissions:
   js:
     js/snap.svg-min.js: {}
     js/admissions.js: {}
+about:
+  version: 8.x
+  css:
+    base:
+      css/about.css: {}
+  js:
+    js/about.js: {}
 fonts-basic:
   remote: https://cloud.typography.com/75214/7683772/css/fonts.css
   version: 1.0.0
