@@ -73,6 +73,13 @@ div.masters-circle .circles-h10, div.doctorate-circle .circles-h10 {
 .rank-prefix {
   color:$lightgray;
   display: inline;
+  font-weight: 500;
+  font-size: 40px;
+  padding-right: 10px;
+  opacity: 0.8;
+  @media screen and (max-width: 1223px) {
+      font-size: 25px;
+  }
 }
 
 .byline-prefix {
@@ -119,21 +126,61 @@ div#links-and-calendar {
   background-color: $white;
 }
 
-div#academic-highlight-overlay {
-  background-color: $xlightblue;
-}
-
-div#academic-highlight-overlay:first-of-type {
+.academic-highlight-overlay {
   background-color: $medblue;
+  padding: 0 15px 10px 15px;
+  .h6 {
+    font-size: 25px;
+    line-height: 27px;
+    text-align: left;
+    @media screen and (min-width: 1024px) and (max-width: 1223px) {
+        font-size: 20px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .h6 {
+      font-size: 20px;
+    }
+    .field--name-field-academic-highlight-byline {
+      font-size: 12px;
+    }
+    .field--name-field-academic-highlight-title.actual-title {
+      min-height: 3em;
+    }
+  }
 }
 
-div#academic-highlight-overlay .h6 {
-  font-size: 25px;
-  line-height: 27px;
-  text-transform: uppercase;
-  text-align: left;
+.field--name-field-academic-highlight .field__item:first-of-type {
+    .academic-highlight-overlay {
+      background-color: $navy;
+    }
 }
 
+.academic-highlight-image img {
+    width: 100%;
+    height: auto;
+}
+
+.field--name-field-academic-highlight-rank {
+    position: relative;
+    margin-top: -1.3em;
+    color: white;
+    font-weight: bold;
+}
+
+.field--name-field-academic-highlight-title.university-for {
+    color: $lightgray;
+    margin-bottom: 0;
+}
+.field--name-field-academic-highlight-title.actual-title {
+    margin-top: 0;
+    min-height: 2em;
+}
+
+.field--name-field-academic-highlight-byline {
+    color: white;
+    font-style: italic;
+}
 
 @media screen and (min-width: 1024px) {
   #circle-wrapper, #academic-success {
@@ -229,5 +276,8 @@ div#academic-highlight-overlay .h6 {
 
   .academic-success .h2 {
     text-align: center;
+  }
+  .field--name-field-academic-highlight .field__item {
+    margin-bottom: 10px;
   }
 }
