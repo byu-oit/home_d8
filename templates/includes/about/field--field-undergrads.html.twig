@@ -72,8 +72,8 @@
             {#{% set raw = attribute(array, 0) ~ attribute(array, 1)  %}#}
 
           <div class="progress-bar bar1" role="progressbar" students-now="{{ item.content }}" aria-valuemin="0" students-max="33000" >
-            {#<span  class="popOver" data-toggle="tooltip" data-placement="bottom" title="{{ item.content|number_format(0, '.', ',') }} " style="margin-top:20px"> </span>#}
-            <span  class="popOver" data-toggle="tooltip" data-placement="bottom" title="{{ item.content }} " style="margin-top:20px"> </span>
+            {#<span  class="popOver" data-toggle="tooltip" data-placement="bottom" title="{{ item.content|number_format(0, ',') }} " style="margin-top:20px"> </span>#}
+            <span  class="popOver" data-toggle="tooltip" data-placement="bottom" title="{{ item.content|number_format() }} " style="margin-top:20px"> </span>
           </div>
         </div>
       </div>

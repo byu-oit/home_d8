@@ -339,6 +339,19 @@ a:hover {
       display: flex; }
 
 /* ----------- Front Page ------- */
+@media screen and (min-width: 1424px) {
+  .main > .container {
+    width: 1224px;
+    padding: 0px 12px; } }
+
+@media screen and (max-width: 1424px) and (min-width: 1224px) {
+  .main > .container {
+    width: 1020px; } }
+
+@media screen and (max-width: 1223px) and (min-width: 1024px) {
+  .main > .container {
+    width: 824px; } }
+
 .views-field.views-field-field-header-image {
   margin-top: -4vw; }
 
