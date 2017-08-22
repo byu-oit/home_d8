@@ -51,11 +51,8 @@
     @media screen and (max-width: 1223px) {
         top: -81px;
     }
-    @media screen and (max-width: 1024px) {
-        top: -46px;
-    }
     @media screen and (max-width: 1023px) {
-        top: -36px;
+        top: -32px;
     }
     @media screen and (max-width: 767px) {
         top: -18px;
@@ -69,6 +66,9 @@
     @media screen and (max-width: 767px) {
         justify-content: space-around;
     }
+    @media screen and (min-width: 1024px) and (max-width: 1223px) {
+        margin-top: 0;
+    }
     flex-wrap: wrap;
     .field--name-field-something-to-type::before {
         content: "Something to ";
@@ -80,7 +80,13 @@
         @media screen and (min-width: 768px) and (max-width: 991px) {
             width: 154px;
         }
-        @media screen and (min-width: 992px) and (max-width: 1199px) {
+        @media screen and (min-width: 992px) and (max-width: 1023px) {
+            width: 211px;
+        }
+        @media screen and (min-width: 1024px) and (max-width: 1223px) {
+            width: 190px;
+        }
+        @media screen and (min-width: 1224px) and (max-width: 1424px) {
             width: 211px;
         }
         @media screen and (max-width: 768px) {
