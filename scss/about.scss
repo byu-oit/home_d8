@@ -223,12 +223,18 @@
 
   //yfacts bar
   .full-width-bar.yfacts-about {
-    height: 350px;
+    height: 400px;
     @media screen and (max-width: 359px) {
       height: 370px;
     }
     @media screen and (min-width: 360px) and (max-width: 1023px) {
       height: 310px;
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1223px) {
+      height: 350px;
+    }
+    @media screen and (min-width: 1224px) {
+      height: 400px;
     }
     padding-top: 0px;
 
@@ -237,13 +243,27 @@
     font-size: 22px;
     line-height: 28px;
     margin: 0px 0px 60px 0px;
-    .field--name-field-quote-bar {
-      padding-top: 130px;
-      @media screen and (max-width: 1023px) {
-        padding: 130px 20px 0px;
-        margin-bottom: 30px;
+    @media screen and (min-width: 1224px) {
+      .backfiller {
+        border-top-color: #e5e5e5;
       }
     }
+
+    .field--name-field-quote-bar {
+      padding-top: 80px;
+      @media screen and (max-width: 1023px) {
+        padding: 80px 20px 0px;
+        margin-bottom: 30px;
+      }
+      @media screen and (min-width: 1024px) and (max-width: 1223px) {
+        padding-top: 130px;
+      }
+      @media screen and (min-width: 1224px) {
+        padding-top: 60px;
+      }
+    }
+
+
 
     p {
       color: $xlightgray;

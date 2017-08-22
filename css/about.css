@@ -329,7 +329,7 @@ div#wrapper {
       margin-right: auto !important; } }
 
 .type-about .main .full-width-bar.yfacts-about {
-  height: 350px;
+  height: 400px;
   padding-top: 0px;
   font-family: "Gotham A", "Gotham B", Arial, sans-serif;
   font-style: italic;
@@ -342,12 +342,24 @@ div#wrapper {
   @media screen and (min-width: 360px) and (max-width: 1023px) {
     .type-about .main .full-width-bar.yfacts-about {
       height: 310px; } }
+  @media screen and (min-width: 1024px) and (max-width: 1223px) {
+    .type-about .main .full-width-bar.yfacts-about {
+      height: 350px; } }
+  @media screen and (min-width: 1424px) {
+    .type-about .main .full-width-bar.yfacts-about {
+      height: 400px; } }
   .type-about .main .full-width-bar.yfacts-about .field--name-field-quote-bar {
-    padding-top: 130px; }
+    padding-top: 80px; }
     @media screen and (max-width: 1023px) {
       .type-about .main .full-width-bar.yfacts-about .field--name-field-quote-bar {
-        padding: 130px 20px 0px;
+        padding: 80px 20px 0px;
         margin-bottom: 30px; } }
+    @media screen and (min-width: 1024px) and (max-width: 1223px) {
+      .type-about .main .full-width-bar.yfacts-about .field--name-field-quote-bar {
+        padding-top: 130px; } }
+    @media screen and (min-width: 1424px) {
+      .type-about .main .full-width-bar.yfacts-about .field--name-field-quote-bar {
+        padding-top: 60px; } }
   .type-about .main .full-width-bar.yfacts-about p {
     color: #f2f2f2; }
   .type-about .main .full-width-bar.yfacts-about .larger-p, .type-about .main .full-width-bar.yfacts-about .larger-p2 {
