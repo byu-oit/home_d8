@@ -311,7 +311,7 @@ a:hover {
       max-width: 1224px; } }
   @media screen and (max-width: 1424px) and (min-width: 1224px) {
     .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar) {
-      max-width: 1020px; } }
+      max-width: 1024px; } }
   @media screen and (max-width: 1223px) and (min-width: 1024px) {
     .type-about .main .node__content > :not(.full-width-bar), .type-academic .main .node__content > :not(.full-width-bar), .type-admissions .main .node__content > :not(.full-width-bar), .type-campus-life .main .node__content > :not(.full-width-bar) {
       max-width: 824px; } }
@@ -346,7 +346,7 @@ a:hover {
 
 @media screen and (max-width: 1424px) and (min-width: 1224px) {
   .main > .container {
-    width: 1020px; } }
+    width: 1024px; } }
 
 @media screen and (max-width: 1223px) and (min-width: 1024px) {
   .main > .container {
