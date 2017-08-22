@@ -5,13 +5,18 @@
 
     $(document).ready(function() {
         $window.on('resize', moveUpInstagram);
-        $('[data-toggle="tooltip"]').tooltip({trigger: 'manual'}).tooltip('show');
-        moveUpInstagram();
-
         $window.scroll(animateYFacts);
         $window.scroll(animateStudentStats);
         $window.scroll(animateGender);
         $window.scroll(animateDemographics);
+
+        moveUpInstagram();
+        try {
+            $('[data-toggle="tooltip"]').tooltip({trigger: 'manual'}).tooltip('show');
+        } catch (err) {
+            //Can't figure out why tooltip function is breaking in IE
+            //sometimes, but for now don't let it crash rest of page
+        }
     });
 
     function moveUpInstagram() {
