@@ -176,14 +176,15 @@
         display: flex;
         justify-content: center;
         div.branchpath-svg-container {
-            width: 400px;
+            width: 408px;
             height: 100px;
             @media screen and (max-width: 1223px) {
-                width: 262px;
+                width: 256px;
                 height: 60px;
             }
             @media screen and (max-width: 767px) {
-                width: 160px;
+                width: 158px;
+                height: 68px;
             }
         }
     }
@@ -428,7 +429,7 @@
                 padding: 20px 10px;
             }
             div.branchpath div.branchpath-svg-container {
-                width: 182px;
+                width: 166px;
             }
             .grad-split {
                 > div {
