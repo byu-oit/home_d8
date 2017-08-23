@@ -193,7 +193,7 @@ $circle-width: 156px;
 
 /* ----- main page --------- */
 //4 main content types that have stretch-full-width with bars
-.type-about, .type-academic, .type-admissions, .type-campus-life, .type-yfacts-test {
+.type-about, .type-academic, .type-admissions, .type-campus-life {
   .main {
     //padding: 0px 0px 30px;  // moved to below because we need to set all 4 content types AND front page
     .node__content > :not(.full-width-bar) {
@@ -256,7 +256,7 @@ $circle-width: 156px;
   }
 }
 // move main 4 pages and homepage up under the
-.type-about, .type-academic, .type-admissions, .type-campus-life, .type-yfacts-test, .front {
+.type-about, .type-academic, .type-admissions, .type-campus-life, .front {
   .main {
     padding: 0px 0px 30px;
   }
