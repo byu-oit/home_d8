@@ -19,6 +19,18 @@ a:hover {
   }
 }
 
+/* --- overriding byu_d8 for homepage components:  -- */
+
+//[slot="actions"] div {
+//
+//  margin: 0;
+//}
+.region.region-header-actions {
+  margin: 0;
+}
+
+
+
 /* ----- helpful classes ----------- */
 .normal-weight {
   font-weight: normal;
