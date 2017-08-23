@@ -195,7 +195,7 @@ $circle-width: 156px;
 //4 main content types that have stretch-full-width with bars
 .type-about, .type-academic, .type-admissions, .type-campus-life, .type-yfacts-test {
   .main {
-    padding: 0px 0px 30px;
+    //padding: 0px 0px 30px;  // moved to below because we need to set all 4 content types AND front page
     .node__content > :not(.full-width-bar) {
       //max-width: 1224px;
 
@@ -257,6 +257,9 @@ $circle-width: 156px;
 }
 // move main 4 pages and homepage up under the
 .type-about, .type-academic, .type-admissions, .type-campus-life, .type-yfacts-test, .front {
+  .main {
+    padding: 0px 0px 30px;
+  }
   #wrapper {
     margin-top: 0px;
     //@media screen and (min-width: 1024px) and (max-width: 1223px) {
