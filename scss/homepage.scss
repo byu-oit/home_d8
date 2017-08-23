@@ -19,6 +19,18 @@ a:hover {
   }
 }
 
+/* --- overriding byu_d8 for homepage components:  -- */
+
+//[slot="actions"] div {
+//
+//  margin: 0;
+//}
+.region.region-header-actions {
+  margin: 0;
+}
+
+
+
 /* ----- helpful classes ----------- */
 .normal-weight {
   font-weight: normal;
@@ -183,7 +195,7 @@ $circle-width: 156px;
 //4 main content types that have stretch-full-width with bars
 .type-about, .type-academic, .type-admissions, .type-campus-life, .type-yfacts-test {
   .main {
-    padding: 30px 0px;
+    padding: 0px 0px 30px;
     .node__content > :not(.full-width-bar) {
       //max-width: 1224px;
 
@@ -243,8 +255,16 @@ $circle-width: 156px;
 
   }
 }
-
-
+// move main 4 pages and homepage up under the
+.type-about, .type-academic, .type-admissions, .type-campus-life, .type-yfacts-test, .front {
+  #wrapper {
+    margin-top: 0px;
+    //@media screen and (min-width: 1024px) and (max-width: 1223px) {
+    @media screen and (min-width: 1024px) {
+      margin-top: -35px;
+    }
+  }
+}
 /* ----------- Front Page ------- */
 
 
@@ -265,7 +285,7 @@ $circle-width: 156px;
 }
 
   .views-field.views-field-field-header-image {
-    margin-top: -4vw;
+    //margin-top: -4vw;
   }
 
   byu-menu.byu-component-rendered a.is-active {

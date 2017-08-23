@@ -53,7 +53,7 @@ $vitesse: "Vitesse A", "Vitesse B", serif;
 
 h1, h2, h3, h4, .h1, .h2, .h3, .h4, .h8, .h9, .h10, .h11, .h12,
 h1 a, h2 a, h3 a, h4 a, .h1 a, .h2 a, .h3 a, .h4 a, .h8 a, .h9 a, .h10 a, .h11 a, .h12 a {
-  color: #002e5d;
+  color: $navy;
 }
 h5 a, .h5 a,
 h5, .h5, .h9.gray, .h9.gray a, .h11.gray, .h11.gray a {
@@ -92,7 +92,7 @@ h4 {
   font-size: 18px;
   line-height: 20px;
   a:hover {
-    color: #003DA5;
+    color: $royal;
   }
 }
 h5 {
@@ -126,7 +126,7 @@ h6 {
   line-height: 40px;
   letter-spacing: .4px;
   a:hover {
-    color: #003DA5;
+    color: $royal;
   }
 }
 .h10 {
@@ -159,6 +159,9 @@ h6 {
   text-transform: uppercase;
   font-weight: 500;
   /*letter-spacing:*/
+  a:hover {
+    color: $royal;
+  }
 }
 $h13-mobile-font:45px;
 $h13-tabletp-font:90px;
@@ -173,7 +176,7 @@ $h13-desktopw-font: 200px;
   margin-top: ($h13-mobile-font *.73*-1);
   margin-bottom: ($h13-mobile-font *.73);
 }
-div#wrapper {margin-top:-17px};
+
 
 @media screen and (min-width: 768px) {
   .h13 {
@@ -183,7 +186,7 @@ div#wrapper {margin-top:-17px};
     margin-top: ($h13-tabletp-font *.50*-1);
     margin-bottom: ($h13-tabletp-font *.50);
   }
-  div#wrapper {margin-top:1px};
+
 }
 @media screen and (min-width: 1024px) {
   h2 {
@@ -200,7 +203,7 @@ div#wrapper {margin-top:-17px};
     margin-top: ($h13-tabletl-font *.50*-1);
     margin-bottom: ($h13-tabletl-font *.50);
   }
-  div#wrapper {margin-top:11px};
+
 
 }
 @media screen and (min-width: 1224px) {
@@ -236,7 +239,7 @@ div#wrapper {margin-top:-17px};
     margin-top: ($h13-desktop-font *.50*-1);
     margin-bottom: ($h13-desktop-font *.50);
   }
-  div#wrapper {margin-top:-16px};
+
 }
 @media screen and (min-width: 1824px) {
 
@@ -247,7 +250,6 @@ div#wrapper {margin-top:-17px};
     margin-top: ($h13-desktopw-font *.45*-1);
     margin-bottom: ($h13-desktopw-font *.45);
   }
-  div#wrapper {margin-top:-16px};
 }
 
 

@@ -20,61 +20,63 @@ ul.quicktabs-tabs > li {
   margin: 0;
 }
 
-.view-id-colleges a, a:link {
-  color: #369;
-  text-decoration: none;
-}
+.view-id-colleges {
+  a, a:link {
+    color: #369;
+    text-decoration: none;
+  }
 
-.view-id-colleges a:hover {
-  color: #025;
-  text-decoration: underline;
-}
+  a:hover {
+    color: #025;
+    text-decoration: underline;
+  }
 
-.view-id-colleges a:visited {
-  color: #539;
-}
+  a:visited {
+    color: #539;
+  }
 
-.view-id-colleges .view-content > ul > li > .views-field {
-  padding: 30px 0 20px 0;
-}
+  .view-content > ul > li > .views-field {
+    padding: 30px 0 20px 0;
+  }
 
-.view-id-colleges .view-content > ul {
-  list-style-type: none;
-  padding: 0;
-}
+  .view-content > ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
-.view-id-colleges .view-content > ul > li > ul {
-  padding: 0 0 10px 25px;
-}
+  .view-content > ul > li > ul {
+    padding: 0 0 10px 25px;
+  }
 
-.view-id-colleges .view-content > ul > li > ul > li {
-  list-style-type: disc;
-}
+  .view-content > ul > li > ul > li {
+    list-style-type: disc;
+  }
 
-.view-id-colleges .view-content > ul > li > ul > li > ul {
-  padding: 4px 0 0 25px;
-}
+  .view-content > ul > li > ul > li > ul {
+    padding: 4px 0 0 25px;
+  }
 
-.view-id-colleges .view-content > ul > li > ul > li > ul > li {
-  list-style-type: circle;
-}
+  .view-content > ul > li > ul > li > ul > li {
+    list-style-type: circle;
+  }
 
-.view-id-colleges .view-content > ul > li > .views-field a {  //colleges
-  font-size: 29px;
-  font-weight: bold;
-  font-family: "Sentinel A","Sentinel B","CreteRound","Palatino","DroidSerif","Droid Serif",Georgia,serif;
-}
+  .view-content > ul > li > .views-field a {  //colleges
+    font-size: 29px;
+    font-weight: bold;
+    font-family: "Sentinel A","Sentinel B","CreteRound","Palatino","DroidSerif","Droid Serif",Georgia,serif;
+  }
 
-.view-id-colleges .view-content > ul > li > ul > li > .views-field span {  //sub-categories
-  color: #444;
-  font-size: 21px;
-  font-weight: bold;
-  font-family: "Whitney SSm A","Whitney SSm B","OpenSans","Thonburi","DroidSans","Droid Sans","sans-serif","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif;
-}
+  .view-content > ul > li > ul > li > .views-field span {  //sub-categories
+    color: #444;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: "Whitney SSm A","Whitney SSm B","OpenSans","Thonburi","DroidSans","Droid Sans","sans-serif","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif;
+  }
 
-.view-id-colleges .view-content > ul > li > ul > li > .views-field a,
-.view-id-colleges .view-content > ul > li > ul > li > ul > li > .views-field a {  //departments
-  font-size: 16px;
-  font-weight: normal;
-  font-family: "Whitney SSm A","Whitney SSm B","OpenSans","Thonburi","DroidSans","Droid Sans","sans-serif","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif;
+  .view-content > ul > li > ul > li > .views-field a,
+  .view-content > ul > li > ul > li > ul > li > .views-field a {  //departments
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "Whitney SSm A","Whitney SSm B","OpenSans","Thonburi","DroidSans","Droid Sans","sans-serif","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif;
+  }
 }
