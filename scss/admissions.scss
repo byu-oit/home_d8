@@ -211,6 +211,9 @@
         text-align: left;
         margin-top: 1em;
     }
+    .subsidies-left {
+        margin: 1em 50px 0 50px;
+    }
     @media screen and (max-width: 991px) {
         .subsidies-left {
             display: none;
@@ -279,6 +282,12 @@
             @media screen and (max-width: 1223px) {
                 width: auto;
                 text-align: right;
+                position: relative;
+                right: 20%;
+            }
+            @media screen and (max-width: 991px) {
+                width: 150%;
+                right: 55%;
             }
             color: $darkgray;
         }
@@ -428,11 +437,6 @@
                 .undergrad-header, .undergrad-header-small, .graduate-header {
                     margin: 10px;
                     width: 140px;
-                }
-                .management-law-header {
-                    position: relative;
-                    width: 150%;
-                    right: 55%;
                 }
             }
             .tuition-bottom-area {
