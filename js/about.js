@@ -68,6 +68,7 @@
         if ($('.field--name-field-gender').hasClass('in-view')) {
             oneTimeAnimateElements.studentStats = true;
             $(".students-group .progress-bar").each(function () {
+                // $(".students-group .progress").css('display', 'block');
                 var each_bar_width = $(this).attr('students-now');
                 var total = $(this).attr('students-max');
                 var percent = each_bar_width / total * 100;
