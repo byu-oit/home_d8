@@ -258,7 +258,7 @@ $circle-width: 156px;
 // move main 4 pages and homepage up under the
 .type-about, .type-academic, .type-admissions, .type-campus-life, .type-front-page {
   .main {
-    padding: 0px 0px 30px;
+    padding: 0px 0px 100px;
   }
   #wrapper {
     margin-top: 0px;
@@ -297,5 +297,5 @@ $circle-width: 156px;
 
 /* -------- Basic Pages ------------- */
 .main {
-  padding: 30px 0px;
+  padding: 30px 0px 100px;
 }
