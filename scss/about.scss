@@ -247,16 +247,16 @@
 
 
     .field--name-field-quote-bar {
-      padding-top: 80px;
+      padding-top: 100px;
       @media screen and (max-width: 1023px) {
-        padding: 125px 20px 0px;
+        padding: 145px 20px 0px;
         margin-bottom: 30px;
       }
       @media screen and (min-width: 1024px) and (max-width: 1223px) {
-        padding-top: 130px;
+        padding-top: 150px;
       }
       @media screen and (min-width: 1224px) {
-        padding-top: 80px;
+        padding-top: 100px;
       }
     }
 
