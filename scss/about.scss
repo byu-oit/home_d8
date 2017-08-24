@@ -361,7 +361,7 @@
       border-radius: 36px;
       margin-top: -9px;
       @media screen and (max-width: 1023px) {
-        margin-left: -20px;
+        //margin-left: -20px;
       }
     }
     .color-2 .tooltip.bottom .tooltip-arrow {
@@ -947,8 +947,12 @@
   //$studentsSpeakingBarWidth: 282px;
   $studentsSpeakingBarWidth: 362px;
   $tabletStudentsSpeakingBarWidth: 285px;
+  $mobileStudentsSpeakingBarWidth: 90%;
   @mixin studentSpeakingWidth() {
     width: $studentsSpeakingBarWidth;
+    @media screen and (max-width: 787px) {
+      width: $mobileStudentsSpeakingBarWidth;
+    }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       width: $tabletStudentsSpeakingBarWidth;
     }
