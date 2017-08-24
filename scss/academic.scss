@@ -24,11 +24,13 @@ $doctorate-circle-size : 155px;
 .masters-circle {
   @include navy-circle($masters-circle-size);
   margin-left:-11px;
+  padding: 18px;
 }
 
 .doctorate-circle {
   @include navy-circle($doctorate-circle-size);
   margin-left:-11px;
+  padding: 18px;
 }
 
 div.masters-circle .circles-h10, div.doctorate-circle .circles-h10 {

@@ -249,7 +249,7 @@
     .field--name-field-quote-bar {
       padding-top: 80px;
       @media screen and (max-width: 1023px) {
-        padding: 80px 20px 0px;
+        padding: 125px 20px 0px;
         margin-bottom: 30px;
       }
       @media screen and (min-width: 1024px) and (max-width: 1223px) {
@@ -928,11 +928,14 @@
 
     .navy-circle {
       @include navy-circle(156px);
+      padding: 15px;
       @media screen and (max-width: 1023px) {
         margin-left: 0px;
         margin-top: 0px;
         margin: 0px 5px;
-
+      }
+      @media screen and (max-width: 1223px) {
+        padding: 15px;
       }
     }
   }
