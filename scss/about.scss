@@ -467,7 +467,7 @@
       order: 3;
       padding: 25px 35px;
     }
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
       padding: 25px 25px 25px 20px;
       width: 40%;
       margin-left: 5%;
@@ -1079,7 +1079,7 @@
   .barWrapper.students-speaking {
     //display: flex;
     display: none; // displayed w animation
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       display: flex;
     }
     margin-bottom: 0px;
@@ -1093,6 +1093,7 @@
       box-shadow: none;
       background: $lightgray;
       //z-index: 1;
+
     }
     .progress-bar {
       background: $medblue;
