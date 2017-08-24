@@ -313,7 +313,8 @@
       margin-right: -10px;
       z-index: 10;
       @media screen and (max-width: 767px) {
-        margin-right: -20px;
+        //margin-right: -20px;
+        margin-right: 0px;
       }
     }
     .tooltip > .tooltip-inner {
@@ -568,6 +569,9 @@
     }
     .progressText2.h9 {
       padding-left: 3px;
+      @media screen and (max-width: 360px) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -1048,14 +1052,21 @@
       display: block;
     }
     width: 290px;
+    max-width: 87%; // this will leave 20px of space on each side at 320px
     height: 218px;
   }
-
+  //.certifications-text-wrapper {
+  //  max-width: 87%; // this will leave 20px of space on each side at 320px
+  //}
   .award-icon-wrapper {
     width: 290px;
+    max-width: 87%; // this will leave 20px of space on each side at 320px
   }
   .award-icon {
     width: 13%; // 7 in a row
+    @media screen and (max-width: 767px) {
+      width: 12.5%;
+    }
     padding: 4px 0px;
   }
   //----- students speaking

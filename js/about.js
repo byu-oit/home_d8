@@ -65,41 +65,79 @@
         if (oneTimeAnimateElements.studentStats) {
             return;
         }
-        if ($('.field--name-field-gender').hasClass('in-view')) {
-            oneTimeAnimateElements.studentStats = true;
-            $(".students-group .progress-bar").each(function () {
-                // $(".students-group .progress").css('display', 'block');
-                var each_bar_width = $(this).attr('students-now');
-                var total = $(this).attr('students-max');
-                var percent = each_bar_width / total * 100;
-                $(this).width(percent + '%');
-            });
-            // add comma w js since twig filters weren't working
+        if (window.matchMedia('(min-width: 1024px)').matches) {
+            if ($('.field--name-field-gender').hasClass('in-view')) {
+                oneTimeAnimateElements.studentStats = true;
+                $(".students-group .progress-bar").each(function () {
+                    var each_bar_width = $(this).attr('students-now');
+                    var total = $(this).attr('students-max');
+                    var percent = each_bar_width / total * 100;
+                    $(this).width(percent + '%');
+                });
+                // add comma w js since twig filters weren't working
 
-            // count up total number
-            $('.counter').each(function () {
-                var $this = $(this),
-                    countTo = $this.attr('content').replace(/[^\d]/g,'');
+                // count up total number
+                $('.counter').each(function () {
+                    var $this = $(this),
+                        countTo = $this.attr('content').replace(/[^\d]/g, '');
 
-                $({countNum: 0}).animate({
-                        countNum: countTo
-                    },
-
-                    {
-                        duration: 1200,
-                        easing: 'linear',
-                        step: function () {
-                            $this.html((Math.floor(this.countNum)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                    $({countNum: 0}).animate({
+                            countNum: countTo
                         },
-                        complete: function () {
-                            $this.html((this.countNum).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-                            //alert('finished');
-                            showStudentNumbers();
-                        }
 
-                    });
+                        {
+                            duration: 1200,
+                            easing: 'linear',
+                            step: function () {
+                                $this.html((Math.floor(this.countNum)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                            },
+                            complete: function () {
+                                $this.html((this.countNum).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                                //alert('finished');
+                                showStudentNumbers();
+                            }
 
-            });
+                        });
+
+                });
+            }
+        } else if (window.matchMedia('(max-width: 1023px)').matches) {
+            if ($('.field--name-field-students-speaking').hasClass('in-view')) {
+                oneTimeAnimateElements.studentStats = true;
+                $(".students-group .progress-bar").each(function () {
+                    var each_bar_width = $(this).attr('students-now');
+                    var total = $(this).attr('students-max');
+                    var percent = each_bar_width / total * 100;
+                    $(this).width(percent + '%');
+                });
+                // add comma w js since twig filters weren't working
+
+                // count up total number
+                $('.counter').each(function () {
+                    var $this = $(this),
+                        countTo = $this.attr('content').replace(/[^\d]/g, '');
+
+                    $({countNum: 0}).animate({
+                            countNum: countTo
+                        },
+
+                        {
+                            duration: 1200,
+                            easing: 'linear',
+                            step: function () {
+                                $this.html((Math.floor(this.countNum)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                            },
+                            complete: function () {
+                                $this.html((this.countNum).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                                //alert('finished');
+                                showStudentNumbers();
+                            }
+
+                        });
+
+                });
+            }
+
         }
     };
 
