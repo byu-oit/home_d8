@@ -507,7 +507,7 @@
             .delay(100)
             .queue(function (next) {
                 var $this = $(this);
-                $this.css('color', '#002e5d');
+                $(this).css('color', '#002e5d');
                 addComma($this);
                 next();
             });
@@ -515,7 +515,7 @@
             .delay(100)
             .queue(function (next) {
                 var $this = $(this);
-                $this.css('color', '#767676');
+                $(this).css('color', '#767676');
                 addComma($this);
                 next();
             });
