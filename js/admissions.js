@@ -40,7 +40,7 @@ jQuery(document).ready(function($) {
             .attr({
                 stroke: '#c5c5c5',
                 'stroke-width': strokeWidth,
-                'stroke-dasharray': '1, ' + strokeSpace,
+                'stroke-dasharray': '0, ' + strokeSpace,
                 'stroke-linecap' : 'round',
                 width: width,
                 height: height});
@@ -63,12 +63,12 @@ jQuery(document).ready(function($) {
                 var top = strokeWidth / 2;
                 s.line(x, top - height, x, top).animate({y1: top, y2: height}, ySpeed);
             } else {
-                var stepSize = strokeSpace + 1.0;
+                var stepSize = strokeSpace;
                 //Tweak the step size so that dots line up *exactly* with div width
                 var floor = Math.floor((x - (strokeWidth / 2.0)) / stepSize);
                 var diff = (x - (strokeWidth / 2.0) - (floor * stepSize)) / floor;
                 stepSize += diff;
-                s.attr({'stroke-dasharray': '1, ' + (strokeSpace + diff)});
+                s.attr({'stroke-dasharray': '0, ' + stepSize});
                 var halfWidth = Math.floor((x - (strokeWidth / 2.0)) / stepSize) * stepSize;
                 var halfHeight = Math.floor((y - (strokeWidth / 2.0)) / stepSize) * stepSize;
                 var top = y - halfHeight;
