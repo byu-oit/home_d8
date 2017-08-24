@@ -1,5 +1,9 @@
 @import "mixins";
 
+article.node--type-admissions {
+    padding-top: 42px;
+}
+
 .field--name-field-links {
     text-align: center;
     .field__label {
