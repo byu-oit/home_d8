@@ -2,6 +2,9 @@
 
 .view-campus-life-links {
     .view-content {
+        a:hover {
+            color: $royal;
+        }
         ul {
             list-style-type: none;
             padding-left: 10px;
@@ -40,6 +43,11 @@
                 li .h12 {
                     line-height: 40px;
                     text-transform: none;
+                }
+            }
+            > li:hover {
+                > .views-field-field-icon {
+                    box-shadow: 2px 2px 6px;
                 }
             }
         }
