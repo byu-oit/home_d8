@@ -7,8 +7,16 @@
 
         var $somethings = $('.field--name-field-somethings');
         $somethings.find('> .field__item').css('opacity', 0);
-        $(window).scroll(slideSomethingsIn);
-        $(window).resize(function() {
+        var $window = $(window);
+        var lastWidth = $window.width();
+        $window.scroll(slideSomethingsIn);
+        $window.resize(function() {
+            var curWidth = $window.width();
+            if (curWidth === lastWidth) {
+                return;
+            }
+
+            lastWidth = curWidth;
             $somethings.find('> .come-in').removeClass('come-in');
             window.setTimeout(slideSomethingsIn, 0);
         });
