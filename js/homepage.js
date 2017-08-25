@@ -12,6 +12,7 @@ $(document).ready(function() {
     $window.on('scroll resize', check_if_in_view);
     //delay scroll trigger so other "$(document).ready" functions can finish first
     window.setTimeout(function() {$window.trigger('scroll');}, 1);
+  $("form#search-block-form input.form-search").attr("style","");
 });
 
 function check_if_in_view() {
