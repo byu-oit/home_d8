@@ -321,13 +321,13 @@ $h13-desktopw-font: 200px;
     color: white;
     text-decoration: none;
     background-color: $royal;
-    transition: background 0.3s;
+    transition: background 0.2s;
 }
 @mixin hover-to-navy() {
     color: white;
     text-decoration: none;
     background-color: $navy;
-    transition: background 0.3s;
+    transition: background 0.2s;
 }
 .hover-to-royal:hover {
     @include hover-to-royal();
