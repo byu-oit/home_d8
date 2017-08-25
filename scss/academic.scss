@@ -49,6 +49,10 @@ div.masters-circle .circles-h10, div.doctorate-circle .circles-h10 {
   justify-content: center;
 }
 
+#academic-calendar-btn:hover {
+    @include hover-to-royal();
+}
+
 #academic-y-facts {
   max-width: 1224px;
   align-items: center;
