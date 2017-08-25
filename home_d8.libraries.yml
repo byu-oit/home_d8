@@ -8,6 +8,7 @@ global-styling:
     theme:
       css/animate.css: {}
       css/academic.css: {}
+      css/cse.css: {}
   js:
     js/homepage.js: {}
     js/cse.js: {}
