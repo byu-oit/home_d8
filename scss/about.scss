@@ -225,11 +225,20 @@
   //yfacts bar
   .full-width-bar.yfacts-about {
     height: 400px;
-    @media screen and (max-width: 359px) {
+    @media screen and (max-width: 436px) {
       height: 370px;
     }
-    @media screen and (min-width: 360px) and (max-width: 1023px) {
-      height: 310px;
+    @media screen and (min-width: 437px) and (max-width: 457px) { // little text goes to 2 lines so 5 lines
+      height: 350px;
+    }
+    @media screen and (min-width: 360px) and (max-width: 457px) { // undergraduate moves down so 4 lines
+      height: 350px;
+    }
+    @media screen and (min-width: 458px) and (max-width: 665px) { // enrollment moves down so 3 lines
+      height: 335px;
+    }
+    @media screen and (min-width: 666px) and (max-width: 1023px) {
+      height: 325px;
     }
     @media screen and (min-width: 1024px) and (max-width: 1223px) {
       height: 350px;
@@ -248,8 +257,12 @@
 
     .field--name-field-quote-bar {
       padding-top: 100px;
-      @media screen and (max-width: 1023px) {
-        padding: 145px 20px 0px;
+      @media screen and (min-width: 360px) and (max-width: 457px) { // undergraduate moves down so 4 lines
+        padding: 130px 20px 0px;
+        margin-bottom: 30px;
+      }
+      @media screen and (min-width: 458px) and (max-width: 1023px) {
+        padding: 160px 20px 0px;
         margin-bottom: 30px;
       }
       @media screen and (min-width: 1024px) and (max-width: 1223px) {
@@ -282,6 +295,15 @@
       }
       @media screen and (max-width: 1023px) {
         display: block;
+      }
+    }
+    .larger-p {
+      margin-bottom: 8px;
+      @media screen and (max-width: 644px){
+        margin-bottom: 4px; // once enrollment goes to next line
+      }
+      @media screen and (min-width: 645px ) and (max-width: 665px){
+        margin-bottom: 0px; // once enrollment goes to next line
       }
     }
     .larger-p2 {
