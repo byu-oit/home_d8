@@ -24,12 +24,18 @@ article.node--type-admissions {
             color: white;
             background-color: $navy;
             padding: 10px 2em;
+            &:hover {
+                @include hover-to-royal();
+            }
         }
     }
     div.field__item:last-of-type {
         a {
             background-color: $medblue;
             padding: 10px 3.5em;
+            &:hover {
+                @include hover-to-royal();
+            }
         }
     }
 }
@@ -396,6 +402,7 @@ article.node--type-admissions {
             padding: 10px 20px;
         }
         a:hover {
+            @include hover-to-royal();
             text-decoration: none;
         }
     }

@@ -309,3 +309,49 @@ $h13-desktopw-font: 200px;
   font-size: 60px;
   margin: 0px;
 }
+
+@mixin button() {
+  padding: 12px 25px;
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin hover-to-royal() {
+    color: white;
+    text-decoration: none;
+    background-color: $royal;
+    transition: background 0.3s;
+}
+@mixin hover-to-navy() {
+    color: white;
+    text-decoration: none;
+    background-color: $navy;
+    transition: background 0.3s;
+}
+.hover-to-royal:hover {
+    @include hover-to-royal();
+}
+.hover-to-navy:hover {
+    @include hover-to-navy();
+}
+
+.royal-button a {
+  @include button();
+  background: $royal;
+  color: #fff;
+  text-decoration: none;
+  &:hover {
+      @include hover-to-navy();
+  }
+}
+
+.medblue-button a {
+  @include button();
+  background: $medblue; /* change to medium blue */
+  color: #fff;
+  &:hover {
+    @include hover-to-royal();
+  }
+}
+
