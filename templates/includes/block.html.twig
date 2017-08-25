@@ -47,16 +47,13 @@
       {% endif %}
     {#{% endblock %}#}
 
-{% else %}
-    {% if label %}
-      <span slot="header" {{ title_attributes }}>{{ label }}</span>
-    {% endif %}
-    {{ title_suffix }}
+{% else %} 
 
     <div{{ attributes.addClass(classes) }}>
         {% if label %}
           <h2>{{ label }}</h2>
         {% endif %}
+        {{ title_suffix }}
         {% block content %}
           {{ content }}
         {% endblock %}
