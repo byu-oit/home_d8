@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AAAA,8DAA8D,CAAC,OAAO,CAAE,IAAI,CAC5E,2CAA4C,CAAC,UAAU,CAAE,IAAI",
-"sources": ["cse.scss"],
-"names": [],
-"file": "cse.css"
-}
+{"version":3,"sources":["cse.scss"],"names":[],"mappings":"AAA6C,kBAA7C,2BAA2B,kBAAoC,QAAS,KACxE,4CAA6C,WAAY","file":"cse.css","sourcesContent":["div.gsc-above-wrapper-area,div.gsc-promotion,div.gcsc-branding{display: none;}\nol.search-results.google_cse_search-results {list-style: none;}"]}
