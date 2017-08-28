@@ -3,10 +3,16 @@ jQuery(document).ready(function($) {
     var $window = $(window);
     var $branchTop = $('#branchpath-top-div');
     var noOverlapCheck = 0;
+    var lastWidth = $window.width();
     animateBranchesIfVisible();
 
     $window.scroll(animateBranchesIfVisible);
     $window.resize(function() {
+        var curWidth = $window.width();
+        if (curWidth === lastWidth) {
+            return;
+        }
+        lastWidth = curWidth;
         alreadyAnimated = false;
         animateBranchesIfVisible();
     });
