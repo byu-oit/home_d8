@@ -10,6 +10,21 @@
     }
 }
 
+.front-page-emergency-notice {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    background-color: lightpink;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid red;
+    p {
+        color: black;
+        margin: 10px 0;
+    }
+    @media screen and (max-width: 1023px) {
+        margin-top: 10px;
+    }
+}
 .come-in {
   transform: translateY(-50px);
   animation: come-in 0.5s ease forwards;
