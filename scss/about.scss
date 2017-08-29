@@ -626,7 +626,7 @@
 
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       background: $lightgray;
-      padding: 80px 0px 30px; // left & right need to be 0 for full width children inside this
+      padding: 80px 0px 0px; // left & right need to be 0 for full width children inside this
     }
 
     @media screen and (min-width: 1024px) {
@@ -1147,7 +1147,7 @@
     margin-bottom: 60px;
     @media screen and (min-width: 768px) and (max-width: 1023px) {
         width: 250px;
-        margin-top: -140px;
+        margin-top: -110px;
         margin-bottom: 40px;
         margin-left: 62%;
     }
