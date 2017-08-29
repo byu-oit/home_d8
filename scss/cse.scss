@@ -1,2 +1,60 @@
+@import "mixins";
+
 div.gsc-above-wrapper-area,div.gsc-promotion,div.gcsc-branding{display: none;}
 ol.search-results.google_cse_search-results {list-style: none;}
+
+input#edit-keys {
+  background: #fff!important; // otherwise, it shows Google stuff
+}
+
+// images
+.gsc-table-cell-thumbnail, .gs-promotion-image-cell {
+  padding-right: 10px;
+}
+
+// linked titles
+.gs-result .gs-title, .gs-result .gs-title * {
+  color: $navy;
+  text-decoration: none;
+  font-size: 20px!important;
+  font-family: $gotham;
+}
+
+// paragraph
+.gs-result .gs-snippet {
+  color: $gray;
+  font-family: $gotham;
+}
+
+// bottom url link
+.gs-result a.gs-visibleUrl, .gs-result .gs-visibleUrl {
+  color: $royal;
+  text-decoration: none;
+  font-family: $gotham;
+}
+
+
+// pager
+.gsc-results .gsc-cursor-box {
+
+  display: flex;
+  justify-content: center;
+}
+// pages
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
+  cursor: pointer;
+  color: $navy;
+  text-decoration: none;
+  margin-right: 8px;
+  display: inline;
+  font-size: 16px;
+  font-family: $gotham;
+}
+// hover pages & current page
+.gsc-results .gsc-cursor-box .gsc-cursor-page:hover,
+.gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+  cursor: default;
+  color: $royal;
+  font-weight: 500;
+  text-decoration: none;
+}
