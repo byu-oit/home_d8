@@ -40,5 +40,6 @@ function check_if_in_view() {
 
 // from byu-theme-components documentation:
 function d8Search(value) {
+    console.log('trying to click search');
     jQuery('[data-drupal-selector="edit-submit"]').click();
 }
