@@ -278,3 +278,37 @@ $circle-width: 156px;
 .main {
   padding: 30px 0px 100px;
 }
+
+/* ---- sidebar on mobile --- */
+@media (max-width: 991px) { // when the sidebar breaks to go below
+  .col-md-3 .sidebar {
+    padding-top: 30px;
+  }
+}
+/* --- AZ Index ------- */
+
+// a ... z at the top & bottom
+.view-a-z-index.view-id-a_z_index.view-display-id-block_1 .view-content > a {
+  font-size: 24px;
+  padding: .5px;
+  line-height: 1.5em;
+  @media screen and (max-width: 1024px) {
+    padding: 4px;
+  }
+}
+// single A, B section headers
+.view-a-z-index .view-content > h3 {
+  margin: 20px 0px 5px;
+  @media screen and (max-width: 1024px) {
+    margin: 20px 0px 0px;
+    font-weight: 500;
+
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  // listed links of colleges/depts
+  .view-a-z-index .view-content > div {
+    padding: 2px 0px;
+  }
+}
