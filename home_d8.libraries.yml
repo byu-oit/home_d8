@@ -11,6 +11,7 @@ global-styling:
       css/cse.css: {}
   js:
     js/homepage.js: {}
+    js/purechat.js: {}
 frontpage:
   version: 8.x
   css:
