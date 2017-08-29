@@ -14,22 +14,22 @@ input#edit-keys {
 
 // linked titles
 .gs-result .gs-title, .gs-result .gs-title * {
-  color: $navy;
-  text-decoration: none;
+  color: $navy!important;
+  text-decoration: none!important
+;
   font-size: 20px!important;
   font-family: $gotham;
 }
 
 // paragraph
 .gs-result .gs-snippet {
-  color: $gray;
+  color: $medgray;
   font-family: $gotham;
 }
 
 // bottom url link
 .gs-result a.gs-visibleUrl, .gs-result .gs-visibleUrl {
-  color: $royal;
-  text-decoration: none;
+  color: $royal!important;
   font-family: $gotham;
 }
 
