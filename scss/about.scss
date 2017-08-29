@@ -249,7 +249,7 @@
     padding-top: 0px;
 
     font-family: $gotham;
-    font-style: italic;
+    //font-style: italic;
     font-size: 22px;
     line-height: 28px;
     margin: 0px 0px 60px 0px;
@@ -834,6 +834,9 @@
 
       //display: block;
       display: none;
+    }
+    .h12.field.field--name-field-percent-arizona:after {
+      content: none;
     }
 
     & > .state-2 {
