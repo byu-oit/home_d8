@@ -355,3 +355,11 @@ $h13-desktopw-font: 200px;
   }
 }
 
+// For A-Z Index, Colleges & Departments, etc
+@mixin letterHeaders() {
+  margin: 20px 0px 5px;
+  font-weight: 500;
+  @media screen and (max-width: 1024px) {
+    margin: 20px 0px 0px;
+  }
+}
