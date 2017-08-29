@@ -43,8 +43,8 @@ ol.search-results.google_cse_search-results {list-style: none;}
 // pages
 .gsc-results .gsc-cursor-box .gsc-cursor-page {
   cursor: pointer;
-  color: $navy;
-  text-decoration: none;
+  color: $navy!important;
+  text-decoration: none!important;
   margin-right: 8px;
   display: inline;
   font-size: 16px;
@@ -54,7 +54,7 @@ ol.search-results.google_cse_search-results {list-style: none;}
 .gsc-results .gsc-cursor-box .gsc-cursor-page:hover,
 .gsc-results .gsc-cursor-box .gsc-cursor-current-page {
   cursor: default;
-  color: $royal;
+  color: $royal!important;
   font-weight: 500;
   text-decoration: none;
 }
