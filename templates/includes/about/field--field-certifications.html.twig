@@ -73,14 +73,14 @@
         {#{% for i in k %}#}
             {#{% if i <= item.content|round %}#}
               {#{{ i }}#}
-            {#<img class="award-icon" src="/sites/default/files/award-medallion-opt.svg">#}
+            {#<img class="award-icon" alt="award icon" src="/sites/default/files/award-medallion-opt.svg">#}
 
             {#{% endif %}#}
         {#{% endfor %}#}
 
         {% set k =  14 %}
         {% for i in 1..k %}
-            <img class="award-icon" src="../sites/default/files/images/award-medallion-opt.svg">
+            <img class="award-icon" alt="award icon" src="../sites/default/files/images/award-medallion-opt.svg">
         {% endfor %}
         </div>
 
