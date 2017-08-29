@@ -298,12 +298,7 @@ $circle-width: 156px;
 }
 // single A, B section headers
 .view-a-z-index .view-content > h3 {
-  margin: 20px 0px 5px;
-  @media screen and (max-width: 1024px) {
-    margin: 20px 0px 0px;
-    font-weight: 500;
-
-  }
+  @include letterHeaders();
 }
 
 @media screen and (max-width: 1024px) {

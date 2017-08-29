@@ -1,3 +1,4 @@
+@import "mixins";
 span.field.field--name-title.field--type-string.field--label-hidden.quickedit-field {
   color: #025;
   font-size: 35px;
@@ -79,4 +80,8 @@ ul.quicktabs-tabs > li {
     font-weight: normal;
     font-family: "Whitney SSm A","Whitney SSm B","OpenSans","Thonburi","DroidSans","Droid Sans","sans-serif","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif;
   }
+}
+
+.view-colleges-alphabetical .view-content > div > h3 {
+  @include letterHeaders();
 }
