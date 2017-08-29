@@ -36,3 +36,9 @@ function check_if_in_view() {
     });
 }
 })(jQuery);
+
+
+// from byu-theme-components documentation:
+function d8Search(value) {
+    jQuery('[data-drupal-selector="edit-submit"]').click();
+}
