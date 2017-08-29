@@ -1,10 +1,11 @@
 @import "mixins";
 span.field.field--name-title.field--type-string.field--label-hidden.quickedit-field {
-  color: #025;
-  font-size: 35px;
-  font-weight: bold;
-  font-family: "Sentinel A","Sentinel B","CreteRound","Palatino","DroidSerif","Droid Serif",Georgia,serif;
-  margin: 30px 0 20px 0;
+  // it should follow the normal h1 styling
+  //color: #025;
+  //font-size: 35px;
+  //font-weight: bold;
+  //font-family: "Sentinel A","Sentinel B","CreteRound","Palatino","DroidSerif","Droid Serif",Georgia,serif;
+  //margin: 30px 0 20px 0;
 }
 
 #block-quicktabscollegesdepartments > h2 {
@@ -17,24 +18,11 @@ ul.quicktabs-tabs > li.active {
 
 ul.quicktabs-tabs > li {
   font-size: 16px;
-  font-family: "Whitney SSm A","Whitney SSm B","OpenSans","Thonburi","DroidSans","Droid Sans","sans-serif","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif;
+  //font-family: "Whitney SSm A","Whitney SSm B","OpenSans","Thonburi","DroidSans","Droid Sans","sans-serif","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif;
   margin: 0;
 }
 
 .view-id-colleges {
-  a, a:link {
-    color: #369;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #025;
-    text-decoration: underline;
-  }
-
-  a:visited {
-    color: #539;
-  }
 
   .view-content > ul > li > .views-field {
     padding: 30px 0 20px 0;
@@ -52,9 +40,9 @@ ul.quicktabs-tabs > li {
   .view-content > ul > li > ul > li {
     list-style-type: disc;
   }
-
+  // sections of subs sections
   .view-content > ul > li > ul > li > ul {
-    padding: 4px 0 0 25px;
+    padding: 5px 0 8px 25px;
   }
 
   .view-content > ul > li > ul > li > ul > li {
@@ -64,21 +52,21 @@ ul.quicktabs-tabs > li {
   .view-content > ul > li > .views-field a {  //colleges
     font-size: 29px;
     font-weight: bold;
-    font-family: "Sentinel A","Sentinel B","CreteRound","Palatino","DroidSerif","Droid Serif",Georgia,serif;
+    //font-family: "Sentinel A","Sentinel B","CreteRound","Palatino","DroidSerif","Droid Serif",Georgia,serif;
   }
 
   .view-content > ul > li > ul > li > .views-field span {  //sub-categories
     color: #444;
     font-size: 21px;
     font-weight: bold;
-    font-family: "Whitney SSm A","Whitney SSm B","OpenSans","Thonburi","DroidSans","Droid Sans","sans-serif","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif;
+    //font-family: "Whitney SSm A","Whitney SSm B","OpenSans","Thonburi","DroidSans","Droid Sans","sans-serif","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif;
   }
 
   .view-content > ul > li > ul > li > .views-field a,
   .view-content > ul > li > ul > li > ul > li > .views-field a {  //departments
     font-size: 16px;
     font-weight: normal;
-    font-family: "Whitney SSm A","Whitney SSm B","OpenSans","Thonburi","DroidSans","Droid Sans","sans-serif","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif;
+    //font-family: "Whitney SSm A","Whitney SSm B","OpenSans","Thonburi","DroidSans","Droid Sans","sans-serif","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif;
   }
 }
 
