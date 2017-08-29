@@ -3,7 +3,8 @@
 div.gsc-above-wrapper-area,div.gsc-promotion,div.gcsc-branding{display: none;}
 ol.search-results.google_cse_search-results {list-style: none;}
 
-[data-drupal-selector="edit-keys"] { // id changes
+byu-search input[type=search] {
+//[data-drupal-selector="edit-keys"] { // id changes
   background: #fff!important; // otherwise, it shows Google stuff
 }
 
@@ -42,19 +43,14 @@ ol.search-results.google_cse_search-results {list-style: none;}
 }
 // pages
 .gsc-results .gsc-cursor-box .gsc-cursor-page {
-  cursor: pointer;
   color: $navy!important;
   text-decoration: none!important;
-  margin-right: 8px;
-  display: inline;
   font-size: 16px;
   font-family: $gotham;
 }
 // hover pages & current page
 .gsc-results .gsc-cursor-box .gsc-cursor-page:hover,
 .gsc-results .gsc-cursor-box .gsc-cursor-current-page {
-  cursor: default;
   color: $royal!important;
   font-weight: 500;
-  text-decoration: none;
 }
