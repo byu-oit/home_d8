@@ -3,8 +3,7 @@
 div.gsc-above-wrapper-area,div.gsc-promotion,div.gcsc-branding{display: none;}
 ol.search-results.google_cse_search-results {list-style: none;}
 
-byu-search input[type=search] {
-//[data-drupal-selector="edit-keys"] { // id changes
+byu-search input[type=search] { // id changes
   background: #fff!important; // otherwise, it shows Google stuff
 }
 
