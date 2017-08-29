@@ -13,12 +13,13 @@
 .front-page-emergency-notice {
     margin-top: 40px;
     margin-bottom: 10px;
-    background-color: lightpink;
+    background-color: #fddadf;
     font-weight: bold;
     text-align: center;
-    border: 3px solid red;
+    text-transform: uppercase;
+    border-left: 15px solid #A90217;
     p {
-        color: black;
+        color: #A90217;
         margin: 10px 0;
     }
     @media screen and (max-width: 1023px) {
