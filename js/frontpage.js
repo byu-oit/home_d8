@@ -1,8 +1,10 @@
 (function($){
     $(document).ready(function() {
-        $('.field--name-field-somethings > .field__item').click(function(evt) {
-            evt.stopPropagation();
-            window.location.href = $(this).find('a').attr('href');
+        $('.field-collection-item--name-field-somethings').each(function() {
+            var $this = $(this);
+            var href = $this.find('a').attr('href');
+            var wrapper = $('<a>').attr('href', href);
+            $this.wrap(wrapper);
         });
 
         var $somethings = $('.field--name-field-somethings');
