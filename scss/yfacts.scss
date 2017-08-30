@@ -69,42 +69,8 @@
   padding: 30px;
 }
 
-// Screens above 1824px
-@media screen and (min-width: 1824px) {
-  .factsBanner {
-    height: 150px;
-    top: 110px;
-  }
-
-  .yText {
-    font-size: 170px;
-    top: -31px;
-  }
-
-  .factsText {
-    font-size: 80px;
-    padding-left: 15px;
-    padding-right: 200px;
-    top: 5px;
-  }
-
-  .backFiller {
-    border-top: 255px solid #fff;
-    border-left: 1500px solid transparent;
-    top: -155px;
-    left: -500px;
-    width: 150%;
-    margin-bottom: -200px;
-  }
-
-  .field--name-field-yfacts-body {
-    margin: 0 !important;
-    padding: 30px;
-  }
-}
-
-// Screens 1224px to 1823px - LARGE SCREEN
-@media screen and (max-width: 1823px) {
+// Screens 1224px and up - LARGE SCREEN
+@media screen and (min-width: 1224px) {
   .factsBanner {
     height: 120px;
     top: 115px;
