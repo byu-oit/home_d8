@@ -225,19 +225,10 @@
   //yfacts bar
   .full-width-bar.yfacts-about {
     height: 400px;
-    @media screen and (max-width: 434px) {
-      height: 370px;
+    @media screen and (max-width: 370px) { // undergraduate moves down so 4 lines
+      height: 360px;
     }
-    @media screen and (min-width: 435px) and (max-width: 457px) { // little text goes to 2 lines so 5 lines
-      height: 350px;
-    }
-    @media screen and (min-width: 360px) and (max-width: 457px) { // undergraduate moves down so 4 lines
-      height: 350px;
-    }
-    @media screen and (min-width: 458px) and (max-width: 665px) { // enrollment moves down so 3 lines
-      height: 335px;
-    }
-    @media screen and (min-width: 666px) and (max-width: 1023px) {
+     @media screen and (min-width: 370px) and (max-width: 1023px) {
       height: 325px;
     }
     @media screen and (min-width: 1024px) and (max-width: 1223px) {
@@ -257,11 +248,11 @@
 
     .field--name-field-quote-bar {
       padding-top: 100px;
-      @media screen and (min-width: 360px) and (max-width: 457px) { // undergraduate moves down so 4 lines
+      @media screen and (max-width: 516px) { // undergraduate moves down so 4 lines
         padding: 130px 20px 0px;
         margin-bottom: 30px;
       }
-      @media screen and (min-width: 458px) and (max-width: 1023px) {
+      @media screen and (min-width: 517px) and (max-width: 1023px) {
         padding: 160px 20px 0px;
         margin-bottom: 30px;
       }
@@ -312,12 +303,12 @@
       }
     }
     .larger-text {
-      font-size: 36px;
+      //font-size: 36px;
       color: #fff;
       font-weight: 500;
     }
     .yFactsText {
-    font-style: normal;
+      font-style: normal;
     }
   }
   // change to trigger on scroll to bar
