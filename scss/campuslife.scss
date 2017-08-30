@@ -186,18 +186,18 @@ section.page-header {
         background: $gray;
         padding: 10px;
         text-align: center;
-        a {
-            color: white;
-            font-family: $gotham;
-            font-size: 25px;
-            font-weight: 500;
-        }
-        a:hover {
-            text-decoration: none;
-        }
+    }
+    a {
+        color: white;
+        font-family: $gotham;
+        font-size: 25px;
+        font-weight: 500;
+    }
+    a:hover {
+        text-decoration: none;
     }
     .field-collection-item--name-field-promo-link:hover {
-        box-shadow: 2px 2px 5px;
+        box-shadow: 2px 2px 5px #888;
         .field--name-field-link {
             @include hover-to-royal();
         }

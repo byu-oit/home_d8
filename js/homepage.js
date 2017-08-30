@@ -6,13 +6,22 @@
 // add the class 'animation-element' if you want this script to mark if it is on the page being viewed or not
 var $animation_elements = $('.animation-element');
 var $window = $(window);
-var oneTimeAnimateElements = {};
 
 $(document).ready(function() {
     $window.on('scroll resize', check_if_in_view);
+    //Add special event if *width* changes, since mobile height
+    //can change on scroll as toolbars appear/disappear
+    var lastWidth = $window.width();
+    $window.resize(function() {
+        var curWidth = $window.width();
+        if (curWidth === lastWidth) {
+            return;
+        }
+        lastWidth = curWidth;
+        $window.trigger('width_resize');
+    });
     //delay scroll trigger so other "$(document).ready" functions can finish first
     window.setTimeout(function() {$window.trigger('scroll');}, 1);
-  jQuery("form#search-block-form input.form-search").attr("style","");
 });
 
 function check_if_in_view() {
@@ -36,3 +45,10 @@ function check_if_in_view() {
     });
 }
 })(jQuery);
+
+
+// from byu-theme-components documentation:
+function d8Search(value) {
+   // console.log('trying to click search');
+    jQuery('[data-drupal-selector="edit-submit"]').click();
+}

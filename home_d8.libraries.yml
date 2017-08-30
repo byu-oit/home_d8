@@ -12,6 +12,9 @@ global-styling:
   js:
     js/homepage.js: {}
     js/purechat.js: {}
+    js/google_autocomplete.js: {}
+  dependencies:
+    - core/drupal.autocomplete
 frontpage:
   version: 8.x
   css:

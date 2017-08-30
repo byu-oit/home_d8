@@ -141,12 +141,12 @@
         .field--name-field-link {
             padding: 0px 15px;
             margin-top: 10px;
-            a:hover {
-                text-decoration: none;
-            }
         }
         a {
             font-weight: normal;
+        }
+        a:hover {
+            text-decoration: none;
         }
     }
     > .field__item:hover {
