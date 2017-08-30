@@ -1062,15 +1062,24 @@
       display: block;
     }
     width: 290px;
-    max-width: 87%; // this will leave 20px of space on each side at 320px
+    //max-width: 87%; // this will leave 20px of space on each side at 320px
+    max-width: 100%;
     height: 218px;
+
+    @media screen and (max-width: 485px) {
+      .h9, .h12 {
+        font-size: 14px;
+      }
+    }
+
   }
   //.certifications-text-wrapper {
   //  max-width: 87%; // this will leave 20px of space on each side at 320px
   //}
   .award-icon-wrapper {
     width: 290px;
-    max-width: 87%; // this will leave 20px of space on each side at 320px
+    //max-width: 87%; // this will leave 20px of space on each side at 320px
+    max-width: 100%;
   }
   .award-icon {
     width: 13%; // 7 in a row
