@@ -137,7 +137,7 @@ div#links-and-calendar {
 }
 
 .academic-highlight-overlay {
-  background-color: $medblue;
+  background-color: $navy;
   padding: 0 15px 10px 15px;
   .h6 {
     font-size: 25px;
@@ -160,12 +160,6 @@ div#links-and-calendar {
   }
 }
 
-.field--name-field-academic-highlight .field__item:first-of-type {
-    .academic-highlight-overlay {
-      background-color: $navy;
-    }
-}
-
 .academic-highlight-image img {
     width: 100%;
     height: auto;
@@ -174,7 +168,7 @@ div#links-and-calendar {
 .field--name-field-academic-highlight-rank {
     position: relative;
     margin-top: -1.3em;
-    color: white;
+    color: white !important; //needed to not be overridden by .h10 mixins.scss
     font-weight: bold;
 }
 
@@ -238,9 +232,9 @@ div#links-and-calendar {
 
 @media screen and (min-width: 1824px) {
   #academic-yfacts-wrapper {
-    padding-top: 240px;
+    padding-top: 220px;
     position: relative;
-    top: -200px;
+    top: -150px;
   }
 }
 
@@ -289,5 +283,100 @@ div#links-and-calendar {
   }
   .field--name-field-academic-highlight .field__item {
     margin-bottom: 10px;
+  }
+}
+
+.academic-highlights {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-top: -50px; // Shim to align the highlights with Yfacts since Yfacts is moved up by using top: -###px
+
+    & > .field__item {
+      flex: 1; // Makes images the same size
+    }
+    & > .field__item:nth-child(2) {
+      margin: 0 2px; // Adds spacing between images (justify-content: space-between doesn't work)
+    }
+
+    // Fills in the background since the height of the overlays are different
+    & > .field__item {
+      background-color: $navy;
+    }
+  }
+
+  // Fixes mis-alignment of #2, #5, #30 on mobile devices
+  @media screen and (max-width: 767px) {
+    .field--name-field-academic-highlight-image {
+      margin-bottom: 0;
+    }
+    .field--name-field-academic-highlight-rank {
+      margin-bottom: 15px;
+    }
+  }
+
+
+  @media screen and (min-width: 1024px) {
+    // Shim to align the highlights with Yfacts since Yfacts is moved up by using top: -###px
+    margin-top: -70px;
+
+    & > .field__item:nth-child(2) {
+      margin: 0 8px; // Adds spacing between the images
+    }
+  }
+  @media screen and (min-width: 1224px) {
+    margin-top: -150px; // Shim to align the highlights with Yfacts
+  }
+  @media screen and (min-width: 1824px) {
+    //change overlay to hover over image rather than display below
+    & > .field__item {
+      background-color: transparent;
+    }
+    .academic-highlight-overlay {
+      width: 85%;
+      margin-top: -200px;
+      opacity: .9;
+      height: 166px;
+
+      // Aligning text in hovering overlay
+      .field.field--name-field-academic-highlight-rank.field--type-integer.field--label-hidden.field__item.h10 {
+        display: inline;
+      }
+      .field.field--name-field-academic-highlight-title.field--type-string.field--label-hidden.field__item.h6.university-for {
+        margin-left: 90px;
+        margin-top: -74px;
+      }
+      .field.field--name-field-academic-highlight-title.field--type-string.field--label-hidden.field__item.h6.actual-title,
+      .field.field--name-field-academic-highlight-byline.field--type-string.field--label-hidden.field__item.white
+      {
+        margin-left: 90px;
+      }
+    }
+
+    & > .field__item:last-child {
+      .field.field--name-field-academic-highlight-title.field--type-string.field--label-hidden.field__item.h6.university-for {
+        margin-left: 125px;
+      }
+      .field.field--name-field-academic-highlight-title.field--type-string.field--label-hidden.field__item.h6.actual-title,
+      .field.field--name-field-academic-highlight-byline.field--type-string.field--label-hidden.field__item.white {
+        margin-left: 125px;
+      }
+    }
+  }
+  margin-top: -18px; // Makes spacing consistent between yfacts and other images
+}
+
+// Academic News header spacing shim to work with the yfacts banner
+// spacing issue
+.field--name-field-byu-news-block {
+  @media screen and (min-width: 1024px) {
+    h2 {
+      text-align: left;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 100px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 50px;
   }
 }
