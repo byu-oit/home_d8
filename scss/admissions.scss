@@ -408,7 +408,9 @@ article.node--type-admissions {
     }
 }
 .backFiller {
-    //border-left-color: $lightgray; // saw a 1px line so we removed this
+    @media screen and (min-width: 1600px) {
+        border-left-color: $lightgray; // saw a 1px line so we removed this
+    }
 }
 
 /* big ugly page re-ordering for 768-991 px */
