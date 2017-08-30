@@ -419,7 +419,6 @@
 
             } else if (window.matchMedia('(max-width: 1023px)').matches) {
                 // mobile & tablet adjustments
-                console.log('mobile animations');
                 // us map
                 if ($('.state-percents-group').hasClass('in-view')) {
                     $("#dots1")
@@ -472,9 +471,7 @@
                             next();
                         });
                 }
-                console.log('about to check if students speaking section is in view');
                 if ($('.field--name-field-students-speaking').hasClass('in-view')) {
-                    console.log('students speaking section in view');
                     $(".field--name-field-students-speaking .progress-bar")
                         .delay(300)
                         .queue(function (next) {
@@ -483,8 +480,6 @@
                             next();
 
                         });
-                } else {
-                    console.log('students not speaking');
                 }
             }
         }
