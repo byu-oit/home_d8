@@ -257,11 +257,22 @@ $circle-width: 156px;
     }
   }
 }
+/* --- content header images on main 4 pages --- */
+.views-field.views-field-field-header-image {
+  // these 100%'s are needed for ff
+  picture {
+    width: 100%;
+  }
+  img {
+    width: 100%;
+  }
+}
+
 /* ----------- Front Page ------- */
 
 
 
-  //Page Header
+//Page Header
 
 .main > .container {
   @media screen and (min-width: 1424px) {
@@ -276,13 +287,13 @@ $circle-width: 156px;
   }
 }
 
-  .views-field.views-field-field-header-image {
-    //margin-top: -4vw;
-  }
+.views-field.views-field-field-header-image {
+  //margin-top: -4vw;
+}
 
-  byu-menu.byu-component-rendered a.is-active {
-      background-color: #ddd;
-  }
+byu-menu.byu-component-rendered a.is-active {
+  background-color: #ddd;
+}
 
 /* -------- Basic Pages ------------- */
 .main {
