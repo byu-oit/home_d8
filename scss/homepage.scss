@@ -331,3 +331,19 @@ byu-menu.byu-component-rendered a.is-active {
     padding: 2px 0px;
   }
 }
+
+// contact form (including the one on az index)
+
+// buttons
+.contact-form {
+  input[type="submit"] {
+    @include button();
+    background: $navy;
+    color: #fff;
+    margin: 5px 0px;
+  }
+  input[type="submit"] {
+    @include hover-to-royal();
+  }
+
+}
