@@ -258,8 +258,11 @@ $circle-width: 156px;
   }
 }
 /* --- content header images on main 4 pages --- */
+// these 100%'s are needed for ff
+.view.view-content-page-header .view-content {
+  width: 100%;
+}
 .views-field.views-field-field-header-image {
-  // these 100%'s are needed for ff
   picture {
     width: 100%;
   }
