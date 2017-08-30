@@ -3,16 +3,9 @@ jQuery(document).ready(function($) {
     var $window = $(window);
     var $branchTop = $('#branchpath-top-div');
     var noOverlapCheck = 0;
-    var lastWidth = $window.width();
-    animateBranchesIfVisible();
 
     $window.scroll(animateBranchesIfVisible);
-    $window.resize(function() {
-        var curWidth = $window.width();
-        if (curWidth === lastWidth) {
-            return;
-        }
-        lastWidth = curWidth;
+    $window.on('width_resize', function() {
         alreadyAnimated = false;
         animateBranchesIfVisible();
     });
@@ -27,7 +20,7 @@ jQuery(document).ready(function($) {
         }
     }
 
-    function drawBranch(id, fullBranch) {
+    function drawBranch(id) {
         var $div = $('#branchpath-' + id + '-div');
         var width = $div.outerWidth();
         var height = $div.outerHeight();

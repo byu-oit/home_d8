@@ -5,6 +5,7 @@
 
     $(document).ready(function() {
         $window.on('resize', moveUpInstagram);
+        $window.on('width_resize', function() { oneTimeAnimateElements = {}; });
         $window.scroll(animateYFacts);
         $window.scroll(animateStudentStats);
         $window.scroll(animateGender);
