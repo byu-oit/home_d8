@@ -163,9 +163,9 @@
     };
 
     function animateDemographics() {
-        if (oneTimeAnimateElements.demographics) {
-            return;
-        }
+        // if (oneTimeAnimateElements.demographics) {
+        //     return;
+        // }
         if ($('.demographics3').hasClass('in-view')) {  // scroll down abit and get the action
             oneTimeAnimateElements.demographics = true;
 
@@ -483,6 +483,8 @@
                             next();
 
                         });
+                } else {
+                    console.log('students not speaking');
                 }
             }
         }
