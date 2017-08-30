@@ -102,7 +102,8 @@
                 });
             }
         } else if (window.matchMedia('(max-width: 1023px)').matches) {
-            if ($('.field--name-field-students-speaking').hasClass('in-view')) {
+
+            if ($('.students-group').hasClass('in-view')) {
                 oneTimeAnimateElements.studentStats = true;
                 $(".students-group .progress-bar").each(function () {
                     var each_bar_width = $(this).attr('students-now');
@@ -302,116 +303,177 @@
                         $(this).css('animation', '1s fadein');
                         next();
                     });
-            }
 
-            // languages navy circles
-            if ($('.demographics3').hasClass('in-view')) {  // scroll down abit and get the action
+
+                // languages navy circles
+                // if ($('.demographics3').hasClass('in-view')) {  // scroll down abit and get the action
                 // change this to AFTER states stats have appeared
-                if (window.matchMedia('(min-width: 1024px)').matches) {
-                    $(".vertical-dots.before-languages .gray-dot.dot-1")
-                        .delay(6000)
+                // if (window.matchMedia('(min-width: 1024px)').matches) {
+                $(".vertical-dots.before-languages .gray-dot.dot-1")
+                    .delay(6000)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
+                        next();
+
+                    });
+                $(".vertical-dots.before-languages .gray-dot.dot-2")
+                    .delay(6200)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
+                        next();
+
+                    });
+                $(".vertical-dots.before-languages .gray-dot.dot-3")
+                    .delay(6400)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
+                        next();
+
+                    });
+                $(".languages-taught-circle")
+                    .delay(6800)
+                    .queue(function (next) {
+                        // $(this).css('display', 'flex');
+                        $(this).css('visibility', 'visible');
+                        $(this).css('animation', '1s fadeinfast');
+                        next();
+
+                    });
+                $(".languages-spoken-circle")
+                    .delay(7200)
+                    .queue(function (next) {
+                        // $(this).css('display', 'flex');
+                        $(this).css('visibility', 'visible');
+                        $(this).css('animation', '1s fadeinfast');
+                        next();
+
+                    });
+                // if($('.demographics4').hasClass('in-view')) {  // scroll down abit and get the action
+                $(".vertical-dots.after-spoken .gray-dot.dot-1")
+                    .delay(7500)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
+                        next();
+
+                    });
+                $(".vertical-dots.after-spoken .gray-dot.dot-2")
+                    .delay(7700)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
+                        next();
+
+                    });
+                $(".vertical-dots.after-spoken .gray-dot.dot-3")
+                    .delay(7900)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation', '1s fadein');
+                        next();
+
+                    });
+
+                // show certifications first
+                $(".certifications-group-wrapper")
+                    .delay(8200)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        $(this).css('animation-name', 'bounceInRight');
+                        // animation-name:bounceInRight
+                        next();
+
+                    });
+
+
+                // then students speaking %
+
+                $(".field--name-field-students-speaking .students-speaking-text-wrapper")
+                    .delay(8400)
+                    .queue(function (next) {
+                        $(this).css('visibility', 'visible');
+                        $(this).css('animation', '1s fadeinfast');
+                        next();
+
+                    });
+                $(".field--name-field-students-speaking .barWrapper.students-speaking")
+                    .delay(8400)
+                    .queue(function (next) {
+                        $(this).css('display', 'flex');
+                        $(this).css('animation', '1s fadeinfast');
+                        next();
+
+                    });
+
+                $(".field--name-field-students-speaking .progress-bar")
+                    .delay(8400)
+                    .queue(function (next) {
+                        var each_bar_width = $(this).attr('aria-valuenow');
+                        $(this).width(each_bar_width); // already has % included
+                        next();
+
+                    });
+
+            } else if (window.matchMedia('(max-width: 1023px)').matches) {
+                // mobile & tablet adjustments
+                // us map
+                if ($('.state-percents-group').hasClass('in-view')) {
+                    $("#dots1")
+                    // .delay(00)
                         .queue(function (next) {
                             $(this).css('display', 'block');
                             $(this).css('animation', '1s fadein');
                             next();
-
                         });
-                    $(".vertical-dots.before-languages .gray-dot.dot-2")
-                        .delay(6200)
+                    $("#dots2")
+                        .delay(300)
                         .queue(function (next) {
                             $(this).css('display', 'block');
                             $(this).css('animation', '1s fadein');
                             next();
-
                         });
-                    $(".vertical-dots.before-languages .gray-dot.dot-3")
-                        .delay(6400)
+                    $("#dots3")
+                        .delay(600)
                         .queue(function (next) {
                             $(this).css('display', 'block');
                             $(this).css('animation', '1s fadein');
                             next();
-
                         });
-                    $(".languages-taught-circle")
-                        .delay(6800)
-                        .queue(function (next) {
-                            // $(this).css('display', 'flex');
-                            $(this).css('visibility', 'visible');
-                            $(this).css('animation', '1s fadeinfast');
-                            next();
-
-                        });
-                    $(".languages-spoken-circle")
-                        .delay(7200)
-                        .queue(function (next) {
-                            // $(this).css('display', 'flex');
-                            $(this).css('visibility', 'visible');
-                            $(this).css('animation', '1s fadeinfast');
-                            next();
-
-                        });
-                    // if($('.demographics4').hasClass('in-view')) {  // scroll down abit and get the action
-                    $(".vertical-dots.after-spoken .gray-dot.dot-1")
-                        .delay(7500)
+                    $("#dots4")
+                        .delay(900)
                         .queue(function (next) {
                             $(this).css('display', 'block');
                             $(this).css('animation', '1s fadein');
                             next();
-
                         });
-                    $(".vertical-dots.after-spoken .gray-dot.dot-2")
-                        .delay(7700)
+                    $("#dots5")
+                        .delay(1200)
                         .queue(function (next) {
                             $(this).css('display', 'block');
                             $(this).css('animation', '1s fadein');
                             next();
-
                         });
-                    $(".vertical-dots.after-spoken .gray-dot.dot-3")
-                        .delay(7900)
+                    $("#dots6")
+                        .delay(1500)
                         .queue(function (next) {
                             $(this).css('display', 'block');
                             $(this).css('animation', '1s fadein');
                             next();
-
                         });
-
-                    // show certifications first
-                    $(".certifications-group-wrapper")
-                        .delay(8200)
+                    $("#dots7")
+                        .delay(1800)
                         .queue(function (next) {
                             $(this).css('display', 'block');
-                            $(this).css('animation-name', 'bounceInRight');
-                            // animation-name:bounceInRight
+                            $(this).css('animation', '1s fadein');
                             next();
-
-                        });
-
-
-                    // then students speaking %
-
-                    $(".field--name-field-students-speaking .students-speaking-text-wrapper")
-                        .delay(8400)
-                        .queue(function (next) {
-                            $(this).css('visibility', 'visible');
-                            $(this).css('animation', '1s fadeinfast');
-                            next();
-
-                        });
-                    $(".field--name-field-students-speaking .barWrapper.students-speaking")
-                        .delay(8400)
-                        .queue(function (next) {
-                            $(this).css('display', 'flex');
-                            $(this).css('animation', '1s fadeinfast');
-                            next();
-
                         });
                 }
-
-
-                if (window.matchMedia('(min-width: 1024px)').matches) {
+                if ($('.field--name-field-students-speaking').hasClass('in-view')) {
                     $(".field--name-field-students-speaking .progress-bar")
-                        .delay(8400)
+                        .delay(300)
                         .queue(function (next) {
                             var each_bar_width = $(this).attr('aria-valuenow');
                             $(this).width(each_bar_width); // already has % included
@@ -419,84 +481,6 @@
 
                         });
                 }
-
-
-                // }
-
-            }
-
-            // bottom stats
-
-
-            // % students speaking
-
-        }
-
-        // mobile & tablet adjustments
-        if (window.matchMedia('(max-width: 1023px)').matches) {
-        // us map
-            if ($('.state-percents-group').hasClass('in-view')) {
-                $("#dots1")
-                    // .delay(00)
-                    .queue(function (next) {
-                        $(this).css('display', 'block');
-                        $(this).css('animation', '1s fadein');
-                        next();
-                    });
-                $("#dots2")
-                    .delay(300)
-                    .queue(function (next) {
-                        $(this).css('display', 'block');
-                        $(this).css('animation', '1s fadein');
-                        next();
-                    });
-                $("#dots3")
-                    .delay(600)
-                    .queue(function (next) {
-                        $(this).css('display', 'block');
-                        $(this).css('animation', '1s fadein');
-                        next();
-                    });
-                $("#dots4")
-                    .delay(900)
-                    .queue(function (next) {
-                        $(this).css('display', 'block');
-                        $(this).css('animation', '1s fadein');
-                        next();
-                    });
-                $("#dots5")
-                    .delay(1200)
-                    .queue(function (next) {
-                        $(this).css('display', 'block');
-                        $(this).css('animation', '1s fadein');
-                        next();
-                    });
-                $("#dots6")
-                    .delay(1500)
-                    .queue(function (next) {
-                        $(this).css('display', 'block');
-                        $(this).css('animation', '1s fadein');
-                        next();
-                    });
-                $("#dots7")
-                    .delay(1800)
-                    .queue(function (next) {
-                        $(this).css('display', 'block');
-                        $(this).css('animation', '1s fadein');
-                        next();
-                    });
-            }
-
-        if ($('.field--name-field-students-speaking').hasClass('in-view')) {
-
-            $(".field--name-field-students-speaking .progress-bar")
-                .delay(300)
-                .queue(function (next) {
-                    var each_bar_width = $(this).attr('aria-valuenow');
-                    $(this).width(each_bar_width); // already has % included
-                    next();
-
-                });
             }
         }
 
