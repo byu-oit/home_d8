@@ -78,6 +78,16 @@ div.masters-circle .circles-h10, div.doctorate-circle .circles-h10 {
 
 .field--name-field-academic-minor-links {
   padding-top: 2em;
+  @media screen and (max-width: 767px) {
+    border-bottom: 1px solid $medgray;
+    padding-bottom: 2em;
+  }
+}
+
+.field--name-field-academic-calendar {
+  @media screen and (max-width: 767px) {
+    padding-top: 2.5em;
+  }
 }
 
 .rank-prefix {
@@ -87,9 +97,6 @@ div.masters-circle .circles-h10, div.doctorate-circle .circles-h10 {
   font-size: 40px;
   padding-right: 10px;
   opacity: 0.8;
-  @media screen and (max-width: 1223px) {
-      font-size: 25px;
-  }
 }
 
 .byline-prefix {
@@ -173,7 +180,6 @@ div#links-and-calendar {
 }
 
 .field--name-field-academic-highlight-title.university-for {
-    color: $lightgray;
     margin-bottom: 0;
 }
 .field--name-field-academic-highlight-title.actual-title {
@@ -281,7 +287,7 @@ div#links-and-calendar {
   .academic-success .h2 {
     text-align: center;
   }
-  .field--name-field-academic-highlight .field__item {
+  .field--name-field-academic-highlight > .field__item {
     margin-bottom: 10px;
   }
 }
@@ -304,13 +310,17 @@ div#links-and-calendar {
     }
   }
 
-  // Fixes mis-alignment of #2, #5, #30 on mobile devices
+  // size/alignment of #2, #5, #30 on mobile devices
   @media screen and (max-width: 767px) {
+    .h10 {
+      font-size: 55px;
+    }
     .field--name-field-academic-highlight-image {
       margin-bottom: 0;
     }
     .field--name-field-academic-highlight-rank {
-      margin-bottom: 15px;
+      margin-bottom: 25px;
+      margin-top: -1em;
     }
   }
 
