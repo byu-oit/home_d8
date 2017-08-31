@@ -2,6 +2,9 @@
 
 article.node--type-admissions {
     padding-top: 42px;
+    @media screen and (max-width: 767px) {
+        padding-top: 0;
+    }
 }
 
 .field--name-field-links {
@@ -111,6 +114,9 @@ article.node--type-admissions {
     margin-top: 20px;
     border-top: solid $gray 1px;
     padding-top: 20px;
+    @media screen and (max-width: 991px) {
+        padding-top: 0;
+    }
     li {
         line-height: normal;
     }
@@ -234,6 +240,13 @@ article.node--type-admissions {
     @media screen and (min-width: 992px) {
         .subsidies-bottom {
             display: none;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        .subsidies-bottom {
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     .tuition-header {
