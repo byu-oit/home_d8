@@ -940,6 +940,10 @@
     .navy-circle {
       @include navy-circle(156px);
       padding: 15px;
+      @media screen and (max-width: 767px) {
+        width: 145px;
+        height: 145px;
+      }
       @media screen and (max-width: 1023px) {
         margin-left: 0px;
         margin-top: 0px;
