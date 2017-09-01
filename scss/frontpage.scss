@@ -27,7 +27,7 @@
     }
 }
 .come-in {
-  transform: translateY(-50px);
+  transform: translateY(-25px);
   animation: come-in 0.5s ease forwards;
 }
 /*
@@ -79,7 +79,7 @@
 .field--name-field-somethings {
     margin-top: 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     @media screen and (max-width: 767px) {
         justify-content: space-around;
     }
@@ -91,6 +91,7 @@
         cursor: pointer;
         border: 1px solid $gray;
         width: 260px;
+        margin: 0 5px;
         @media screen and (min-width: 768px) and (max-width: 991px) {
             width: 154px;
         }
@@ -98,7 +99,7 @@
             width: 211px;
         }
         @media screen and (min-width: 1024px) and (max-width: 1223px) {
-            width: 190px;
+            width: 180px;
         }
         @media screen and (min-width: 1224px) and (max-width: 1424px) {
             width: 211px;
@@ -152,7 +153,8 @@
     > .field__item:hover {
         box-shadow: 3px 3px 1px $lightgray;
         a {
-            font-weight: 500;
+            font-weight: normal;
+            color: $royal;
         }
     }
 }
