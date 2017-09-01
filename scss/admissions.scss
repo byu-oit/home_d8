@@ -322,6 +322,13 @@ article.node--type-admissions {
                 right: 55%;
             }
             color: $darkgray;
+
+            .management-title-breakpoint {
+                display: none;
+                @media screen and (max-width: 1223px) {
+                    display: initial;
+                }
+            }
         }
         > div {
             width: 400px;
