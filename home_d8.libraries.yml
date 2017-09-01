@@ -78,9 +78,9 @@ homepage-components:
   version: 1.x
   css:
     base:
-      byu-homepage-components/dist/byu-homepage-components.css: {}
+      byu-homepage-components/dist/byu-homepage-components.min.css: {}
   js:
-    byu-homepage-components/dist/byu-homepage-components.js: {}
+    byu-homepage-components/dist/byu-homepage-components.min.js: {}
 
 
 #homepage-components-js:
