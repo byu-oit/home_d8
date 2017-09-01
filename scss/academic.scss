@@ -69,6 +69,12 @@ div.masters-circle .circles-h10, div.doctorate-circle .circles-h10 {
 .field--name-field-academic-major-links {
   border-bottom: 1px solid $medgray;
   padding-bottom: 2em;
+  @media screen and (min-width: 1024px) {
+    margin-right: 10%;
+  }
+  @media screen and (min-width: 1450px) {
+    margin-right: 25%;
+  }
 }
 
 .field--name-field-academic-minor-links .h12 a {
