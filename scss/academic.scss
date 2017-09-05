@@ -119,7 +119,11 @@ div.masters-circle .circles-h10, div.doctorate-circle .circles-h10 {
 div#links-and-calendar {
   min-height: 80em;
 }
-
+#links-and-calendar .col-sm-4 {
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    padding-left: 30px;
+  }
+}
 .academic-success .h2 {
   text-align: left;
   font-weight: 500;
