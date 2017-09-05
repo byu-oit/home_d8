@@ -1178,10 +1178,38 @@
 
 
 
+
 /* ----- ipad safari fixes ----- */
 
 // safari doesn't support the scroll events like other browsers, need animations to not happen and things to just show on the page
-.safari.type-about .main {
+html:not(.chrome) .safari.type-about .main {
+
+
+  .field--name-field-states,
+  .states-label {
+    display: block;
+    animation: 1s fadein;
+  }
+
+  .and-icon {
+    display: inline;
+    animation: 1s fadein;
+  }
+
+  .field--name-field-countries {
+    display: block;
+    animation: 1s fadein;
+  }
+  .countries-label,
+    // state percentages
+  .state-percents-group .state-1,
+  .state-percents-group .state-2,
+  .state-percents-group .state-3,
+  .state-percents-group .state-4,
+  .state-percents-group .state-5 {
+    display: inline;
+    animation: 1s fadein;
+  }
 
   .vertical-dots.before-languages .gray-dot.dot-1,
   .vertical-dots.before-languages .gray-dot.dot-2,
@@ -1191,7 +1219,7 @@
   }
   .languages-taught-circle,
   .languages-spoken-circle {
-    visibiliity: visible;
+    visibility: visible;
     animation: 1s fadeinfast;
   }
   // if($('.demographics4').hasClass('in-view')) {  // scroll down abit and get the action
