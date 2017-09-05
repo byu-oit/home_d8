@@ -28,6 +28,10 @@ a:hover {
   margin: 0;
 }
 
+// Fix for footer headers alignment in Firefox
+byu-footer h2.header {
+  text-align: left;
+}
 
 
 /* ----- helpful classes ----------- */
