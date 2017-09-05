@@ -54,3 +54,5 @@ byu-search input[type=search] { // id changes
   color: $royal!important;
   font-weight: 500;
 }
+//removing boxes from search results
+.gsc-webResult.gsc-result {border:none}

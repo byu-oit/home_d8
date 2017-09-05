@@ -248,4 +248,7 @@ byu-search input[type=search] {
   color: #003DA5 !important;
   font-weight: 500; }
 
+.gsc-webResult.gsc-result {
+  border: none; }
+
 /*# sourceMappingURL=cse.css.map */
