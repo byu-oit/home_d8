@@ -485,7 +485,7 @@
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       padding: 25px 25px 25px 20px;
       width: 40%;
-      margin-left: 5%;
+      margin-left: 4.8%; // was 5% for some reason in actual ipad it doesn't fit 55% + 40+ 5
     }
     .field__item {
       font-size: 55px;
@@ -1153,7 +1153,7 @@
         width: 250px;
         margin-top: -110px;
         margin-bottom: 40px;
-        margin-left: 62%;
+        margin-left: 58%; // was 62%
     }
     @media screen and (max-width: 767px) {
       margin: 0px auto 20px auto;
