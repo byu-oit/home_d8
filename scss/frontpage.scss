@@ -9,17 +9,17 @@
         padding: 0;
     }
 }
-
 .front-page-emergency-notice {
-    margin-top: 40px;
-    margin-bottom: 10px;
-    background-color: #fddadf;
+    margin-top: 65px;
+    margin-bottom: 30px;
+    background-color: #a90217;
     font-weight: bold;
     text-align: center;
-    text-transform: uppercase;
-    border-left: 15px solid #A90217;
+    color: #fff!important;
+    p, h2, h3, h4, h5, h6 {
+        color: #fff;
+    }
     p {
-        color: #A90217;
         margin: 10px 0;
     }
     @media screen and (max-width: 1023px) {
