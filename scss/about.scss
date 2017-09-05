@@ -410,7 +410,7 @@
   }
   // student group layout
   $totalStudentsHeight: 170px;
-  $totalStudentsWidth: 23%;
+  $totalStudentsWidth: 22.8%; // was 23% but ipad has issue with math 77% + 23%
   $totalStudentsHeightMobile: 100px;
   .students-group.row {
     display: flex;
@@ -436,7 +436,7 @@
 
   .field--name-field-undergrads,
   .field--name-field-grads {
-    width: 100% - $totalStudentsWidth;
+    width: 77%;
     @media screen and (max-width: 767px) {
       width: 100%;
       padding: 0px 35px!important;
@@ -1174,4 +1174,50 @@
       margin-left: -15px;
     }
   }
+}
+
+
+
+/* ----- ipad safari fixes ----- */
+
+// safari doesn't support the scroll events like other browsers, need animations to not happen and things to just show on the page
+.safari.type-about .main {
+
+  .vertical-dots.before-languages .gray-dot.dot-1,
+  .vertical-dots.before-languages .gray-dot.dot-2,
+  .vertical-dots.before-languages .gray-dot.dot-3 {
+    display: block;
+    animation: 1s fadein;
+  }
+  .languages-taught-circle,
+  .languages-spoken-circle {
+    visibiliity: visible;
+    animation: 1s fadeinfast;
+  }
+  // if($('.demographics4').hasClass('in-view')) {  // scroll down abit and get the action
+  .vertical-dots.after-spoken .gray-dot.dot-1,
+  .vertical-dots.after-spoken .gray-dot.dot-2,
+  .vertical-dots.after-spoken .gray-dot.dot-3 {
+    display: block;
+    animation: 1s fadein;
+  }
+
+  // show certifications first
+  .certifications-group-wrapper {
+    display: block;
+    animation-name: bounceInRight;
+  }
+
+
+  // then students speaking %
+
+  .field--name-field-students-speaking .students-speaking-text-wrapper {
+    visibility: visible;
+    animation : 1s fadeinfast;
+  }
+  .field--name-field-students-speaking .barWrapper.students-speaking {
+    display: flex;
+    animation: 1s fadeinfast;
+  }
+
 }
