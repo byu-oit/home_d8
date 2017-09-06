@@ -1,8 +1,8 @@
-
+{% include directory ~ '/templates/includes/header--front.html.twig' %}
 <div id="wrapper">
-    {% include directory ~ '/templates/includes/header--front.html.twig' %}
+
     <div role="main" class="main {%  if custom_width %} custom-width {% endif %}" style="width: {{ custom_width }}px">
-        {% if page.slide_show %}
+    {% if page.slide_show %}
             {{ page.slide_show }}
         {% endif %}
         {% if page_title %}
