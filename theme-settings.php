@@ -4,7 +4,7 @@ use Drupal\Core\Theme\ThemeSettings;
 use Drupal\system\Form\ThemeSettingsForm;
 use Drupal\Core\Form;
 
-function homepage_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormStateInterface $form_state) {
+function home_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormStateInterface $form_state) {
 
     // ----------- GENERAL -----------
     $form['options']['general'] = array(
@@ -180,20 +180,21 @@ function homepage_form_system_theme_settings_alter(&$form, Drupal\Core\Form\Form
 
 
     // Header Option
-    $form['header_style'] = array(
-        '#type' => 'details',
-        '#title' => 'BYU Header',
-        '#group' => 'design',
-    );
-    $form['header_style']['header_option'] = array(
-        '#type' => 'select',
-        '#title' => 'Select a header style option:',
-        '#default_value' => theme_get_setting('header_option'),
-        '#options' => array(
-//            'none' => 'None',
-            'h_default' => 'Header Default - Set Width',
-            'h_fullwidth' => 'Header FullWidth',
-            'h_center_identity' => 'Header - Center Identity',
+//    $form['header_style'] = array(
+//        '#type' => 'details',
+//        '#title' => 'BYU Header',
+//        '#group' => 'design',
+//    );
+//    $form['header_style']['header_option'] = array(
+//        '#type' => 'select',
+//        '#title' => 'Select a header style option:',
+//        '#default_value' => theme_get_setting('header_option'),
+//        '#options' => array(
+////            'none' => 'None',
+//            'h_default' => 'Header Default - Set Width',
+//            'h_fullwidth' => 'Header FullWidth',
+//            'h_center_identity' => 'Header - Center Identity',
+
 //            'h_default_big_logo' => 'Header Default + Big Logo',
 //            'h_flat' => 'Header Flat',
 //            'h_flat_topbar' => 'Header Flat + Top Bar',
@@ -210,9 +211,28 @@ function homepage_form_system_theme_settings_alter(&$form, Drupal\Core\Form\Form
 //            'h_without_menu' => 'Header Without Menu',
 
 //            'h_below_slider' => 'Header Below Slider',
-        ),
 
+//        ),
+
+//    );
+    $form['header_style']['identity'] = array(
+        '#type' => 'fieldset',
+        '#title' => 'Identity Banner Settings',
+        '#open' => FALSE,
     );
+    $form['header_style']['identity']['front_animation_use'] = array(
+        '#type'          => 'checkbox',
+        '#title'         => t('Animate the Brand Logo on the front page'),
+        '#default_value' => theme_get_setting('front_animation_use'),
+        '#description'   => t("Adds slide in down animation."),
+    );
+    $form['header_style']['identity']['nonfront_animation_use'] = array(
+        '#type'          => 'checkbox',
+        '#title'         => t('Animate the Brand Logo on all non-front pages'),
+        '#default_value' => theme_get_setting('nonfront_animation_use'),
+        '#description'   => t("Adds slide in down animation."),
+    );
+
 
     $form['header_style']['subtitle'] = array(
         '#type' => 'fieldset',
