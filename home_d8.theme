@@ -171,6 +171,10 @@ function home_d8_preprocess_page(&$variables) {
 
     /* -- Load Theme settings ---- */
     $variables['header_option'] = theme_get_setting('header_option');
+
+    $variables['front_animation_use'] = theme_get_setting('front_animation_use'); // t/f
+    $variables['nonfront_animation_use'] = theme_get_setting('nonfront_animation_use'); // t/f
+
     $variables['subtitle_use'] = theme_get_setting('subtitle_use'); // t/f
     $variables['subtitle_above'] = theme_get_setting('subtitle_above'); // t/f
     $variables['subtitle_italic'] = theme_get_setting('subtitle_italic'); // t/f
