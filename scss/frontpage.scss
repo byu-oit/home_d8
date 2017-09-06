@@ -82,34 +82,24 @@
 
 .field--name-field-somethings {
     margin-top: 50px;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     @media screen and (max-width: 767px) {
-        justify-content: space-around;
+        grid-template-columns: 1fr 1fr;
     }
-    flex-wrap: wrap;
     .field--name-field-something-to-type::before {
         content: "Something to ";
     }
     > .field__item {
         cursor: pointer;
         border: 1px solid $gray;
-        width: 260px;
-        margin: 0 5px;
-        @media screen and (min-width: 768px) and (max-width: 991px) {
-            width: 154px;
-        }
-        @media screen and (min-width: 992px) and (max-width: 1023px) {
-            width: 211px;
-        }
-        @media screen and (min-width: 1024px) and (max-width: 1223px) {
-            width: 180px;
-        }
-        @media screen and (min-width: 1224px) and (max-width: 1424px) {
-            width: 211px;
+        margin: 0;
+        margin-right: 10px;
+        &:last-of-type {
+            margin-right: 0;
         }
         @media screen and (max-width: 768px) {
-            margin-bottom: 30px;
+            margin-bottom: 15px;
         }
         .field--name-field-something-to-type {
             text-align: center;
