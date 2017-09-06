@@ -58,6 +58,9 @@
         font-family: $gotham;
         font-weight: 400;
     }
+    a:hover p {
+        color: $royal;
+    }
 }
 .hero-title {
     font-family: $vitesse;
