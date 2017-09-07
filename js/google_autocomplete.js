@@ -25,6 +25,9 @@
               dataType: "jsonp",
               success: function (data) {
                 response($.map(data[1], function (item) {
+                  if (item.length > 1) {
+                      return;
+                  }
                   return {
                     label: item[0],
                     value: item[0]
