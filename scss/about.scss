@@ -1182,8 +1182,16 @@
 /* ----- ipad safari fixes ----- */
 
 // safari doesn't support the scroll events like other browsers, need animations to not happen and things to just show on the page
+html.safari .chrome.type-about .main, // this is actually safari desktop or ipad
 html:not(.chrome) .safari.type-about .main {
-
+  .students-group .tooltip {
+    @media screen and (min-width: 1024px) {
+      margin-right: 20px;
+    }
+    @media screen and (min-width: 1224px) {
+      margin-right: 10px;
+    }
+  }
 
   .field--name-field-states,
   .states-label {

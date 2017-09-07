@@ -1,6 +1,8 @@
 (function($){
-
-
+    // add safari only class
+    if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+        $('html').addClass('safari-only');
+    }
 // scrolling for several pages:
 //Cache reference to window and animation items
 // add the class 'animation-element' if you want this script to mark if it is on the page being viewed or not
