@@ -2,10 +2,12 @@
     // add safari only class
     // Chrome 1+
     isChrome = !!window.chrome && !!window.chrome.webstore;
+    console.log('ischrome');
+    console.log(ischrome);
     if(isChrome == false) {
         $('html').addClass('not-chrome');
     }
-    
+
 
 // scrolling for several pages:
 //Cache reference to window and animation items
