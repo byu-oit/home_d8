@@ -26,11 +26,12 @@
               success: function (data) {
                 response($.map(data[1], function (item) {
                   if (item.length > 1) {
-                      return;
+                    return {
+                      full: item[2]
+                    };
                   }
                   return {
-                    label: item[0],
-                    value: item[0]
+                    label: item[0]
                   };
                 }));
               }
@@ -39,10 +40,22 @@
           autoFill: true,
           minChars: 0,
           select: function (event, ui) {
+            if (ui.item.full) {
+                window.location.href = ui.item.full.b;
+                return;
+            }
             $(this).closest('input').val(ui.item.value);
             $(this).closest('form').trigger('submit');
           }
-        });
+        })
+        .autocomplete( "instance" )._renderItem = function( ul, item ) {
+            if (item.full) {
+                return $("<li>").append("<div class='autocomplete-full-link'>" + item.full.a + "<div class='autocomplete-link-description'>" + item.full.d + "</div></div>").appendTo(ul);
+            }
+            return $( "<li>" )
+                .append(item.label)
+                .appendTo( ul );
+        };
     }
   };
 }(jQuery));

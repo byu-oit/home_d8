@@ -351,3 +351,12 @@ byu-menu.byu-component-rendered a.is-active {
   }
 
 }
+
+.autocomplete-full-link {
+    font-weight: bold;
+    .autocomplete-link-description {
+        font-weight: normal;
+        font-size: small;
+        padding: 0 1.5em;
+    }
+}
