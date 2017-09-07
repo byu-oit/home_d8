@@ -3,7 +3,7 @@
     // Chrome 1+
     isChrome = !!window.chrome && !!window.chrome.webstore;
     console.log('ischrome');
-    console.log(ischrome);
+    console.log(isChrome);
     if(isChrome == false) {
         $('html').addClass('not-chrome');
     }
