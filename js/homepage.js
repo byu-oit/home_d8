@@ -1,4 +1,14 @@
 (function($){
+
+
+// scrolling for several pages:
+//Cache reference to window and animation items
+// add the class 'animation-element' if you want this script to mark if it is on the page being viewed or not
+var $animation_elements = $('.animation-element');
+var $window = $(window);
+
+$(document).ready(function() {
+
     // add safari only class
     // Chrome 1+
     isChrome = !!window.chrome && !!window.chrome.webstore;
@@ -9,13 +19,6 @@
     }
 
 
-// scrolling for several pages:
-//Cache reference to window and animation items
-// add the class 'animation-element' if you want this script to mark if it is on the page being viewed or not
-var $animation_elements = $('.animation-element');
-var $window = $(window);
-
-$(document).ready(function() {
     $window.on('scroll resize', check_if_in_view);
     //Add special event if *width* changes, since mobile height
     //can change on scroll as toolbars appear/disappear
