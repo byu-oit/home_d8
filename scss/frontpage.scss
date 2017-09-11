@@ -83,9 +83,12 @@
 .field--name-field-somethings {
     margin-top: 50px;
     display: grid;
+    display: -ms-grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
     @media screen and (max-width: 767px) {
         grid-template-columns: 1fr 1fr;
+        -ms-grid-columns: 1fr 1fr;
     }
     .field--name-field-something-to-type::before {
         content: "Something to ";
@@ -98,21 +101,47 @@
         @media screen and (min-width: 768px) {
             &:nth-child(1) {
                 margin-right: 9px;
+                -ms-grid-column: 1;
             }
             &:nth-child(2) {
                 margin-left: 3px;
                 margin-right: 6px;
+                -ms-grid-column: 2;
             }
             &:nth-child(3) {
                 margin-left: 6px;
                 margin-right: 3px;
+                -ms-grid-column: 3;
             }
             &:nth-child(4) {
                 margin-left: 9px;
+                -ms-grid-column: 4;
             }
         }
         @media screen and (max-width: 767px) {
             margin: 0 5px 15px 5px;
+            &:nth-child(1) {
+                margin-right: 9px;
+                -ms-grid-row: 1;
+                -ms-grid-column: 1;
+            }
+            &:nth-child(2) {
+                margin-left: 3px;
+                margin-right: 6px;
+                -ms-grid-row: 1;
+                -ms-grid-column: 2;
+            }
+            &:nth-child(3) {
+                margin-left: 6px;
+                margin-right: 3px;
+                -ms-grid-row: 2;
+                -ms-grid-column: 1;
+            }
+            &:nth-child(4) {
+                margin-left: 9px;
+                -ms-grid-row: 2;
+                -ms-grid-column: 2;
+            }
         }
         .field--name-field-something-to-type {
             text-align: center;

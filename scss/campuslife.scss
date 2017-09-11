@@ -71,7 +71,9 @@ section.page-header {
 
 .campus-life-main-content-layout {
     display: grid;
+    display: -ms-grid;
     grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
     position: relative;
     top: -25px;
     padding-top: 85px;
@@ -81,12 +83,14 @@ section.page-header {
     }
     @media screen and (max-width: 1023px) {
         grid-template-columns: repeat(6, 1fr);
+        -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
     @media screen and (max-width: 767px) {
         display: block;
     }
     @media screen and (min-width: 1024px) and (max-width: 1223px) {
         grid-template-columns: 1fr 1fr 1.18fr;
+        -ms-grid-columns: 1fr 1fr 1.18fr;
     }
 }
 
@@ -99,8 +103,11 @@ section.page-header {
 }
 .field--name-field-years-sober {
     grid-column-end: span 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     @media screen and (max-width: 1023px) {
         grid-column-end: span 4;
+        -ms-grid-column-span: 4;
     }
     display: flex;
     justify-content: center;
@@ -161,11 +168,15 @@ section.page-header {
     }
 }
 .field--name-field-sober-image {
+    -ms-grid-column: 3;
     @media screen and (min-width: 1024px) {
         grid-row-end: span 2;
+        -ms-grid-row-span: 2;
     }
     @media screen and (max-width: 1023px) {
+        -ms-grid-column: 5;
         grid-column-end: span 2;
+        -ms-grid-column-span: 2;
     }
     img {
         width: 100%;
@@ -186,12 +197,20 @@ section.page-header {
     padding-left: 0;
     background: white;
     cursor: pointer;
+    -ms-grid-row: 2;
+    &:last-of-type {
+        -ms-grid-column: 2;
+        @media screen and (max-width: 1023px) {
+            -ms-grid-column: 4;
+        }
+    }
     @media screen and (max-width: 767px) {
         padding-right: 0;
     }
     @media screen and (max-width: 1023px) {
         padding-top: 10px;
         grid-column-end: span 3;
+        -ms-grid-column-span: 3;
     }
 
     img {
