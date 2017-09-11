@@ -58,12 +58,15 @@ div.masters-circle .circles-h10, div.doctorate-circle .circles-h10 {
   align-items: center;
   margin: 30px;
   display: grid;
+  display: -ms-grid;
   grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
 }
 
 #circle-wrapper {
   justify-content: flex-end;
   align-items: center;
+  -ms-grid-column: 2;
 }
 
 .field--name-field-academic-major-links {
@@ -223,11 +226,15 @@ div#links-and-calendar {
 
   #circle-wrapper {
     display: grid;
+    display: -ms-grid;
   }
 
   .undergrad-circle {
     grid-column: 1;
+    -ms-grid-column: 1;
     grid-row: 1/span 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
   }
 
   .masters-circle {
@@ -235,6 +242,8 @@ div#links-and-calendar {
     width: $masters-circle-size;
     grid-column: 2;
     grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-row: 1;
     margin-left: -30px;
     margin-bottom: -20px;
   }
@@ -242,6 +251,8 @@ div#links-and-calendar {
   .doctorate-circle {
     grid-column: 2;
     grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
     margin-left: -25px;
   }
 }
