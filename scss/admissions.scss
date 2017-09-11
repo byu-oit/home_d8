@@ -309,20 +309,15 @@ article.node--type-admissions {
             }
         }
         .management-law-header {
-            width: 550px;
+            text-align: left;
             @media screen and (min-width: 1224px) {
-                padding-left: 40px;
-                text-align: left;
+                margin-left: 39px;
             }
-            @media screen and (max-width: 1223px) {
-                width: auto;
-                text-align: right;
-                position: relative;
-                right: 20%;
+            @media screen and (min-width: 992px) and (max-width: 1223px) {
+                margin-left: 50px;
             }
             @media screen and (max-width: 991px) {
-                width: 150%;
-                right: 55%;
+                margin-left: 10px;
             }
             color: $darkgray;
 
