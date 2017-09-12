@@ -26,6 +26,12 @@ a:hover {
 }
 .region.region-header-actions {
   margin: 0;
+  a {
+      background-color: $navy;
+  }
+}
+.region.region-search label.visually-hidden {
+    background-color: $navy;
 }
 
 // Fix for footer headers alignment in Firefox
