@@ -121,24 +121,18 @@
         @media screen and (max-width: 767px) {
             margin: 0 5px 15px 5px;
             &:nth-child(1) {
-                margin-right: 9px;
                 -ms-grid-row: 1;
                 -ms-grid-column: 1;
             }
             &:nth-child(2) {
-                margin-left: 3px;
-                margin-right: 6px;
                 -ms-grid-row: 1;
                 -ms-grid-column: 2;
             }
             &:nth-child(3) {
-                margin-left: 6px;
-                margin-right: 3px;
                 -ms-grid-row: 2;
                 -ms-grid-column: 1;
             }
             &:nth-child(4) {
-                margin-left: 9px;
                 -ms-grid-row: 2;
                 -ms-grid-column: 2;
             }
@@ -187,7 +181,9 @@
         }
     }
     > .field__item:hover {
-        box-shadow: 3px 3px 1px $lightgray;
+        @media screen and (min-width: 768px) {
+            box-shadow: 3px 3px 1px $lightgray;
+        }
         a {
             font-weight: normal;
             color: $royal;
