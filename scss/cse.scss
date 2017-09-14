@@ -1,6 +1,6 @@
 @import "mixins";
 
-div.gsc-above-wrapper-area,div.gsc-result-info-container,div.gcsc-branding{display: none;}
+div.gsc-above-wrapper-area,div.gsc-result-info-container,div.gcsc-branding,form.search-page-form{display: none;}
 ol.search-results.google_cse_search-results {list-style: none;}
 
 byu-search input[type=search] { // id changes
@@ -59,3 +59,5 @@ byu-search input[type=search] { // id changes
 }
 //removing boxes from search results
 .gsc-webResult.gsc-result {border:none}
+//capitalize search results text
+form#search-form+h2{text-transform:uppercase}
