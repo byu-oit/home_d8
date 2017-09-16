@@ -82,11 +82,18 @@
 
 .field--name-field-somethings {
     margin-top: 50px;
+    @supports (not (display: grid)) and (not (display: -ms-grid)) {
+        display: flex;
+        justify-content: center;
+    }
     display: grid;
     display: -ms-grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
     @media screen and (max-width: 767px) {
+        @supports (not (display: grid)) and (not (display: -ms-grid)) {
+            justify-content: space-around;
+        }
         margin-top: 20px;
         grid-template-columns: 1fr 1fr;
         -ms-grid-columns: 1fr 1fr;
@@ -98,6 +105,9 @@
         cursor: pointer;
         border: 1px solid $gray;
         margin: 0;
+        @supports (not (display: grid)) and (not (display: -ms-grid)) {
+            width: 25%;
+        }
         //goofy explicit margins here since IE/Edge don't support grid-column-gap
         @media screen and (min-width: 768px) {
             &:nth-child(1) {
