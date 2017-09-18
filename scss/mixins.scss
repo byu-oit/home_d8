@@ -75,14 +75,14 @@ h3, .h3 {
   font-size: 15px;
   letter-spacing: -.2px;
   line-height: 19px;
-  a:hover {
+  a:hover, a:focus {
     font-weight: bold;
   }
 }
 h4 {
   font-size: 18px;
   line-height: 20px;
-  a:hover {
+  a:hover, a:focus {
     color: $royal;
   }
 }
@@ -117,7 +117,7 @@ h6 {
   font-weight: 500;
   line-height: 40px;
   letter-spacing: .4px;
-  a:hover {
+  a:hover, a:focus  {
     color: $royal;
   }
 }
@@ -151,7 +151,7 @@ h6 {
   text-transform: uppercase;
   font-weight: 500;
   /*letter-spacing:*/
-  a:hover {
+  a:hover, a:focus  {
     color: $royal;
   }
 }
@@ -304,7 +304,7 @@ $h13-desktopw-font: 200px;
 
 @mixin button() {
   padding: 12px 25px;
-  a:hover {
+  a:hover, a:focus  {
     text-decoration: none;
   }
 }
@@ -321,9 +321,11 @@ $h13-desktopw-font: 200px;
     background-color: $navy;
     transition: background 0.2s;
 }
+.hover-to-royal:focus,
 .hover-to-royal:hover {
     @include hover-to-royal();
 }
+.hover-to-navy:focus,
 .hover-to-navy:hover {
     @include hover-to-navy();
 }
@@ -333,7 +335,7 @@ $h13-desktopw-font: 200px;
   background: $royal;
   color: #fff;
   text-decoration: none;
-  &:hover {
+  &:hover, a:focus {
       @include hover-to-navy();
   }
 }
@@ -342,6 +344,7 @@ $h13-desktopw-font: 200px;
   @include button();
   background: $medblue; /* change to medium blue */
   color: #fff;
+  &:focus,
   &:hover {
     @include hover-to-royal();
   }
