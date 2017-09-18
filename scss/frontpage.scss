@@ -203,6 +203,13 @@
             color: $royal;
         }
     }
+    > .field__item {
+        a:focus,
+        a:hover {
+            font-weight: normal;
+            color: $royal;
+        }
+    }
 }
 
 section.page-header {
