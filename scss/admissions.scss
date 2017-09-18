@@ -423,7 +423,7 @@ article.node--type-admissions {
             padding: 10px 20px;
         }
         a:hover {
-            @include hover-to-royal();
+            @include hover-to-navy();
             text-decoration: none;
         }
     }
