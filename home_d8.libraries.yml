@@ -12,6 +12,7 @@ global-styling:
   js:
     js/homepage.js: {}
     js/purechat.js: {}
+    js/crazyegg.js: {}
     js/google_autocomplete.js: {}
   dependencies:
     - core/drupal.autocomplete
