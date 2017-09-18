@@ -8,7 +8,7 @@ window.purechatApi = {
 purechatApi.on('chatbox:ready', function (args) {
     // Do any of your manipulation to settings here!
     // console.log(args.chatboxId); // Prints the ID of the chatbox to the console window
-    setTimeout(function(){jQuery("img.purechat-collapsed-image").prop("alt","Chat with BYU Info")},2000);
+    setTimeout(function(){jQuery("div.purechat-collapsed-image").prop("title","Chat with BYU Info")},2000);
 });
 purechatApi.on('chatbox:minimize', function (args) {
     //  console.log('Chatbox was minimized');
@@ -21,7 +21,7 @@ purechatApi.on('chatbox:collapse', function (args) {
 purechatApi.on('chatbox:expand', function (args) {
     //  console.log('Chatbox was expanded!');
     //  console.log(args.chatboxId) // Prints the ID of the chatbox to the console window
-    jQuery("a.purechat-toggle-audio-notifications i.fa").prop("title","Mute Chat Sounds");
+    jQuery("button.purechat-toggle-audio-notifications").prop("title","Mute Chat Sounds");
     jQuery("input#purechat-name-submit").prop("title","Send Chat Request");
 });
 purechatApi.on('chatbox:poppedOut', function (args) {
