@@ -90,9 +90,9 @@ section.page-header {
     @media screen and (max-width: 767px) {
         display: block;
     }
-    @media screen and (min-width: 1024px) and (max-width: 1223px) {
-        grid-template-columns: 1fr 1fr 1.18fr;
-        -ms-grid-columns: 1fr 1fr 1.18fr;
+    @media screen and (min-width: 1024px) {
+        grid-template-columns: 1fr 1fr 1.2fr;
+        -ms-grid-columns: 1fr 1fr 1.2fr;
     }
 }
 
@@ -184,7 +184,7 @@ section.page-header {
         width: 100%;
         height: auto;
     }
-    @media screen and (min-width: 1024px) and (max-width: 1223px) {
+    @media screen and (min-width: 1024px) {
         position: relative;
         img {
             position: absolute;
