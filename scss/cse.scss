@@ -53,6 +53,7 @@ byu-search input[type=search] { // id changes
 }
 // hover pages & current page
 .gsc-results .gsc-cursor-box .gsc-cursor-page:hover,
+.gsc-results .gsc-cursor-box .gsc-cursor-page:focus,
 .gsc-results .gsc-cursor-box .gsc-cursor-current-page {
   color: $royal!important;
   font-weight: 500;

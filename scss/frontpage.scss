@@ -58,6 +58,7 @@
         font-family: $gotham;
         font-weight: 400;
     }
+    a:focus p,
     a:hover p {
         color: $royal;
     }
@@ -187,10 +188,12 @@
         a {
             font-weight: normal;
         }
+        a:focus,
         a:hover {
             text-decoration: none;
         }
     }
+    > .field__item:focus,
     > .field__item:hover {
         @media screen and (min-width: 768px) {
             box-shadow: 3px 3px 1px $lightgray;

@@ -27,6 +27,7 @@ article.node--type-admissions {
             color: white;
             background-color: $navy;
             padding: 10px 2em;
+            &:focus,
             &:hover {
                 @include hover-to-royal();
             }
@@ -36,6 +37,7 @@ article.node--type-admissions {
         a {
             background-color: $medblue;
             padding: 10px 3.5em;
+            &:focus,
             &:hover {
                 @include hover-to-royal();
             }
@@ -422,6 +424,7 @@ article.node--type-admissions {
             background-color: $brightBlue;
             padding: 10px 20px;
         }
+        a:focus,
         a:hover {
             @include hover-to-navy();
             text-decoration: none;

@@ -51,6 +51,7 @@ div.masters-circle .circles-h10, div.doctorate-circle .circles-h10 {
   justify-content: center;
 }
 
+#academic-calendar-btn:focus,
 #academic-calendar-btn:hover {
     @include hover-to-royal();
 }

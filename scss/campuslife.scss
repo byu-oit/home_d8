@@ -14,6 +14,7 @@ article.node--type-campus-life {
 
 .view-campus-life-links {
     .view-content {
+        a:focus,
         a:hover {
             color: $royal;
         }
@@ -58,6 +59,7 @@ article.node--type-campus-life {
                     text-transform: none;
                 }
             }
+            > li:focus,
             > li:hover {
                 > .views-field-field-icon {
                     box-shadow: 2px 2px 8px;
@@ -230,9 +232,11 @@ section.page-header {
         font-size: 25px;
         font-weight: 500;
     }
+    a:focus,
     a:hover {
         text-decoration: none;
     }
+    .field-collection-item--name-field-promo-link:focus,
     .field-collection-item--name-field-promo-link:hover {
         box-shadow: 2px 2px 5px #888;
         .field--name-field-link {
