@@ -4,7 +4,9 @@ $masters-circle-size : 155px;
 $doctorate-circle-size : 155px;
 
 article.node--type-academic {
+  @media screen and (min-width: 768px) {
     padding-top: 40px;
+  }
 }
 
 //section for circles
