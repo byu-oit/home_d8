@@ -10,7 +10,7 @@
       padding-right: 35px;
     }
     @media screen and (max-width: 767px) {
-
+      margin-top: 25px;
       padding: 0px 25px;
 
       .h9 {
@@ -707,6 +707,10 @@
   .countries-field-wrapper {
     height: 40px;
     width: 70px;
+    @media screen and (max-width: 767px) {
+      width: 52px;
+      margin-right: .5em;
+    }
   }
   .field--name-field-states, .field--name-field-countries,
   .states-label, .countries-label {
