@@ -30,8 +30,35 @@ $(document).ready(function() {
         lastWidth = curWidth;
         $window.trigger('width_resize');
     });
-    //delay scroll trigger so other "$(document).ready" functions can finish first
-    window.setTimeout(function() {$window.trigger('scroll');}, 1);
+
+    //Let components finish loading before triggering initial check_if_in_view
+    var initialCheckInViewCount = 0;
+    function initialCheckInView() {
+        if (initialCheckInViewCount++ > 20) {
+            //fallback if components aren't loading
+            return $window.trigger('scroll');
+        }
+        var foundLoadingString = false;
+        if (window.byu && window.byu.webCommunityComponents && window.byu.webCommunityComponents.resourceLoading) {
+            var loading = window.byu.webCommunityComponents.resourceLoading;
+            for (var i in loading) {
+                if (loading[i] instanceof HTMLScriptElement) {
+                    continue;
+                }
+                foundLoadingString = true;
+                if (loading[i] !== 'done') {
+                    return setTimeout(initialCheckInView, 100);
+                }
+            }
+        }
+        if (!foundLoadingString) {
+            return setTimeout(initialCheckInView, 100);
+        }
+        //Don't just "check_if_in_view"; trigger scroll event so
+        //other items watching for scroll will see check_if_in_view results
+        $window.trigger('scroll');
+    }
+    setTimeout(initialCheckInView, 1);
 });
 
 function check_if_in_view() {
