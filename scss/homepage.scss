@@ -1,4 +1,9 @@
 @import "mixins";
+/* ----------- Overall fix so there isn't scrolling to the left/right ----------- */
+html, body {
+  overflow-x: hidden;
+}
+
 /* ----------- BYU HOMEPAGE SPECIFIC--------- */
 a {
   color: $navy;
