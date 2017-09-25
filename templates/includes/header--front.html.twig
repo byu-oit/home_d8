@@ -26,8 +26,8 @@
         </byu-identity>
 
         {% if search_use == TRUE %}
-            {#<byu-search  slot="search" action="click" action-target='[data-drupal-selector="edit-submit"]'>#}
-            <byu-search  slot="search" onsearch="d8Search">
+            <byu-search  slot="search" action="click" action-target='input[data-drupal-selector="edit-submit"]'>
+            {#<byu-search  slot="search" onsearch="d8Search">#}
                 {#{% if page.content.searchform %}#}
                     {#{{ page.content.searchform }}#}
                 {#{% endif %}#}
