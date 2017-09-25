@@ -30,6 +30,9 @@ a:hover {
 [slot="actions"] div {
   margin: 0;
 }
+#header {
+    z-index: auto;
+}
 byu-header {
     background-color: $navy;
 }
@@ -38,7 +41,12 @@ byu-header {
 byu-footer h2.header {
   text-align: left;
 }
-
+byu-footer p {
+    margin: 0;
+}
+byu-footer-column :nth-child(2) {
+    padding-top: 0;
+}
 
 /* ----- helpful classes ----------- */
 .normal-weight {
