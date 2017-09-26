@@ -138,7 +138,13 @@ function home_d8_preprocess_page(&$variables) {
         $variables['#attached']['library'][] = 'home_d8/fonts-basic';
     }
 
-    $userOb = $variables['user'];
+    // alternate google fonts
+    $google_fonts = trim(theme_get_setting('google_fonts'));
+    if($google_fonts == true ) {
+        $variables['#attached']['library'][] = 'home_d8/alt-fonts';
+    }
+
+//    $userOb = $variables['user'];
 //    $username = $userOb->account->name;
 
 

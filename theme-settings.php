@@ -59,6 +59,14 @@ function home_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormS
         ),
         '#default_value' => theme_get_setting('font_package'),
     );
+    $form['fonts']['google_fonts'] = array(
+        '#type'          => 'checkbox',
+        '#title'         => t('Use Nearly Identical Google Font versions of BYU Fonts'),
+        '#default_value' => theme_get_setting('google_fonts'),
+    );
+    $form['header_style']['header_actions']['actions_info'] = array(
+        '#markup' => '<p>Purchased fonts load much slower than unlicensed free fonts due to the processes required to validate valid licensing information. Google fonts can load in up to 1/10th the time.</p><p>Montserrat is an alternative to Gotham, Domine is an alternative to Sentinel, and _______ is an alternative to Vitesse. You can see a visual comparison here: ____________</p>',
+    );
     $form['fonts']['font_one'] = array(
         '#type' => 'select',
         '#title' => t('H1 Font'),

@@ -82,6 +82,17 @@ homepage-components:
       byu-homepage-components/dist/byu-homepage-components.min.css: {}
   js:
     byu-homepage-components/dist/byu-homepage-components.min.js: {}
+alt-fonts:
+  remote: https://fonts.googleapis.com/css?family=Domine|Montserrat
+  version: 1.0.0
+  license:
+    name: Google Font Alternatives for BYU Fonts
+    url: https://fonts.googleapis.com/css?family=Domine|Montserrat
+    gpl-compatible: true
+  css:
+    theme:
+      https://fonts.googleapis.com/css?family=Domine|Montserrat: { type: external, minified: true }
+
 
 
 #homepage-components-js:
