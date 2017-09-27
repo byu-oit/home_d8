@@ -74,7 +74,7 @@ libre-baskerville:
     gpl-compatible: true
   css:
     theme:
-      https://fonts.googleapis.com/css?family=Libre Baskerville: { type: external, minified: true }
+      https://fonts.googleapis.com/css?family=Libre Baskerville: { type: external, minified: false }
 homepage-components:
   version: 1.x
   css:
@@ -83,15 +83,15 @@ homepage-components:
   js:
     byu-homepage-components/dist/byu-homepage-components.min.js: {}
 alt-fonts:
-  remote: https://fonts.googleapis.com/css?family=Domine|Montserrat
+  remote: https://fonts.googleapis.com/css?family=Domine|Montserrat|Zilla+Slab
   version: 1.0.0
   license:
     name: Google Font Alternatives for BYU Fonts
-    url: https://fonts.googleapis.com/css?family=Domine|Montserrat
+    url: https://fonts.googleapis.com/css?family=Domine|Montserrat|Zilla+Slab
     gpl-compatible: true
   css:
     theme:
-      https://fonts.googleapis.com/css?family=Domine|Montserrat: { type: external, minified: true }
+      https://fonts.googleapis.com/css?family=Domine|Montserrat|Zilla+Slab: { type: external, minified: false }
 
 
 
