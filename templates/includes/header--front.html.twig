@@ -1,7 +1,7 @@
 {% if header_sticky_option == 'always_sticky' %}
-    <byu-header id="header" mobile-max-width="1023px" home-url="http://www.byu.edu" {%  if full_width == TRUE %}full-width {% endif %} class="{%  if front_animation_use == TRUE %}animate-header {% endif %}" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 0, "stickySetTop": "0", "stickyChangeLogo": false}'>
+    <byu-header id="header" stretch-top-bar mobile-max-width="1023px" home-url="http://www.byu.edu" {%  if full_width == TRUE %}full-width {% endif %} class="{%  if front_animation_use == TRUE %}animate-header {% endif %}" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 0, "stickySetTop": "0", "stickyChangeLogo": false}'>
 {% else %}
-    <byu-header id="header" mobile-max-width="1023px" home-url="http://www.byu.edu" {%  if full_width == TRUE %}full-width {% endif %} class="{%  if front_animation_use == TRUE %}animate-header {% endif %}" data-plugin-options='{"stickyEnabled": false, "stickyEnableOnBoxed": false, "stickyEnableOnMobile": true, "stickyStartAt": 0, "stickySetTop": "0"}'>
+    <byu-header id="header" stretch-top-bar mobile-max-width="1023px" home-url="http://www.byu.edu" {%  if full_width == TRUE %}full-width {% endif %} class="{%  if front_animation_use == TRUE %}animate-header {% endif %}" data-plugin-options='{"stickyEnabled": false, "stickyEnableOnBoxed": false, "stickyEnableOnMobile": true, "stickyStartAt": 0, "stickySetTop": "0"}'>
         {% endif %}
 
 
@@ -26,8 +26,8 @@
         </byu-identity>
 
         {% if search_use == TRUE %}
-            {#<byu-search  slot="search" action="click" action-target='[data-drupal-selector="edit-submit"]'>#}
-            <byu-search  slot="search" onsearch="d8Search">
+            <byu-search  slot="search" action="click" action-target='input[data-drupal-selector="edit-submit"]'>
+            {#<byu-search  slot="search" onsearch="d8Search">#}
                 {#{% if page.content.searchform %}#}
                     {#{{ page.content.searchform }}#}
                 {#{% endif %}#}

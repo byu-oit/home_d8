@@ -67,20 +67,6 @@
     font-family: $vitesse;
 }
 
-.field--name-field-hero-video {
-    position: relative;
-    //top: -55px;
-    //@media screen and (max-width: 1223px) {
-    //    top: -81px;
-    //}
-    //@media screen and (max-width: 1023px) {
-    //    top: -32px;
-    //}
-    //@media screen and (max-width: 767px) {
-    //    top: -18px;
-    //}
-}
-
 .field--name-field-somethings {
     margin-top: 50px;
     @supports (not (display: grid)) and (not (display: -ms-grid)) {

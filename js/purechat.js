@@ -21,6 +21,7 @@ purechatApi.on('chatbox:collapse', function (args) {
 purechatApi.on('chatbox:expand', function (args) {
     //  console.log('Chatbox was expanded!');
     //  console.log(args.chatboxId) // Prints the ID of the chatbox to the console window
+    jQuery("form.purechat-form input.purechat-firstname-input").prop("title","First Name");
     jQuery("button.purechat-toggle-audio-notifications").prop("title","Mute Chat Sounds");
     jQuery("input#purechat-name-submit").prop("title","Send Chat Request");
 });

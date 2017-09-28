@@ -31,6 +31,9 @@ a:hover {
 [slot="actions"] div {
   margin: 0;
 }
+#header {
+    z-index: auto;
+}
 byu-header {
     background-color: $navy;
 }
@@ -39,7 +42,12 @@ byu-header {
 byu-footer h2.header {
   text-align: left;
 }
-
+byu-footer p {
+    margin: 0;
+}
+byu-footer-column :nth-child(2) {
+    padding-top: 0;
+}
 
 /* ----- helpful classes ----------- */
 .normal-weight {
@@ -262,10 +270,6 @@ $circle-width: 156px;
   }
   #wrapper {
     margin-top: 0px;
-    //@media screen and (min-width: 1024px) and (max-width: 1223px) {
-    @media screen and (min-width: 1024px) {
-      margin-top: -35px;
-    }
   }
 }
 /* --- content header images on main 4 pages --- */
