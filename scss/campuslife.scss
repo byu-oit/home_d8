@@ -81,7 +81,7 @@ section.page-header {
     position: relative;
     top: -25px;
     padding-top: 85px;
-    background-color: $gray;
+    background-color: $lightgray;
     @media screen and (max-width: 1223px) {
         top: 0;
     }
@@ -115,8 +115,8 @@ section.page-header {
     }
     display: flex;
     justify-content: center;
-    background-color: $gray;
-    color: white;
+    background-color: $lightgray;
+    color: #666;
     font-family: $gotham;
     font-weight: bold;
     font-size: 45px;
@@ -222,7 +222,7 @@ section.page-header {
         height: auto;
     }
     .field--name-field-link {
-        background: $gray;
+        background: $navy;
         padding: 10px;
         text-align: center;
     }
