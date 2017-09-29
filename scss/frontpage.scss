@@ -1,5 +1,10 @@
 @import "mixins";
-
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        padding: 0;
+        width: 100%;
+    }
+}
 @media screen and (max-width: 767px) {
     .main {
         padding-left: 0;
@@ -77,6 +82,11 @@
     display: -ms-grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
+
+    @include tabletAreaWithMaxWidth();
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        //max-width: 750px; // mixin tablet max width is set to 700px
+    }
     @media screen and (max-width: 767px) {
         @supports (not (display: grid)) and (not (display: -ms-grid)) {
             justify-content: space-around;
@@ -196,7 +206,9 @@
         }
     }
 }
-
+#block-calendarwidgetfeaturedevents {
+    @include tabletAreaWithMaxWidth();
+}
 section.page-header {
     display: none;
 }
