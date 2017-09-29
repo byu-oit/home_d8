@@ -7,7 +7,7 @@ byu-search input[type=search] { // id changes
   background: #fff!important; // otherwise, it shows Google stuff
   border: none;
   @media screen and (max-width: 1023px) {
-    border-bottom: 1px solid #666;
+    border-bottom: 1px solid $darkgray;
   }
 }
 
