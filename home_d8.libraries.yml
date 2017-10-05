@@ -65,16 +65,6 @@ fonts-full:
   css:
     theme:
       https://cloud.typography.com/75214/6517752/css/fonts.css: { type: external, minified: true }
-libre-baskerville:
-  remote: https://fonts.googleapis.com/css?family=Libre Baskerville
-  version: 4.5.0
-  license:
-    name: Google
-    url: https://fonts.googleapis.com/css?family=Libre Baskerville
-    gpl-compatible: true
-  css:
-    theme:
-      https://fonts.googleapis.com/css?family=Libre Baskerville: { type: external, minified: true }
 homepage-components:
   version: 1.x
   css:
@@ -82,40 +72,6 @@ homepage-components:
       byu-homepage-components/dist/byu-homepage-components.min.css: {}
   js:
     byu-homepage-components/dist/byu-homepage-components.min.js: {}
-
-
-#homepage-components-js:
-#  version: 1.x.x
-#  js:
-#     byu-homepage-components/dist/byu-theme-components.js: { type: external, minified: false, preprocess: false}
-#homepage-components-css:
-#  remote: https://github.com/byu-oit/byu-homepage-components/
-#  version: 1.x.x
-#  license:
-#    name: BYUHomeCSS
-#    url: https://github.com/byu-oit/byu-homepage-components/blob/master/LICENSE
-#    gpl-compatible: true
-#  css:
-#    theme:
-#      byu-homepage-components/dist/byu-theme-components.css: { type: internal, minified: false }
-#components-latest-js:
-#  version: 1.x.x
-#  license:
-#    name: BYUComponentsJs
-#    url: https://github.com/byu-oit/byu-homepage-components/blob/master/LICENSE
-#    gpl-compatible: true
-#  js:
-#     https://cdn.byu.edu/byu-theme-components/unstable/byu-theme-components.min.js: { type: external, minified: true }
-#components-latest-css:
-#  remote: https://github.com/byuweb/byu-theme-components/
-#  version: 1.x.x
-#  license:
-#    name: BYUComponentsCSS
-#    url: https://github.com/byuweb/byu-theme-components/blob/master/LICENSE
-#    gpl-compatible: true
-#  css:
-#    base:
-#      https://cdn.byu.edu/byu-theme-components/latest/byu-theme-components.min.css: { type: external, minified: true }
 font-awesome:
   remote: https://fortawesome.github.io/Font-Awesome/
   version: 4.5.0
@@ -126,4 +82,47 @@ font-awesome:
   css:
     theme:
       https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css: { type: external, minified: true }
+librebaskerville:
+  version: VERSION
+  css:
+    theme:
+      'https://fonts.googleapis.com/css?family=Libre Baskerville': { type: external }
+sourcesans:
+  version: VERSION
+  css:
+    theme:
+      'https://fonts.googleapis.com/css?family=Source+Sans+Pro': { type: external }
+
+byu-buttons:
+  remote: https://github.com/byuweb/byu-theme-style-helpers/
+  version: 1.x.x
+  license:
+    name: BYUButtons
+    url: https://github.com/byuweb/byu-theme-style-helpers/blob/master/LICENSE
+    gpl-compatible: false
+  css:
+    theme:
+      https://cdn.byu.edu/byu-theme-style-helpers/latest/buttons.css: { type: external, minified: false }
+
+byu-tables:
+  remote: https://github.com/byuweb/byu-theme-style-helpers/
+  version: 1.x.x
+  license:
+    name: BYUTables
+    url: https://github.com/byuweb/byu-theme-style-helpers/blob/master/LICENSE
+    gpl-compatible: false
+  css:
+    theme:
+      https://cdn.byu.edu/byu-theme-style-helpers/latest/tables.css: { type: external, minified: false }
+
+byu-box-shadows:
+  remote: https://github.com/byuweb/byu-theme-style-helpers/
+  version: 1.x.x
+  license:
+    name: BYUBoxShadows
+    url: https://github.com/byuweb/byu-theme-style-helpers/blob/master/LICENSE
+    gpl-compatible: false
+  css:
+    theme:
+      https://cdn.byu.edu/byu-theme-style-helpers/latest/box-shadows.css: { type: external, minified: false }
 

@@ -133,9 +133,35 @@ function home_d8_preprocess_page(&$variables) {
     /* --- Load Fonts ------- */
     $font_package = trim(theme_get_setting('font_package'));
     if($font_package == 'fonts-full' ) {
-        $variables['#attached']['library'][] = 'home_d8/fonts-full';
+        $variables['#attached']['library'][] = 'byu_d8/fonts-full';
     } else { // load fonts-basic
-        $variables['#attached']['library'][] = 'home_d8/fonts-basic';
+        $variables['#attached']['library'][] = 'byu_d8/fonts-basic';
+    }
+    $fontawesome_use = trim(theme_get_setting('fontawesome_use'));
+    if($fontawesome_use == TRUE ) {
+        $variables['#attached']['library'][] = 'byu_d8/font-awesome';
+    }
+    $librebaskerville_use = trim(theme_get_setting('librebaskerville_use'));
+    if($librebaskerville_use == TRUE ) {
+        $variables['#attached']['library'][] = 'byu_d8/librebaskerville';
+    }
+    $sourcesans_use = trim(theme_get_setting('sourcesans_use'));
+    if($sourcesans_use == TRUE ) {
+        $variables['#attached']['library'][] = 'byu_d8/sourcesans';
+    }
+
+    /* ------ Load Helper Styles --------- */
+    $byu_buttons = trim(theme_get_setting('byu_buttons'));
+    if($byu_buttons == TRUE ) {
+        $variables['#attached']['library'][] = 'byu_d8/byu-buttons';
+    }
+    $byu_tables = trim(theme_get_setting('byu_tables'));
+    if($byu_tables == TRUE ) {
+        $variables['#attached']['library'][] = 'byu_d8/byu-tables';
+    }
+    $byu_box_shadows = trim(theme_get_setting('byu_box_shadows'));
+    if($byu_box_shadows == TRUE ) {
+        $variables['#attached']['library'][] = 'byu_d8/byu-box-shadows';
     }
 
     $userOb = $variables['user'];
