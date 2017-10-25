@@ -16,7 +16,8 @@ $(document).ready(function() {
     if(isChrome == false) {
         $('html').addClass('not-chrome');
     }
-
+    //adding class to body if search results page
+    if($("#google-cse-results").length>0) {$(document.body).addClass("search-results");}
 
     $window.on('scroll resize', check_if_in_view);
     //Add special event if *width* changes, since mobile height
