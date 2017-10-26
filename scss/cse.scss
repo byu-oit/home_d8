@@ -61,4 +61,5 @@ byu-search input[type=search] { // id changes
 //removing boxes from search results
 .gsc-webResult.gsc-result {border:none}
 //capitalize search results text
-form#search-form+h2{text-transform:uppercase}
+form#search-form+h2{text-transform:uppercase;}
+body.search-results h2{margin:1.5vh 0vh 1vh 0vh;}
