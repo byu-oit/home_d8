@@ -3,24 +3,23 @@
 // blues
 $navy: #002E5D;
 $darknavy: #002040;
-$medblue: #869DB5;
+$medblue: #5D7998 ; // was 869DB5 but not quite accessible
 $lightBlue: #e0f0cc;
 $xlightblue: #C3DDF9;
 $brightBlue: #0057B8;
 
-$royal: #003DA5;
+$royal: #005eb8; // was #003DA5
 $lightRoyal: #114BAD;
 
-// There are 6 grays right now..
+// There are 7-9 grays right now..
 $xlightgray: #f2f2f2;
-$lightgray: #e5e5e5;
+$lightgray: #e6e6e6; // will likely change to e6e6e6
 $lightergray: #e6e6e6;
 $medgray: #767676; // extra
 $gray: #c5c5c5;
-//$medgray: #666;
-$darkgray: #6a6a6b; // least used gray
+$darkgray: #666; // went from 4a4a4a to 666
 $darkestgray: #141414;  // this should be used for body & default text.
-
+// we are also using #666 and #777 in some places
 
 // other colors
 $red: #B3041A;
@@ -33,15 +32,7 @@ $lightteal: #C4F7E0;
 
 $green: #66B200; // doesn't work with accessibility
 $lightgreen: #e0f0cc;
-//$green: #4D8501; // was #6EAE17;
-//$greendarkened: #498000 ; // was #6AA816;
 
-// other blues Aleni has used:
-//$lightestblue: #C4CFDA;
-//$lightblue: #A6B6C7;
-//$lightmedblue: #889FB7;
-$medblue: #697F96;  // was #889FB7  but it couldn't have white on it with enough contrast
-//$darkmedblue: #5B728A;  // #5B728A is enough contrast for small white text
 $white: #FFF;
 
 /* ---- fonts ---- */
@@ -75,7 +66,7 @@ h1, .h1 {
   line-height: 34px;
   text-align: center;
 }
-h2, .h2 {
+h2, .h2, .larger-text {
   font-size: 25px;
   line-height: 34px;
   text-align: center;
@@ -84,14 +75,14 @@ h3, .h3 {
   font-size: 15px;
   letter-spacing: -.2px;
   line-height: 19px;
-  a:hover {
+  a:hover, a:focus {
     font-weight: bold;
   }
 }
 h4 {
   font-size: 18px;
   line-height: 20px;
-  a:hover {
+  a:hover, a:focus {
     color: $royal;
   }
 }
@@ -126,7 +117,7 @@ h6 {
   font-weight: 500;
   line-height: 40px;
   letter-spacing: .4px;
-  a:hover {
+  a:hover, a:focus  {
     color: $royal;
   }
 }
@@ -160,7 +151,7 @@ h6 {
   text-transform: uppercase;
   font-weight: 500;
   /*letter-spacing:*/
-  a:hover {
+  a:hover, a:focus  {
     color: $royal;
   }
 }
@@ -176,6 +167,9 @@ $h13-desktopw-font: 200px;
 .view-content-page-header .views-field-title {
   margin-top: ($h13-mobile-font *.73*-1);
   margin-bottom: ($h13-mobile-font *.73);
+  h1 {
+      background-color: $darknavy;
+  }
 }
 
 
@@ -190,12 +184,12 @@ $h13-desktopw-font: 200px;
 
 }
 @media screen and (min-width: 1024px) {
-  h2 {
+  h2, .h2, .larger-text {
     font-size: 30px;
   }
-  h3 {
+  h3, .h3 {
     font-size: 17px;
-    /*line-height: ??;*/
+    line-height: 23px;
   }
   .h13 {
     font-size: $h13-tabletl-font;
@@ -208,14 +202,15 @@ $h13-desktopw-font: 200px;
 
 }
 @media screen and (min-width: 1224px) {
-  h1 {
+  h1, .h1 {
     font-size: 40px;
   }
-  h2 {
+  h2, .h2, .larger-text {
     font-size: 35px;
   }
-  h3 {
+  h3, .h3 {
     font-size: 20px;
+    line-height: 26px;
   }
   /* we may not do this this way */
   .h8 {
@@ -312,7 +307,7 @@ $h13-desktopw-font: 200px;
 
 @mixin button() {
   padding: 12px 25px;
-  a:hover {
+  a:hover, a:focus  {
     text-decoration: none;
   }
 }
@@ -329,9 +324,11 @@ $h13-desktopw-font: 200px;
     background-color: $navy;
     transition: background 0.2s;
 }
+.hover-to-royal:focus,
 .hover-to-royal:hover {
     @include hover-to-royal();
 }
+.hover-to-navy:focus,
 .hover-to-navy:hover {
     @include hover-to-navy();
 }
@@ -341,7 +338,7 @@ $h13-desktopw-font: 200px;
   background: $royal;
   color: #fff;
   text-decoration: none;
-  &:hover {
+  &:hover, a:focus {
       @include hover-to-navy();
   }
 }
@@ -350,8 +347,17 @@ $h13-desktopw-font: 200px;
   @include button();
   background: $medblue; /* change to medium blue */
   color: #fff;
+  &:focus,
   &:hover {
     @include hover-to-royal();
   }
 }
 
+// For A-Z Index, Colleges & Departments, etc
+@mixin letterHeaders() {
+  margin: 20px 0px 5px;
+  font-weight: 500;
+  @media screen and (max-width: 1024px) {
+    margin: 20px 0px 0px;
+  }
+}

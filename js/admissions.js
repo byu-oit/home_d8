@@ -3,10 +3,9 @@ jQuery(document).ready(function($) {
     var $window = $(window);
     var $branchTop = $('#branchpath-top-div');
     var noOverlapCheck = 0;
-    animateBranchesIfVisible();
 
     $window.scroll(animateBranchesIfVisible);
-    $window.resize(function() {
+    $window.on('width_resize', function() {
         alreadyAnimated = false;
         animateBranchesIfVisible();
     });
@@ -21,7 +20,7 @@ jQuery(document).ready(function($) {
         }
     }
 
-    function drawBranch(id, fullBranch) {
+    function drawBranch(id) {
         var $div = $('#branchpath-' + id + '-div');
         var width = $div.outerWidth();
         var height = $div.outerHeight();

@@ -11,7 +11,12 @@ global-styling:
       css/cse.css: {}
   js:
     js/homepage.js: {}
+    js/purechat.js: {}
+    js/crazyegg.js: {}
+    js/google_autocomplete.js: {}
     js/survey.js: {}
+  dependencies:
+    - core/drupal.autocomplete
 frontpage:
   version: 8.x
   css:

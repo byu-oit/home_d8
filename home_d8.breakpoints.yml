@@ -18,7 +18,7 @@ home_d8.tablet_landscape:
     - 1x
 home_d8.desktop:
   label: desktop
-  mediaQuery: 'all and (min-width: 1025x) and (max-width: 1224px)'
+  mediaQuery: 'all and (min-width: 1025px) and (max-width: 1224px)'
   weight: 1
   multipliers:
     - 1x

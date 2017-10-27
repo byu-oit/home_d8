@@ -2,6 +2,9 @@
 
 article.node--type-admissions {
     padding-top: 42px;
+    @media screen and (max-width: 767px) {
+        padding-top: 0;
+    }
 }
 
 .field--name-field-links {
@@ -24,6 +27,7 @@ article.node--type-admissions {
             color: white;
             background-color: $navy;
             padding: 10px 2em;
+            &:focus,
             &:hover {
                 @include hover-to-royal();
             }
@@ -33,6 +37,7 @@ article.node--type-admissions {
         a {
             background-color: $medblue;
             padding: 10px 3.5em;
+            &:focus,
             &:hover {
                 @include hover-to-royal();
             }
@@ -50,7 +55,7 @@ article.node--type-admissions {
 .node__content.freshman_profile {
     .field__label {
         padding-left: 200px;
-        font-family: $vitesse;
+        text-align: left;
         font-weight: normal;
         @media screen and (max-width: 1424px) {
             padding-left: 100px;
@@ -84,7 +89,7 @@ article.node--type-admissions {
                 margin: 10px -10px;
                 padding: 10px 15px;
             }
-            color: $medblue;
+            color: $navy;
             .field-collection-item--name-field-freshman-profile {
                 div {
                     line-height: normal;
@@ -111,6 +116,9 @@ article.node--type-admissions {
     margin-top: 20px;
     border-top: solid $gray 1px;
     padding-top: 20px;
+    @media screen and (max-width: 991px) {
+        padding-top: 0;
+    }
     li {
         line-height: normal;
     }
@@ -147,9 +155,12 @@ article.node--type-admissions {
             @media screen and (max-width: 991px) {
                 flex-wrap: wrap;
             }
+            @media screen and (max-width: 767px) {
+                padding: 0px 20px;
+            }
             > li {
                 > div {
-                    display: none;
+/*                    display: none; */
                 }
                 width: 360px;
                 border-right: solid $gray 1px;
@@ -161,6 +172,9 @@ article.node--type-admissions {
                 }
                 @media screen and (min-width: 992px) and (max-width: 1223px) {
                     width: 310px;
+                }
+                @media screen and (min-width: 1024px) and (max-width: 1424px) {
+                    padding-left: 20px;
                 }
                 .views-field-name {
                     padding-top: 15px;
@@ -236,6 +250,13 @@ article.node--type-admissions {
             display: none;
         }
     }
+    @media screen and (max-width: 767px) {
+        .subsidies-bottom {
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
     .tuition-header {
         display: inline-block;
         width: 400px;
@@ -290,22 +311,24 @@ article.node--type-admissions {
             }
         }
         .management-law-header {
-            width: 550px;
+            text-align: left;
             @media screen and (min-width: 1224px) {
-                padding-left: 40px;
-                text-align: left;
+                margin-left: 39px;
             }
-            @media screen and (max-width: 1223px) {
-                width: auto;
-                text-align: right;
-                position: relative;
-                right: 20%;
+            @media screen and (min-width: 992px) and (max-width: 1223px) {
+                margin-left: 50px;
             }
             @media screen and (max-width: 991px) {
-                width: 150%;
-                right: 55%;
+                margin-left: 10px;
             }
             color: $darkgray;
+
+            .management-title-breakpoint {
+                display: none;
+                @media screen and (max-width: 1223px) {
+                    display: initial;
+                }
+            }
         }
         > div {
             width: 400px;
@@ -353,7 +376,7 @@ article.node--type-admissions {
                 }
                 .per-semester {
                     font-size: 12px;
-                    font-weight: normal;
+                    font-weight: 500;
                     text-transform: uppercase;
                 }
                 .tuition-price {
@@ -401,14 +424,17 @@ article.node--type-admissions {
             background-color: $brightBlue;
             padding: 10px 20px;
         }
+        a:focus,
         a:hover {
-            @include hover-to-royal();
+            @include hover-to-navy();
             text-decoration: none;
         }
     }
 }
 .backFiller {
-    border-left-color: $lightgray;
+    @media screen and (min-width: 1600px) {
+        border-left-color: $lightgray; // saw a 1px line so we removed this
+    }
 }
 
 /* big ugly page re-ordering for 768-991 px */

@@ -12,6 +12,7 @@
 <article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
+  <h1 class="screen-reader-only">Brigham Young University Home Page</h1>
   {% if not page %}
     <h2{{ title_attributes }}>
       <a href="{{ url }}" rel="bookmark">{{ label }}</a>
@@ -30,7 +31,11 @@
   {% endif %}
 
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
+    {% if node.field_display_emergency_notice.value == '1' %}
+        {{ content | without('field_display_emergency_notice') }}
+    {% else %}
+        {{ content | without('field_display_emergency_notice', 'field_emergency_notice') }}
+    {% endif %}
   </div>
 
 </article>

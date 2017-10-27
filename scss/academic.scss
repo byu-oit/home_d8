@@ -4,7 +4,9 @@ $masters-circle-size : 155px;
 $doctorate-circle-size : 155px;
 
 article.node--type-academic {
+  @media screen and (min-width: 768px) {
     padding-top: 40px;
+  }
 }
 
 //section for circles
@@ -49,6 +51,7 @@ div.masters-circle .circles-h10, div.doctorate-circle .circles-h10 {
   justify-content: center;
 }
 
+#academic-calendar-btn:focus,
 #academic-calendar-btn:hover {
     @include hover-to-royal();
 }
@@ -58,17 +61,26 @@ div.masters-circle .circles-h10, div.doctorate-circle .circles-h10 {
   align-items: center;
   margin: 30px;
   display: grid;
+  display: -ms-grid;
   grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
 }
 
 #circle-wrapper {
   justify-content: flex-end;
   align-items: center;
+  -ms-grid-column: 2;
 }
 
 .field--name-field-academic-major-links {
   border-bottom: 1px solid $medgray;
   padding-bottom: 2em;
+  @media screen and (min-width: 1024px) {
+    margin-right: 10%;
+  }
+  @media screen and (min-width: 1450px) {
+    margin-right: 25%;
+  }
 }
 
 .field--name-field-academic-minor-links .h12 a {
@@ -78,6 +90,16 @@ div.masters-circle .circles-h10, div.doctorate-circle .circles-h10 {
 
 .field--name-field-academic-minor-links {
   padding-top: 2em;
+  @media screen and (max-width: 767px) {
+    border-bottom: 1px solid $medgray;
+    padding-bottom: 2em;
+  }
+}
+
+.field--name-field-academic-calendar {
+  @media screen and (max-width: 767px) {
+    padding-top: 2.5em;
+  }
 }
 
 .rank-prefix {
@@ -87,9 +109,6 @@ div.masters-circle .circles-h10, div.doctorate-circle .circles-h10 {
   font-size: 40px;
   padding-right: 10px;
   opacity: 0.8;
-  @media screen and (max-width: 1223px) {
-      font-size: 25px;
-  }
 }
 
 .byline-prefix {
@@ -106,7 +125,11 @@ div.masters-circle .circles-h10, div.doctorate-circle .circles-h10 {
 div#links-and-calendar {
   min-height: 80em;
 }
-
+#links-and-calendar .col-sm-4 {
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    padding-left: 30px;
+  }
+}
 .academic-success .h2 {
   text-align: left;
   font-weight: 500;
@@ -137,7 +160,7 @@ div#links-and-calendar {
 }
 
 .academic-highlight-overlay {
-  background-color: $medblue;
+  background-color: $navy;
   padding: 0 15px 10px 15px;
   .h6 {
     font-size: 25px;
@@ -160,12 +183,6 @@ div#links-and-calendar {
   }
 }
 
-.field--name-field-academic-highlight .field__item:first-of-type {
-    .academic-highlight-overlay {
-      background-color: $navy;
-    }
-}
-
 .academic-highlight-image img {
     width: 100%;
     height: auto;
@@ -174,12 +191,11 @@ div#links-and-calendar {
 .field--name-field-academic-highlight-rank {
     position: relative;
     margin-top: -1.3em;
-    color: white;
+    color: white !important; //needed to not be overridden by .h10 mixins.scss
     font-weight: bold;
 }
 
 .field--name-field-academic-highlight-title.university-for {
-    color: $lightgray;
     margin-bottom: 0;
 }
 .field--name-field-academic-highlight-title.actual-title {
@@ -213,11 +229,15 @@ div#links-and-calendar {
 
   #circle-wrapper {
     display: grid;
+    display: -ms-grid;
   }
 
   .undergrad-circle {
     grid-column: 1;
+    -ms-grid-column: 1;
     grid-row: 1/span 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
   }
 
   .masters-circle {
@@ -225,6 +245,8 @@ div#links-and-calendar {
     width: $masters-circle-size;
     grid-column: 2;
     grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-row: 1;
     margin-left: -30px;
     margin-bottom: -20px;
   }
@@ -232,15 +254,17 @@ div#links-and-calendar {
   .doctorate-circle {
     grid-column: 2;
     grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
     margin-left: -25px;
   }
 }
 
 @media screen and (min-width: 1824px) {
   #academic-yfacts-wrapper {
-    padding-top: 240px;
+    padding-top: 220px;
     position: relative;
-    top: -200px;
+    top: -150px;
   }
 }
 
@@ -287,7 +311,106 @@ div#links-and-calendar {
   .academic-success .h2 {
     text-align: center;
   }
-  .field--name-field-academic-highlight .field__item {
+  .field--name-field-academic-highlight > .field__item {
     margin-bottom: 10px;
+  }
+}
+
+.academic-highlights {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-top: -50px; // Shim to align the highlights with Yfacts since Yfacts is moved up by using top: -###px
+
+    & > .field__item {
+      flex: 1; // Makes images the same size
+    }
+    & > .field__item:nth-child(2) {
+      margin: 0 2px; // Adds spacing between images (justify-content: space-between doesn't work)
+    }
+
+    // Fills in the background since the height of the overlays are different
+    & > .field__item {
+      background-color: $navy;
+    }
+  }
+
+  // size/alignment of #2, #5, #30 on mobile devices
+  @media screen and (max-width: 767px) {
+    .h10 {
+      font-size: 55px;
+    }
+    .field--name-field-academic-highlight-image {
+      margin-bottom: 0;
+    }
+    .field--name-field-academic-highlight-rank {
+      margin-bottom: 25px;
+      margin-top: -1em;
+    }
+  }
+
+
+  @media screen and (min-width: 1024px) {
+    // Shim to align the highlights with Yfacts since Yfacts is moved up by using top: -###px
+    margin-top: -70px;
+
+    & > .field__item:nth-child(2) {
+      margin: 0 8px; // Adds spacing between the images
+    }
+  }
+  @media screen and (min-width: 1224px) {
+    margin-top: -150px; // Shim to align the highlights with Yfacts
+  }
+  @media screen and (min-width: 1824px) {
+    //change overlay to hover over image rather than display below
+    & > .field__item {
+      background-color: transparent;
+    }
+    .academic-highlight-overlay {
+      width: 85%;
+      margin-top: -200px;
+      opacity: .9;
+      height: 166px;
+
+      // Aligning text in hovering overlay
+      .field.field--name-field-academic-highlight-rank.field--type-integer.field--label-hidden.field__item.h10 {
+        display: inline;
+      }
+      .field.field--name-field-academic-highlight-title.field--type-string.field--label-hidden.field__item.h6.university-for {
+        margin-left: 90px;
+        margin-top: -74px;
+      }
+      .field.field--name-field-academic-highlight-title.field--type-string.field--label-hidden.field__item.h6.actual-title,
+      .field.field--name-field-academic-highlight-byline.field--type-string.field--label-hidden.field__item.white
+      {
+        margin-left: 90px;
+      }
+    }
+
+    & > .field__item:last-child {
+      .field.field--name-field-academic-highlight-title.field--type-string.field--label-hidden.field__item.h6.university-for {
+        margin-left: 125px;
+      }
+      .field.field--name-field-academic-highlight-title.field--type-string.field--label-hidden.field__item.h6.actual-title,
+      .field.field--name-field-academic-highlight-byline.field--type-string.field--label-hidden.field__item.white {
+        margin-left: 125px;
+      }
+    }
+  }
+  margin-top: -18px; // Makes spacing consistent between yfacts and other images
+}
+
+// Academic News header spacing shim to work with the yfacts banner
+// spacing issue
+.field--name-field-byu-news-block {
+  @media screen and (min-width: 1024px) {
+    h2 {
+      text-align: left;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 100px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 50px;
   }
 }

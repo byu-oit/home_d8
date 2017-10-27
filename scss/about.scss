@@ -10,13 +10,13 @@
       padding-right: 35px;
     }
     @media screen and (max-width: 767px) {
-
+      margin-top: 25px;
       padding: 0px 25px;
 
       .h9 {
         text-align: left;
         line-height: 24px;
-        font-weight: normal;
+        //font-weight: normal;
         //color: $medgray;
       }
 
@@ -213,31 +213,13 @@
     }
   }
 
-
-
-
-  //
-  //.field--name-field-links a:hover, .field--name-field-links a:active {
-  //  color: $royal;
-  //  text-decoration: none;
-  //}
-
   //yfacts bar
   .full-width-bar.yfacts-about {
     height: 400px;
-    @media screen and (max-width: 434px) {
-      height: 370px;
+    @media screen and (max-width: 370px) { // undergraduate moves down so 4 lines
+      height: 360px;
     }
-    @media screen and (min-width: 435px) and (max-width: 457px) { // little text goes to 2 lines so 5 lines
-      height: 350px;
-    }
-    @media screen and (min-width: 360px) and (max-width: 457px) { // undergraduate moves down so 4 lines
-      height: 350px;
-    }
-    @media screen and (min-width: 458px) and (max-width: 665px) { // enrollment moves down so 3 lines
-      height: 335px;
-    }
-    @media screen and (min-width: 666px) and (max-width: 1023px) {
+     @media screen and (min-width: 370px) and (max-width: 1023px) {
       height: 325px;
     }
     @media screen and (min-width: 1024px) and (max-width: 1223px) {
@@ -249,7 +231,7 @@
     padding-top: 0px;
 
     font-family: $gotham;
-    font-style: italic;
+    //font-style: italic;
     font-size: 22px;
     line-height: 28px;
     margin: 0px 0px 60px 0px;
@@ -257,11 +239,11 @@
 
     .field--name-field-quote-bar {
       padding-top: 100px;
-      @media screen and (min-width: 360px) and (max-width: 457px) { // undergraduate moves down so 4 lines
+      @media screen and (max-width: 516px) { // undergraduate moves down so 4 lines
         padding: 130px 20px 0px;
         margin-bottom: 30px;
       }
-      @media screen and (min-width: 458px) and (max-width: 1023px) {
+      @media screen and (min-width: 517px) and (max-width: 1023px) {
         padding: 160px 20px 0px;
         margin-bottom: 30px;
       }
@@ -312,12 +294,12 @@
       }
     }
     .larger-text {
-      font-size: 36px;
+      //font-size: 36px;
       color: #fff;
-      font-weight: 500;
+      //font-weight: 500;
     }
     .yFactsText {
-    font-style: normal;
+      font-style: normal;
     }
   }
   // change to trigger on scroll to bar
@@ -419,7 +401,7 @@
   }
   // student group layout
   $totalStudentsHeight: 170px;
-  $totalStudentsWidth: 23%;
+  $totalStudentsWidth: 22.8%; // was 23% but ipad has issue with math 77% + 23%
   $totalStudentsHeightMobile: 100px;
   .students-group.row {
     display: flex;
@@ -445,7 +427,7 @@
 
   .field--name-field-undergrads,
   .field--name-field-grads {
-    width: 100% - $totalStudentsWidth;
+    width: 77%;
     @media screen and (max-width: 767px) {
       width: 100%;
       padding: 0px 35px!important;
@@ -494,7 +476,7 @@
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       padding: 25px 25px 25px 20px;
       width: 40%;
-      margin-left: 5%;
+      margin-left: 4.8%; // was 5% for some reason in actual ipad it doesn't fit 55% + 40+ 5
     }
     .field__item {
       font-size: 55px;
@@ -626,7 +608,7 @@
 
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       background: $lightgray;
-      padding: 80px 0px 30px; // left & right need to be 0 for full width children inside this
+      padding: 80px 0px 0px; // left & right need to be 0 for full width children inside this
     }
 
     @media screen and (min-width: 1024px) {
@@ -716,6 +698,10 @@
   .countries-field-wrapper {
     height: 40px;
     width: 70px;
+    @media screen and (max-width: 767px) {
+      width: 52px;
+      margin-right: .5em;
+    }
   }
   .field--name-field-states, .field--name-field-countries,
   .states-label, .countries-label {
@@ -835,6 +821,9 @@
       //display: block;
       display: none;
     }
+    .h12.field.field--name-field-percent-arizona:after {
+      content: none;
+    }
 
     & > .state-2 {
       animation-delay: 300ms
@@ -946,6 +935,10 @@
     .navy-circle {
       @include navy-circle(156px);
       padding: 15px;
+      @media screen and (max-width: 767px) {
+        width: 145px;
+        height: 145px;
+      }
       @media screen and (max-width: 1023px) {
         margin-left: 0px;
         margin-top: 0px;
@@ -1068,15 +1061,24 @@
       display: block;
     }
     width: 290px;
-    max-width: 87%; // this will leave 20px of space on each side at 320px
+    //max-width: 87%; // this will leave 20px of space on each side at 320px
+    max-width: 100%;
     height: 218px;
+
+    @media screen and (max-width: 485px) {
+      .h9, .h12 {
+        font-size: 14px;
+      }
+    }
+
   }
   //.certifications-text-wrapper {
   //  max-width: 87%; // this will leave 20px of space on each side at 320px
   //}
   .award-icon-wrapper {
     width: 290px;
-    max-width: 87%; // this will leave 20px of space on each side at 320px
+    //max-width: 87%; // this will leave 20px of space on each side at 320px
+    max-width: 100%;
   }
   .award-icon {
     width: 13%; // 7 in a row
@@ -1144,9 +1146,9 @@
     margin-bottom: 60px;
     @media screen and (min-width: 768px) and (max-width: 1023px) {
         width: 250px;
-        margin-top: -140px;
+        margin-top: -110px;
         margin-bottom: 40px;
-        margin-left: 62%;
+        margin-left: 58%; // was 62%
     }
     @media screen and (max-width: 767px) {
       margin: 0px auto 20px auto;
@@ -1167,4 +1169,87 @@
       margin-left: -15px;
     }
   }
+}
+
+
+
+
+/* ----- ipad safari fixes ----- */
+
+// safari doesn't support the scroll events like other browsers, need animations to not happen and things to just show on the page
+//html.safari .chrome.type-about .main, // this is actually safari desktop or ipad
+html.not-chrome .safari.type-about .main,
+html.not-chrome.safari .type-about .main {
+  .students-group .tooltip {
+    @media screen and (min-width: 1024px) {
+      margin-right: 20px;
+    }
+    @media screen and (min-width: 1224px) {
+      margin-right: 10px;
+    }
+  }
+
+  .field--name-field-states,
+  .states-label {
+    display: block;
+    animation: 1s fadein;
+  }
+
+  .and-icon {
+    display: inline;
+    animation: 1s fadein;
+  }
+
+  .field--name-field-countries {
+    display: block;
+    animation: 1s fadein;
+  }
+  .countries-label,
+    // state percentages
+  .state-percents-group .state-1,
+  .state-percents-group .state-2,
+  .state-percents-group .state-3,
+  .state-percents-group .state-4,
+  .state-percents-group .state-5 {
+    display: inline;
+    animation: 1s fadein;
+  }
+
+  .vertical-dots.before-languages .gray-dot.dot-1,
+  .vertical-dots.before-languages .gray-dot.dot-2,
+  .vertical-dots.before-languages .gray-dot.dot-3 {
+    display: block;
+    animation: 1s fadein;
+  }
+  .languages-taught-circle,
+  .languages-spoken-circle {
+    visibility: visible;
+    animation: 1s fadeinfast;
+  }
+  // if($('.demographics4').hasClass('in-view')) {  // scroll down abit and get the action
+  .vertical-dots.after-spoken .gray-dot.dot-1,
+  .vertical-dots.after-spoken .gray-dot.dot-2,
+  .vertical-dots.after-spoken .gray-dot.dot-3 {
+    display: block;
+    animation: 1s fadein;
+  }
+
+  // show certifications first
+  .certifications-group-wrapper {
+    display: block;
+    animation-name: bounceInRight;
+  }
+
+
+  // then students speaking %
+
+  .field--name-field-students-speaking .students-speaking-text-wrapper {
+    visibility: visible;
+    animation : 1s fadeinfast;
+  }
+  .field--name-field-students-speaking .barWrapper.students-speaking {
+    display: flex;
+    animation: 1s fadeinfast;
+  }
+
 }

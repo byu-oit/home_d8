@@ -1,5 +1,10 @@
 @import "mixins";
-
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        padding: 0;
+        width: 100%;
+    }
+}
 @media screen and (max-width: 767px) {
     .main {
         padding-left: 0;
@@ -9,9 +14,25 @@
         padding: 0;
     }
 }
-
+.front-page-emergency-notice {
+    margin-top: 65px;
+    margin-bottom: 30px;
+    background-color: #a90217;
+    font-weight: bold;
+    text-align: center;
+    color: #fff!important;
+    p, h2, h3, h4, h5, h6 {
+        color: #fff;
+    }
+    p {
+        margin: 10px 0;
+    }
+    @media screen and (max-width: 1023px) {
+        margin-top: 10px;
+    }
+}
 .come-in {
-  transform: translateY(-50px);
+  transform: translateY(-25px);
   animation: come-in 0.5s ease forwards;
 }
 /*
@@ -40,55 +61,89 @@
         line-height: normal;
         color: $navy;
         font-family: $gotham;
+        font-weight: 400;
+    }
+    a:focus p,
+    a:hover p {
+        color: $royal;
     }
 }
 .hero-title {
     font-family: $vitesse;
 }
 
-.field--name-field-hero-video {
-    position: relative;
-    //top: -55px;
-    //@media screen and (max-width: 1223px) {
-    //    top: -81px;
-    //}
-    //@media screen and (max-width: 1023px) {
-    //    top: -32px;
-    //}
-    //@media screen and (max-width: 767px) {
-    //    top: -18px;
-    //}
-}
-
 .field--name-field-somethings {
     margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    @media screen and (max-width: 767px) {
-        justify-content: space-around;
+    @supports (not (display: grid)) and (not (display: -ms-grid)) {
+        display: flex;
+        justify-content: center;
     }
-    flex-wrap: wrap;
+    display: grid;
+    display: -ms-grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+
+    @include tabletAreaWithMaxWidth();
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        //max-width: 750px; // mixin tablet max width is set to 700px
+    }
+    @media screen and (max-width: 767px) {
+        @supports (not (display: grid)) and (not (display: -ms-grid)) {
+            justify-content: space-around;
+        }
+        margin-top: 20px;
+        grid-template-columns: 1fr 1fr;
+        -ms-grid-columns: 1fr 1fr;
+    }
     .field--name-field-something-to-type::before {
         content: "Something to ";
     }
     > .field__item {
         cursor: pointer;
         border: 1px solid $gray;
-        width: 260px;
-        @media screen and (min-width: 768px) and (max-width: 991px) {
-            width: 154px;
+        margin: 0;
+        @supports (not (display: grid)) and (not (display: -ms-grid)) {
+            width: 25%;
         }
-        @media screen and (min-width: 992px) and (max-width: 1023px) {
-            width: 211px;
+        //goofy explicit margins here since IE/Edge don't support grid-column-gap
+        @media screen and (min-width: 768px) {
+            &:nth-child(1) {
+                margin-right: 9px;
+                -ms-grid-column: 1;
+            }
+            &:nth-child(2) {
+                margin-left: 3px;
+                margin-right: 6px;
+                -ms-grid-column: 2;
+            }
+            &:nth-child(3) {
+                margin-left: 6px;
+                margin-right: 3px;
+                -ms-grid-column: 3;
+            }
+            &:nth-child(4) {
+                margin-left: 9px;
+                -ms-grid-column: 4;
+            }
         }
-        @media screen and (min-width: 1024px) and (max-width: 1223px) {
-            width: 190px;
-        }
-        @media screen and (min-width: 1224px) and (max-width: 1424px) {
-            width: 211px;
-        }
-        @media screen and (max-width: 768px) {
-            margin-bottom: 30px;
+        @media screen and (max-width: 767px) {
+            margin: 0 5px 15px 5px;
+            &:nth-child(1) {
+                -ms-grid-row: 1;
+                -ms-grid-column: 1;
+            }
+            &:nth-child(2) {
+                -ms-grid-row: 1;
+                -ms-grid-column: 2;
+            }
+            &:nth-child(3) {
+                -ms-grid-row: 2;
+                -ms-grid-column: 1;
+            }
+            &:nth-child(4) {
+                -ms-grid-row: 2;
+                -ms-grid-column: 2;
+            }
         }
         .field--name-field-something-to-type {
             text-align: center;
@@ -111,7 +166,6 @@
         }
         span.something-to-type {
             font-weight: bold;
-            font-style: italic;
         }
 
         .field--name-field-image {
@@ -125,22 +179,36 @@
         .field--name-field-link {
             padding: 0px 15px;
             margin-top: 10px;
-            a:hover {
-                text-decoration: none;
-            }
         }
         a {
             font-weight: normal;
         }
+        a:focus,
+        a:hover {
+            text-decoration: none;
+        }
     }
+    > .field__item:focus,
     > .field__item:hover {
-        box-shadow: 3px 3px 1px $lightgray;
+        @media screen and (min-width: 768px) {
+            box-shadow: 3px 3px 1px $lightgray;
+        }
         a {
-            font-weight: 500;
+            font-weight: normal;
+            color: $royal;
+        }
+    }
+    > .field__item {
+        a:focus,
+        a:hover {
+            font-weight: normal;
+            color: $royal;
         }
     }
 }
-
+#block-calendarwidgetfeaturedevents {
+    @include tabletAreaWithMaxWidth();
+}
 section.page-header {
     display: none;
 }

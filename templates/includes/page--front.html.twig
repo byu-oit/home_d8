@@ -1,29 +1,13 @@
-
+{% include directory ~ '/templates/includes/header--front.html.twig' %}
 <div id="wrapper">
-    {% include directory ~ '/templates/includes/header.html.twig' %}
+
     <div role="main" class="main {%  if custom_width %} custom-width {% endif %}" style="width: {{ custom_width }}px">
+
         {% if page.slide_show %}
             {{ page.slide_show }}
         {% endif %}
-        {% if page_title %}
-            <!--breadcrumbs-->
-            {% if page.breadcrumb %}
-            <section class="page-header">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            {{ page.breadcrumb }}
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1>{{ page_title }}</h1>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        {% endif %}
-        {% endif %}
+
+        {#{% include directory ~ '/templates/includes/custom-breadcrumb.html.twig' %}#}
 
         {% if messages %}
             <section id="messages" class="messages">
@@ -32,64 +16,76 @@
                 </div>
             </section>
         {% endif %}
-        {% if page.left_sidebar and page.right_sidebar is empty %}
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <aside class="sidebar">
-                        {{ page.left_sidebar }}
-                    </aside>
-                </div>
-                <div class="col-md-9">
-                    {{ page.content }}
-                </div>
+
+        {% if arg == 'page-coming-soon' %}
+            <div class="page-coming-soon">
+                {{ page.content }}
+                {% if page.after_content %}
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3">
+                                {{ page.after_content }}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
             </div>
-
-        </div>
-
-        {% elseif page.right_sidebar and page.left_sidebar is empty %}
-        <div class="container">
-            <div class="row">
-                <div class="col-md-9">
-                    {{ page.content }}
-                </div>
-                <div class="col-md-3">
-                    <aside class="sidebar">
-                        {{ page.right_sidebar }}
-                    </aside>
-                </div>
-            </div>
-        </div>
-
-
-        {% elseif page.right_sidebar and page.left_sidebar %}
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <aside class="sidebar">
-                        {{ page.left_sidebar }}
-                    </aside>
-                </div>
-                <div class="col-md-6">
-                    {{ page.content }}
-                </div>
-                <div class="col-md-3">
-                    <aside class="sidebar">
-                        {{ page.right_sidebar }}
-                    </aside>
-                </div>
-            </div>
-        </div>
-
-
         {% else %}
-        <!--content-->
-        <div>
-            {{ page.content }}
-        </div>
-        {% endif %}
-        {% if page.after_content %}
-            {{ page.after_content }}
+            {% if page.left_sidebar and page.right_sidebar is empty %}
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <aside class="sidebar">
+                                {{ page.left_sidebar }}
+                            </aside>
+                        </div>
+                        <div class="col-md-9">
+                            {{ page.content }}
+                        </div>
+                    </div>
+                </div>
+            {% elseif page.right_sidebar and page.left_sidebar is empty %}
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                            {{ page.content }}
+                        </div>
+                        <div class="col-md-3">
+                            <aside class="sidebar">
+                                {{ page.right_sidebar }}
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            {% elseif page.right_sidebar and page.left_sidebar %}
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <aside class="sidebar">
+                                {{ page.left_sidebar }}
+                            </aside>
+                        </div>
+                        <div class="col-md-6">
+                            {{ page.content }}
+                        </div>
+                        <div class="col-md-3">
+                            <aside class="sidebar">
+                                {{ page.right_sidebar }}
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                {% if page.before_content %}
+                    {{ page.before_content }}
+                {% endif %}
+                <div class="container">
+                    {{ page.content }}
+                </div>
+            {% endif %}
+            {% if page.after_content %}
+                {{ page.after_content }}
+            {% endif %}
         {% endif %}
     </div>
     {% include directory ~ '/templates/includes/footer.html.twig' %}
