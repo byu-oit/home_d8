@@ -14,7 +14,6 @@ global-styling:
     js/purechat.js: {}
     js/crazyegg.js: {}
     js/google_autocomplete.js: {}
-    js/survey.js: {}
   dependencies:
     - core/drupal.autocomplete
 frontpage:
@@ -80,9 +79,9 @@ homepage-components:
   version: 1.x
   css:
     base:
-      byu-homepage-components/dist/byu-theme-components.css: {}
+      byu-homepage-components/dist/byu-homepage-components.css: {}
   js:
-    byu-homepage-components/dist/byu-theme-components.js: {}
+    byu-homepage-components/dist/byu-homepage-components.js: {}
 #homepage-components-js:
 #  version: 1.x.x
 #  js:
@@ -126,3 +125,10 @@ font-awesome:
     theme:
       https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css: { type: external, minified: true }
 
+survey:
+  version: 1.x
+  css:
+    base:
+      css/survey.css: {}
+  js:
+    js/survey.js: {}
