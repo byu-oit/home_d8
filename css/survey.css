@@ -71,7 +71,7 @@
     background-color: #002e5d;
     color: white;
 }
-
+.byu-modal-header h2,.byu-modal-header h3{color:white;}
 .byu-modal-body {
     padding: 6% 10%;
     padding: 30px 10%;
