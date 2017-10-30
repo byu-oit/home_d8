@@ -80,9 +80,9 @@ homepage-components:
   version: 1.x
   css:
     base:
-      byu-homepage-components/dist/byu-theme-components.css: {}
+      byu-homepage-components/dist/byu-homepage-components.css: {}
   js:
-    byu-homepage-components/dist/byu-theme-components.js: {}
+    byu-homepage-components/dist/byu-homepage-components.js: {}
 #homepage-components-js:
 #  version: 1.x.x
 #  js:
