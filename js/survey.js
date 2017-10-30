@@ -19,7 +19,7 @@ jQuery(document).ready(function() {
     if (typeof(Storage) == 'undefined') {
         return;
     }
-  randomTrigger(5);
+  randomTrigger(3);
     if(trigger) {
         if (localStorage.getItem('popState') != 'shown') {
             jQuery("#byu-modal").delay(1000).fadeIn();
