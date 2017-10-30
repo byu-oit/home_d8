@@ -3,11 +3,11 @@
  */
 
 jQuery(document).ready(function() {
-
   var trigger=false;
   function randomTrigger(top) {
 // Random number 0 - top inclusive
     var randNum = Math.floor(Math.random() * top);
+    console.log(randNum);
     switch (randNum) {
       case 0:
         trigger=true;
