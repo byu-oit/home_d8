@@ -22,17 +22,17 @@ jQuery(document).ready(function() {
   randomTrigger(5);
     if(trigger) {
         if (localStorage.getItem('popState') != 'shown') {
-            $("#byu-modal").delay(1000).fadeIn();
-            $("#byu-modal").delay(1000).css('display', 'block');
+            jQuery("#byu-modal").delay(1000).fadeIn();
+            jQuery("#byu-modal").delay(1000).css('display', 'block');
             localStorage.setItem('popState', 'shown')
         }
 
-        $('.byu-close').click(function (e) // You are clicking the close button
+        jQuery('.byu-close').click(function (e) // You are clicking the close button
         {
-            $('#byu-modal').fadeOut(); // Now the pop up is hiden.
+            jQuery('#byu-modal').fadeOut(); // Now the pop up is hiden.
         });
-        $('#byu-modal').click(function (e) {
-            $('#byu-modal').fadeOut();
+        jQuery('#byu-modal').click(function (e) {
+            jQuery('#byu-modal').fadeOut();
         }).children().click(function (e) {
             e.stopPropagation();
         });
