@@ -1,0 +1,201 @@
+/* from cdn file https://cdn.byu.edu/byu-theme-style-helpers/latest/popups-modals.css  */
+.byu-modal {
+	display: none;
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.byu-modal-content {
+    font-family: "Gotham A","Gotham B", helvetica neue, helvetica, sans-serif;
+    position: relative;
+    background-color: #fff;
+    margin: auto;
+    padding: 0;
+    border: none;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.3s;
+    animation-name: animatetop;
+    animation-duration: 0.3s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+@media screen and (max-width: 767px) {
+    .byu-modal-content {
+        width: 90%;
+    }
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.byu-modal-header .byu-close {
+    color: white;
+    float: right;
+    padding: 10px;
+    font-size: 2em;
+    border-radius: 100%;
+    /*     border: 2px solid #fff; */
+}
+
+.byu-modal-header .byu-close:hover,
+.byu-modal-header .byu-close:focus {
+    color: #c5c5c5;
+    text-decoration: none;
+    cursor: pointer;
+    /*     border: 2px solid #c5c5c5; */
+}
+
+.byu-modal-header {
+    border-radius: 10px 10px 0px 0px;
+    padding: .2% 0 .2% 5%;
+    background-color: #002e5d;
+    color: white;
+}
+.byu-modal-header h2,.byu-modal-header h3{
+	color: white;
+	margin: 15px;
+}
+.byu-modal-body {
+    padding: 6% 10%;
+    padding: 30px 10%;
+}
+
+.byu-modal-footer {
+    border-radius: 0px 0px 10px 10px;
+    padding: 0.2% 5%;
+    background-color: #002e5d;
+    color: white;
+}
+.byu-modal-button {
+    margin-top: 12px;
+    float: right;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    color: #002E5D;
+    position: relative;
+    background-color: #fff;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+}
+.byu-modal-button:hover{
+    background:#002E5D;
+    box-shadow:0px 2px 2px 2px #97B1BF;
+    color:#fff;
+}
+.byu-modal-button:focus {
+    color: #c5c5c5;
+    text-decoration: none;
+    cursor: pointer;
+    /*     border: 2px solid #c5c5c5; */
+}
+.byu-modal-button:after {
+    content: "";
+    background: #84DCB4;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+.byu-modal-button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+.byu-button {
+    display: inline-block;
+    padding: 9px 12px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #002e5d;
+    font-family: Vitesse A, Vitesse B, Georgia, serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.byu-button:hover {
+    background: #c5c5c5;
+}
+
+.byu-button:active {
+    background-color: #2ba6cb;
+    -webkit-box-shadow: -3px 0 5px 0 rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: -3px 0 5px 0 rgba(0, 0, 0, 0.35);
+    box-shadow: -3px 0 5px 0 rgba(0, 0, 0, 0.35);
+}
+.grey{
+    background-color: #767676;
+}
+.byu-modal-body a{
+    color: #003DA5;
+    text-decoration: none;
+}
+.byu-modal-body a:hover, .byu-modal-body a:focus{
+    color: #003DA5;
+    text-decoration: underline;
+}
+
+/* end of that modified file */
+.inner-navy-button {
+    background: #002e5d!important;
+    color: #fff!important;
+    display: block;
+    padding: 6px 6px;
+    display: flex;
+    width: 130px;
+    border-radius: 3px;
+    justify-content: center;
+}
+.byu-modal-body .inner-navy-button:hover {
+    background: #003DA5 !important;
+    text-decoration: none;
+}
+.inner-navy-button p {
+    margin: 0;
+}
+.byu-modal-body .larger-text {
+    font-size: 16px;
+}
+@media screen and (max-width: 767px) {
+
+    .byu-modal-content h2 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .byu-modal-content h3 {
+        font-size: 16px;
+    }
+    .byu-modal-body .larger-text {
+        font-size: 14px;
+    }
+}
