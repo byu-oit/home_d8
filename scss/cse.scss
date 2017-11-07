@@ -62,4 +62,8 @@ byu-search input[type=search] { // id changes
 .gsc-webResult.gsc-result {border:none}
 //capitalize search results text
 form#search-form+h2{text-transform:uppercase;}
-body.search-results h2{margin:1.5vh 0vh 1vh 0vh;}
+//fixing search header distance from top
+body.search-results h2{margin:5vh 0vh 1vh 0vh;}
+@media screen and (max-width: 1023px) {
+  body.search-results h2{margin:1.5vh 0vh 1vh 0vh;}
+}
