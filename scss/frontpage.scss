@@ -84,6 +84,9 @@
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
 
     @include tabletAreaWithMaxWidth();
+    @media screen and (min-width: 1200px) {
+    margin-top: 90px;
+    }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
         //max-width: 750px; // mixin tablet max width is set to 700px
     }
