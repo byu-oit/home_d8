@@ -28,7 +28,7 @@ a:hover {
 
 /* --- overriding byu_d8 for homepage components:  -- */
 
-[slot="actions"] div {
+[slot="actions"] div, [slot="actions"] p {
   margin: 0;
 }
 #header {
