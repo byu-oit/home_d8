@@ -356,6 +356,7 @@ function home_d8_theme_suggestions_page_alter(array &$suggestions, array $variab
 //}
 //
 function home_d8_preprocess_html(&$variables) {
+    $variables['serverip']=gethostbyname(gethostname());
     global $base_url;
     $theme_root = $base_url.'/'.drupal_get_path('theme','home_d8');
     $variables['theme_root'] = $theme_root;
