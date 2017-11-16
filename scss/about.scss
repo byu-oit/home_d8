@@ -677,8 +677,11 @@
   }
   .states-cont {
     width: 188px;
+    @media screen and (min-width: 1023px) {
+      width: 145px; // smaller for new font
+    }
     @media screen and (min-width: 1024px) {
-      width: 200px;
+      width: 170px; // smaller for new font
     }
 
     height: 40px;
