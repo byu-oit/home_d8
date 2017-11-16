@@ -72,6 +72,12 @@ byu-footer-column :nth-child(2) {
 .all-caps {
   text-transform: uppercase;
 }
+.extra-space {
+  line-height: 240%;
+  @media screen and (max-width: 1023px) {
+    line-height: 250%;
+  }
+}
 .navy {
   color: $navy;
 }
