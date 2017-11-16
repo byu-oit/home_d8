@@ -43,8 +43,8 @@ $vitesse: "Vitesse A", "Vitesse B", serif;
 
 /* ------------- Headings Etc -------------------- */
 
-h1, h2, h3, h4, .h1, .h2, .h3, .h4, .h8, .h9, .h10, .h11, .h12,
-h1 a, h2 a, h3 a, h4 a, .h1 a, .h2 a, .h3 a, .h4 a, .h8 a, .h9 a, .h10 a, .h11 a, .h12 a {
+h1, h2, h3, h4, .h1, .v2, .h3, .h4, .h8, .h9, .h10, .h11, .h12,
+h1 a, h2 a, h3 a, h4 a, .h1 a, .v2 a, .h3 a, .h4 a, .h8 a, .h9 a, .h10 a, .h11 a, .h12 a {
   color: $navy;
 }
 h5 a, .h5 a,
@@ -55,7 +55,7 @@ h6 a, .h6 a, .h7 a,.h8.white a, .h9.white a, .h11.white a, .h12.white a, .banner
 h6, .h6, .h7,.h8.white, .h9.white, .h10.white, .h10.white a, .h11.white, .h12.white, .banner-text, .h1-navy .banner-text  {
   color: #fff;
 }
-h1, h2, .h1, .h2 {
+h1, h2, .h1, .v2 {
   font-family: $vitesse;
 }
 h3, h5, h6, .h3, .h5, .h6, .h7, .h8, .h9, .h10, .h11, .h12, .banner-text, .h1-navy .banner-text {
@@ -67,7 +67,7 @@ h1, .h1, .v1 {
   line-height: 34px;
   text-align: center;
 }
-h2, .h2, .v2, .larger-text {
+h2, .v2, .v2, .larger-text {
   font-size: 25px;
   line-height: 34px;
   text-align: center;
@@ -187,7 +187,7 @@ $h13-desktopw-font: 200px;
 
 }
 @media screen and (min-width: 1024px) {
-  h2, .h2, .larger-text {
+  h2, .v2, .larger-text {
     font-size: 30px;
   }
   h3, .h3 {
@@ -208,7 +208,7 @@ $h13-desktopw-font: 200px;
   h1, .h1 {
     font-size: 40px;
   }
-  h2, .h2, .larger-text {
+  h2, .v2, .larger-text {
     font-size: 35px;
   }
   h3, .h3 {
