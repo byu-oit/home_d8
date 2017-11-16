@@ -57,13 +57,13 @@ byu-footer-column :nth-child(2) {
   font-family: $ringside !important;
 }
 .normal-weight {
-  font-weight: normal;
+  font-weight: normal!important;
 }
 .bold {
-  font-weight: bold;
+  font-weight: bold!important;
 }
 .semibold {
-  font-weight: 500;
+  font-weight: 500!important;
 }
 .normal-caps {
   text-transform: capitalize;
