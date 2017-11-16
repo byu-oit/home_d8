@@ -13,7 +13,7 @@
       margin-top: 25px;
       padding: 0px 25px;
 
-      .h9 {
+      .v3 {
         text-align: left;
         line-height: 24px;
         //font-weight: normal;
@@ -572,7 +572,7 @@
       }
 
     }
-    .progressText2.h9 {
+    .progressText2.v3 {
       padding-left: 3px;
       @media screen and (max-width: 360px) {
         font-size: 14px;
@@ -1066,7 +1066,7 @@
     height: 218px;
 
     @media screen and (max-width: 485px) {
-      .h9, .h12 {
+      .v3, .h12 {
         font-size: 14px;
       }
     }
@@ -1096,7 +1096,7 @@
       @include studentSpeakingWidth();
       line-height: 18px; // necessary to override Aleni's default big spacing
       padding-bottom: 10px;
-      .h9 {
+      .v3 {
         line-height: 22px;
       }
       @media screen and (max-width: 767px) {
