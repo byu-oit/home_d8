@@ -13,7 +13,7 @@ article.node--type-academic {
 
 
 .circles-h10 {
-  font-family: $gotham;
+  font-family: $ringside;
   font-size: 60px;
   line-height: 82px;
   letter-spacing: -2.5px;
@@ -337,7 +337,7 @@ div#links-and-calendar {
   // size/alignment of #2, #5, #30 on mobile devices
   @media screen and (max-width: 767px) {
     .h10 {
-      font-size: 55px;
+      font-size: 55px;  // can we change this to the 60px style set? *katria
     }
     .field--name-field-academic-highlight-image {
       margin-bottom: 0;

@@ -50,6 +50,12 @@ byu-footer-column :nth-child(2) {
 }
 
 /* ----- helpful classes ----------- */
+.vitesse {
+  font-family: $vitesse !important;
+}
+.ringside {
+  font-family: $ringside !important;
+}
 .normal-weight {
   font-weight: normal;
 }
@@ -59,8 +65,23 @@ byu-footer-column :nth-child(2) {
 .semibold {
   font-weight: 500;
 }
+.normal-caps {
+  text-transform: capitalize;
+}
 .all-caps {
   text-transform: uppercase;
+}
+.navy {
+  color: $navy;
+}
+.white {
+  color: #fff;
+}
+.royal {
+  color: $royal;
+}
+.medgray {
+  color: $medgray; // 767676
 }
 .left-text {
   text-align: left;

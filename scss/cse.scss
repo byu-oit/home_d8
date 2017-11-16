@@ -22,19 +22,19 @@ byu-search input[type=search] { // id changes
   text-decoration: none!important
 ;
   font-size: 20px!important;
-  font-family: $gotham;
+  font-family: $ringside;
 }
 
 // paragraph
 .gs-result .gs-snippet {
   color: $medgray;
-  font-family: $gotham;
+  font-family: $ringside;
 }
 
 // bottom url link
 .gs-result a.gs-visibleUrl, .gs-result .gs-visibleUrl {
   color: $royal!important;
-  font-family: $gotham;
+  font-family: $ringside;
 }
 
 
@@ -49,7 +49,7 @@ byu-search input[type=search] { // id changes
   color: $navy!important;
   text-decoration: none!important;
   font-size: 16px;
-  font-family: $gotham;
+  font-family: $ringside;
 }
 // hover pages & current page
 .gsc-results .gsc-cursor-box .gsc-cursor-page:hover,
