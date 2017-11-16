@@ -53,7 +53,7 @@ h5, .h5, .v3.gray, .v3.gray a, .large-text.gray, .large-text.gray a {
 }
 //h6 a, .h6 a, .h7 a,.h8.white a, .v3.white a, .large-text.white a, .v5.white a, .banner-text a,
 //h6, .h6, .h7,.h8.white, .v3.white, .h10.white, .h10.white a, .large-text.white, .v5.white, .banner-text, .h1-navy .banner-text,
-.white, .banner-text {
+.white {
   color: #fff;
 }
 h1, h2, .h1, .v2 {
@@ -166,7 +166,7 @@ $h13-desktop-font:135px;
 $h13-desktopw-font: 200px;
 .banner-text {
   font-size: $h13-mobile-font;
-  /*line-height:*/
+  color: #fff!important;
 }
 .view-content-page-header .views-field-title {
   margin-top: ($h13-mobile-font *.73*-1);
