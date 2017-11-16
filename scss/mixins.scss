@@ -81,6 +81,11 @@ h2, .v2, .v2, .larger-text {
 //    font-weight: bold;
 //  }
 //}
+.h3.normal-weight, .v3.normal-weight {
+  a:hover, a:focus {
+    font-weight: 500;
+  }
+}
 h4 {
   font-size: 18px;
   line-height: 20px;
