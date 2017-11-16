@@ -124,7 +124,7 @@ h6 {  // in mockups H6 was shown next to 85px size, 25px size, and 12px size..
 .v3 { // merging with h3 but diff font weight.. check on line height..
   font-size: 16px;
   font-weight: 500;
-  line-height: 40px;
+  line-height: 26px;
   letter-spacing: .4px;
   a:hover, a:focus  {
     color: $royal;
@@ -196,8 +196,8 @@ $h13-desktopw-font: 200px;
   h2, .v2, .larger-text { // this larger text refers to on the about page only
     font-size: 30px;
   }
-  h3, .h3 {
-    font-size: 17px;
+  h3, .v3 {
+    font-size: 16px;
     line-height: 23px; // check if this is okay everywhere for .v3
   }
   .banner-text {
@@ -217,10 +217,10 @@ $h13-desktopw-font: 200px;
   h2, .v2, .larger-text {
     font-size: 35px;
   }
-  h3, .h3 {
-    font-size: 20px;
-    line-height: 26px;
-  }
+  //h3, .h3 {
+  //  font-size: 20px;
+  //  line-height: 26px;
+  //}
   /* we may not do this this way */
   .h8 {
     font-size: 16px;
@@ -229,7 +229,7 @@ $h13-desktopw-font: 200px;
   .v3 {
     font-size: 20px;
     letter-spacing: .5px;
-    line-height: 48px;
+    //line-height: 48px;
   }
   .h10 {
     font-size: 60px;
