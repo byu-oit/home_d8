@@ -43,22 +43,22 @@ $vitesse: "Vitesse A", "Vitesse B", serif;
 
 /* ------------- Headings Etc -------------------- */
 
-h1, h2, h3, h4, .h1, .v2, .h3, .h4, .h8, .v3, .h10, .h11, .h12,
-h1 a, h2 a, h3 a, h4 a, .h1 a, .v2 a, .h3 a, .h4 a, .h8 a, .v3 a, .h10 a, .h11 a, .h12 a {
+h1, h2, h3, h4, .h1, .v2, .h3, .h4, .h8, .v3, .h10, .large-text, .h12,
+h1 a, h2 a, h3 a, h4 a, .h1 a, .v2 a, .h3 a, .h4 a, .h8 a, .v3 a, .h10 a, .large-text a, .h12 a {
   color: $navy;
 }
 h5 a, .h5 a,
-h5, .h5, .v3.gray, .v3.gray a, .h11.gray, .h11.gray a {
+h5, .h5, .v3.gray, .v3.gray a, .large-text.gray, .large-text.gray a {
   color: $medgray;
 }
-h6 a, .h6 a, .h7 a,.h8.white a, .v3.white a, .h11.white a, .h12.white a, .banner-text a,
-h6, .h6, .h7,.h8.white, .v3.white, .h10.white, .h10.white a, .h11.white, .h12.white, .banner-text, .h1-navy .banner-text  {
+h6 a, .h6 a, .h7 a,.h8.white a, .v3.white a, .large-text.white a, .h12.white a, .banner-text a,
+h6, .h6, .h7,.h8.white, .v3.white, .h10.white, .h10.white a, .large-text.white, .h12.white, .banner-text, .h1-navy .banner-text  {
   color: #fff;
 }
 h1, h2, .h1, .v2 {
   font-family: $vitesse;
 }
-h3, h5, h6, .h3, .h5, .h6, .h7, .h8, .v3, .h10, .h11, .h12, .banner-text, .h1-navy .banner-text {
+h3, h5, h6, .h3, .h5, .h6, .h7, .h8, .v3, .h10, .large-text, .h12, .banner-text, .h1-navy .banner-text {
   font-family: $ringside;
 }
 
@@ -135,7 +135,7 @@ h6 {  // in mockups H6 was shown next to 85px size, 25px size, and 12px size..
 
 // one case i couldn't add the class, so need a mixin
 // no mobile adjustment
-@mixin h11() {
+@mixin large-text() {
   font-family: $ringside;
   font-size: 35px;
   font-weight: bold;
@@ -145,8 +145,8 @@ h6 {  // in mockups H6 was shown next to 85px size, 25px size, and 12px size..
   }
 
 }
-.h11 {
-  @include h11();
+.large-text {
+  @include large-text();
 }
 .h12 {
   font-size: 16px;

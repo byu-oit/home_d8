@@ -325,7 +325,7 @@
     .tooltip > .tooltip-inner {
       background: none;
       padding: 15px 15px;
-      @include h11();
+      @include large-text();
       padding-right: 35px !important; // strangely needed to center number now.. wasn't needed before
       @media screen and (max-width: 767px) {
         //top: -39px;

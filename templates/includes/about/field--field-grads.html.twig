@@ -64,7 +64,7 @@
     {% for item in items %}
 
       <div class="barWrapper grad-wrapper field--name-field-grads">
-        <span class="progressText h9 gray all-caps"><B>GRADUATE</B> Students</span>
+        <span class="progressText v3 gray all-caps"><B>GRADUATE</B> Students</span>
         <div class="progress ">
           {# the students-now value NEEDS to not have a comma, the popover title NEEDS to have a comma.. i tried most math and raw and render filters and tried adding and removing it#}
           <div class="progress-bar bar2 color-2" role="progressbar" students-now="{{ item.content }}" aria-valuemin="0" students-max="33000" style="">
@@ -81,7 +81,7 @@
   {% endif %}
 {% else %}
   <div{{ attributes.addClass(classes)}}>
-    <div{{ title_attributes.addClass(title_classes, 'h9', 'gray', 'all-caps', 'bold') }}>{{ label }}</div>
+    <div{{ title_attributes.addClass(title_classes, 'v3', 'gray', 'all-caps', 'bold') }}>{{ label }}</div>
     {% if multiple %}
       <div class="field__items">
     {% endif %}
