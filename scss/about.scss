@@ -799,7 +799,7 @@
     //background-position-x: 47px;
 
 
-    .field.h12 {
+    .field.v5 {
       text-transform: none;
       //display: inline;
       display: none;
@@ -807,7 +807,7 @@
           font-size: 14px;
       }
     }
-    .field.h12:after {
+    .field.v5:after {
       content: "\2022";
       color: $navy;
       font-size: 20px;
@@ -816,12 +816,12 @@
       top: 2px;
     }
     // arizona block
-    .h12.field.field--name-field-percent-arizona {
+    .v5.field.field--name-field-percent-arizona {
 
       //display: block;
       display: none;
     }
-    .h12.field.field--name-field-percent-arizona:after {
+    .v5.field.field--name-field-percent-arizona:after {
       content: none;
     }
 
@@ -1066,7 +1066,7 @@
     height: 218px;
 
     @media screen and (max-width: 485px) {
-      .v3, .h12 {
+      .v3, .v5 {
         font-size: 14px;
       }
     }
