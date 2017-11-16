@@ -51,14 +51,14 @@ h5 a, .h5 a,
 h5, .h5, .h9.gray, .h9.gray a, .h11.gray, .h11.gray a {
   color: $medgray;
 }
-h6 a, .h6 a, .h7 a,.h8.white a, .h9.white a, .h11.white a, .h12.white a, .h13 a,
-h6, .h6, .h7,.h8.white, .h9.white, .h10.white, .h10.white a, .h11.white, .h12.white, .h13, .h1-navy .h13  {
+h6 a, .h6 a, .h7 a,.h8.white a, .h9.white a, .h11.white a, .h12.white a, .banner-text a,
+h6, .h6, .h7,.h8.white, .h9.white, .h10.white, .h10.white a, .h11.white, .h12.white, .banner-text, .h1-navy .banner-text  {
   color: #fff;
 }
 h1, h2, .h1, .h2 {
   font-family: $vitesse;
 }
-h3, h5, h6, .h3, .h5, .h6, .h7, .h8, .h9, .h10, .h11, .h12, .h13, .h1-navy .h13 {
+h3, h5, h6, .h3, .h5, .h6, .h7, .h8, .h9, .h10, .h11, .h12, .banner-text, .h1-navy .banner-text {
   font-family: $ringside;
 }
 
@@ -163,7 +163,7 @@ $h13-tabletp-font:90px;
 $h13-tabletl-font: 120px;
 $h13-desktop-font:135px;
 $h13-desktopw-font: 200px;
-.h13 {
+.banner-text {
   font-size: $h13-mobile-font;
   /*line-height:*/
 }
@@ -177,7 +177,7 @@ $h13-desktopw-font: 200px;
 
 
 @media screen and (min-width: 768px) {
-  .h13 {
+  .banner-text {
     font-size: $h13-tabletp-font;
   }
   .view-content-page-header .views-field-title {
@@ -194,7 +194,7 @@ $h13-desktopw-font: 200px;
     font-size: 17px;
     line-height: 23px;
   }
-  .h13 {
+  .banner-text {
     font-size: $h13-tabletl-font;
   }
   .view-content-page-header .views-field-title {
@@ -231,7 +231,7 @@ $h13-desktopw-font: 200px;
     letter-spacing: -2.5px;
     font-weight: 500;
   }
-  .h13 {
+  .banner-text {
     font-size: $h13-desktop-font;
   }
   .view-content-page-header .views-field-title {
@@ -242,7 +242,7 @@ $h13-desktopw-font: 200px;
 }
 @media screen and (min-width: 1824px) {
 
-  .h13 {
+  .banner-text {
     font-size: $h13-desktopw-font;
   }
   .view-content-page-header .views-field-title {
