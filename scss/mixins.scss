@@ -42,23 +42,23 @@ $vitesse: "Vitesse A", "Vitesse B", serif;
 
 /* ------------- Headings Etc -------------------- */
 
-h1, h2, h3, h4, .h1, .v2, .h3, .h4, .h8, .v3, .h10, .large-text, .v4,
-h1 a, h2 a, h3 a, h4 a, .h1 a, .v2 a, .h3 a, .h4 a, .h8 a, .v3 a, .h10 a, .large-text a, .v4 a {
+h1, h2, h3, h4, .h1, .v2, .h3, .h4, .v4, .v3, .h10, .large-text, .v4,
+h1 a, h2 a, h3 a, h4 a, .h1 a, .v2 a, .h3 a, .h4 a, .v4 a, .v3 a, .h10 a, .large-text a, .v4 a {
   color: $navy;
 }
 h5 a, .h5 a,
 h5, .h5, .v3.gray, .v3.gray a, .large-text.gray, .large-text.gray a {
   color: $medgray;
 }
-//h6 a, .h6 a, .h7 a,.h8.white a, .v3.white a, .large-text.white a, .v4.white a, .banner-text a,
-//h6, .h6, .h7,.h8.white, .v3.white, .h10.white, .h10.white a, .large-text.white, .v4.white, .banner-text, .h1-navy .banner-text,
+//h6 a, .h6 a, .h7 a,.v4.white a, .v3.white a, .large-text.white a, .v4.white a, .banner-text a,
+//h6, .h6, .h7,.v4.white, .v3.white, .h10.white, .h10.white a, .large-text.white, .v4.white, .banner-text, .h1-navy .banner-text,
 .white {
   color: #fff;
 }
 h1, h2, .h1, .v2 {
   font-family: $vitesse;
 }
-h3, h5, h6, .h3, .h5, .h6, .h7, .h8, .v3, .h10, .large-text, .v4, .banner-text, .h1-navy .banner-text {
+h3, h5, h6, .h3, .h5, .h6, .h7, .v4, .v3, .h10, .large-text, .v4, .banner-text, .h1-navy .banner-text {
   font-family: $ringside;
 }
 
@@ -85,13 +85,13 @@ h2, .v2, .v2, .larger-text {
     font-weight: 500;
   }
 }
-h4 {
-  font-size: 18px;
-  line-height: 20px;
-  a:hover, a:focus {
-    color: $royal;
-  }
-}
+//h4 { // used in calendar module frontpage - not used on any other pages, ONLY in the calendar module.
+//  font-size: 18px;
+//  line-height: 20px;
+//  a:hover, a:focus {
+//    color: $royal;
+//  }
+//}
 h5 {  // changing to a small-text class, never used as a heading
   font-weight: bold;
   font-size: 12px;
@@ -113,7 +113,7 @@ h6 {  // in mockups H6 was shown next to 85px size, 25px size, and 12px size..
   text-transform: uppercase;
   text-align: center;
 }
-.h8 {  // basically the same as normal text.. just center-aligned.. try to merge with .v4
+.v4 {  // basically the same as normal text.. just center-aligned.. try to merge with .v4
   font-size: 14px;
   line-height: 16px;
   letter-spacing: -.2px;
@@ -221,7 +221,7 @@ $h13-desktopw-font: 200px;
   //  line-height: 26px;
   //}
   /* we may not do this this way */
-  .h8 {
+  .v4 {
     font-size: 16px;
     line-height: 17px;
   }
