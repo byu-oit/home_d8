@@ -271,10 +271,10 @@ article.node--type-admissions {
             font-style: italic;
             font-size: 25px;
         }
-        .for-full-time {
-            font-size: 12px;
-            text-transform: uppercase;
-        }
+        //.for-full-time {
+        //    font-size: 12px;
+        //    text-transform: uppercase;
+        //}
     }
     .grad-split {
         display: flex;
@@ -282,7 +282,7 @@ article.node--type-admissions {
         justify-content: center;
         .undergrad-header, .undergrad-header-small, .graduate-header {
             background-color: $navy;
-            color: white;
+            //color: white;
             padding: 10px;
             margin: 0 50px;
         }
@@ -374,11 +374,11 @@ article.node--type-admissions {
                         left: 8.5em;
                     }
                 }
-                .per-semester {
-                    font-size: 12px;
-                    font-weight: 500;
-                    text-transform: uppercase;
-                }
+                //.per-semester {
+                //    font-size: 12px;
+                //    font-weight: 500;
+                //    text-transform: uppercase;
+                //}
                 .tuition-price {
                     padding: 10px 0;
                 }
@@ -421,7 +421,7 @@ article.node--type-admissions {
         margin-top: 50px;
         a {
             color: white;
-            background-color: $brightBlue;
+            background-color: $royal;
             padding: 10px 20px;
         }
         a:focus,

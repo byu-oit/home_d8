@@ -6,9 +6,8 @@ $darknavy: #002040;
 $medblue: #5D7998 ; // was 869DB5 but not quite accessible
 $lightBlue: #e0f0cc;
 $xlightblue: #C3DDF9;
-$brightBlue: #0057B8;
 
-$royal: #005eb8; // was #003DA5
+$royal: #0057B8; // was #003DA5
 $lightRoyal: #114BAD;
 
 // There are 7-9 grays right now..
@@ -317,11 +316,14 @@ $h13-desktopw-font: 200px;
 @mixin button() {
   padding: 12px 25px;
   font-weight: 700; // katria testing with new font change - i think all are bolded..
+  color: #fff;
   text-align: center; // katria testing with new font change, i think all are centered..?
   a:hover, a:focus  {
     text-decoration: none;
+    color: #fff;
   }
 }
+
 
 @mixin hover-to-royal() {
     color: white;
