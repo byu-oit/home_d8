@@ -47,8 +47,8 @@ software:
             software:
           supports:
             software:
-              # - University Homepage
-              # i dont know how to put this in - what format of the name?
+              # - university-homepage
+              # i dont know how to put this in - what format of the name? the name value in its own repo meta?
               # also this supports prod and dev so i think we list both so each has the connection
             service:
               - BYU Home Page
