@@ -47,13 +47,10 @@ software:
             software:
           supports:
             software:
-              # - university-homepage
-              # i dont know how to put this in - what format of the name? the name value in its own repo meta?
-              # also this supports prod and dev so i think we list both so each has the connection
+              - university-homepage:production
+              - university-homepage:development
             service:
               - BYU Home Page
-              # - Drupal
-              # university homepage lists Drupal as a service - ??
           reverse_proxy:
           runs_on:
             server_cluster:
