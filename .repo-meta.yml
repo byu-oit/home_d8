@@ -30,9 +30,10 @@ software:
       - CSS
       - JavaScript
       - NodeJS
+      - Web Components
     standard_change_template_id:
     stages:
-      development:
+      production:
         urls:
           product_page:
           physical_url:
@@ -46,7 +47,13 @@ software:
             software:
           supports:
             software:
+              # - University Homepage
+              # i dont know how to put this in - what format of the name?
+              # also this supports prod and dev so i think we list both so each has the connection
             service:
+              - BYU Home Page
+              # - Drupal
+              # university homepage lists Drupal as a service - ??
           reverse_proxy:
           runs_on:
             server_cluster:
