@@ -136,14 +136,6 @@ h6 {  // in mockups H6 was shown next to 85px size, 25px size, and 12px size..
 
 @mixin jumbo-text() {
 
-  display: none;
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    display: block;
-  }
-  @media screen and (max-width: 767px) {
-    display: none!important;
-  }
-
   font-weight: 600;
   font-size: 130px;
   font-family: $ringside;
