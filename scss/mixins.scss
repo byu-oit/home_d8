@@ -72,14 +72,25 @@ h2, .v2, .v2, .larger-text {
   line-height: 34px;
   text-align: center;
 }
-//h3, .h3, .v3 { // h9 & h3 combo
-//  font-size: 16px; // was 15
-//  letter-spacing: -.2px;
-//  line-height: 19px;
-//  a:hover, a:focus {
-//    font-weight: bold;
+
+//.v3 { // merging with h3 but diff font weight.. check on line height..
+//  font-size: 16px;
+//  font-weight: 500;
+//  line-height: 26px;
+//  letter-spacing: .4px;
+//  a:hover, a:focus  {
+//    color: $royal;
 //  }
 //}
+
+h4, .h4, .v4 { // h9 & h3 combo
+  font-size: 16px; // was 15
+  letter-spacing: -.2px;
+  line-height: 19px;
+  a:hover, a:focus {
+    font-weight: bold;
+  }
+}
 .h3.normal-weight, .v3.normal-weight {
   a:hover, a:focus {
     font-weight: 500;
@@ -120,15 +131,7 @@ h6 {  // in mockups H6 was shown next to 85px size, 25px size, and 12px size..
   text-align: center;
 }
 
-.v3 { // merging with h3 but diff font weight.. check on line height..
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 26px;
-  letter-spacing: .4px;
-  a:hover, a:focus  {
-    color: $royal;
-  }
-}
+
 .large-text { // numbers inside navy circles - use a class instead - where is this used outside of the circles?
   font-size: 35px;
   line-height: 40px;
