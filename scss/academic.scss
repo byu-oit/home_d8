@@ -12,7 +12,7 @@ article.node--type-academic {
 //section for circles
 
 
-.circles-h10 {
+.circles-large-text {
   font-family: $ringside;
   font-size: 60px;
   line-height: 82px;
@@ -39,7 +39,7 @@ article.node--type-academic {
   padding: 18px;
 }
 
-div.masters-circle .circles-h10, div.doctorate-circle .circles-h10 {
+div.masters-circle .circles-large-text, div.doctorate-circle .circles-large-text {
   line-height:70px;
 }
 
@@ -191,7 +191,7 @@ div#links-and-calendar {
 .field--name-field-academic-highlight-rank {
     position: relative;
     margin-top: -1.3em;
-    color: white !important; //needed to not be overridden by .h10 mixins.scss
+    color: white !important; //needed to not be overridden by .large-text mixins.scss
     font-weight: bold;
 }
 
@@ -218,7 +218,7 @@ div#links-and-calendar {
 
 
 @media screen and (min-width: 1224px) {
-  div.masters-circle .circles-h10, div.doctorate-circle .circles-h10 {
+  div.masters-circle .circles-large-text, div.doctorate-circle .circles-large-text {
     line-height: 70px;
   }
 }
@@ -336,7 +336,7 @@ div#links-and-calendar {
 
   // size/alignment of #2, #5, #30 on mobile devices
   @media screen and (max-width: 767px) {
-    .h10 {
+    .large-text {
       font-size: 55px;  // can we change this to the 60px style set? *katria
     }
     .field--name-field-academic-highlight-image {
@@ -372,7 +372,7 @@ div#links-and-calendar {
       height: 166px;
 
       // Aligning text in hovering overlay
-      .field.field--name-field-academic-highlight-rank.field--type-integer.field--label-hidden.field__item.h10 {
+      .field.field--name-field-academic-highlight-rank.field--type-integer.field--label-hidden.field__item.large-text {
         display: inline;
       }
       .field.field--name-field-academic-highlight-title.field--type-string.field--label-hidden.field__item.h6.university-for {
