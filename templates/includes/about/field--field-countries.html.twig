@@ -62,12 +62,12 @@ label_display == 'visually_hidden' ? 'visually-hidden',
   {% else %}
     {#single#}
     {% for item in items %}
-      <div class="and-icon">&</div>
+      <div class="jumbo-text">&</div>
       <div class="countries-cont">
         <div class="countries-field-wrapper">
-          <div{{ attributes.addClass(classes, 'field__item', 'large-text') }}>{{ item.content }}</div>
+          <div{{ attributes.addClass(classes, 'field__item', 'medium-text') }}>{{ item.content }}</div>
         </div>
-        <div class="large-text semibold countries-label"> Countries</div>
+        <div class="medium-text semibold countries-label"> Countries</div>
       </div>
 
     {% endfor %}

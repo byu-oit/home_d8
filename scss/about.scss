@@ -325,7 +325,7 @@
     .tooltip > .tooltip-inner {
       background: none;
       padding: 15px 15px;
-      @include large-text();
+      @include medium-text();
       padding-right: 35px !important; // strangely needed to center number now.. wasn't needed before
       @media screen and (max-width: 767px) {
         //top: -39px;
@@ -747,7 +747,7 @@
     //width: 100%; // is a test
   }
 
-  .and-icon {
+  .jumbo-text {
 
     display: none;
     @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -1097,11 +1097,8 @@
       //display: none; // displayed w animation
       visibility: hidden;
       @include studentSpeakingWidth();
-      line-height: 18px; // necessary to override Aleni's default big spacing
-      padding-bottom: 10px;
-      .v3 {
-        line-height: 22px;
-      }
+      //line-height: 18px; // necessary to override Aleni's default big spacing - not neccessary w katria's consolidation
+      //padding-bottom: 10px;
       @media screen and (max-width: 767px) {
         visibility: visible;
       }
@@ -1198,7 +1195,7 @@ html.not-chrome.safari .type-about .main {
     animation: 1s fadein;
   }
 
-  .and-icon {
+  .jumbo-text {
     display: inline;
     animation: 1s fadein;
   }
