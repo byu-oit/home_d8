@@ -131,6 +131,14 @@ h6 {  // in mockups H6 was shown next to 85px size, 25px size, and 12px size..
   text-align: center;
 }
 
+@mixin xlarge-text() {
+  font-size: 85px;
+  line-height: 84px;
+  padding-left: 10px;
+}
+.xlarge-text {
+  @include xlarge-text();
+}
 
 .large-text { // numbers inside navy circles - use a class instead - where is this used outside of the circles?
   font-size: 35px;

@@ -133,11 +133,6 @@ section.page-header {
         display: flex;
         align-items: flex-end;
     }
-    .xlarge-text {
-        font-size: 85px;
-        line-height: 84px;
-        padding-left: 10px;
-    }
     .sober-stone-cold-sober {
         color: $navy;
         font-style: italic;
@@ -159,7 +154,7 @@ section.page-header {
         text-align: justify;
     }
     .sober-years-number {
-        font-size: 85px;
+        @include xlarge-text(); // katria maybe adjust more later
         line-height: 75px;
         padding-left: 122px;
         padding-right: 8px;
