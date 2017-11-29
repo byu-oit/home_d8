@@ -91,7 +91,10 @@ h4, .h4, .v4 { // h9 & h3 combo
     font-weight: bold;
   }
 }
-.h3.normal-weight, .v3.normal-weight {
+h3, .v3 {
+  font-weight: 500;
+}
+h3.normal-weight, .v3.normal-weight {
   a:hover, a:focus {
     font-weight: 500;
   }
