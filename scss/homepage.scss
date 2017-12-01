@@ -19,6 +19,12 @@ a:hover {
   // include this line for your specific navy-circle's and override the size for your specific circles
 }
 
+//fixes navy-circles in IE
+.navy-circl .h12, #circle-wrapper .field > .h12 {
+  width: inherit;
+  padding: 0 5px;
+}
+
 .vertical-dots {
   @include vertical-dots();
   .gray-dot {
