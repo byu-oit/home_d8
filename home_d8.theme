@@ -33,7 +33,7 @@ $theme_root = $base_url.'/'.drupal_get_path('theme','home_d8');
  * Do some browser detection and generate body classes based on them
  * "Borrowed" from wordpress
  */
-function byu_d8_browser_classes() {
+function home_d8_browser_classes() {
     // A little browser detection shall we?
     $browser = $_SERVER[ 'HTTP_USER_AGENT' ];
     $classes = array();
