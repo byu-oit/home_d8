@@ -97,11 +97,14 @@ article.node--type-admissions {
                 .field--name-field-data-text {
 
                 }
-                .field--name-field-data-type {
-                    font-size: 14px;
-                    font-weight: normal;
-                    text-transform: uppercase;
+                .field--name-field-data-type:nth-of-type(2) {
+                    font-weight: normal!important;
                 }
+                //.field--name-field-data-type {
+                //    font-size: 14px;
+                //    font-weight: normal;
+                //    text-transform: uppercase;
+                //}
                 img.freshman-profile-icon {
                     float: left;
                     padding-right: 10px;
@@ -230,11 +233,11 @@ article.node--type-admissions {
         line-height: normal!important;
     }
     .subsidies {
-        color: $medgray;
-        font-style: italic;
-        font-weight: normal;
-        font-size: 12px;
-        text-align: left;
+        //color: $medgray;
+        //font-style: italic;
+        //font-weight: normal;
+        //font-size: 12px;
+        //text-align: left;
         margin-top: 1em;
     }
     .subsidies-left {
@@ -265,12 +268,11 @@ article.node--type-admissions {
             width: auto;
         }
         background-color: $darkgray;
-        color: white;
-        font-weight: normal;
-        .how-much {
-            font-style: italic;
-            font-size: 25px;
-        }
+        //font-weight: normal;
+        //.how-much {
+        //    font-style: italic;
+        //    font-size: 25px;
+        //}
         //.for-full-time {
         //    font-size: 12px;
         //    text-transform: uppercase;
@@ -348,8 +350,8 @@ article.node--type-admissions {
                     margin: 10px;
                 }
                 .credits {
-                    background-color: $lightgray;
-                    color: $darkgray;
+                    //background-color: $lightgray;
+                    //color: $darkgray;
                     width: 400px;
                     padding: 5px 1em;
                     position: absolute;
@@ -384,12 +386,12 @@ article.node--type-admissions {
                 }
                 .lds-left {
                     .tuition-price {
-                        background-color: #ffe7a2;
+                        background-color: $lightyellow;
                     }
                 }
                 .non-lds-right {
                     .tuition-price {
-                        background-color: #fcc015;
+                        background-color: $yellow;
                     }
                     @media screen and (min-width: 1224px) {
                         .credits {

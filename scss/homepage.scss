@@ -103,12 +103,15 @@ byu-footer-column :nth-child(2) {
 .right-text {
   text-align: right;
 }
-.centered-text {
+.centered-text, .center-text {
   text-align: center;
 }
 .centered-margin {
   margin-left: auto;
   margin-right: auto;
+}
+.italics {
+  font-style: italic;
 }
 .screen-reader-only {
   border: 0;

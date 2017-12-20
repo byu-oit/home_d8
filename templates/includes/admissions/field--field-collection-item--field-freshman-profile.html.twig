@@ -47,12 +47,10 @@
 %}
 {%
   set title_classes = [
-    'field__label', 'v2',
-
+    'field__label',
     label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
-{#'v3', 'ringside', 'medgray',#}
 
 {% if label_hidden %}
   {% if multiple %}
@@ -63,7 +61,7 @@
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
+      <div{{ attributes.addClass(classes, 'field__item', 'v3', 'bold') }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}

@@ -23,8 +23,10 @@ $darkestgray: #141414;  // this should be used for body & default text.
 // other colors
 $red: #B3041A;
 
-$yellow: #FCC015;
+$yellow: #FCC015; // goldish-orange darker yellow
 $lightyellow: #fef2d0;
+
+
 
 $teal: #84DCB4;
 $lightteal: #C4F7E0;
@@ -41,6 +43,9 @@ $vitesse: "Vitesse A", "Vitesse B", serif;
 
 
 /* ------------- Headings Etc -------------------- */
+body {
+  font-family: $ringside;
+}
 
 h1, h2, h3, h4, .h1, .v2, .h3, .h4, .v4, .v3, .large-text, .medium-text, .v4,
 h1 a, h2 a, h3 a, h4 a, .h1 a, .v2 a, .h3 a, .h4 a, .v4 a, .v3 a, .large-text a, .medium-text a, .v4 a {
@@ -83,22 +88,38 @@ h2, .v2, .v2, .larger-text {
 //  }
 //}
 
-h4, .h4, .v4 { // h9 & h3 combo
-  font-size: 16px; // was 15
-  letter-spacing: -.2px;
-  line-height: 19px;
-  a:hover, a:focus {
-    font-weight: bold;
-  }
-}
+
+
 h3, .v3 {
+  font-size: 20px;
+  //  smaller w media queries below.
   font-weight: 500;
+  letter-spacing: .5px;
+  @media screen and (max-width: 1024px) {
+    font-size: 16px;
+  }
 }
 h3.normal-weight, .v3.normal-weight {
   a:hover, a:focus {
     font-weight: 500;
   }
 }
+
+h4, .h4, .v4 { // h9 & h3 combo
+  font-size: 16px; // was 15
+  letter-spacing: 0.2px;
+  line-height: 19px;
+  a:hover, a:focus {
+    //font-weight: 500; // might use this later, idk if it should be applied so generally
+  }
+}
+.v4 {  // basically the same as normal text.. just center-aligned.. try to merge with .v4
+  font-size: 14px;
+  line-height: 16px;
+  //letter-spacing: -.2px;
+  //text-align: center;
+}
+
 //h4 { // used in calendar module frontpage - not used on any other pages, ONLY in the calendar module.
 //  font-size: 18px;
 //  line-height: 20px;
@@ -114,25 +135,20 @@ h5 {  // changing to a small-text class, never used as a heading
 }
 // change this to a .v2.ringside ? or another class?
 // could this one be switched to the other font (v2) in all cases to condense?
-h6 {  // in mockups H6 was shown next to 85px size, 25px size, and 12px size..
-  font-size: 25px;
-  line-height: 27px;
-  text-transform: uppercase;
-  text-align: center;
-}
-.h7 { // just the same as normal paragraph and bold and uppercase? or maybe we use this as h6 to have uppercase and bold..?.
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 14px;
-  text-transform: uppercase;
-  text-align: center;
-}
-.v4 {  // basically the same as normal text.. just center-aligned.. try to merge with .v4
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: -.2px;
-  text-align: center;
-}
+//h6 {  // in mockups H6 was shown next to 85px size, 25px size, and 12px size..
+//  font-size: 25px;
+//  line-height: 27px;
+//  text-transform: uppercase;
+//  text-align: center;
+//}
+//.h7 { // just the same as normal paragraph and bold and uppercase? or maybe we use this as h6 to have uppercase and bold..?.
+//  font-size: 14px;
+//  font-weight: bold;
+//  line-height: 14px;
+//  text-transform: uppercase;
+//  text-align: center;
+//}
+
 
 @mixin jumbo-text() {
 
@@ -141,6 +157,7 @@ h6 {  // in mockups H6 was shown next to 85px size, 25px size, and 12px size..
   font-family: $ringside;
   color: $navy;
   padding: 0px 25px;
+  line-height: normal; // katria added this in font conversion
   @media screen and (max-width: 1023px) {
     //padding-top: 30px;
   }
@@ -199,6 +216,7 @@ $h13-desktop-font:135px;
 $h13-desktopw-font: 200px;
 .banner-text {
   font-size: $h13-mobile-font;
+  //line-height: $h13-mobile-font;
   color: #fff!important;
 }
 .view-content-page-header .views-field-title {
@@ -213,6 +231,7 @@ $h13-desktopw-font: 200px;
 @media screen and (min-width: 768px) {
   .banner-text {
     font-size: $h13-tabletp-font;
+    //line-height: $h13-tabletp-font;
   }
   .view-content-page-header .views-field-title {
     margin-top: ($h13-tabletp-font *.54*-1);
@@ -225,7 +244,7 @@ $h13-desktopw-font: 200px;
     font-size: 30px;
   }
   h3, .v3 {
-    font-size: 16px;
+    font-size: 16px; // has to be 16, not 17 - breaks somethings
     line-height: 23px; // check if this is okay everywhere for .v3
   }
   .banner-text {
