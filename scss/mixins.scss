@@ -72,10 +72,13 @@ h1, .h1, .v1 {
   line-height: 34px;
   text-align: center;
 }
-h2, .v2, .v2, .larger-text {
+h2, .v2, .larger-text {
   font-size: 25px;
   line-height: 34px;
-  text-align: center;
+}
+h2, .v2 {
+  font-weight: 500!important;
+  //text-align: center;
 }
 
 //.v3 { // merging with h3 but diff font weight.. check on line height..
@@ -175,14 +178,17 @@ h5 {  // changing to a small-text class, never used as a heading
   @include xlarge-text();
 }
 
-.large-text { // numbers inside navy circles - use a class instead - where is this used outside of the circles?
-  font-size: 35px;
-  line-height: 40px;
-  font-weight: bold;
-  &.white {
-    color: #fff;
+ // numbers inside navy circles - use a class instead - where is this used outside of the circles?
+.large-text {
+    font-family: $ringside;
+    font-size: 60px;
+    line-height: 82px;
+    letter-spacing: -2.5px;
+    font-weight: 500;
+    &.white {
+      color: #fff;
+    }
   }
-}
 
 // one case i couldn't add the class, so need a mixin
 // no mobile adjustment
