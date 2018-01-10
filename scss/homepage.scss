@@ -60,23 +60,20 @@ byu-footer-column :nth-child(2) {
 .normal-weight {
   font-weight: normal!important;
 }
-.bold {
+.bold, .v2.bold {
   font-weight: bold!important;
 }
 .semibold {
   font-weight: 500!important;
 }
 .normal-caps {
-  text-transform: capitalize;
+  text-transform: capitalize!important;
 }
 .all-caps {
   text-transform: uppercase;
 }
 .extra-space {
-  line-height: 240%!important;
-  @media screen and (max-width: 1023px) {
-    line-height: 250%!important;
-  }
+  @include extra-space();
 
 }
 .extra-small {
@@ -94,9 +91,9 @@ byu-footer-column :nth-child(2) {
 .medgray {
   color: $medgray!important; // 767676
 }
-//.darkgray {
-//  color: $darkgray;
-//}
+.darkgray {
+  color: $darkgray!important; // 666
+}
 .left-text {
   text-align: left;
 }

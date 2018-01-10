@@ -662,6 +662,15 @@
       flex-direction: column;
       margin-bottom: 0px;
     }
+    // and-icon
+    .jumbo-text {
+      margin-top: -70px; // desktop & wide tablet
+      margin-bottom: -60px;
+      @media screen and (max-width: 1023px) {
+        margin-top: -40px;
+        margin-bottom: -60px;
+      }
+    }
   }
 
 
@@ -783,7 +792,7 @@
       width: 530px;
       max-width: 530px;
       margin-top: -30px;
-      padding-right: 315px;
+      padding-right: 345px;
     }
     @media screen and (min-width: 1024px) {
       margin-left: $largeLeftMapContentMargin;
@@ -802,6 +811,7 @@
       display: none;
       @media screen and (max-width: 1023px) {
           font-size: 14px;
+        display: inline;
       }
     }
     .field.v4:after {
@@ -814,9 +824,11 @@
     }
     // arizona block
     .v4.field.field--name-field-percent-arizona {
-
       //display: block;
       display: none;
+      @media screen and (max-width: 1023px) {
+        display: block;
+      }
     }
     .v4.field.field--name-field-percent-arizona:after {
       content: none;

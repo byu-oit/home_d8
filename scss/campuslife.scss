@@ -34,10 +34,10 @@ article.node--type-campus-life {
                 > .views-field-name {
                     display: block;
                     background-color: $medblue;
-                    padding: 10px;
+                    padding: 0px 10px;
                     .v4 {
-                        color: white;
-                        font-size: 18px;
+                        //color: white;
+                        //font-size: 18px;
                     }
                 }
                 > .views-field-field-icon {
@@ -65,6 +65,11 @@ article.node--type-campus-life {
                     box-shadow: 2px 2px 8px;
                 }
             }
+        }
+        // this targets links but not main category sections
+        ul > li > ul > li > .views-field-name .v3.all-caps {
+            text-transform: none;
+            //@include extra-space();
         }
     }
 }
@@ -124,46 +129,54 @@ section.page-header {
     padding-top: 20px;
     padding-bottom: 20px;
 
-    .sober-center {
-        margin-top: auto;
-        margin-bottom: auto;
-    }
+    //.sober-center {
+    //    margin-top: auto;
+    //    margin-bottom: auto;
+    //}
 
     .sober-rank-block {
         display: flex;
         align-items: flex-end;
     }
-    .sober-stone-cold-sober {
-        color: $navy;
-        font-style: italic;
-    }
-    .sober-university {
-        color: $navy;
-        text-transform: uppercase;
-        text-align: justify;
-    }
+    //.sober-stone-cold-sober {
+    //    color: $navy;
+    //    font-style: italic;
+    //}
+    //.sober-university {
+    //    color: $navy;
+    //    text-transform: uppercase;
+    //    text-align: justify;
+    //}
     .sober-year-block {
         display: flex;
         align-items: flex-start;
-    }
-    .sober-for-the-past {
-        font-size: 30px;
-    }
-    .sober-years-text {
-        font-size: 30px;
-        text-align: justify;
-    }
-    .sober-years-number {
-        @include xlarge-text(); // katria maybe adjust more later
-        line-height: 75px;
         padding-left: 122px;
-        padding-right: 8px;
+        .xlarge-text {
+            line-height: 75px;
+        }
     }
+    .sober-year-block > div:nth-of-type(2) {
+        padding-left: 8px;
+    }
+    //.sober-for-the-past {
+    //    font-size: 30px;
+    //}
+    //.sober-years-text {
+    //    font-size: 30px;
+    //    text-align: justify;
+    //}
+    //.sober-years-number {
+    //    //@include xlarge-text(); // katria maybe adjust more later
+    //    line-height: 75px;
+    //    padding-left: 122px;
+    //    padding-right: 8px;
+    //}
     .sober-princeton {
-        font-style: italic;
-        font-size: 16px;
         padding-left: 250px;
-        font-weight: normal;
+        //font-style: italic;
+        //font-size: 16px;
+        //
+        //font-weight: normal;
     }
 }
 .field--name-field-sober-image {
@@ -259,21 +272,28 @@ section.page-header {
             font-size: 12vw;
             line-height: 12vw;
         }
-        .sober-years-number {
+        .sober-year-block {
             padding-left: 20px;
-            font-size: 17vw;
-            line-height: 14vw;
+            .xlarge-text {
+                line-height: 14vw;// is font size okay? it was 17vw..
+            }
         }
-        .sober-for-the-past {
-            font-size: 6vw;
-        }
-        .sober-years-text {
-            font-size: 6vw;
-        }
+        //.sober-years-number {
+        //    padding-left: 20px;
+        //    font-size: 17vw;
+        //    line-height: 14vw;
+        //}
+        //.sober-for-the-past {
+        //    font-size: 6vw;
+        //}
+        //.sober-years-text {
+        //    font-size: 6vw;
+        //}
         .sober-princeton {
-            font-size: 5vw;
+            //font-size: 5vw;
             padding-left: 65px;
         }
+
     }
     .field--name-field-sober-image {
         img {

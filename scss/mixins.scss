@@ -72,7 +72,7 @@ h1, .h1, .v1 {
   line-height: 34px;
   text-align: center;
 }
-h2, .v2, .larger-text {
+h2, .v2  {
   font-size: 25px;
   line-height: 34px;
 }
@@ -246,7 +246,7 @@ $h13-desktopw-font: 200px;
 
 }
 @media screen and (min-width: 1024px) {
-  h2, .v2, .larger-text { // this larger text refers to on the about page only
+  h2, .v2 { // this larger text refers to on the about page only
     font-size: 30px;
   }
   h3, .v3 {
@@ -264,10 +264,10 @@ $h13-desktopw-font: 200px;
 
 }
 @media screen and (min-width: 1224px) {
-  h1, .h1 {
+  h1, .v1 {
     font-size: 40px;
   }
-  h2, .v2, .larger-text {
+  h2, .v2 {
     font-size: 35px;
   }
   //h3, .h3 {
@@ -312,6 +312,14 @@ $h13-desktopw-font: 200px;
 
 
 // general mixins
+
+@mixin vertical-center-margin() {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.vertical-center-margin {
+  @include vertical-center-margin();
+}
 
 @mixin fieldWithMaxWidth() {
   max-width: 1200px;
@@ -426,5 +434,12 @@ $h13-desktopw-font: 200px;
   font-weight: 500;
   @media screen and (max-width: 1024px) {
     margin: 20px 0px 0px;
+  }
+}
+
+@mixin extra-space() {
+  line-height: 240%!important;
+  @media screen and (max-width: 1023px) {
+    line-height: 250%!important;
   }
 }
