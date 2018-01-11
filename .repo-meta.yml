@@ -2,7 +2,7 @@
 # This file was automatically generated. It is used for various integrations like creating and updating Software CIs in the CMDB.
 # You are required to maintain Software CI records in the CMDB for all of the deployable software artifacts you maintain.
 # You can fill in the information here and have the integration do that for you or you can do that yourself manually.
-$schemaver: '2.0'
+$schemaver: 2.1
 repo_url: https://github.com/byu-oit/home_d8
 software:
   - name: home_d8
@@ -31,7 +31,6 @@ software:
       - JavaScript
       - NodeJS
       - Web Components
-    standard_change_template_id:
     stages:
       production:
         urls:
@@ -47,8 +46,8 @@ software:
             software:
           supports:
             software:
-              - university-homepage:production
-              - university-homepage:development
+              - university-homepage
+              - university-homepage
             service:
               - BYU Home Page
           reverse_proxy:
@@ -57,7 +56,5 @@ software:
             virtual_server:
             rack_server:
             blade_server:
-    tags:
-      data-sensitivity: confidential
-      team: gro:AD-Front End Technologies and Applications
-      app: home_d8
+    data_sensitivity: confidential
+    standard_change_template:
