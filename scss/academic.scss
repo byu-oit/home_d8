@@ -144,11 +144,12 @@ div#links-and-calendar {
   color: $navy;
 }
 
-.view-content-page-header {
-  display: flex;
-  justify-content: center;
-  text-transform: uppercase;
-}
+// not neccessary
+//.view-content-page-header {
+  //display: flex;
+  //justify-content: center;
+  //text-transform: uppercase;
+//}
 
 .view-content-page-header .v4.italic {
   font-style: italic;

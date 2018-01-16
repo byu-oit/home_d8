@@ -217,34 +217,34 @@ h4, .v4 { // h9 & h3 combo
     color: $royal;
   }
 }
-$h13-mobile-font:45px;
-$h13-tabletp-font:90px;
-$h13-tabletl-font: 120px;
-$h13-desktop-font:135px;
-$h13-desktopw-font: 200px;
+$v1-mobile-font:45px;
+$v1-tabletp-font:90px;
+$v1-tabletl-font: 120px;
+$v1-desktop-font:135px;
+$v1-desktopw-font: 200px;
 .banner-text {
-  font-size: $h13-mobile-font;
-  //line-height: $h13-mobile-font;
+  font-size: $v1-mobile-font;
+  //line-height: $v1-mobile-font;
   color: #fff!important;
   text-transform: uppercase;
 }
 .view-content-page-header .views-field-title {
-  margin-top: ($h13-mobile-font *.73*-1);
-  margin-bottom: ($h13-mobile-font *.73);
+  margin-top: ($v1-mobile-font *.73*-1);
+  margin-bottom: ($v1-mobile-font *.73);
   h1 {
-      background-color: $darknavy;
+      background-color: $darknavy;  // fallback if no image?
   }
 }
 
 
 @media screen and (min-width: 768px) {
   .banner-text {
-    font-size: $h13-tabletp-font;
-    //line-height: $h13-tabletp-font;
+    font-size: $v1-tabletp-font;
+    //line-height: $v1-tabletp-font;
   }
   .view-content-page-header .views-field-title {
-    margin-top: ($h13-tabletp-font *.54*-1);
-    margin-bottom: ($h13-tabletp-font *.50);
+    margin-top: ($v1-tabletp-font *.54*-1);
+    margin-bottom: ($v1-tabletp-font *.50);
   }
 
 }
@@ -257,11 +257,11 @@ $h13-desktopw-font: 200px;
     line-height: 23px; // check if this is okay everywhere for .v3
   }
   .banner-text {
-    font-size: $h13-tabletl-font;
+    font-size: $v1-tabletl-font;
   }
   .view-content-page-header .views-field-title {
-    margin-top: ($h13-tabletl-font *.50*-1);
-    margin-bottom: ($h13-tabletl-font *.50);
+    margin-top: ($v1-tabletl-font *.50*-1);
+    margin-bottom: ($v1-tabletl-font *.50);
   }
 
 
@@ -290,22 +290,22 @@ $h13-desktopw-font: 200px;
     font-weight: 500;
   }
   .banner-text {
-    font-size: $h13-desktop-font;
+    font-size: $v1-desktop-font;
   }
   .view-content-page-header .views-field-title {
-    margin-top: ($h13-desktop-font *.48*-1);
-    margin-bottom: ($h13-desktop-font *.50);
+    margin-top: ($v1-desktop-font *.48*-1);
+    margin-bottom: ($v1-desktop-font *.50);
   }
 
 }
 @media screen and (min-width: 1824px) {
 
   .banner-text {
-    font-size: $h13-desktopw-font;
+    font-size: $v1-desktopw-font;
   }
   .view-content-page-header .views-field-title {
-    margin-top: ($h13-desktopw-font *.44*-1);
-    margin-bottom: ($h13-desktopw-font *.45);
+    margin-top: ($v1-desktopw-font *.44*-1);
+    margin-bottom: ($v1-desktopw-font *.45);
   }
 }
 
