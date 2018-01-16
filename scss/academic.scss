@@ -344,7 +344,7 @@ div#links-and-calendar {
     }
     .field--name-field-academic-highlight-rank {
       margin-bottom: 25px;
-      margin-top: -1em;
+      //margin-top: -1em;
     }
   }
 
@@ -412,5 +412,11 @@ div#links-and-calendar {
   }
   @media screen and (max-width: 767px) {
     margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .block-byu-news-block h2 {
+    text-align: center;
   }
 }

@@ -104,8 +104,7 @@ byu-footer-column :nth-child(2) {
   text-align: center;
 }
 .centered-margin {
-  margin-left: auto;
-  margin-right: auto;
+  @include centered-margin();
 }
 .italics {
   font-style: italic;

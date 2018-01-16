@@ -89,6 +89,7 @@ h2, .v2  {
 
 
 h3, .v3 {
+  font-size: 16px; // base for mobile etc
   //font-size: 22px; // checking 20 to 22px
   //  smaller w media queries below.
   font-weight: 500;
@@ -309,6 +310,11 @@ $h13-desktopw-font: 200px;
 
 
 // general mixins
+@mixin centered-margin() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 @mixin vertical-center-margin() {
   margin-top: auto;
@@ -320,8 +326,7 @@ $h13-desktopw-font: 200px;
 
 @mixin fieldWithMaxWidth() {
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  @include centered-margin();
   // katria added these max-width adjustments for mobile & tablet - need to make sure this works for everyone's.
   // Aleni has told me specifics for some of these numbers and others are guesses based on the mockups.
   @media screen and (min-width: 768px) and (max-width: 1023px) {

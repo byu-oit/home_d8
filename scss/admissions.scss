@@ -9,16 +9,25 @@ article.node--type-admissions {
 
 .field--name-field-links {
     text-align: center;
-    .field__label {
-        margin-right: 15px;
+    @media screen and (min-width: 768px) {
+        .field__label {
+            margin-right: 15px;
+        }
     }
     .field__item {
         margin-right: 10px;
+        @media screen and (max-width: 768px) {
+            margin-bottom: 3px;
+            margin-right: 0px;
+        }
     }
     div {
         display: inline;
         @media screen and (max-width: 767px) {
-            display: block;
+            display: flex;
+            padding: 0 10px;
+            flex-wrap: wrap;
+            justify-content: center;
             div.field__item {
                 display: inline;
             }
@@ -26,7 +35,10 @@ article.node--type-admissions {
         a {
             color: white;
             background-color: $navy;
-            padding: 10px 2em;
+            //padding: 10px 2em;
+            width: 145px;
+            display: inline-block;
+            //padding: 3px 2em;
             &:focus,
             &:hover {
                 @include hover-to-royal();
@@ -36,7 +48,7 @@ article.node--type-admissions {
     div.field__item:last-of-type {
         a {
             background-color: $medblue;
-            padding: 10px 3.5em;
+            //padding: 10px 3.5em;
             &:focus,
             &:hover {
                 @include hover-to-royal();
