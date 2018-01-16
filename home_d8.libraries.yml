@@ -3,11 +3,9 @@ global-styling:
   css:
     base:
       css/homepage.css: {}
-      css/colleges.css: {}
       css/yfacts.css: {}
     theme:
       css/animate.css: {}
-      css/academic.css: {}
       css/cse.css: {}
   js:
     js/homepage.js: {}
@@ -23,13 +21,13 @@ frontpage:
       css/frontpage.css: {}
   js:
     js/frontpage.js: {}
-campuslife:
+about:
   version: 8.x
   css:
     base:
-      css/campuslife.css: {}
+      css/about.css: {}
   js:
-    js/campuslife.js: {}
+    js/about.js: {}
 admissions:
   version: 8.x
   css:
@@ -38,13 +36,23 @@ admissions:
   js:
     js/snap.svg-min.js: {}
     js/admissions.js: {}
-about:
+academic:
   version: 8.x
   css:
     base:
-      css/about.css: {}
+      css/academic.css: {}
+campuslife:
+  version: 8.x
+  css:
+    base:
+      css/campuslife.css: {}
   js:
-    js/about.js: {}
+    js/campuslife.js: {}
+colleges:
+  version: 8.x
+  css:
+    base:
+      css/colleges.css: {}
 fonts-basic:
   remote: https://cloud.typography.com/75214/7683772/css/fonts.css
   version: 1.0.0
