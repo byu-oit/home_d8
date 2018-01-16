@@ -125,7 +125,7 @@
   .backFiller {
     border-top: 175px solid #fff;
     border-left: 1500px solid transparent;
-    top: -100px;
+    top: -101px; // was 100 before font change
   }
 
   .field--name-field-yfacts-body {
@@ -156,7 +156,7 @@
   .backFiller {
     border-top: 155px solid #fff;
     border-left: 1500px solid transparent;
-    top: -100px;
+    top: -101px; // was 100 before font change
   }
 
   .field--name-field-yfacts-body {

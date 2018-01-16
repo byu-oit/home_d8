@@ -153,6 +153,9 @@ section.page-header {
         padding-left: 122px;
         .xlarge-text {
             line-height: 75px;
+            @media screen and (max-width: 1023px) {
+                line-height: 65px;
+            }
         }
     }
     .sober-year-block > div:nth-of-type(2) {
@@ -173,6 +176,9 @@ section.page-header {
     //}
     .sober-princeton {
         padding-left: 250px;
+        @media screen and (min-width: 701px) and (max-width: 1023px) {
+            padding-left: 245px;
+        }
         //font-style: italic;
         //font-size: 16px;
         //
@@ -268,15 +274,15 @@ section.page-header {
     .field--name-field-years-sober {
         font-size: 7vw;
         padding-left: 5px;
-        .xlarge-text {
-            font-size: 12vw;
-            line-height: 12vw;
-        }
+        //.xlarge-text {
+            //font-size: 12vw;
+            //line-height: 12vw;
+        //}
         .sober-year-block {
             padding-left: 20px;
-            .xlarge-text {
-                line-height: 14vw;// is font size okay? it was 17vw..
-            }
+            //.xlarge-text {
+                //line-height: 14vw;// is font size okay? it was 17vw..
+            //}
         }
         //.sober-years-number {
         //    padding-left: 20px;
@@ -290,8 +296,7 @@ section.page-header {
         //    font-size: 6vw;
         //}
         .sober-princeton {
-            //font-size: 5vw;
-            padding-left: 65px;
+            padding-left: 5vw;
         }
 
     }
