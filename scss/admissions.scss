@@ -33,10 +33,10 @@ article.node--type-admissions {
             }
         }
         a {
-            color: white;
+            //color: white;
             background-color: $navy;
-            //padding: 10px 2em;
-            width: 145px;
+            padding: 0px 2em;
+            //width: 280px;
             display: inline-block;
             //padding: 3px 2em;
             &:focus,
@@ -58,7 +58,7 @@ article.node--type-admissions {
 }
 
 .freshman_profile_wrapper {
-    background-color: $lightgray;
+    //background-color: $lightgray;
     padding-top: 100px;
     @media screen and (max-width: 1223px) {
         padding-top: 130px;
@@ -90,7 +90,6 @@ article.node--type-admissions {
         padding-bottom: 50px;
         > .field__item {
             width: 400px;
-            background-color: white;
             margin: 10px;
             padding: 10px 30px;
             @media screen and (min-width: 321px) and (max-width: 1223px) {
@@ -101,7 +100,7 @@ article.node--type-admissions {
                 margin: 10px -10px;
                 padding: 10px 15px;
             }
-            color: $navy;
+            //color: $navy;
             .field-collection-item--name-field-freshman-profile {
                 div {
                     line-height: normal;
@@ -279,7 +278,7 @@ article.node--type-admissions {
         @media screen and (max-width: 767px) {
             width: auto;
         }
-        background-color: $darkgray;
+        //background-color: $darkgray;
         .v2 {
             padding-bottom: 4px;
         }
@@ -298,7 +297,7 @@ article.node--type-admissions {
         flex-wrap: wrap;
         justify-content: center;
         .undergrad-header, .undergrad-header-small, .graduate-header {
-            background-color: $navy;
+            //background-color: $navy;
             //color: white;
             padding: 10px;
             margin: 0 50px;
@@ -307,7 +306,7 @@ article.node--type-admissions {
             display: none;
         }
         .graduate-header {
-            background-color: $medblue;
+            //background-color: $medblue;
         }
         @media screen and (max-width: 1223px) {
             .undergrad-header {
@@ -338,7 +337,7 @@ article.node--type-admissions {
             @media screen and (max-width: 991px) {
                 margin-left: 10px;
             }
-            color: $darkgray;
+            //color: $darkgray;
 
             .management-title-breakpoint {
                 display: none;

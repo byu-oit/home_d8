@@ -91,6 +91,9 @@ byu-footer-column :nth-child(2) {
 .white {
   color: #fff;
 }
+.white > a {
+   color: #fff!important;
+ }
 .royal {
   color: $royal;
 }
