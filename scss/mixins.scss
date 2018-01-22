@@ -185,7 +185,7 @@ h4, .v4 { // h9 & h3 combo
     font-family: $ringside;
     font-size: 60px;
     line-height: 82px;
-    letter-spacing: -2.5px;
+    letter-spacing: 1px;
     font-weight: 500;
     &.white {
       color: #fff;
@@ -286,7 +286,7 @@ $v1-desktopw-font: 200px;
   .large-text {
     font-size: 60px;
     line-height: 82px;
-    letter-spacing: -2.5px;
+    letter-spacing: 1px;
     font-weight: 500;
   }
   .banner-text {

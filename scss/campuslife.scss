@@ -39,10 +39,10 @@ article.node--type-campus-life {
                     display: block;
                     background-color: $medblue;
                     padding: 0px 10px;
-                    .v4 {
-                        //color: white;
-                        //font-size: 18px;
-                    }
+                    //.v4 {
+                    //    //color: white;
+                    //    //font-size: 18px;
+                    //}
                 }
                 > .views-field-field-icon {
                     position: absolute;
@@ -90,7 +90,7 @@ section.page-header {
     position: relative;
     top: -25px;
     padding-top: 85px;
-    background-color: $lightgray;
+    //background-color: $lightgray;
     @media screen and (max-width: 1223px) {
         top: 0;
     }
@@ -124,12 +124,12 @@ section.page-header {
     }
     display: flex;
     justify-content: center;
-    background-color: $lightgray;
-    color: #666;
-    font-family: $ringside;
-    font-weight: bold;
-    font-size: 45px;
-    line-height: normal;
+    //background-color: $lightgray;
+    //color: #666;
+    //font-family: $ringside;
+    //font-weight: bold;
+    //font-size: 45px;
+    //line-height: normal;
     padding-top: 20px;
     padding-bottom: 20px;
 
@@ -156,9 +156,11 @@ section.page-header {
         align-items: flex-start;
         padding-left: 122px;
         .xlarge-text {
-            line-height: 75px;
+            //line-height: 75px;
+            margin-top: -11px;
             @media screen and (max-width: 1023px) {
-                line-height: 65px;
+                //line-height: 65px;
+                margin-top: -5px;
             }
         }
     }
@@ -217,7 +219,7 @@ section.page-header {
     padding: 5px;
     padding-bottom: 0;
     padding-left: 0;
-    background: white;
+    //background: white;
     cursor: pointer;
     -ms-grid-row: 2;
     &:last-of-type {
@@ -240,15 +242,15 @@ section.page-header {
         height: auto;
     }
     .field--name-field-link {
-        background: $navy;
+        //background: $navy;
         padding: 10px;
-        text-align: center;
+        //text-align: center;
     }
     a {
-        color: white;
-        font-family: $ringside;
-        font-size: 25px;
-        font-weight: 500;
+        color: white; // difficult to figure out where to add the 'white' class to get this
+        //font-family: $ringside;
+        //font-size: 25px;
+        //font-weight: 500;
     }
     a:focus,
     a:hover {

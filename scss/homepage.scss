@@ -73,7 +73,7 @@ byu-footer-column :nth-child(2) {
   font-weight: 500!important;
 }
 .normal-caps {
-  text-transform: capitalize!important;
+  text-transform: none !important;
 }
 .all-caps {
   text-transform: uppercase;
@@ -93,6 +93,9 @@ byu-footer-column :nth-child(2) {
 }
 .royal {
   color: $royal;
+}
+.lightgray {
+  color: $lightgray!important; // #e6e6e6
 }
 .medgray {
   color: $medgray!important; // 767676
@@ -127,11 +130,27 @@ byu-footer-column :nth-child(2) {
 }
 
 // background
+.bg-white {
+  background: #fff;
+}
 .bg-lightgray {
   background: $lightgray;
 }
+.bg-gray {
+  background: $gray;
+}
 .bg-darkgray {
   background: $darkgray;
+}
+.bg-medblue {
+  background: $medblue; // not in use yet
+}
+.bg-navy {
+  background: $navy;
+}
+
+.display-inline {
+  display: inline;
 }
 
 // used so far on about page - don't change

@@ -56,12 +56,12 @@
   {% if multiple %}
     <div{{ attributes.addClass(classes, 'field__items','doctorate-circle') }}>
       {% for item in items %}
-        <div{{ item.attributes.addClass('field__item','circles-large-text','white') }}>{{ item.content }}</div>
+        <div{{ item.attributes.addClass('field__item','large-text','white') }}>{{ item.content }}</div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field__item','circles-large-text','white') }}>{{ item.content }}</div>
+      <div{{ attributes.addClass(classes, 'field__item','large-text','white') }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
@@ -70,7 +70,7 @@
       <div class="field__items">
     {% endif %}
     {% for item in items %}
-      <div{{ item.attributes.addClass('field__item','circles-large-text','white') }}>{{ item.content }}</div>
+      <div{{ item.attributes.addClass('field__item','large-text','white') }}>{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
       </div>
