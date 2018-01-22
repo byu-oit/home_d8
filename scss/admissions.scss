@@ -58,7 +58,6 @@ article.node--type-admissions {
 }
 
 .freshman_profile_wrapper {
-    //background-color: $lightgray;
     padding-top: 100px;
     @media screen and (max-width: 1223px) {
         padding-top: 130px;
@@ -100,7 +99,6 @@ article.node--type-admissions {
                 margin: 10px -10px;
                 padding: 10px 15px;
             }
-            //color: $navy;
             .field-collection-item--name-field-freshman-profile {
                 div {
                     line-height: normal;
@@ -111,11 +109,6 @@ article.node--type-admissions {
                 .field--name-field-data-type:nth-of-type(2) {
                     font-weight: normal!important;
                 }
-                //.field--name-field-data-type {
-                //    font-size: 14px;
-                //    font-weight: normal;
-                //    text-transform: uppercase;
-                //}
                 img.freshman-profile-icon {
                     float: left;
                     padding-right: 10px;
@@ -190,10 +183,6 @@ article.node--type-admissions {
                 @media screen and (min-width: 1024px) and (max-width: 1424px) {
                     padding-left: 20px;
                 }
-                //.views-field-name {
-                //    padding-top: 15px;
-                //    padding-bottom: 5px;
-                //}
             }
             > li:last-of-type {
                 border-right: 0;
@@ -244,11 +233,6 @@ article.node--type-admissions {
         line-height: normal!important;
     }
     .subsidies {
-        //color: $medgray;
-        //font-style: italic;
-        //font-weight: normal;
-        //font-size: 12px;
-        //text-align: left;
         margin-top: 1em;
     }
     .subsidies-left {
@@ -278,36 +262,24 @@ article.node--type-admissions {
         @media screen and (max-width: 767px) {
             width: auto;
         }
-        //background-color: $darkgray;
         .v2 {
             padding-bottom: 4px;
         }
-        //font-weight: normal;
-        //.how-much {
-        //    font-style: italic;
-        //    font-size: 25px;
-        //}
-        //.for-full-time {
-        //    font-size: 12px;
-        //    text-transform: uppercase;
-        //}
     }
     .grad-split {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         .undergrad-header, .undergrad-header-small, .graduate-header {
-            //background-color: $navy;
-            //color: white;
             padding: 10px;
             margin: 0 50px;
         }
         .undergrad-header-small {
             display: none;
         }
-        .graduate-header {
-            //background-color: $medblue;
-        }
+        //.graduate-header {
+        //    //background-color: $medblue;
+        //}
         @media screen and (max-width: 1223px) {
             .undergrad-header {
                 display: none;
@@ -337,8 +309,6 @@ article.node--type-admissions {
             @media screen and (max-width: 991px) {
                 margin-left: 10px;
             }
-            //color: $darkgray;
-
             .management-title-breakpoint {
                 display: none;
                 @media screen and (max-width: 1223px) {
@@ -390,11 +360,6 @@ article.node--type-admissions {
                         left: 8.5em;
                     }
                 }
-                //.per-semester {
-                //    font-size: 12px;
-                //    font-weight: 500;
-                //    text-transform: uppercase;
-                //}
                 .tuition-price {
                     padding: 10px 0;
                 }
@@ -501,7 +466,7 @@ article.node--type-admissions {
             .tuition-bottom-area {
                 position: relative;
                 width: 200%;
-                background-color: white;
+                //background-color: white;
                 padding-top: 30px;
                 .subsidies {
                     width: 600px;
