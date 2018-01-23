@@ -18,17 +18,17 @@ byu-search input[type=search] { // id changes
 
 // linked titles
 .gs-result .gs-title, .gs-result .gs-title * {
-  color: $navy!important;
-  text-decoration: none!important
-;
-  font-size: 20px!important;
-  font-family: $ringside;
+  @include v3();
+  text-decoration: none!important;
+  //font-size: 20px!important;
+  //font-family: $ringside;
 }
 
 // paragraph
 .gs-result .gs-snippet {
   color: $medgray;
   font-family: $ringside;
+  font-size: 14px; // trying to be like body text
 }
 
 // bottom url link

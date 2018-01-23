@@ -73,35 +73,38 @@ h2, .v2  {
   font-size: 25px;
   line-height: 34px;
   font-weight: 500!important;
-  //text-align: center;
 }
 
-//.v3 { // merging with h3 but diff font weight.. check on line height..
-//  font-size: 16px;
-//  font-weight: 500;
-//  line-height: 26px;
-//  letter-spacing: .4px;
-//  a:hover, a:focus  {
-//    color: $royal;
-//  }
-//}
 
 
-
-h3, .v3 {
+@mixin v3 {
   font-size: 16px; // base for mobile etc
   //font-size: 22px; // checking 20 to 22px
   //  smaller w media queries below.
   font-weight: 500;
   //letter-spacing: .5px;
-
+  @media screen and (min-width: 1024px) {
+    font-size: 16px; // has to be 16, not 17 - breaks somethings
+    line-height: 23px; // check if this is okay everywhere for .v3
+  }
+  @media screen and (min-width: 1224px) {
+    font-size: 23px;
+    letter-spacing: .5px;
+  }
 
 }
+
+h3, .v3 {
+  @include v3();
+}
+
 h3.normal-weight, .v3.normal-weight {
   a:hover, a:focus {
     font-weight: 500;
   }
 }
+
+
 
 h4, .v4 { // h9 & h3 combo
   //font-size: 17px; // was 15, then was 16, testing 16 to 17 rt now
@@ -114,45 +117,8 @@ h4, .v4 { // h9 & h3 combo
     //font-weight: 500; // might use this later, idk if it should be applied so generally
   }
 }
-//.v4 {  // basically the same as normal text.. just center-aligned.. try to merge with .v4
-//  font-size: 14px;
-//  line-height: 16px;
-//  //letter-spacing: -.2px;
-//  //text-align: center;
-//}
-
-//h4 { // used in calendar module frontpage - not used on any other pages, ONLY in the calendar module.
-//  font-size: 18px;
-//  line-height: 20px;
-//  a:hover, a:focus {
-//    color: $royal;
-//  }
-//}
-//h5 {  // changing to a small-text class, never used as a heading
-//  font-weight: bold;
-//  font-size: 12px;
-//  line-height: 14px;
-//  letter-spacing: .33px;
-//}
-// change this to a .v2.ringside ? or another class?
-// could this one be switched to the other font (v2) in all cases to condense?
-//h6 {  // in mockups H6 was shown next to 85px size, 25px size, and 12px size..
-//  font-size: 25px;
-//  line-height: 27px;
-//  text-transform: uppercase;
-//  text-align: center;
-//}
-//.h7 { // just the same as normal paragraph and bold and uppercase? or maybe we use this as h6 to have uppercase and bold..?.
-//  font-size: 14px;
-//  font-weight: bold;
-//  line-height: 14px;
-//  text-transform: uppercase;
-//  text-align: center;
-//}
-
 
 @mixin jumbo-text() {
-
   font-weight: 600;
   font-size: 130px;
   font-family: $ringside;
