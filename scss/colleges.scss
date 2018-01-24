@@ -1,12 +1,4 @@
 @import "mixins";
-span.field.field--name-title.field--type-string.field--label-hidden.quickedit-field {
-  // it should follow the normal h1 styling
-  //color: #025;
-  //font-size: 35px;
-  //font-weight: bold;
-  //font-family: "Sentinel A","Sentinel B","CreteRound","Palatino","DroidSerif","Droid Serif",Georgia,serif;
-  //margin: 30px 0 20px 0;
-}
 
 #block-quicktabscollegesdepartments > h2 {
   display: none;
@@ -18,7 +10,6 @@ ul.quicktabs-tabs > li.active {
 
 ul.quicktabs-tabs > li {
   font-size: 16px;
-  //font-family: "Whitney SSm A","Whitney SSm B","OpenSans","Thonburi","DroidSans","Droid Sans","sans-serif","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif;
   margin: 0;
 }
 
@@ -32,7 +23,7 @@ ul.quicktabs-tabs > li {
     list-style-type: none;
     padding: 0;
   }
-
+  // redo this more organized with nesting?
   .view-content > ul > li > ul {
     padding: 0 0 10px 25px;
   }
@@ -50,23 +41,19 @@ ul.quicktabs-tabs > li {
   }
 
   .view-content > ul > li > .views-field a {  //colleges
-    font-size: 29px;
-    font-weight: bold;
-    //font-family: "Sentinel A","Sentinel B","CreteRound","Palatino","DroidSerif","Droid Serif",Georgia,serif;
+    @include v2();
+    font-family: $ringside;
   }
 
   .view-content > ul > li > ul > li > .views-field span {  //sub-categories
-    color: #444;
-    font-size: 21px;
-    font-weight: bold;
-    //font-family: "Whitney SSm A","Whitney SSm B","OpenSans","Thonburi","DroidSans","Droid Sans","sans-serif","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif;
+    @include v3();
+    color: $darkgray;
   }
 
   .view-content > ul > li > ul > li > .views-field a,
   .view-content > ul > li > ul > li > ul > li > .views-field a {  //departments
     font-size: 16px;
     font-weight: normal;
-    //font-family: "Whitney SSm A","Whitney SSm B","OpenSans","Thonburi","DroidSans","Droid Sans","sans-serif","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif;
   }
 }
 

@@ -17,6 +17,7 @@ byu-search input[type=search] { // id changes
 }
 
 // linked titles
+.gsc-control-cse .gs-spelling, .gsc-control-cse .gs-result .gs-title, .gsc-control-cse .gs-result .gs-title *,
 .gs-result .gs-title, .gs-result .gs-title * {
   @include v3();
   color: $navy!important;
@@ -26,6 +27,7 @@ byu-search input[type=search] { // id changes
 }
 
 // paragraph
+.gsc-control-cse, .gsc-control-cse .gsc-table-result,
 .gs-result .gs-snippet {
   color: $medgray;
   font-family: $ringside;
@@ -38,10 +40,8 @@ byu-search input[type=search] { // id changes
   font-family: $ringside;
 }
 
-
 // pager
 .gsc-results .gsc-cursor-box {
-
   display: flex;
   justify-content: center;
 }
