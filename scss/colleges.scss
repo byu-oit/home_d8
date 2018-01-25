@@ -44,6 +44,9 @@ ul.quicktabs-tabs > li {
     @include v2();
     font-family: $ringside;
   }
+  .view-content > ul > li > .views-field a:hover { //colleges
+    text-decoration: none;
+  }
 
   .view-content > ul > li > ul > li > .views-field span {  //sub-categories
     @include v3();
