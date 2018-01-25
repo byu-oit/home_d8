@@ -52,25 +52,25 @@
 }
 
 .hero-div {
-    line-height: normal;
+    //line-height: normal;
     .hero-title {
         padding-bottom: 0.2em;
     }
-    color: $navy;
-    p {
-        line-height: normal;
-        color: $navy;
-        font-family: $ringside;
-        font-weight: 400;
-    }
+    //color: $navy;
+    //p {
+    //    line-height: normal;
+    //    //color: $navy; // katria come back here to simplify a lot of this file
+    //    //font-family: $ringside;
+    //    //font-weight: 400;
+    //}
     a:focus p,
     a:hover p {
         color: $royal;
     }
 }
-.hero-title {
-    font-family: $vitesse;
-}
+//.hero-title {
+//    font-family: $vitesse;
+//}
 
 .field--name-field-somethings {
     margin-top: 50px;
@@ -148,11 +148,12 @@
                 -ms-grid-column: 2;
             }
         }
+        // katria here here
         .field--name-field-something-to-type {
-            text-align: center;
-            text-transform: uppercase;
+            //text-align: center;
+            //text-transform: uppercase;
             padding: 15px 5px;
-            color: white;
+            //color: white;
             background-color: $medgray;
             @media screen and (max-width: 991px) {
                 display: none;
@@ -167,9 +168,9 @@
         .something-to-see {
             background-color: $darkestgray;
         }
-        span.something-to-type {
-            font-weight: bold;
-        }
+        //span.something-to-type {
+        //    font-weight: bold;
+        //}
 
         .field--name-field-image {
             overflow: hidden;
@@ -184,7 +185,7 @@
             margin: 10px 0 15px;
         }
         a {
-            font-weight: normal;
+            font-weight: normal; // could strip w a template katria
         }
         a:focus,
         a:hover {
@@ -197,14 +198,14 @@
             box-shadow: 3px 3px 1px $lightgray;
         }
         a {
-            font-weight: normal;
+            //font-weight: normal;
             color: $royal;
         }
     }
     > .field__item {
         a:focus,
         a:hover {
-            font-weight: normal;
+            //font-weight: normal;
             color: $royal;
         }
     }

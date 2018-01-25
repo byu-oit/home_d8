@@ -39,7 +39,7 @@
 #}
 {%
   set classes = [
-    'v3', 'normal-weight',
+    'v3', 'normal-weight', 'all-caps', 'centered-text', 'white',
     'field',
     'field--name-' ~ field_name|clean_class,
     'field--type-' ~ field_type|clean_class,
@@ -55,5 +55,5 @@
 %}
 
 {% for item in items %}
-    <div{{ attributes.addClass(classes, 'something-to-' ~ item.content['#markup'] | lower) }}><span class="something-to-type">{{ item.content }}</span></div>
+    <div{{ attributes.addClass(classes, 'something-to-' ~ item.content['#markup'] | lower) }}><span class="something-to-type bold">{{ item.content }}</span></div>
 {% endfor %}

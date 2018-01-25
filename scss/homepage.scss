@@ -63,7 +63,7 @@ byu-footer-column :nth-child(2) {
 .ringside {
   font-family: $ringside !important;
 }
-.normal-weight {
+.normal-weight, .normal-weight p{
   font-weight: normal!important;
 }
 .bold, .v2.bold {
@@ -78,14 +78,16 @@ byu-footer-column :nth-child(2) {
 .all-caps {
   text-transform: uppercase;
 }
+.normal-space, .normal-space p {
+  line-height: normal;
+}
 .extra-space {
   @include extra-space();
-
 }
 .extra-small {
   font-size: 12px;
 }
-.navy {
+.navy, .navy p {
   color: $navy;
 }
 .white {
