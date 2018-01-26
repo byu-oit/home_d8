@@ -149,7 +149,7 @@
             }
         }
         // katria here here
-        .field--name-field-something-to-type {
+        .field--name-field-something-to-type { // this is at the v3 level
             //text-align: center;
             //text-transform: uppercase;
             padding: 15px 5px;
@@ -158,6 +158,13 @@
             @media screen and (max-width: 991px) {
                 display: none;
             }
+        }
+        .v3 {
+            // need this bandaid fix override to fit the font:
+            @media screen and (min-width: 1224px) {
+                font-size: 20px!important;
+            }
+
         }
         .something-to-do {
             background-color: $navy;
