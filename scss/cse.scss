@@ -1,7 +1,15 @@
 @import "mixins";
 
 div.gsc-above-wrapper-area,div.gsc-result-info-container,div.gcsc-branding,form.search-page-form{display: none;}
-ol.search-results.google_cse_search-results {list-style: none;}
+ol.search-results.google_cse_search-results {
+  list-style: none;
+  @media screen and (max-width: 1023px) {
+    padding-left: 0px;
+    & > li {
+      margin-left: 0px;
+    }
+  }
+}
 
 byu-search input[type=search] { // id changes
   background: #fff!important; // otherwise, it shows Google stuff
