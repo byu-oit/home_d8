@@ -14,10 +14,10 @@
         padding: 0;
     }
 }
-.front-page-emergency-notice {
+.front-page-emergency-notice { // katria here here
     margin-top: 65px;
     margin-bottom: 30px;
-    background-color: #a90217;
+    background-color: $red;
     font-weight: bold;
     text-align: center;
     color: #fff!important;
@@ -35,42 +35,20 @@
   transform: translateY(-25px);
   animation: come-in 0.5s ease forwards;
 }
-/*
-.come-in:nth-child(2) {
-    transform: translateX(-200px);
-}
-.come-in:nth-child(3) {
-    transform: translateX(-300px);
-}
-.come-in:nth-child(4) {
-    transform: translateX(-400px);
-}
-*/
 @keyframes come-in {
   from { opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
 
 .hero-div {
-    //line-height: normal;
     .hero-title {
         padding-bottom: 0.2em;
     }
-    //color: $navy;
-    //p {
-    //    line-height: normal;
-    //    //color: $navy; // katria come back here to simplify a lot of this file
-    //    //font-family: $ringside;
-    //    //font-weight: 400;
-    //}
     a:focus p,
     a:hover p {
         color: $royal;
     }
 }
-//.hero-title {
-//    font-family: $vitesse;
-//}
 
 .field--name-field-somethings {
     margin-top: 50px;
@@ -86,9 +64,6 @@
     @include tabletAreaWithMaxWidth();
     @media screen and (min-width: 1200px) {
     margin-top: 90px;
-    }
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
-        //max-width: 750px; // mixin tablet max width is set to 700px
     }
     @media screen and (max-width: 767px) {
         @supports (not (display: grid)) and (not (display: -ms-grid)) {
@@ -150,10 +125,7 @@
         }
         // katria here here
         .field--name-field-something-to-type { // this is at the v3 level
-            //text-align: center;
-            //text-transform: uppercase;
             padding: 15px 5px;
-            //color: white;
             background-color: $medgray;
             @media screen and (max-width: 991px) {
                 display: none;
@@ -164,7 +136,6 @@
             @media screen and (min-width: 1224px) {
                 font-size: 20px!important;
             }
-
         }
         .something-to-do {
             background-color: $navy;
@@ -175,9 +146,6 @@
         .something-to-see {
             background-color: $darkestgray;
         }
-        //span.something-to-type {
-        //    font-weight: bold;
-        //}
 
         .field--name-field-image {
             overflow: hidden;
@@ -205,14 +173,12 @@
             box-shadow: 3px 3px 1px $lightgray;
         }
         a {
-            //font-weight: normal;
             color: $royal;
         }
     }
     > .field__item {
         a:focus,
         a:hover {
-            //font-weight: normal;
             color: $royal;
         }
     }

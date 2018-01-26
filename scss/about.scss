@@ -12,12 +12,9 @@
     @media screen and (max-width: 767px) {
       margin-top: 25px;
       padding: 0px 25px;
-
       .v3 {
         text-align: left;
         line-height: 24px!important;
-        //font-weight: normal;
-        //color: $medgray;
       }
 
 
@@ -60,7 +57,6 @@
     margin-top: 10px;
 
     @media screen and (max-width: 767px) {
-      //color: $medgray;
       padding: 0px 25px 15px;
     }
   }
@@ -90,16 +86,10 @@
         max-width: 100%;
       }
       @media screen and (min-width: 768px) and (max-width: 1023px) {
-        //width: 766px;
-        //height: 405px;
         width: 100%;
       }
       @media screen and (min-width: 1024px) {
-        //width: 766px;
-        //height: 405px;
-
         width: 100%;
-        //height: -webkit-fill-available;
         max-height: 600px;
       }
     }
@@ -113,11 +103,9 @@
 
   .field--name-field-links {
     width: 30%;
-    //margin-top: -20px; // moving up to have links exactly aligned w video top
     margin-left: 0px;
     margin-right: 0px;
     @media screen and (max-width: 1223px) {
-      //width: 100%;
       padding: 0px 25px;
       order: 2;
     }
@@ -126,7 +114,6 @@
       width: 30%;
     }
     @media screen and (min-width: 1024px) and (max-width: 1223px) {
-      //order: 2;
       width: 60%;
       display: inline-block; // to get instagram block up on same line
       margin-left: 0px!important;
@@ -141,7 +128,6 @@
       margin-left: 0px!important;
       margin-top: 10px;
       display: inline-block; // to get instagram block up on same line
-      //order: 2;
       background: $lightgray;
       padding: 20px 30px 20px;
       min-height: 500px;
@@ -151,7 +137,6 @@
     }
     @media screen and (max-width: 767px) {
       width: 100%;
-      //order: 2;
       margin-top: 0px;
       margin-top: 10px;
       background: $lightgray;
@@ -191,7 +176,6 @@
     @media screen and (min-width: 1224px)  {
       height: 480px; // img at 185 now
     }
-    //background: gray; // temp for positioning
     @media screen and (min-width: 1024px) and (max-width: 1223px) {
       height: 380px; // 185 * 2 + 10px - 2 rows
       order: 3;
@@ -226,17 +210,16 @@
     @media screen and (min-width: 1024px) and (max-width: 1223px) {
       height: 350px;
     }
-    @media screen and (min-width: 1224px) {
-      height: 400px;
-    }
-    padding-top: 0px;
-
-    font-family: $ringside;
-    //font-style: italic;
-    font-size: 22px;
-    line-height: 28px;
+    //@media screen and (min-width: 1224px) {
+    //  height: 400px;
+    //}
+    //padding-top: 0px;
+    //
+    //font-family: $ringside;
+    ////font-style: italic;
+    //font-size: 22px;
+    //line-height: 28px;
     margin: 0px 0px 60px 0px;
-
 
     .field--name-field-quote-bar {
       padding-top: 100px;
@@ -258,7 +241,7 @@
 
     @media screen and (min-width: 1224px) {
       .backFiller {
-        border-top-color: #e5e5e5;
+        border-top-color: $lightgray;
       }
     }
 

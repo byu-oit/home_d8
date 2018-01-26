@@ -72,7 +72,6 @@ article.node--type-campus-life {
         // this targets links but not main category sections
         ul > li > ul > li > .views-field-name .v3.all-caps {
             text-transform: none;
-            //@include extra-space();
         }
     }
 }
@@ -89,7 +88,6 @@ section.page-header {
     position: relative;
     top: -25px;
     padding-top: 85px;
-    //background-color: $lightgray;
     @media screen and (max-width: 1223px) {
         top: 0;
     }
@@ -123,33 +121,13 @@ section.page-header {
     }
     display: flex;
     justify-content: center;
-    //background-color: $lightgray;
-    //color: #666;
-    //font-family: $ringside;
-    //font-weight: bold;
-    //font-size: 45px;
-    //line-height: normal;
     padding-top: 20px;
     padding-bottom: 20px;
-
-    //.sober-center {
-    //    margin-top: auto;
-    //    margin-bottom: auto;
-    //}
 
     .sober-rank-block {
         display: flex;
         align-items: flex-end;
     }
-    //.sober-stone-cold-sober {
-    //    color: $navy;
-    //    font-style: italic;
-    //}
-    //.sober-university {
-    //    color: $navy;
-    //    text-transform: uppercase;
-    //    text-align: justify;
-    //}
     .sober-year-block {
         display: flex;
         align-items: flex-start;
@@ -166,28 +144,11 @@ section.page-header {
     .sober-year-block > div:nth-of-type(2) {
         padding-left: 8px;
     }
-    //.sober-for-the-past {
-    //    font-size: 30px;
-    //}
-    //.sober-years-text {
-    //    font-size: 30px;
-    //    text-align: justify;
-    //}
-    //.sober-years-number {
-    //    //@include xlarge-text(); // katria maybe adjust more later
-    //    line-height: 75px;
-    //    padding-left: 122px;
-    //    padding-right: 8px;
-    //}
     .sober-princeton {
         padding-left: 250px;
         @media screen and (min-width: 701px) and (max-width: 1023px) {
             padding-left: 245px;
         }
-        //font-style: italic;
-        //font-size: 16px;
-        //
-        //font-weight: normal;
     }
 }
 .field--name-field-sober-image {
@@ -218,7 +179,6 @@ section.page-header {
     padding: 5px;
     padding-bottom: 0;
     padding-left: 0;
-    //background: white;
     cursor: pointer;
     -ms-grid-row: 2;
     &:last-of-type {
@@ -241,15 +201,10 @@ section.page-header {
         height: auto;
     }
     .field--name-field-link {
-        //background: $navy;
         padding: 10px;
-        //text-align: center;
     }
     a {
         color: white; // difficult to figure out where to add the 'white' class to get this
-        //font-family: $ringside;
-        //font-size: 25px;
-        //font-weight: 500;
     }
     a:focus,
     a:hover {
@@ -279,27 +234,9 @@ section.page-header {
     .field--name-field-years-sober {
         font-size: 7vw;
         padding-left: 5px;
-        //.xlarge-text {
-            //font-size: 12vw;
-            //line-height: 12vw;
-        //}
         .sober-year-block {
             padding-left: 20px;
-            //.xlarge-text {
-                //line-height: 14vw;// is font size okay? it was 17vw..
-            //}
         }
-        //.sober-years-number {
-        //    padding-left: 20px;
-        //    font-size: 17vw;
-        //    line-height: 14vw;
-        //}
-        //.sober-for-the-past {
-        //    font-size: 6vw;
-        //}
-        //.sober-years-text {
-        //    font-size: 6vw;
-        //}
         .sober-princeton {
             padding-left: 5vw;
         }
