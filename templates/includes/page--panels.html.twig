@@ -1,7 +1,7 @@
 {% include directory ~ '/templates/includes/header.html.twig' %}
 <div id="wrapper">
 
-    <div role="main" class="main {%  if custom_width %} custom-width {% endif %}" style="width: {{ custom_width }}px">
+    <div role="main" id="main-content" class="main {%  if custom_width %} custom-width {% endif %}" style="width: {{ custom_width }}px">
 
         {% if page.slide_show %}
             {{ page.slide_show }}
