@@ -12,7 +12,7 @@ $lightRoyal: #114BAD;
 
 // There are 7-9 grays right now..
 $xlightgray: #f2f2f2;
-$lightgray: #e6e6e6; 
+$lightgray: #e6e6e6;
 $medgray: #767676; // extra
 $gray: #c5c5c5;
 $darkgray: #666; // went from 4a4a4a to 666
@@ -47,13 +47,13 @@ body {
 }
 
 h1, h2, h3, h4, .h1, .v2, .h3, .h4, .v4, .v3, .large-text, .medium-text, .v4,
-h1 a, h2 a, h3 a, h4 a, .h1 a, .v2 a, .h3 a, .h4 a, .v4 a, .v3 a, .large-text a, .medium-text a, .v4 a {
+h1 a, h2 a, h3 a, h4 a, .v1 a, .v2 a, .h3 a, .h4 a, .v4 a, .v3 a, .large-text a, .medium-text a {
   color: $navy;
 }
 .v3.gray, .v3.gray a, .medium-text.gray, .medium-text.gray a {
   color: $medgray;
 }
-.white {
+.white, .jumbo-text.white {
   color: #fff;
 }
 h1, h2, .h1, .v2 {
@@ -133,8 +133,14 @@ h4, .v4 { // h9 & h3 combo
   color: $navy;
   padding: 0px 25px;
   line-height: normal; // katria added this in font conversion
-  @media screen and (max-width: 1023px) {
-    //padding-top: 30px;
+  //@media screen and (min-width: 1224px) {
+  //  font-size: 110px;
+  //}
+  @media screen and (max-width: 1223px) {
+    font-size: 110px;
+  }
+  @media screen and (max-width: 767px) {
+      font-size: 90px;
   }
 }
 .jumbo-text {
@@ -145,8 +151,12 @@ h4, .v4 { // h9 & h3 combo
   font-size: 85px;
   line-height: 84px;
   padding-left: 10px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1023px) {
     font-size: 75px;
+    line-height: 74px; // check if this messes stuff up
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 60px;
     line-height: 74px; // check if this messes stuff up
   }
 }
@@ -164,7 +174,15 @@ h4, .v4 { // h9 & h3 combo
     &.white {
       color: #fff;
     }
+  // katria see if this is necessary for ytext:
+  //@media screen and (max-width: 1023px)  {
+  //  font-size: 55px;
+  //}
+  @media screen and (max-width: 768px) {
+    font-size: 45px;
   }
+
+}
 
 // one case i couldn't add the class, so need a mixin
 // no mobile adjustment
@@ -257,12 +275,12 @@ $v1-desktopw-font: 200px;
     letter-spacing: .5px;
     //line-height: 48px;
   }
-  .large-text {
-    font-size: 60px;
-    line-height: 82px;
-    letter-spacing: 1px;
-    font-weight: 500;
-  }
+  //.large-text {
+  //  font-size: 60px;
+  //  line-height: 82px;
+  //  letter-spacing: 1px;
+  //  font-weight: 500;
+  //}
   .banner-text {
     font-size: $v1-desktop-font;
   }

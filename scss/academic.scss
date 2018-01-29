@@ -11,18 +11,6 @@ article.node--type-academic {
 
 //section for circles
 
-
-//.circles-large-text {
-//  //font-family: $ringside;
-//  //font-size: 60px;
-//  //line-height: 82px;
-//  //letter-spacing: -2.5px;
-//  //font-weight: 500;
-//  &.white {
-//    color: #fff;
-//  }
-//}
-
 .undergrad-circle {
   @include navy-circle($undergrad-circle-size);
 }
@@ -103,11 +91,9 @@ article.node--type-academic {
 
 
 #circle-wrapper, #academic-success {
-  //background-color: $gray;
   min-height: 15em;
 }
 
-//#academic-y-facts div {float: left;}
 div#links-and-calendar {
   min-height: 80em;
 }
@@ -134,7 +120,6 @@ div#links-and-calendar {
 }
 
 .field--name-field-academic-highlight-rank {
-    //position: relative;
     margin-top: -1.3em;
 }
 
@@ -338,11 +323,6 @@ div#links-and-calendar {
 // Academic News header spacing shim to work with the yfacts banner
 // spacing issue
 .field--name-field-byu-news-block {
-  //@media screen and (min-width: 1024px) {
-  //  h2 {
-  //    text-align: left;
-  //  }
-  //}
   @media screen and (min-width: 768px) {
     margin-top: 100px;
   }

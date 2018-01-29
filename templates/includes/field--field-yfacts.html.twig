@@ -63,10 +63,10 @@
 
     {% for item in items %}
 
-      <div class="factsBanner">
-        <div class="yFactsText">
-          <div class="yText">Y</div>
-          <div{{ attributes.addClass(classes, 'field__item', 'factsText') }}>{{ item.content }}</div>
+      <div class="factsBanner bg-darknavy">
+        <div class="yFactsText white">
+          <div class="yText jumbo-text white vitesse semibold">Y</div>
+          <div{{ attributes.addClass(classes, 'field__item', 'factsText', 'xlarge-text', 'all-caps', 'white') }}>{{ item.content }}</div>
         </div>
       </div>
       <div {% if attributes.hasClass('lightgray-above') %} class="lightgray-above backFiller" {% else %} class="backFiller"{% endif %}>&nbsp;</div>

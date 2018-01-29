@@ -718,7 +718,7 @@
     //  display: block;
     //}
   }
-  .jumbo-text {
+  .jumbo-text.and-icon {
 
     display: none;
     @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -1184,7 +1184,7 @@ html.not-chrome.safari .type-about .main {
     animation: 1s fadein;
   }
 
-  .jumbo-text { // katria maybe make this not just about
+  .jumbo-text.and-icon { // katria maybe make this not just about
     display: inline;
     animation: 1s fadein;
   }
