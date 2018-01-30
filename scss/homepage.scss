@@ -187,8 +187,9 @@ $circle-width: 156px;
   flex-direction: column;
   margin: 15px 0px;
   .gray-dot {
-    color: $medgray;
-    font-size: 60px;
+    line-height: 25px;
+    //color: $medgray;
+    //font-size: 60px;
     font-family: Serif;
     margin: 0px;
     display: none;
@@ -196,20 +197,6 @@ $circle-width: 156px;
     //animation: 1s fadein;  // then they are display: block
   }
 }
-
-// animation delay on later dots:
-
-//.gray-dot.dot-2 { animation-delay: 250ms }
-//.gray-dot.dot-3 { animation-delay: 500ms }
-//.gray-dot.dot-4 { animation-delay: 750ms }
-//.gray-dot.dot-5 { animation-delay: 1000ms }
-//.gray-dot.dot-6 { animation-delay: 1250ms }
-//.gray-dot.dot-7 { animation-delay: 1500ms }
-//.gray-dot.dot-8 { animation-delay: 1750ms }
-//.gray-dot.dot-9 { animation-delay: 2000ms }
-//.gray-dot.dot-10 { animation-delay: 2250ms }
-
-
 
 // testing if this works
 .blue-dot-after {
@@ -295,15 +282,6 @@ $circle-width: 156px;
       }
       // we don't set a max-width on mobile ones now because a lot of them are full width for mobile & Tablet:
 
-      @media screen and (max-width: 1023px) and (min-width: 768px) {
-        //max-width: 600px;
-      }
-      @media screen and (max-width: 767px) and (min-width: 400px) {
-        //max-width: 90%;
-      }
-      @media screen and (max-width: 400px) {
-        //max-width: 300px;
-      }
     }
     .container {
       width: 100%;

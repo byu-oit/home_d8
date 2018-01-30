@@ -1105,9 +1105,9 @@ html.not-chrome.safari .type-about .main {
     animation: 1s fadein;
   }
 
-  .vertical-dots.before-languages .gray-dot.dot-1,
-  .vertical-dots.before-languages .gray-dot.dot-2,
-  .vertical-dots.before-languages .gray-dot.dot-3 {
+  //.vertical-dots.before-languages .gray-dot.dot-1,
+  //.vertical-dots.before-languages .gray-dot.dot-2,
+  .vertical-dots.before-languages .gray-dot {
     display: block;
     animation: 1s fadein;
   }
@@ -1117,9 +1117,9 @@ html.not-chrome.safari .type-about .main {
     animation: 1s fadeinfast;
   }
   // if($('.demographics4').hasClass('in-view')) {  // scroll down abit and get the action
-  .vertical-dots.after-spoken .gray-dot.dot-1,
-  .vertical-dots.after-spoken .gray-dot.dot-2,
-  .vertical-dots.after-spoken .gray-dot.dot-3 {
+  //.vertical-dots.after-spoken .gray-dot.dot-1,
+  //.vertical-dots.after-spoken .gray-dot.dot-2,
+  .vertical-dots.after-spoken .gray-dot {
     display: block;
     animation: 1s fadein;
   }
