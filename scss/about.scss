@@ -1079,49 +1079,26 @@ html.not-chrome.safari .type-about .main {
     }
   }
 
+  .vertical-dots.after-spoken .gray-dot,
+  .vertical-dots.before-languages .gray-dot,
   .field--name-field-states,
-  .states-label {
-    display: block;
-    animation: 1s fadein;
-  }
-
-  .jumbo-text.and-icon { // katria maybe make this not just about
-    display: inline;
-    animation: 1s fadein;
-  }
-
+  .states-label,
   .field--name-field-countries {
     display: block;
     animation: 1s fadein;
   }
+
+  .jumbo-text.and-icon,
   .countries-label,
-    // state percentages
-  .state-percents-group .state-1,
-  .state-percents-group .state-2,
-  .state-percents-group .state-3,
-  .state-percents-group .state-4,
-  .state-percents-group .state-5 {
+  .state-percents-group > .v4 {
     display: inline;
     animation: 1s fadein;
   }
 
-  //.vertical-dots.before-languages .gray-dot.dot-1,
-  //.vertical-dots.before-languages .gray-dot.dot-2,
-  .vertical-dots.before-languages .gray-dot {
-    display: block;
-    animation: 1s fadein;
-  }
   .languages-taught-circle,
   .languages-spoken-circle {
     visibility: visible;
     animation: 1s fadeinfast;
-  }
-  // if($('.demographics4').hasClass('in-view')) {  // scroll down abit and get the action
-  //.vertical-dots.after-spoken .gray-dot.dot-1,
-  //.vertical-dots.after-spoken .gray-dot.dot-2,
-  .vertical-dots.after-spoken .gray-dot {
-    display: block;
-    animation: 1s fadein;
   }
 
   // show certifications first
@@ -1129,7 +1106,6 @@ html.not-chrome.safari .type-about .main {
     display: block;
     animation-name: bounceInRight;
   }
-
 
   // then students speaking %
 
