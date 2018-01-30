@@ -138,11 +138,17 @@ byu-footer-column :nth-child(2) {
 .bg-white {
   background: #fff;
 }
+.bg-xlightgray {
+  background: $xlightgray;
+}
 .bg-lightgray {
   background: $lightgray;
 }
 .bg-gray {
   background: $gray;
+}
+.bg-medgray {
+  background: $medgray;
 }
 .bg-darkgray {
   background: $darkgray;

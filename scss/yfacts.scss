@@ -1,7 +1,6 @@
 @import "mixins";
 
 .factsBanner {
-  //background-color: $darknavy;
   height: 150px;
   width:100%;
   position:relative;
@@ -15,7 +14,6 @@
 }
 
 .yFactsText {
-  //color: white;
   display: flex;
   align-items: center;
   transform:skew(0deg,-7deg);
@@ -24,21 +22,17 @@
 }
 
 .yText {
-  //font-family: "Vitesse A", "Vitesse B", Georgia, serif;
-  font-size: 170px;
-  //font-weight: 500;
   position: relative;
   top: -31px;
   transform:rotate(7deg);
   -ms-transform:rotate(7deg);
   -webkit-transform:rotate(7deg);
 }
+.yText.jumbo-text {
+  padding-right: 0px;
+}
 
 .factsText {
-  //font-family: $ringside;
-  font-size: 80px;
-  //font-weight: 500;
-  //text-transform: uppercase;
   padding-left: 15px;
   padding-right: 200px;
   position: relative;
@@ -77,12 +71,10 @@
   }
 
   .yText {
-    //font-size: 135px;
     top: -22px;
   }
 
   .factsText {
-    //font-size: 65px;
     padding-left: 0;
     padding-right: 120px;
     top: 8px;
@@ -111,12 +103,10 @@
   }
 
   .yText {
-    //font-size: 110px;
     top: -18px;
   }
 
   .factsText {
-    //font-size: 55px;
     padding-left: 0;
     padding-right: 80px;
     top: 5px;
@@ -142,12 +132,10 @@
   }
 
   .yText {
-    //font-size: 110px;
     top: -17px;
   }
 
   .factsText {
-    //font-size: 55px;
     padding-left: 0;
     padding-right: 70px;
     top: 5px;
@@ -173,12 +161,10 @@
   }
 
   .yText {
-    //font-size: 90px;
     top: -11px;
   }
 
   .factsText {
-    //font-size: 45px;
     padding-left: 0;
     padding-right: 15px;
     top: 5px;

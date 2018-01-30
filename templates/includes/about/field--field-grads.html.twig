@@ -65,9 +65,9 @@
 
       <div class="barWrapper grad-wrapper field--name-field-grads">
         <span class="progressText v3 extra-space gray all-caps"><B>GRADUATE</B> Students</span>
-        <div class="progress ">
+        <div class="progress bg-lightgray">
           {# the students-now value NEEDS to not have a comma, the popover title NEEDS to have a comma.. i tried most math and raw and render filters and tried adding and removing it#}
-          <div class="progress-bar bar2 color-2" role="progressbar" students-now="{{ item.content }}" aria-valuemin="0" students-max="33000" style="">
+          <div class="progress-bar bar2 color-2 bg-medgray" role="progressbar" students-now="{{ item.content }}" aria-valuemin="0" students-max="33000" style="">
             <span  class="popOver" data-toggle="tooltip" data-placement="bottom" title="{{ item.content }}"></span>
           </div>
 

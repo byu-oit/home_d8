@@ -133,9 +133,6 @@ h4, .v4 { // h9 & h3 combo
   color: $navy;
   padding: 0px 25px;
   line-height: normal; // katria added this in font conversion
-  //@media screen and (min-width: 1224px) {
-  //  font-size: 110px;
-  //}
   @media screen and (max-width: 1223px) {
     font-size: 110px;
   }
@@ -175,9 +172,9 @@ h4, .v4 { // h9 & h3 combo
       color: #fff;
     }
   // katria see if this is necessary for ytext:
-  //@media screen and (max-width: 1023px)  {
-  //  font-size: 55px;
-  //}
+  @media screen and (max-width: 1223px) { // test this on other pages
+    font-size: 50px; // 55px is too big for about Total students - test
+  }
   @media screen and (max-width: 768px) {
     font-size: 45px;
   }
