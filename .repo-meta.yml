@@ -46,8 +46,8 @@ software:
             software:
           supports:
             software:
-              - university-homepage
-              - university-homepage
+              - university-homepage Web App Development
+              - university-homepage Web App Production
             service:
               - BYU Home Page
           reverse_proxy:
