@@ -188,6 +188,7 @@ h4, .v4 { // h9 & h3 combo
   font-size: 35px;
   font-weight: bold;
   line-height: 40px;
+  letter-spacing: 0.8px; // improves readability
   @media screen and (max-width: 1024px){
     font-size: 26px;
   }
