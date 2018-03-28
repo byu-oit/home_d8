@@ -40,6 +40,7 @@
 {%
   set classes = [
     'field',
+    'bg-xlightgray',
     'field--name-' ~ field_name|clean_class,
     'field--type-' ~ field_type|clean_class,
     'field--label-' ~ label_display,
@@ -68,13 +69,13 @@
 {% else %}
   <div{{ attributes.addClass(classes)}}>
       {% set array = label|split(' ', 2) %}
-    <div{{ title_attributes.addClass(title_classes, 'h9', 'all-caps') }}><b>{{ attribute(array, 0) }}</b> {{ attribute(array, 1) }}</div>
-    <div{{ title_attributes.addClass('total-students-label', 'h9', 'all-caps', 'normal-weight') }}>Students</div>
+    <div{{ title_attributes.addClass(title_classes, 'v3', 'all-caps') }}><b>{{ attribute(array, 0) }}</b> {{ attribute(array, 1) }}</div>
+    <div{{ title_attributes.addClass('total-students-label', 'v3', 'all-caps', 'normal-weight') }}>Students</div>
     {% if multiple %}
       <div class="field__items">
     {% endif %}
     {% for item in items %}
-      <div{{ item.attributes.addClass('field__item', 'counter') }}>{{ item.content }}</div>
+      <div{{ item.attributes.addClass('field__item', 'counter', 'bold', 'large-text', 'right-text') }}>{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
       </div>

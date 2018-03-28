@@ -14,10 +14,10 @@
         padding: 0;
     }
 }
-.front-page-emergency-notice {
+.front-page-emergency-notice { // katria here here
     margin-top: 65px;
     margin-bottom: 30px;
-    background-color: #a90217;
+    background-color: $red;
     font-weight: bold;
     text-align: center;
     color: #fff!important;
@@ -35,41 +35,19 @@
   transform: translateY(-25px);
   animation: come-in 0.5s ease forwards;
 }
-/*
-.come-in:nth-child(2) {
-    transform: translateX(-200px);
-}
-.come-in:nth-child(3) {
-    transform: translateX(-300px);
-}
-.come-in:nth-child(4) {
-    transform: translateX(-400px);
-}
-*/
 @keyframes come-in {
   from { opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
 
 .hero-div {
-    line-height: normal;
     .hero-title {
         padding-bottom: 0.2em;
-    }
-    color: $navy;
-    p {
-        line-height: normal;
-        color: $navy;
-        font-family: $gotham;
-        font-weight: 400;
     }
     a:focus p,
     a:hover p {
         color: $royal;
     }
-}
-.hero-title {
-    font-family: $vitesse;
 }
 
 .field--name-field-somethings {
@@ -86,9 +64,6 @@
     @include tabletAreaWithMaxWidth();
     @media screen and (min-width: 1200px) {
     margin-top: 90px;
-    }
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
-        //max-width: 750px; // mixin tablet max width is set to 700px
     }
     @media screen and (max-width: 767px) {
         @supports (not (display: grid)) and (not (display: -ms-grid)) {
@@ -148,14 +123,18 @@
                 -ms-grid-column: 2;
             }
         }
-        .field--name-field-something-to-type {
-            text-align: center;
-            text-transform: uppercase;
+        // katria here here
+        .field--name-field-something-to-type { // this is at the v3 level
             padding: 15px 5px;
-            color: white;
             background-color: $medgray;
             @media screen and (max-width: 991px) {
                 display: none;
+            }
+        }
+        .v3 {
+            // need this bandaid fix override to fit the font:
+            @media screen and (min-width: 1224px) {
+                font-size: 20px!important;
             }
         }
         .something-to-do {
@@ -166,9 +145,6 @@
         }
         .something-to-see {
             background-color: $darkestgray;
-        }
-        span.something-to-type {
-            font-weight: bold;
         }
 
         .field--name-field-image {
@@ -181,10 +157,10 @@
 
         .field--name-field-link {
             padding: 0px 15px;
-            margin-top: 10px;
+            margin: 10px 0 15px;
         }
         a {
-            font-weight: normal;
+            font-weight: normal; // could strip w a template katria
         }
         a:focus,
         a:hover {
@@ -197,14 +173,12 @@
             box-shadow: 3px 3px 1px $lightgray;
         }
         a {
-            font-weight: normal;
             color: $royal;
         }
     }
     > .field__item {
         a:focus,
         a:hover {
-            font-weight: normal;
             color: $royal;
         }
     }

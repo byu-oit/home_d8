@@ -6,15 +6,13 @@ $darknavy: #002040;
 $medblue: #5D7998 ; // was 869DB5 but not quite accessible
 $lightBlue: #e0f0cc;
 $xlightblue: #C3DDF9;
-$brightBlue: #0057B8;
 
-$royal: #005eb8; // was #003DA5
+$royal: #0057B8; // was #003DA5
 $lightRoyal: #114BAD;
 
 // There are 7-9 grays right now..
 $xlightgray: #f2f2f2;
-$lightgray: #e6e6e6; // will likely change to e6e6e6
-$lightergray: #e6e6e6;
+$lightgray: #e6e6e6;
 $medgray: #767676; // extra
 $gray: #c5c5c5;
 $darkgray: #666; // went from 4a4a4a to 666
@@ -24,8 +22,10 @@ $darkestgray: #141414;  // this should be used for body & default text.
 // other colors
 $red: #B3041A;
 
-$yellow: #FCC015;
+$yellow: #FCC015; // goldish-orange darker yellow
 $lightyellow: #fef2d0;
+
+
 
 $teal: #84DCB4;
 $lightteal: #C4F7E0;
@@ -36,225 +36,288 @@ $lightgreen: #e0f0cc;
 $white: #FFF;
 
 /* ---- fonts ---- */
-$gotham: "Gotham A", "Gotham B", Arial, sans-serif;
+//$ringside: "Gotham A", "Gotham B", Arial, sans-serif;
+$ringside: "Ringside Narrow A", "Ringside Narrow B", sans-serif;
 $vitesse: "Vitesse A", "Vitesse B", serif;
 
 
 /* ------------- Headings Etc -------------------- */
+body {
+  font-family: $ringside;
+}
 
-h1, h2, h3, h4, .h1, .h2, .h3, .h4, .h8, .h9, .h10, .h11, .h12,
-h1 a, h2 a, h3 a, h4 a, .h1 a, .h2 a, .h3 a, .h4 a, .h8 a, .h9 a, .h10 a, .h11 a, .h12 a {
+h1, h2, h3, h4, .h1, .v2, .h3, .h4, .v4, .v3, .large-text, .medium-text, .v4,
+h1 a, h2 a, h3 a, h4 a, .v1 a, .v2 a, .h3 a, .h4 a, .v4 a, .v3 a, .large-text a, .medium-text a {
   color: $navy;
 }
-h5 a, .h5 a,
-h5, .h5, .h9.gray, .h9.gray a, .h11.gray, .h11.gray a {
+.v3.gray, .v3.gray a, .medium-text.gray, .medium-text.gray a {
   color: $medgray;
 }
-h6 a, .h6 a, .h7 a,.h8.white a, .h9.white a, .h11.white a, .h12.white a, .h13 a,
-h6, .h6, .h7,.h8.white, .h9.white, .h10.white, .h10.white a, .h11.white, .h12.white, .h13, .h1-navy .h13  {
+.white, .jumbo-text.white {
   color: #fff;
 }
-h1, h2, .h1, .h2 {
+h1, h2, .h1, .v2 {
   font-family: $vitesse;
 }
-h3, h5, h6, .h3, .h5, .h6, .h7, .h8, .h9, .h10, .h11, .h12, .h13, .h1-navy .h13 {
-  font-family: $gotham;
+h3, .v3, h4, .v4, .large-text, .medium-text, .v4, .banner-text, .h1-navy .banner-text {
+  font-family: $ringside;
 }
 
-h1, .h1 {
+h1, .h1, .v1 {
   font-size: 35px;
   line-height: 34px;
   text-align: center;
 }
-h2, .h2, .larger-text {
+
+
+@mixin v2() {
   font-size: 25px;
   line-height: 34px;
-  text-align: center;
-}
-h3, .h3 {
-  font-size: 15px;
-  letter-spacing: -.2px;
-  line-height: 19px;
-  a:hover, a:focus {
-    font-weight: bold;
+  font-weight: 500!important;
+  @media screen and (min-width: 1024px) {
+      font-size: 30px;
+  }
+  @media screen and (min-width: 1224px) {
+    font-size: 35px;
   }
 }
-h4 {
-  font-size: 18px;
-  line-height: 20px;
-  a:hover, a:focus {
-    color: $royal;
-  }
-}
-h5 {
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: .33px;
-}
-h6 {
-  font-size: 25px;
-  line-height: 27px;
-  text-transform: uppercase;
-  text-align: center;
-}
-.h7 {
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 14px;
-  text-transform: uppercase;
-  text-align: center;
-}
-.h8 {
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: -.2px;
-  text-align: center;
+h2, .v2 {
+  @include v2();
 }
 
-.h9 {
-  font-size: 16px;
+@mixin v3 {
+  font-size: 16px; // base for mobile etc
+  //font-size: 22px; // checking 20 to 22px
+  //  smaller w media queries below.
   font-weight: 500;
-  line-height: 40px;
-  letter-spacing: .4px;
-  a:hover, a:focus  {
-    color: $royal;
+  //letter-spacing: .5px;
+  @media screen and (min-width: 1024px) {
+    font-size: 16px; // has to be 16, not 17 - breaks somethings
+    line-height: 23px; // check if this is okay everywhere for .v3
+  }
+  @media screen and (min-width: 1224px) {
+    font-size: 23px!important;
+    letter-spacing: .5px;
+  }
+
+}
+
+h3, .v3 {
+  @include v3();
+}
+
+h3.normal-weight, .v3.normal-weight {
+  a:hover, a:focus {
+    font-weight: 500;
   }
 }
-.h10 {
-  font-size: 35px;
-  line-height: 40px;
-  font-weight: bold;
-  &.white {
-    color: #fff;
+
+
+
+h4, .v4 { // h9 & h3 combo
+  //font-size: 17px; // was 15, then was 16, testing 16 to 17 rt now
+  letter-spacing: 0.2px;
+  line-height: 19px;
+  @media screen and (max-width: 1024px) { // already below
+    font-size: 16px;
   }
+  a:hover, a:focus {
+    //font-weight: 500; // might use this later, idk if it should be applied so generally
+  }
+}
+
+@mixin jumbo-text() {
+  font-weight: 600;
+  font-size: 130px;
+  font-family: $ringside;
+  color: $navy;
+  padding: 0px 25px;
+  line-height: normal; // katria added this in font conversion
+  @media screen and (max-width: 1223px) {
+    font-size: 110px;
+  }
+  @media screen and (max-width: 767px) {
+      font-size: 90px;
+  }
+}
+.jumbo-text {
+  @include jumbo-text();
+}
+
+@mixin xlarge-text() {
+  font-size: 85px;
+  line-height: 84px;
+  padding-left: 10px;
+  @media screen and (max-width: 1023px) {
+    font-size: 75px;
+    line-height: 74px; // check if this messes stuff up
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 60px;
+    line-height: 74px; // check if this messes stuff up
+  }
+}
+.xlarge-text {
+  @include xlarge-text();
+}
+
+ // numbers inside navy circles - use a class instead - where is this used outside of the circles?
+.large-text {
+    font-family: $ringside;
+    font-size: 60px;
+    line-height: 82px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    &.white {
+      color: #fff;
+    }
+  // katria see if this is necessary for ytext:
+  @media screen and (max-width: 1223px) { // test this on other pages
+    font-size: 50px; // 55px is too big for about Total students - test
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 45px;
+  }
+
 }
 
 // one case i couldn't add the class, so need a mixin
 // no mobile adjustment
-@mixin h11() {
-  font-family: $gotham;
+@mixin medium-text() {
+  font-family: $ringside;
   font-size: 35px;
   font-weight: bold;
   line-height: 40px;
+  letter-spacing: 0.8px; // improves readability
   @media screen and (max-width: 1024px){
     font-size: 26px;
   }
 
 }
-.h11 {
-  @include h11();
+.medium-text {
+  @include medium-text();
 }
-.h12 {
+.v4 {
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
   /*letter-spacing:*/
   a:hover, a:focus  {
     color: $royal;
   }
 }
-$h13-mobile-font:45px;
-$h13-tabletp-font:90px;
-$h13-tabletl-font: 120px;
-$h13-desktop-font:135px;
-$h13-desktopw-font: 200px;
-.h13 {
-  font-size: $h13-mobile-font;
-  /*line-height:*/
+$v1-mobile-font:45px;
+$v1-tabletp-font:90px;
+$v1-tabletl-font: 120px;
+$v1-desktop-font:135px;
+$v1-desktopw-font: 200px;
+.banner-text {
+  font-size: $v1-mobile-font;
+  //line-height: $v1-mobile-font;
+  color: #fff!important;
+  text-transform: uppercase;
 }
 .view-content-page-header .views-field-title {
-  margin-top: ($h13-mobile-font *.73*-1);
-  margin-bottom: ($h13-mobile-font *.73);
+  margin-top: ($v1-mobile-font *.73*-1);
+  margin-bottom: ($v1-mobile-font *.73);
   h1 {
-      background-color: $darknavy;
+      background-color: $darknavy;  // fallback if no image?
   }
 }
 
 
 @media screen and (min-width: 768px) {
-  .h13 {
-    font-size: $h13-tabletp-font;
+  .banner-text {
+    font-size: $v1-tabletp-font;
+    //line-height: $v1-tabletp-font;
   }
   .view-content-page-header .views-field-title {
-    margin-top: ($h13-tabletp-font *.54*-1);
-    margin-bottom: ($h13-tabletp-font *.50);
+    margin-top: ($v1-tabletp-font *.54*-1);
+    margin-bottom: ($v1-tabletp-font *.50);
   }
 
 }
 @media screen and (min-width: 1024px) {
-  h2, .h2, .larger-text {
-    font-size: 30px;
+  //h2, .v2 { // this larger text refers to on the about page only
+  //  font-size: 30px;
+  //}
+  h3, .v3 {
+    font-size: 16px; // has to be 16, not 17 - breaks somethings
+    line-height: 23px; // check if this is okay everywhere for .v3
   }
-  h3, .h3 {
-    font-size: 17px;
-    line-height: 23px;
-  }
-  .h13 {
-    font-size: $h13-tabletl-font;
+  .banner-text {
+    font-size: $v1-tabletl-font;
   }
   .view-content-page-header .views-field-title {
-    margin-top: ($h13-tabletl-font *.50*-1);
-    margin-bottom: ($h13-tabletl-font *.50);
+    margin-top: ($v1-tabletl-font *.50*-1);
+    margin-bottom: ($v1-tabletl-font *.50);
   }
 
 
 }
 @media screen and (min-width: 1224px) {
-  h1, .h1 {
+  h1, .v1 {
     font-size: 40px;
   }
-  h2, .h2, .larger-text {
-    font-size: 35px;
-  }
-  h3, .h3 {
-    font-size: 20px;
-    line-height: 26px;
-  }
-  /* we may not do this this way */
-  .h8 {
-    font-size: 16px;
+  //h2, .v2 {
+  //  font-size: 35px;
+  //}
+
+  h4, .v4 {
+    font-size: 17px; // testing 16 to 17
     line-height: 17px;
   }
-  .h9 {
-    font-size: 20px;
+  h3, .v3 {
+    font-size: 23px;
     letter-spacing: .5px;
-    line-height: 48px;
+    //line-height: 48px;
   }
-  .h10 {
-    font-size: 60px;
-    line-height: 82px;
-    letter-spacing: -2.5px;
-    font-weight: 500;
-  }
-  .h13 {
-    font-size: $h13-desktop-font;
+  //.large-text {
+  //  font-size: 60px;
+  //  line-height: 82px;
+  //  letter-spacing: 1px;
+  //  font-weight: 500;
+  //}
+  .banner-text {
+    font-size: $v1-desktop-font;
   }
   .view-content-page-header .views-field-title {
-    margin-top: ($h13-desktop-font *.48*-1);
-    margin-bottom: ($h13-desktop-font *.50);
+    margin-top: ($v1-desktop-font *.48*-1);
+    margin-bottom: ($v1-desktop-font *.50);
   }
 
 }
 @media screen and (min-width: 1824px) {
 
-  .h13 {
-    font-size: $h13-desktopw-font;
+  .banner-text {
+    font-size: $v1-desktopw-font;
   }
   .view-content-page-header .views-field-title {
-    margin-top: ($h13-desktopw-font *.44*-1);
-    margin-bottom: ($h13-desktopw-font *.45);
+    margin-top: ($v1-desktopw-font *.44*-1);
+    margin-bottom: ($v1-desktopw-font *.45);
   }
 }
 
 
 // general mixins
+@mixin centered-margin() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@mixin vertical-center-margin() {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.vertical-center-margin {
+  @include vertical-center-margin();
+}
 
 @mixin fieldWithMaxWidth() {
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  @include centered-margin();
   // katria added these max-width adjustments for mobile & tablet - need to make sure this works for everyone's.
   // Aleni has told me specifics for some of these numbers and others are guesses based on the mockups.
   @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -307,10 +370,15 @@ $h13-desktopw-font: 200px;
 
 @mixin button() {
   padding: 12px 25px;
+  font-weight: 700; // katria testing with new font change - i think all are bolded..
+  color: #fff;
+  text-align: center; // katria testing with new font change, i think all are centered..?
   a:hover, a:focus  {
     text-decoration: none;
+    color: #fff;
   }
 }
+
 
 @mixin hover-to-royal() {
     color: white;
@@ -359,5 +427,12 @@ $h13-desktopw-font: 200px;
   font-weight: 500;
   @media screen and (max-width: 1024px) {
     margin: 20px 0px 0px;
+  }
+}
+
+@mixin extra-space() {
+  line-height: 240%!important;
+  @media screen and (max-width: 1023px) {
+    line-height: 250%!important;
   }
 }

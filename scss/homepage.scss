@@ -50,23 +50,63 @@ byu-footer h2.header {
 }
 byu-footer p {
     margin: 0;
+    padding: 6px 0px; // needs to adjust padding in footer
 }
 byu-footer-column :nth-child(2) {
     padding-top: 0;
 }
 
 /* ----- helpful classes ----------- */
-.normal-weight {
-  font-weight: normal;
+.vitesse {
+  font-family: $vitesse !important;
 }
-.bold {
-  font-weight: bold;
+.ringside {
+  font-family: $ringside !important;
+}
+.normal-weight, .normal-weight p{
+  font-weight: normal!important;
+}
+.bold, .v2.bold {
+  font-weight: bold!important;
 }
 .semibold {
-  font-weight: 500;
+  font-weight: 500!important;
+}
+.normal-caps {
+  text-transform: none !important;
 }
 .all-caps {
   text-transform: uppercase;
+}
+.normal-space, .normal-space p {
+  line-height: normal;
+}
+.extra-space {
+  @include extra-space();
+}
+.extra-small {
+  font-size: 12px;
+}
+.navy, .navy p {
+  color: $navy;
+}
+.white {
+  color: #fff;
+}
+.white > a {
+   color: #fff!important;
+ }
+.royal {
+  color: $royal;
+}
+.lightgray {
+  color: $lightgray!important; // #e6e6e6
+}
+.medgray {
+  color: $medgray!important; // 767676
+}
+.darkgray {
+  color: $darkgray!important; // 666
 }
 .left-text {
   text-align: left;
@@ -74,12 +114,14 @@ byu-footer-column :nth-child(2) {
 .right-text {
   text-align: right;
 }
-.centered-text {
+.centered-text, .center-text {
   text-align: center;
 }
 .centered-margin {
-  margin-left: auto;
-  margin-right: auto;
+  @include centered-margin();
+}
+.italics {
+  font-style: italic;
 }
 .screen-reader-only {
   border: 0;
@@ -93,11 +135,36 @@ byu-footer-column :nth-child(2) {
 }
 
 // background
+.bg-white {
+  background: #fff;
+}
+.bg-xlightgray {
+  background: $xlightgray;
+}
 .bg-lightgray {
   background: $lightgray;
 }
+.bg-gray {
+  background: $gray;
+}
+.bg-medgray {
+  background: $medgray;
+}
 .bg-darkgray {
   background: $darkgray;
+}
+.bg-medblue {
+  background: $medblue; // not in use yet
+}
+.bg-navy {
+  background: $navy;
+}
+.bg-darknavy {
+  background: $darknavy;
+}
+
+.display-inline {
+  display: inline;
 }
 
 // used so far on about page - don't change
@@ -120,8 +187,9 @@ $circle-width: 156px;
   flex-direction: column;
   margin: 15px 0px;
   .gray-dot {
-    color: $medgray;
-    font-size: 60px;
+    line-height: 25px;
+    //color: $medgray;
+    //font-size: 60px;
     font-family: Serif;
     margin: 0px;
     display: none;
@@ -129,20 +197,6 @@ $circle-width: 156px;
     //animation: 1s fadein;  // then they are display: block
   }
 }
-
-// animation delay on later dots:
-
-//.gray-dot.dot-2 { animation-delay: 250ms }
-//.gray-dot.dot-3 { animation-delay: 500ms }
-//.gray-dot.dot-4 { animation-delay: 750ms }
-//.gray-dot.dot-5 { animation-delay: 1000ms }
-//.gray-dot.dot-6 { animation-delay: 1250ms }
-//.gray-dot.dot-7 { animation-delay: 1500ms }
-//.gray-dot.dot-8 { animation-delay: 1750ms }
-//.gray-dot.dot-9 { animation-delay: 2000ms }
-//.gray-dot.dot-10 { animation-delay: 2250ms }
-
-
 
 // testing if this works
 .blue-dot-after {
@@ -228,15 +282,6 @@ $circle-width: 156px;
       }
       // we don't set a max-width on mobile ones now because a lot of them are full width for mobile & Tablet:
 
-      @media screen and (max-width: 1023px) and (min-width: 768px) {
-        //max-width: 600px;
-      }
-      @media screen and (max-width: 767px) and (min-width: 400px) {
-        //max-width: 90%;
-      }
-      @media screen and (max-width: 400px) {
-        //max-width: 300px;
-      }
     }
     .container {
       width: 100%;
@@ -286,6 +331,7 @@ $circle-width: 156px;
   }
   img {
     width: 100%;
+    margin-bottom: -1px;
   }
 }
 
@@ -318,7 +364,7 @@ byu-menu.byu-component-rendered a.is-active {
 
 /* -------- Basic Pages ------------- */
 .main {
-  padding: 30px 0px 100px;
+  padding: 60px 0px 100px;
 }
 
 /* ---- sidebar on mobile --- */

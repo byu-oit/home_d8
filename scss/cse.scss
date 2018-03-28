@@ -1,7 +1,15 @@
 @import "mixins";
 
 div.gsc-above-wrapper-area,div.gsc-result-info-container,div.gcsc-branding,form.search-page-form{display: none;}
-ol.search-results.google_cse_search-results {list-style: none;}
+ol.search-results.google_cse_search-results {
+  list-style: none;
+  @media screen and (max-width: 1023px) {
+    padding-left: 0px;
+    & > li {
+      margin-left: 0px;
+    }
+  }
+}
 
 byu-search input[type=search] { // id changes
   background: #fff!important; // otherwise, it shows Google stuff
@@ -17,30 +25,31 @@ byu-search input[type=search] { // id changes
 }
 
 // linked titles
+.gsc-control-cse .gs-spelling, .gsc-control-cse .gs-result .gs-title, .gsc-control-cse .gs-result .gs-title *,
 .gs-result .gs-title, .gs-result .gs-title * {
+  @include v3();
   color: $navy!important;
-  text-decoration: none!important
-;
-  font-size: 20px!important;
-  font-family: $gotham;
+  text-decoration: none!important;
+  //font-size: 20px!important;
+  //font-family: $ringside;
 }
 
 // paragraph
+.gsc-control-cse, .gsc-control-cse .gsc-table-result,
 .gs-result .gs-snippet {
   color: $medgray;
-  font-family: $gotham;
+  font-family: $ringside;
+  font-size: 14px; // trying to be like body text
 }
 
 // bottom url link
 .gs-result a.gs-visibleUrl, .gs-result .gs-visibleUrl {
   color: $royal!important;
-  font-family: $gotham;
+  font-family: $ringside;
 }
-
 
 // pager
 .gsc-results .gsc-cursor-box {
-
   display: flex;
   justify-content: center;
 }
@@ -49,7 +58,7 @@ byu-search input[type=search] { // id changes
   color: $navy!important;
   text-decoration: none!important;
   font-size: 16px;
-  font-family: $gotham;
+  font-family: $ringside;
 }
 // hover pages & current page
 .gsc-results .gsc-cursor-box .gsc-cursor-page:hover,

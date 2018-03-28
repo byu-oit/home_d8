@@ -9,24 +9,36 @@ article.node--type-admissions {
 
 .field--name-field-links {
     text-align: center;
-    .field__label {
-        margin-right: 15px;
+    @media screen and (min-width: 768px) {
+        .field__label {
+            margin-right: 15px;
+        }
     }
     .field__item {
         margin-right: 10px;
+        @media screen and (max-width: 768px) {
+            margin-bottom: 3px;
+            margin-right: 0px;
+        }
     }
     div {
         display: inline;
         @media screen and (max-width: 767px) {
-            display: block;
+            display: flex;
+            padding: 0 10px;
+            flex-wrap: wrap;
+            justify-content: center;
             div.field__item {
                 display: inline;
             }
         }
         a {
-            color: white;
+            //color: white;
             background-color: $navy;
-            padding: 10px 2em;
+            padding: 0px 2em;
+            //width: 280px;
+            display: inline-block;
+            //padding: 3px 2em;
             &:focus,
             &:hover {
                 @include hover-to-royal();
@@ -36,7 +48,7 @@ article.node--type-admissions {
     div.field__item:last-of-type {
         a {
             background-color: $medblue;
-            padding: 10px 3.5em;
+            //padding: 10px 3.5em;
             &:focus,
             &:hover {
                 @include hover-to-royal();
@@ -46,7 +58,6 @@ article.node--type-admissions {
 }
 
 .freshman_profile_wrapper {
-    background-color: $lightgray;
     padding-top: 100px;
     @media screen and (max-width: 1223px) {
         padding-top: 130px;
@@ -78,7 +89,6 @@ article.node--type-admissions {
         padding-bottom: 50px;
         > .field__item {
             width: 400px;
-            background-color: white;
             margin: 10px;
             padding: 10px 30px;
             @media screen and (min-width: 321px) and (max-width: 1223px) {
@@ -89,7 +99,6 @@ article.node--type-admissions {
                 margin: 10px -10px;
                 padding: 10px 15px;
             }
-            color: $navy;
             .field-collection-item--name-field-freshman-profile {
                 div {
                     line-height: normal;
@@ -97,10 +106,8 @@ article.node--type-admissions {
                 .field--name-field-data-text {
 
                 }
-                .field--name-field-data-type {
-                    font-size: 14px;
-                    font-weight: normal;
-                    text-transform: uppercase;
+                .field--name-field-data-type:nth-of-type(2) {
+                    font-weight: normal!important;
                 }
                 img.freshman-profile-icon {
                     float: left;
@@ -126,7 +133,7 @@ article.node--type-admissions {
         ul {
             list-style-type: none;
             padding-left: 10px;
-            span.h9 {
+            span.v3 {
                 line-height: normal;
             }
             ul {
@@ -176,10 +183,6 @@ article.node--type-admissions {
                 @media screen and (min-width: 1024px) and (max-width: 1424px) {
                     padding-left: 20px;
                 }
-                .views-field-name {
-                    padding-top: 15px;
-                    padding-bottom: 5px;
-                }
             }
             > li:last-of-type {
                 border-right: 0;
@@ -226,15 +229,10 @@ article.node--type-admissions {
     @media screen and (max-width: 320px) {
         width: 310px;
     }
-    .h9 {
-        line-height: normal;
+    .v3 {
+        line-height: normal!important;
     }
     .subsidies {
-        color: $medgray;
-        font-style: italic;
-        font-weight: normal;
-        font-size: 12px;
-        text-align: left;
         margin-top: 1em;
     }
     .subsidies-left {
@@ -264,16 +262,8 @@ article.node--type-admissions {
         @media screen and (max-width: 767px) {
             width: auto;
         }
-        background-color: $darkgray;
-        color: white;
-        font-weight: normal;
-        .how-much {
-            font-style: italic;
-            font-size: 25px;
-        }
-        .for-full-time {
-            font-size: 12px;
-            text-transform: uppercase;
+        .v2 {
+            padding-bottom: 4px;
         }
     }
     .grad-split {
@@ -281,17 +271,15 @@ article.node--type-admissions {
         flex-wrap: wrap;
         justify-content: center;
         .undergrad-header, .undergrad-header-small, .graduate-header {
-            background-color: $navy;
-            color: white;
             padding: 10px;
             margin: 0 50px;
         }
         .undergrad-header-small {
             display: none;
         }
-        .graduate-header {
-            background-color: $medblue;
-        }
+        //.graduate-header {
+        //    //background-color: $medblue;
+        //}
         @media screen and (max-width: 1223px) {
             .undergrad-header {
                 display: none;
@@ -321,8 +309,6 @@ article.node--type-admissions {
             @media screen and (max-width: 991px) {
                 margin-left: 10px;
             }
-            color: $darkgray;
-
             .management-title-breakpoint {
                 display: none;
                 @media screen and (max-width: 1223px) {
@@ -348,8 +334,8 @@ article.node--type-admissions {
                     margin: 10px;
                 }
                 .credits {
-                    background-color: $lightgray;
-                    color: $darkgray;
+                    //background-color: $lightgray;
+                    //color: $darkgray;
                     width: 400px;
                     padding: 5px 1em;
                     position: absolute;
@@ -374,22 +360,17 @@ article.node--type-admissions {
                         left: 8.5em;
                     }
                 }
-                .per-semester {
-                    font-size: 12px;
-                    font-weight: 500;
-                    text-transform: uppercase;
-                }
                 .tuition-price {
                     padding: 10px 0;
                 }
                 .lds-left {
                     .tuition-price {
-                        background-color: #ffe7a2;
+                        background-color: $lightyellow;
                     }
                 }
                 .non-lds-right {
                     .tuition-price {
-                        background-color: #fcc015;
+                        background-color: $yellow;
                     }
                     @media screen and (min-width: 1224px) {
                         .credits {
@@ -407,7 +388,7 @@ article.node--type-admissions {
             }
             .lds-split.management-law {
                 @media screen and (min-width: 1224px) {
-                    .h9 {
+                    .v3 {
                         display: none;
                     }
                     .grad-credits {
@@ -421,7 +402,7 @@ article.node--type-admissions {
         margin-top: 50px;
         a {
             color: white;
-            background-color: $brightBlue;
+            background-color: $royal;
             padding: 10px 20px;
         }
         a:focus,
@@ -485,7 +466,7 @@ article.node--type-admissions {
             .tuition-bottom-area {
                 position: relative;
                 width: 200%;
-                background-color: white;
+                //background-color: white;
                 padding-top: 30px;
                 .subsidies {
                     width: 600px;

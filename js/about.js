@@ -198,7 +198,7 @@
                 next();
             });
         // should only run for 768px and above:
-        $('.and-icon')
+        $('.jumbo-text.and-icon')
             .delay(1200)
             .queue(function (next) {
                 $(this).css('display', 'block');
