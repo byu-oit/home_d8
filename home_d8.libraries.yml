@@ -63,6 +63,26 @@ fonts-basic:
   css:
     theme:
       https://cloud.typography.com/75214/7683772/css/fonts.css: { type: external, minified: true }
+fonts-slim-medium:
+  remote: https://cloud.typography.com/75214/7102192/css/fonts.css
+  version: 1.0.0
+  license:
+    name: BYU Fonts Slim w Medium
+    url: https://cloud.typography.com/75214/7102192/css/fonts.css
+    gpl-compatible: true
+  css:
+    theme:
+      https://cloud.typography.com/75214/7102192/css/fonts.css: { type: external, minified: true }
+fonts-slim-semibold:
+  remote: https://cloud.typography.com/75214/7302192/css/fonts.css
+  version: 1.0.0
+  license:
+    name: BYU Fonts Slim w Semibold
+    url: https://cloud.typography.com/75214/7302192/css/fonts.css
+    gpl-compatible: true
+  css:
+    theme:
+      https://cloud.typography.com/75214/7302192/css/fonts.css: { type: external, minified: true }
 fonts-full:
   remote: https://cloud.typography.com/75214/6517752/css/fonts.css
   version: 1.0.0

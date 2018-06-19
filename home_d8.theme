@@ -137,7 +137,9 @@ function home_d8_preprocess_page(&$variables) {
     if($font_package == 'fonts-full' ) {
         $variables['#attached']['library'][] = 'home_d8/fonts-full';
     } else { // load fonts-basic
-        $variables['#attached']['library'][] = 'home_d8/fonts-basic';
+//        $variables['#attached']['library'][] = 'home_d8/fonts-basic';
+        $variables['#attached']['library'][] = 'home_d8/fonts-slim-medium';
+//        $variables['#attached']['library'][] = 'home_d8/fonts-slim-semibold';
     }
 
     $userOb = $variables['user'];
