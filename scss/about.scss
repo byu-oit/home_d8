@@ -45,6 +45,11 @@
     }
   }
 
+  // Adjust quote line-height
+  .field--name-field-quote {
+    line-height: 40px !important;
+  }
+
   // quote source desktop
   .field--name-field-quote-source {
     font-size: 16px !important;
@@ -233,7 +238,7 @@
     }
 
     p {
-      color: $xlightgray;
+      color: $darknavy;
     }
     .larger-p, .larger-p2 {
       width: 100%;

@@ -432,8 +432,8 @@ $v1-desktopw-font: 200px;
 }
 
 @mixin extra-space() {
-  line-height: 181%!important;
+  line-height: 240%!important;
   @media screen and (max-width: 1023px) {
-    line-height: 191%!important;
+    line-height: 250%!important;
   }
 }
