@@ -36,6 +36,7 @@ article.node--type-academic {
   max-width: 100%;
   display: flex;
   justify-content: center;
+  background-color: $lightgray !important; // Put here because I can't find where to delete the bg-gray class
 }
 
 #academic-calendar-btn:focus,

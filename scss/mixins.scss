@@ -266,11 +266,11 @@ $v1-desktopw-font: 200px;
   //}
 
   h4, .v4 {
-    font-size: 17px; // testing 16 to 17
+    font-size: 15px; // testing 16 to 17
     line-height: 17px;
   }
   h3, .v3 {
-    font-size: 23px;
+    font-size: 17px;
     letter-spacing: .5px;
     //line-height: 48px;
   }
@@ -344,7 +344,7 @@ $v1-desktopw-font: 200px;
 @mixin navy-circle($circle-width) {
   background: $navy;
   padding: 25px ;
-  border: 2px solid $medgray;
+  border: 2px solid $white;
   border-radius: 50%;
   width: $circle-width;
   height: $circle-width;
