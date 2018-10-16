@@ -6,9 +6,6 @@
   .quote-wrapper.full-width-bar-inner {
     display: flex;
     margin-top: 50px;
-    @media screen and (max-width: 1224px) {
-      padding-right: 35px;
-    }
     @media screen and (max-width: 767px) {
       margin-top: 25px;
       padding: 0px 25px;
@@ -38,25 +35,25 @@
     }
   }
   .quote-icon {
-    //font-weight: bold;
-    font-size: 200px;
-    line-height: 22px; // this positions it correctly
-    //font-family: $vitesse;
-    //color: $lightgray;
-    margin-top: 30px;
+    font-size: 150px;
+    line-height: 150px; // this positions it correctly
+    height: 50px; // avoids pushing the quote reference down
     // come back to this for smaller sizes/bg instead/overlap
     @media screen and (max-width: 1023px) {
       display: none;
 
     }
   }
+
+  // quote source desktop
+  .field--name-field-quote-source {
+    font-size: 16px !important;
+    line-height: 21px;
+  }
+
   /// quote source mobile
   .field--name-field-quote-source {
-    max-width: 400px!important;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 80px;
-    margin-top: 10px;
+    margin: 10px auto 80px;
 
     @media screen and (max-width: 767px) {
       padding: 0px 25px 15px;
