@@ -48,6 +48,10 @@
   // Adjust quote line-height
   .field--name-field-quote {
     line-height: 40px !important;
+
+    @media screen and (max-width: 1024px) {
+      padding-right: 30px;
+    }
   }
 
   // quote source desktop
