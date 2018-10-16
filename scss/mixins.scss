@@ -3,7 +3,7 @@
 // blues
 $navy: #002E5D;
 $darknavy: #002040;
-$medblue: #5D7998 ; // was 869DB5 but not quite accessible
+$medblue: #32538D; ; // was 869DB5 but not quite accessible
 $lightBlue: #e0f0cc;
 $xlightblue: #C3DDF9;
 
@@ -73,12 +73,13 @@ h1, .h1, .v1 {
 @mixin v2() {
   font-size: 25px;
   line-height: 34px;
-  font-weight: 500!important;
+  font-weight: 300!important;
   @media screen and (min-width: 1024px) {
       font-size: 30px;
   }
   @media screen and (min-width: 1224px) {
-    font-size: 35px;
+    font-size: 38px;
+    line-height: 44px;
   }
 }
 h2, .v2 {

@@ -43,6 +43,7 @@
 .hero-div {
     .hero-title {
         padding-bottom: 0.2em;
+        font-size: 38px;
     }
     a:focus p,
     a:hover p {
@@ -125,8 +126,9 @@
         }
         // katria here here
         .field--name-field-something-to-type { // this is at the v3 level
-            padding: 15px 5px;
+            padding: 15px 15px;
             background-color: $medgray;
+            text-align: left;
             @media screen and (max-width: 991px) {
                 display: none;
             }
