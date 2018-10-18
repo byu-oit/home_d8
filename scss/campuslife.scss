@@ -116,22 +116,44 @@ section.page-header {
     font-size: 32px;
     line-height: 40px;
 
+    @media screen and (max-width: 425px) {
+      font-size: 22px;
+    }
+
     .number-one {
       font-size: 50px;
+
+      @media screen and (max-width: 425px) {
+        font-size: 30px;
+      }
     }
 
     .lines-two-three {
       font-size: 50px;
       line-height: 50px;
+
+      @media screen and (max-width: 425px) {
+        font-size: 30px;
+        line-height: 30px;
+      }
     }
 
     .line-four {
       margin-bottom: 14px;
+
+      @media screen and (max-width: 425px) {
+        margin-bottom: 10px;
+      }
     }
 
     .line-five {
       font-size: 18px;
       line-height: 22px;
+
+      @media screen and (max-width: 425px) {
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
   }
 }
