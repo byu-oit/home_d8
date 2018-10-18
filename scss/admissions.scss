@@ -1,482 +1,475 @@
 @import "mixins";
-
 article.node--type-admissions {
-    padding-top: 42px;
-    @media screen and (max-width: 767px) {
-        padding-top: 0;
-    }
+  padding-top: 42px;
+  @media screen and (max-width: 767px) {
+    padding-top: 0;
+  }
 }
-
 .field--name-field-links {
-    text-align: center;
-    @media screen and (min-width: 768px) {
-        .field__label {
-            margin-right: 15px;
-        }
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    .field__label {
+      margin-right: 15px;
     }
-    .field__item {
-        margin-right: 10px;
-        @media screen and (max-width: 768px) {
-            margin-bottom: 3px;
-            margin-right: 0px;
-        }
+  }
+  .field__item {
+    margin-right: 10px;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 3px;
+      margin-right: 0px;
     }
-    div {
+  }
+  div {
+    display: inline;
+    @media screen and (max-width: 767px) {
+      display: flex;
+      padding: 0 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      div.field__item {
         display: inline;
-        @media screen and (max-width: 767px) {
-            display: flex;
-            padding: 0 10px;
-            flex-wrap: wrap;
-            justify-content: center;
-            div.field__item {
-                display: inline;
-            }
-        }
-        a {
-            //color: white;
-            background-color: $navy;
-            padding: 0px 2em;
-            //width: 280px;
-            display: inline-block;
-            //padding: 3px 2em;
-            &:focus,
-            &:hover {
-                @include hover-to-royal();
-            }
-        }
+      }
     }
-    div.field__item:last-of-type {
-        a {
-            background-color: $medblue;
-            //padding: 10px 3.5em;
-            &:focus,
-            &:hover {
-                @include hover-to-royal();
-            }
-        }
+    a {
+      //color: white;
+      background-color: $navy;
+      padding: 0px 2em;
+      //width: 280px;
+      display: inline-block;
+      //padding: 3px 2em;
+      &:focus,
+      &:hover {
+        @include hover-to-royal();
+      }
     }
+  }
+  div.field__item:last-of-type {
+    a {
+      background-color: $medblue;
+      //padding: 10px 3.5em;
+      &:focus,
+      &:hover {
+        @include hover-to-royal();
+      }
+    }
+  }
 }
-
 .freshman_profile_wrapper {
-    padding-top: 100px;
-    @media screen and (max-width: 1223px) {
-        padding-top: 130px;
-    }
+  padding-top: 100px;
+  @media screen and (max-width: 1223px) {
+    padding-top: 130px;
+  }
 }
 .node__content.freshman_profile {
-    .field__label {
-        padding-left: 200px;
-        text-align: left;
-        font-weight: normal;
-        @media screen and (max-width: 1424px) {
-            padding-left: 100px;
-        }
-        @media screen and (max-width: 1223px) {
-            padding-left: 52px;
-        }
-        @media screen and (max-width: 1023px) {
-            padding-left: 152px;
-        }
-        @media screen and (max-width: 991px) {
-            padding-left: 0;
-            text-align: center;
-        }
+  .field__label {
+    padding-left: 200px;
+    text-align: left;
+    font-weight: normal;
+    @media screen and (max-width: 1424px) {
+      padding-left: 100px;
     }
-    .field__items {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding-bottom: 50px;
-        > .field__item {
-            width: 400px;
-            margin: 10px;
-            padding: 10px 30px;
-            @media screen and (min-width: 321px) and (max-width: 1223px) {
-                width: 350px;
-            }
-            @media screen and (max-width: 320px) {
-                width: 310px;
-                margin: 10px -10px;
-                padding: 10px 15px;
-            }
-            .field-collection-item--name-field-freshman-profile {
-                div {
-                    line-height: normal;
-                }
-                .field--name-field-data-text {
-
-                }
-                .field--name-field-data-type:nth-of-type(2) {
-                    font-weight: normal!important;
-                }
-                img.freshman-profile-icon {
-                    float: left;
-                    padding-right: 10px;
-                    height: 40px;
-                }
-            }
-        }
+    @media screen and (max-width: 1223px) {
+      padding-left: 52px;
     }
-}
-
-.view-id-admissions_links.view-display-id-block_1 {
-    margin-top: 20px;
-    border-top: solid $gray 1px;
-    padding-top: 20px;
+    @media screen and (max-width: 1023px) {
+      padding-left: 152px;
+    }
     @media screen and (max-width: 991px) {
-        padding-top: 0;
+      padding-left: 0;
+      text-align: center;
     }
-    li {
-        line-height: normal;
-    }
-    .view-content {
-        ul {
-            list-style-type: none;
-            padding-left: 10px;
-            span.v3 {
-                line-height: normal;
-            }
-            ul {
-                ul {
-                    div.views-field-name a:before {
-                        content: "> ";
-                    }
-                    li {
-                        margin-left: 1em;
-                        text-indent: -1em;
-                    }
-                }
-            }
-            span.field-content {
-                text-transform: uppercase;
-                color: $medgray;
-                a {
-                    text-transform: none;
-                }
-            }
-        }
-        > ul {
-            padding-left: 0;
-            display: flex;
-            justify-content: space-around;
-            @media screen and (max-width: 991px) {
-                flex-wrap: wrap;
-            }
-            @media screen and (max-width: 767px) {
-                padding: 0px 20px;
-            }
-            > li {
-                > div {
-/*                    display: none; */
-                }
-                width: 360px;
-                border-right: solid $gray 1px;
-                @media screen and (max-width: 991px) {
-                    width: 400px;
-                    border-right: 0;
-                    border-bottom: solid $gray 1px;
-                    padding-bottom: 10px;
-                }
-                @media screen and (min-width: 992px) and (max-width: 1223px) {
-                    width: 310px;
-                }
-                @media screen and (min-width: 1024px) and (max-width: 1424px) {
-                    padding-left: 20px;
-                }
-            }
-            > li:last-of-type {
-                border-right: 0;
-                @media screen and (max-width: 991px) {
-                    border-bottom: 0;
-                }
-            }
-        }
-    }
-}
-
-.field-collection-item--name-field-tuition-info {
-    margin-top: 50px;
-    text-align: center;
-    line-height: normal;
-
-    div.branchpath {
-        margin: 0px 0;
-        display: flex;
-        justify-content: center;
-        div.branchpath-svg-container {
-            width: 408px;
-            height: 100px;
-            @media screen and (max-width: 1223px) {
-                width: 256px;
-                height: 60px;
-            }
-            @media screen and (max-width: 767px) {
-                width: 158px;
-                height: 68px;
-            }
-        }
-    }
-    div.branchpath.sub-branch {
-        div.branchpath-svg-container {
-            width: 180px;
-            @media screen and (max-width: 1223px) {
-                margin-top: 5px;
-                height: 30px;
-            }
-        }
-    }
-
-    @media screen and (max-width: 320px) {
+  }
+  .field__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 50px;
+    > .field__item {
+      width: 400px;
+      margin: 10px;
+      padding: 10px 30px;
+      @media screen and (min-width: 321px) and (max-width: 1223px) {
+        width: 350px;
+      }
+      @media screen and (max-width: 320px) {
         width: 310px;
+        margin: 10px -10px;
+        padding: 10px 15px;
+      }
+      .field-collection-item--name-field-freshman-profile {
+        div {
+          line-height: normal;
+        }
+        .field--name-field-data-text {
+        }
+        .field--name-field-data-type:nth-of-type(2) {
+          font-weight: normal !important;
+        }
+        img.freshman-profile-icon {
+          float: left;
+          padding-right: 10px;
+          height: 40px;
+        }
+      }
     }
-    .v3 {
-        line-height: normal!important;
+  }
+}
+.view-id-admissions_links.view-display-id-block_1 {
+  margin-top: 20px;
+  border-top: solid $gray 1px;
+  padding-top: 20px;
+  @media screen and (max-width: 991px) {
+    padding-top: 0;
+  }
+  li {
+    line-height: normal;
+  }
+  .view-content {
+    ul {
+      list-style-type: none;
+      padding-left: 10px;
+      span.v3 {
+        line-height: normal;
+      }
+      ul {
+        ul {
+          div.views-field-name a:before {
+            content: "> ";
+          }
+          li {
+            margin-left: 1em;
+            text-indent: -1em;
+          }
+        }
+      }
+      span.field-content {
+        text-transform: uppercase;
+        color: $medgray;
+        a {
+          text-transform: none;
+        }
+      }
     }
-    .subsidies {
-        margin-top: 1em;
+    > ul {
+      padding-left: 0;
+      display: flex;
+      justify-content: space-around;
+      @media screen and (max-width: 991px) {
+        flex-wrap: wrap;
+      }
+      @media screen and (max-width: 767px) {
+        padding: 0px 20px;
+      }
+      > li {
+        > div {
+          /*                    display: none; */
+        }
+        width: 360px;
+        border-right: solid $gray 1px;
+        @media screen and (max-width: 991px) {
+          width: 400px;
+          border-right: 0;
+          border-bottom: solid $gray 1px;
+          padding-bottom: 10px;
+        }
+        @media screen and (min-width: 992px) and (max-width: 1223px) {
+          width: 310px;
+        }
+        @media screen and (min-width: 1024px) and (max-width: 1424px) {
+          padding-left: 20px;
+        }
+      }
+      > li:last-of-type {
+        border-right: 0;
+        @media screen and (max-width: 991px) {
+          border-bottom: 0;
+        }
+      }
     }
+  }
+}
+.field-collection-item--name-field-tuition-info {
+  margin-top: 50px;
+  text-align: center;
+  line-height: normal;
+
+  div.branchpath {
+    margin: 0px 0;
+    display: flex;
+    justify-content: center;
+    div.branchpath-svg-container {
+      width: 408px;
+      height: 100px;
+      @media screen and (max-width: 1223px) {
+        width: 256px;
+        height: 60px;
+      }
+      @media screen and (max-width: 767px) {
+        width: 158px;
+        height: 68px;
+      }
+    }
+  }
+  div.branchpath.sub-branch {
+    div.branchpath-svg-container {
+      width: 180px;
+      @media screen and (max-width: 1223px) {
+        margin-top: 5px;
+        height: 30px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    width: 310px;
+  }
+  .v3 {
+    line-height: normal !important;
+  }
+  .subsidies {
+    margin-top: 1em;
+  }
+  .subsidies-left {
+    margin: 1em 50px 0 50px;
+  }
+  @media screen and (max-width: 991px) {
     .subsidies-left {
-        margin: 1em 50px 0 50px;
+      display: none;
     }
-    @media screen and (max-width: 991px) {
-        .subsidies-left {
-            display: none;
-        }
+  }
+  @media screen and (min-width: 992px) {
+    .subsidies-bottom {
+      display: none;
     }
-    @media screen and (min-width: 992px) {
-        .subsidies-bottom {
-            display: none;
-        }
+  }
+  @media screen and (max-width: 767px) {
+    .subsidies-bottom {
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .tuition-header {
+    display: inline-block;
+    width: 400px;
+    padding: 20px;
+    @media screen and (max-width: 767px) {
+      width: auto;
+    }
+    .v2 {
+      padding-bottom: 4px;
+    }
+  }
+  .grad-split {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .undergrad-header, .undergrad-header-small, .graduate-header {
+      padding: 10px;
+      margin: 0 50px;
+    }
+    .undergrad-header-small {
+      display: none;
+    }
+    //.graduate-header {
+    //    //background-color: $medblue;
+    //}
+    @media screen and (max-width: 1223px) {
+      .undergrad-header {
+        display: none;
+      }
+      .undergrad-header-small {
+        display: block;
+        height: 60px;
+      }
+      .graduate-header {
+        height: 60px;
+        line-height: 40px;
+      }
     }
     @media screen and (max-width: 767px) {
-        .subsidies-bottom {
-            width: 300px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+      .undergrad-header-small, .graduate-header {
+        margin: 0 10px;
+      }
     }
-    .tuition-header {
-        display: inline-block;
-        width: 400px;
-        padding: 20px;
-        @media screen and (max-width: 767px) {
-            width: auto;
+    .management-law-header {
+      text-align: left;
+      @media screen and (min-width: 1224px) {
+        margin-left: 39px;
+      }
+      @media screen and (min-width: 992px) and (max-width: 1223px) {
+        margin-left: 50px;
+      }
+      @media screen and (max-width: 991px) {
+        margin-left: 10px;
+      }
+      .management-title-breakpoint {
+        display: none;
+        @media screen and (max-width: 1223px) {
+          display: initial;
         }
-        .v2 {
-            padding-bottom: 4px;
-        }
+      }
     }
-    .grad-split {
+    > div {
+      width: 400px;
+      @media screen and (max-width: 1223px) {
+        width: 250px;
+      }
+      @media screen and (max-width: 767px) {
+        width: 150px;
+      }
+      .lds-split {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        .undergrad-header, .undergrad-header-small, .graduate-header {
-            padding: 10px;
-            margin: 0 50px;
-        }
-        .undergrad-header-small {
-            display: none;
-        }
-        //.graduate-header {
-        //    //background-color: $medblue;
-        //}
-        @media screen and (max-width: 1223px) {
-            .undergrad-header {
-                display: none;
-            }
-            .undergrad-header-small {
-                display: block;
-                height: 60px;
-            }
-            .graduate-header {
-                height: 60px;
-                line-height: 40px;
-            }
-        }
-        @media screen and (max-width: 767px) {
-            .undergrad-header-small, .graduate-header {
-                margin: 0 10px;
-            }
-        }
-        .management-law-header {
-            text-align: left;
-            @media screen and (min-width: 1224px) {
-                margin-left: 39px;
-            }
-            @media screen and (min-width: 992px) and (max-width: 1223px) {
-                margin-left: 50px;
-            }
-            @media screen and (max-width: 991px) {
-                margin-left: 10px;
-            }
-            .management-title-breakpoint {
-                display: none;
-                @media screen and (max-width: 1223px) {
-                    display: initial;
-                }
-            }
-        }
         > div {
-            width: 400px;
-            @media screen and (max-width: 1223px) {
-                width: 250px;
-            }
-            @media screen and (max-width: 767px) {
-                width: 150px;
-            }
-            .lds-split {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                > div {
-                    position: relative;
-                    width: 150px;
-                    margin: 10px;
-                }
-                .credits {
-                    //background-color: $lightgray;
-                    //color: $darkgray;
-                    width: 400px;
-                    padding: 5px 1em;
-                    position: absolute;
-                    top: 35px;
-                    z-index: -1000;
-                    @media screen and (max-width: 991px) {
-                        display: none;
-                    }
-                    @media screen and (min-width: 992px) and (max-width: 1223px) {
-                        top: 30px;
-                        width: 150px;
-                    }
-                }
-                .undergrad-credits {
-                    text-align: left;
-                    left: -8em;
-                }
-                .grad-credits {
-                    text-align: right;
-                    left: 4.5em;
-                    @media screen and (min-width: 992px) and (max-width: 1223px) {
-                        left: 8.5em;
-                    }
-                }
-                .tuition-price {
-                    padding: 10px 0;
-                }
-                .lds-left {
-                    .tuition-price {
-                        background-color: $lightyellow;
-                    }
-                }
-                .non-lds-right {
-                    .tuition-price {
-                        background-color: $yellow;
-                    }
-                    @media screen and (min-width: 1224px) {
-                        .credits {
-                            display: none;
-                        }
-                    }
-                }
-                .non-lds-right.smaller-border {
-                    @media screen and (max-width: 1223px) {
-                        border-bottom: 1px solid $gray;
-                        padding-bottom: 10px;
-                        margin-bottom: 10px;
-                    }
-                }
-            }
-            .lds-split.management-law {
-                @media screen and (min-width: 1224px) {
-                    .v3 {
-                        display: none;
-                    }
-                    .grad-credits {
-                        top: 12px;
-                    }
-                }
-            }
+          position: relative;
+          width: 150px;
+          margin: 10px;
         }
+        .credits {
+          //background-color: $lightgray;
+          //color: $darkgray;
+          width: 400px;
+          padding: 5px 1em;
+          position: absolute;
+          top: 35px;
+          z-index: -1000;
+          @media screen and (max-width: 991px) {
+            display: none;
+          }
+          @media screen and (min-width: 992px) and (max-width: 1223px) {
+            top: 30px;
+            width: 150px;
+          }
+        }
+        .undergrad-credits {
+          text-align: left;
+          left: -8em;
+        }
+        .grad-credits {
+          text-align: right;
+          left: 4.5em;
+          @media screen and (min-width: 992px) and (max-width: 1223px) {
+            left: 8.5em;
+          }
+        }
+        .tuition-price {
+          padding: 10px 0;
+        }
+        .lds-left {
+          .tuition-price {
+            background-color: $lightyellow;
+          }
+        }
+        .non-lds-right {
+          .tuition-price {
+            background-color: $yellow;
+          }
+          @media screen and (min-width: 1224px) {
+            .credits {
+              display: none;
+            }
+          }
+        }
+        .non-lds-right.smaller-border {
+          @media screen and (max-width: 1223px) {
+            border-bottom: 1px solid $gray;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+      .lds-split.management-law {
+        @media screen and (min-width: 1224px) {
+          .v3 {
+            display: none;
+          }
+          .grad-credits {
+            top: 12px;
+          }
+        }
+      }
     }
-    .field--name-field-more-tuition-details-link {
-        margin-top: 50px;
-        a {
-            color: white;
-            background-color: $royal;
-            padding: 10px 20px;
-        }
-        a:focus,
-        a:hover {
-            @include hover-to-navy();
-            text-decoration: none;
-        }
+  }
+  .field--name-field-more-tuition-details-link {
+    margin-top: 50px;
+    a {
+      color: white;
+      background-color: $royal;
+      padding: 10px 20px;
     }
+    a:focus,
+    a:hover {
+      @include hover-to-navy();
+      text-decoration: none;
+    }
+  }
 }
 .backFiller {
-    @media screen and (min-width: 1600px) {
-        border-left-color: $lightgray; // saw a 1px line so we removed this
-    }
+  @media screen and (min-width: 1600px) {
+    border-left-color: $lightgray; // saw a 1px line so we removed this
+  }
 }
-
 /* big ugly page re-ordering for 768-991 px */
 @media screen and (min-width: 768px) and (max-width: 991px) {
-    .view-id-admissions_links.view-display-id-block_1 .view-content > ul {
-        flex-direction: column;
-        align-items: center;
+  .view-id-admissions_links.view-display-id-block_1 .view-content > ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .backFiller {
+    border-left-color: transparent;
+  }
+
+  .more-tuition-details {
+    display: none;
+  }
+  .more-tuition-details-bottom {
+    display: block;
+  }
+  .freshman_and_tuition {
+    display: flex;
+    flex-direction: row-reverse;
+    > div {
+      width: 50%;
+    }
+    .freshman_profile_wrapper {
+      padding-top: 200px;
     }
 
-    .backFiller {
-        border-left-color: transparent;
-    }
-
-    .more-tuition-details {
-        display: none;
-    }
-    .more-tuition-details-bottom {
-        display: block;
-    }
-    .freshman_and_tuition {
-        display: flex;
-        flex-direction: row-reverse;
+    .field-collection-item--name-field-tuition-info {
+      margin-top: 110px;
+      .tuition-header {
+        width: 300px;
+        padding: 20px 10px;
+      }
+      div.branchpath div.branchpath-svg-container {
+        width: 166px;
+      }
+      .grad-split {
         > div {
-            width: 50%;
+          width: 160px;
         }
-        .freshman_profile_wrapper {
-            padding-top: 200px;
+        .undergrad-header, .undergrad-header-small, .graduate-header {
+          margin: 10px;
+          width: 140px;
         }
-
-        .field-collection-item--name-field-tuition-info {
-            margin-top: 110px;
-            .tuition-header {
-                width: 300px;
-                padding: 20px 10px;
-            }
-            div.branchpath div.branchpath-svg-container {
-                width: 166px;
-            }
-            .grad-split {
-                > div {
-                    width: 160px;
-                }
-                .undergrad-header, .undergrad-header-small, .graduate-header {
-                    margin: 10px;
-                    width: 140px;
-                }
-            }
-            .tuition-bottom-area {
-                position: relative;
-                width: 200%;
-                //background-color: white;
-                padding-top: 30px;
-                .subsidies {
-                    width: 600px;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-                .field--name-field-more-tuition-details-link {
-                    margin-top: 30px;
-                }
-            }
+      }
+      .tuition-bottom-area {
+        position: relative;
+        width: 200%;
+        //background-color: white;
+        padding-top: 30px;
+        .subsidies {
+          width: 600px;
+          margin-left: auto;
+          margin-right: auto;
         }
+        .field--name-field-more-tuition-details-link {
+          margin-top: 30px;
+        }
+      }
     }
+  }
 }
