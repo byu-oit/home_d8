@@ -384,7 +384,7 @@ $v1-desktopw-font: 200px;
 @mixin hover-to-royal() {
     color: white;
     text-decoration: none;
-    background-color: $royal;
+    background-color: $medblue;
     transition: background 0.2s;
 }
 @mixin hover-to-navy() {
