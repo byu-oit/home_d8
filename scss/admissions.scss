@@ -89,6 +89,7 @@ article.node--type-admissions {
       width: 480px;
       margin: 10px;
       padding: 15px 30px;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
       @media screen and (min-width: 321px) and (max-width: 1223px) {
         width: 350px;
       }
@@ -418,6 +419,7 @@ article.node--type-admissions {
       color: white;
       background-color: $royal;
       padding: 10px 20px;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
     }
     a:focus,
     a:hover {
