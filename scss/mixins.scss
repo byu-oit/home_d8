@@ -199,8 +199,8 @@ h4, .v4 { // h9 & h3 combo
   @include medium-text();
 }
 .v4 {
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 15px;
   text-transform: uppercase;
   font-weight: 600;
   /*letter-spacing:*/
@@ -266,8 +266,8 @@ $v1-desktopw-font: 200px;
   //}
 
   h4, .v4 {
-    font-size: 15px; // testing 16 to 17
-    line-height: 17px;
+    font-size: 14px; // testing 16 to 17
+    line-height: 15px;
   }
   h3, .v3 {
     font-size: 17px;

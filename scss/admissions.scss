@@ -35,7 +35,7 @@ article.node--type-admissions {
       background-color: $navy;
       padding: 0.2em 2.3em;
       display: inline-block;
-      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
       &:focus,
       &:hover {
         @include hover-to-royal();
@@ -45,7 +45,7 @@ article.node--type-admissions {
   div.field__item:last-of-type {
     a {
       background-color: $medgray;
-      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
       //padding: 10px 3.5em;
       &:focus,
       &:hover {
@@ -89,7 +89,7 @@ article.node--type-admissions {
       width: 480px;
       margin: 10px;
       padding: 15px 30px;
-      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
       @media screen and (min-width: 321px) and (max-width: 1223px) {
         width: 350px;
       }
@@ -274,8 +274,18 @@ article.node--type-admissions {
     display: inline-block;
     width: 400px;
     padding: 20px;
+
+    div.how-much {
+      font-size: 33px;
+      line-height: 33px;
+    }
+
     @media screen and (max-width: 767px) {
       width: auto;
+
+      .how-much {
+        font-size: 27px !important;
+      }
     }
     .v2 {
       padding-bottom: 4px;
@@ -419,7 +429,7 @@ article.node--type-admissions {
       color: white;
       background-color: $royal;
       padding: 10px 20px;
-      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     }
     a:focus,
     a:hover {
@@ -465,6 +475,10 @@ article.node--type-admissions {
       .tuition-header {
         width: 300px;
         padding: 20px 10px;
+
+        .how-much {
+          font-size: 27px;
+        }
       }
       div.branchpath div.branchpath-svg-container {
         width: 166px;
