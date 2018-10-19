@@ -63,6 +63,7 @@ article.node--type-admissions {
 .node__content.freshman_profile {
   .field__label {
     padding-left: 200px;
+    margin-bottom: 40px;
     text-align: left;
     font-weight: normal;
     @media screen and (max-width: 1424px) {
@@ -85,30 +86,35 @@ article.node--type-admissions {
     justify-content: center;
     padding-bottom: 50px;
     > .field__item {
-      width: 400px;
+      width: 480px;
       margin: 10px;
-      padding: 10px 30px;
+      padding: 15px 30px;
       @media screen and (min-width: 321px) and (max-width: 1223px) {
         width: 350px;
       }
       @media screen and (max-width: 320px) {
         width: 310px;
         margin: 10px -10px;
-        padding: 10px 15px;
+        padding: 10px 0 10px 15px;
       }
       .field-collection-item--name-field-freshman-profile {
         div {
-          line-height: normal;
+          font-size: 32px;
+          line-height: 40px;
+          color: $navy;
         }
         .field--name-field-data-text {
         }
         .field--name-field-data-type:nth-of-type(2) {
-          font-weight: normal !important;
+          font-size: 18px;
+          line-height: 22px;
+          color: $medgray;
         }
         img.freshman-profile-icon {
           float: left;
-          padding-right: 10px;
-          height: 40px;
+          padding-left: 5px;
+          padding-right: 20px;
+          height: 60px;
         }
       }
     }
