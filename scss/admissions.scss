@@ -102,6 +102,11 @@ article.node--type-admissions {
           font-size: 32px;
           line-height: 40px;
           color: $navy;
+
+          @media screen and (max-width: 1228px) {
+            font-size: 22px;
+            line-height: 30px;
+          }
         }
         .field--name-field-data-text {
         }
@@ -109,12 +114,21 @@ article.node--type-admissions {
           font-size: 18px;
           line-height: 22px;
           color: $medgray;
+
+          @media screen and (max-width: 1228px) {
+            font-size: 14px;
+          }
         }
         img.freshman-profile-icon {
           float: left;
           padding-left: 5px;
           padding-right: 20px;
           height: 60px;
+
+          @media screen and (max-width: 1228px) {
+            height: 50px;
+            padding: 0 10px 0 0;
+          }
         }
       }
     }
