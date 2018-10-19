@@ -33,10 +33,9 @@ article.node--type-admissions {
     a {
       //color: white;
       background-color: $navy;
-      padding: 0px 2em;
-      //width: 280px;
+      padding: 0.2em 2.3em;
       display: inline-block;
-      //padding: 3px 2em;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
       &:focus,
       &:hover {
         @include hover-to-royal();
@@ -45,7 +44,8 @@ article.node--type-admissions {
   }
   div.field__item:last-of-type {
     a {
-      background-color: $medblue;
+      background-color: $medgray;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
       //padding: 10px 3.5em;
       &:focus,
       &:hover {
