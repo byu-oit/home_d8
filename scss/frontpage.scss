@@ -43,6 +43,11 @@
   .hero-title {
     padding-bottom: 0.2em;
     font-size: 38px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 27px;
+      line-height: 28px;
+    }
   }
   a:focus p,
   a:hover p {
