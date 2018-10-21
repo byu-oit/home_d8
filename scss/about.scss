@@ -601,7 +601,7 @@
       width: 145px; // smaller for new font
     }
     @media screen and (min-width: 1024px) {
-      width: 188px; // smaller for new font
+      width: 200px; // smaller for new font
     }
 
     height: 40px;
@@ -616,7 +616,7 @@
   }
   .state-field-wrapper {
     height: 40px;
-    width: 50px;
+    width: 64px;
   }
   .countries-field-wrapper {
     height: 40px;
@@ -636,6 +636,10 @@
       display: block!important;
     }
 
+  }
+
+  .field--name-field-states.field--type-integer {
+    margin-right: 6px;
   }
 
   .jumbo-text.and-icon {
