@@ -159,6 +159,7 @@ section.page-header {
 }
 .field--name-field-sober-image {
   -ms-grid-column: 3;
+  background-color: $white;
   @media screen and (min-width: 1024px) {
     grid-row-end: span 2;
     -ms-grid-row-span: 2;
@@ -173,10 +174,9 @@ section.page-header {
     height: auto;
   }
   @media screen and (min-width: 1024px) {
-    position: relative;
     img {
-      position: absolute;
-      bottom: 0
+      bottom: 43px;
+      position: relative;
     }
   }
 }
@@ -208,9 +208,9 @@ section.page-header {
   .field--name-field-link {
     padding: 10px;
     background-color: rgba(0, 46, 93, 0.8);
-    position: absolute;
+    position: relative;
     width: 100%;
-    bottom: 0;
+    bottom: 43px;
   }
   a {
     color: white; // difficult to figure out where to add the 'white' class to get this
