@@ -620,7 +620,7 @@
   }
   .countries-field-wrapper {
     height: 40px;
-    width: 65px;
+    width: 77px;
     @media screen and (max-width: 767px) {
       width: 52px;
       margin-right: .5em;
@@ -638,7 +638,8 @@
 
   }
 
-  .field--name-field-states.field--type-integer {
+  .field--name-field-states.field--type-integer,
+  .field--name-field-countries.field--type-integer {
     margin-right: 6px;
   }
 
@@ -659,7 +660,7 @@
   }
   .countries-cont {
     @media screen and (min-width: 1024px) {
-      width: 300px;
+      width: 312px;
     }
     @media screen and (max-width: 767px) {
       position: relative;
