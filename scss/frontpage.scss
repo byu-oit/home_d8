@@ -1,35 +1,35 @@
 @import "mixins";
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .container {
-        padding: 0;
-        width: 100%;
-    }
+  .container {
+    padding: 0;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 767px) {
-    .main {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .container {
-        padding: 0;
-    }
+  .main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .container {
+    padding: 0;
+  }
 }
 .front-page-emergency-notice { // katria here here
-    margin-top: 65px;
-    margin-bottom: 30px;
-    background-color: $red;
-    font-weight: bold;
-    text-align: center;
-    color: #fff!important;
-    p, h2, h3, h4, h5, h6 {
-        color: #fff;
-    }
-    p {
-        margin: 10px 0;
-    }
-    @media screen and (max-width: 1023px) {
-        margin-top: 10px;
-    }
+  margin-top: 65px;
+  margin-bottom: 30px;
+  background-color: $red;
+  font-weight: bold;
+  text-align: center;
+  color: #fff !important;
+  p, h2, h3, h4, h5, h6 {
+    color: #fff;
+  }
+  p {
+    margin: 10px 0;
+  }
+  @media screen and (max-width: 1023px) {
+    margin-top: 10px;
+  }
 }
 .come-in {
   transform: translateY(-25px);
@@ -39,155 +39,152 @@
   from { opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
-
 .hero-div {
-    .hero-title {
-        padding-bottom: 0.2em;
-        font-size: 38px;
-    }
-    a:focus p,
-    a:hover p {
-        color: $royal;
-    }
+  .hero-title {
+    padding-bottom: 0.2em;
+    font-size: 38px;
+  }
+  a:focus p,
+  a:hover p {
+    color: $royal;
+  }
 }
-
 .field--name-field-somethings {
-    margin-top: 50px;
-    @supports (not (display: grid)) and (not (display: -ms-grid)) {
-        display: flex;
-        justify-content: center;
-    }
-    display: grid;
-    display: -ms-grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-
-    @include tabletAreaWithMaxWidth();
-    @media screen and (min-width: 1200px) {
+  margin-top: 50px;
+  @supports (not (display: grid)) and (not (display: -ms-grid)) {
+    display: flex;
+    justify-content: center;
+  }
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  @include tabletAreaWithMaxWidth();
+  @media screen and (min-width: 1200px) {
     margin-top: 90px;
+  }
+  @media screen and (max-width: 767px) {
+    @supports (not (display: grid)) and (not (display: -ms-grid)) {
+      justify-content: space-around;
+    }
+    margin-top: 20px;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+  }
+  .field--name-field-something-to-type::before {
+    content: "Something to ";
+  }
+  > .field__item {
+    cursor: pointer;
+    border: 1px solid $gray;
+    margin: 0;
+    @supports (not (display: grid)) and (not (display: -ms-grid)) {
+      width: 25%;
+    }
+    //goofy explicit margins here since IE/Edge don't support grid-column-gap
+    @media screen and (min-width: 768px) {
+      &:nth-child(1) {
+        margin-right: 9px;
+        -ms-grid-column: 1;
+      }
+      &:nth-child(2) {
+        margin-left: 3px;
+        margin-right: 6px;
+        -ms-grid-column: 2;
+      }
+      &:nth-child(3) {
+        margin-left: 6px;
+        margin-right: 3px;
+        -ms-grid-column: 3;
+      }
+      &:nth-child(4) {
+        margin-left: 9px;
+        -ms-grid-column: 4;
+      }
     }
     @media screen and (max-width: 767px) {
-        @supports (not (display: grid)) and (not (display: -ms-grid)) {
-            justify-content: space-around;
-        }
-        margin-top: 20px;
-        grid-template-columns: 1fr 1fr;
-        -ms-grid-columns: 1fr 1fr;
+      margin: 0 5px 15px 5px;
+      &:nth-child(1) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+      }
+      &:nth-child(2) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+      }
+      &:nth-child(3) {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+      }
+      &:nth-child(4) {
+        -ms-grid-row: 2;
+        -ms-grid-column: 2;
+      }
     }
-    .field--name-field-something-to-type::before {
-        content: "Something to ";
+    // katria here here
+    .field--name-field-something-to-type { // this is at the v3 level
+      padding: 15px 15px;
+      background-color: $medgray;
+      text-align: left;
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
     }
-    > .field__item {
-        cursor: pointer;
-        border: 1px solid $gray;
-        margin: 0;
-        @supports (not (display: grid)) and (not (display: -ms-grid)) {
-            width: 25%;
-        }
-        //goofy explicit margins here since IE/Edge don't support grid-column-gap
-        @media screen and (min-width: 768px) {
-            &:nth-child(1) {
-                margin-right: 9px;
-                -ms-grid-column: 1;
-            }
-            &:nth-child(2) {
-                margin-left: 3px;
-                margin-right: 6px;
-                -ms-grid-column: 2;
-            }
-            &:nth-child(3) {
-                margin-left: 6px;
-                margin-right: 3px;
-                -ms-grid-column: 3;
-            }
-            &:nth-child(4) {
-                margin-left: 9px;
-                -ms-grid-column: 4;
-            }
-        }
-        @media screen and (max-width: 767px) {
-            margin: 0 5px 15px 5px;
-            &:nth-child(1) {
-                -ms-grid-row: 1;
-                -ms-grid-column: 1;
-            }
-            &:nth-child(2) {
-                -ms-grid-row: 1;
-                -ms-grid-column: 2;
-            }
-            &:nth-child(3) {
-                -ms-grid-row: 2;
-                -ms-grid-column: 1;
-            }
-            &:nth-child(4) {
-                -ms-grid-row: 2;
-                -ms-grid-column: 2;
-            }
-        }
-        // katria here here
-        .field--name-field-something-to-type { // this is at the v3 level
-            padding: 15px 15px;
-            background-color: $medgray;
-            text-align: left;
-            @media screen and (max-width: 991px) {
-                display: none;
-            }
-        }
-        .v3 {
-            // need this bandaid fix override to fit the font:
-            @media screen and (min-width: 1224px) {
-                font-size: 20px!important;
-            }
-        }
-        .something-to-do {
-            background-color: $navy;
-        }
-        .something-to-read {
-            background-color: $medblue;
-        }
-        .something-to-see {
-            background-color: $darkestgray;
-        }
+    .v3 {
+      // need this bandaid fix override to fit the font:
+      @media screen and (min-width: 1224px) {
+        font-size: 20px !important;
+      }
+    }
+    .something-to-do {
+      background-color: $navy;
+    }
+    .something-to-read {
+      background-color: $medblue;
+    }
+    .something-to-see {
+      background-color: $darkestgray;
+    }
 
-        .field--name-field-image {
-            overflow: hidden;
-            img {
-                width: 100%;
-                height: auto;
-            }
-        }
+    .field--name-field-image {
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
 
-        .field--name-field-link {
-            padding: 0px 15px;
-            margin: 10px 0 15px;
-        }
-        a {
-            font-weight: normal; // could strip w a template katria
-        }
-        a:focus,
-        a:hover {
-            text-decoration: none;
-        }
+    .field--name-field-link {
+      padding: 0px 15px;
+      margin: 10px 0 15px;
     }
-    > .field__item:focus,
-    > .field__item:hover {
-        @media screen and (min-width: 768px) {
-            box-shadow: 3px 3px 1px $lightgray;
-        }
-        a {
-            color: $royal;
-        }
+    a {
+      font-weight: normal; // could strip w a template katria
     }
-    > .field__item {
-        a:focus,
-        a:hover {
-            color: $royal;
-        }
+    a:focus,
+    a:hover {
+      text-decoration: none;
     }
+  }
+  > .field__item:focus,
+  > .field__item:hover {
+    @media screen and (min-width: 768px) {
+      box-shadow: 3px 3px 1px $lightgray;
+    }
+    a {
+      color: $royal;
+    }
+  }
+  > .field__item {
+    a:focus,
+    a:hover {
+      color: $royal;
+    }
+  }
 }
 #block-calendarwidgetfeaturedevents {
-    @include tabletAreaWithMaxWidth();
+  @include tabletAreaWithMaxWidth();
 }
 section.page-header {
-    display: none;
+  display: none;
 }
