@@ -342,7 +342,7 @@ $v1-desktopw-font: 200px;
 
 @mixin navy-circle($circle-width) {
   background: $navy;
-  padding: 25px ;
+  padding: 25px;
   border: 2px solid $white;
   border-radius: 50%;
   width: $circle-width;
