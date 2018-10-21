@@ -36,6 +36,7 @@ article.node--type-admissions {
       padding: 0.2em 2.3em;
       display: inline-block;
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+      letter-spacing: 1.3px;
       &:focus,
       &:hover {
         @include hover-to-royal();
@@ -430,6 +431,7 @@ article.node--type-admissions {
       background-color: $royal;
       padding: 10px 20px;
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+      letter-spacing: 1.3px;
     }
     a:focus,
     a:hover {
