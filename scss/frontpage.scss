@@ -76,6 +76,12 @@
     grid-template-columns: 1fr 1fr;
     -ms-grid-columns: 1fr 1fr;
   }
+  @media screen and (max-width: 1426px) {
+    .v3 {
+      font-size: 13px;
+      line-height: 21px;
+    }
+  }
   .field--name-field-something-to-type::before {
     content: "Something to ";
   }
