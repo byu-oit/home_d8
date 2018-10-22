@@ -64,7 +64,7 @@ article.node--type-admissions {
 .node__content.freshman_profile {
   .field__label {
     padding-left: 117px;
-    margin-bottom: 40px;
+    margin-bottom: 14px;
     text-align: left;
     font-weight: normal;
     @media screen and (max-width: 1424px) {
@@ -77,8 +77,13 @@ article.node--type-admissions {
       padding-left: 152px;
     }
     @media screen and (max-width: 991px) {
-      padding-left: 0;
-      text-align: center;
+      padding-left: 15px;
+    }
+    @media screen and (max-width: 425px) {
+      padding-left: 37px;
+    }
+    @media screen and (max-width: 375px) {
+      padding-left: 15px;
     }
   }
   .field__items {
