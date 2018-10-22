@@ -1,7 +1,10 @@
 @import "mixins";
-$undergrad-circle-size : 190px;
-$masters-circle-size : 155px;
-$doctorate-circle-size : 155px;
+$undergrad-circle-size : 170px;
+$masters-circle-size : 135px;
+$doctorate-circle-size : 135px;
+$undergrad-desktop : 190px;
+$masters-desktop : 155px;
+$doctorate-desktop : 155px;
 
 article.node--type-academic {
   @media screen and (min-width: 768px) {
@@ -13,18 +16,28 @@ article.node--type-academic {
 
 .undergrad-circle {
   @include navy-circle($undergrad-circle-size);
+
+  @media screen and (min-width: 426px) {
+    @include navy-circle($undergrad-desktop);
+  }
 }
 
 .masters-circle {
   @include navy-circle($masters-circle-size);
-  margin-left:-11px;
-  padding: 18px;
+
+  @media screen and (min-width: 426px) {
+    @include navy-circle($masters-desktop);
+  }
 }
 
 .doctorate-circle {
   @include navy-circle($doctorate-circle-size);
+
+  @media screen and (min-width: 426px) {
+    @include navy-circle($doctorate-desktop);
+  }
   margin-left:-11px;
-  padding: 18px;
+  padding: 5px;
 }
 
 #circle-wrapper .large-text {
