@@ -18,6 +18,10 @@ article.node--type-admissions {
       margin-bottom: 3px;
       margin-right: 0px;
     }
+    @media screen and (max-width: 425px) {
+      font-size: 12px;
+      line-height: 15px;
+    }
   }
   div {
     display: inline;
@@ -25,15 +29,21 @@ article.node--type-admissions {
       display: flex;
       padding: 0 10px;
       flex-wrap: wrap;
-      justify-content: center;
       div.field__item {
         display: inline;
+        padding: 0;
+      }
+      div.field__item:last-of-type {
+        padding-left: 20px;
       }
     }
     a {
       //color: white;
       background-color: $navy;
-      padding: 0.2em 2.3em;
+      padding: 1em 2.3em;
+      @media screen and (max-width: 425px) {
+        padding: 1em 1.2em;
+      }
       display: inline-block;
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
       letter-spacing: 1.3px;
