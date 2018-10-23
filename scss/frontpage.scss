@@ -82,6 +82,18 @@
       line-height: 21px;
     }
   }
+  @media screen and (max-width: 1024px) {
+    .v3 {
+      font-size: 11px;
+      line-height: 19px;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .v3 {
+      font-size: 17px;
+      line-height: 23px;
+    }
+  }
   .field--name-field-something-to-type::before {
     content: "Something to ";
   }
