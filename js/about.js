@@ -481,6 +481,44 @@
                     $(this).css('animation', '1s fadein');
                     next();
                 });
+
+          // state percentages
+          $(".state-percents-group .state-1")
+            .delay(1800)
+            .queue(function (next) {
+              $(this).css('display', 'inline');
+              $(this).css('animation', '1s fadein');
+              next();
+            });
+          $(".state-percents-group .state-2")
+            .delay(2200)
+            .queue(function (next) {
+              $(this).css('display', 'inline');
+              $(this).css('animation', '1s fadein');
+              next();
+            });
+          $(".state-percents-group .state-3")
+            .delay(2600)
+            .queue(function (next) {
+              $(this).css('display', 'inline-block');
+              $(this).css('animation', '1s fadein');
+              next();
+            });
+          $(".state-percents-group .state-4")
+            .delay(3000)
+            .queue(function (next) {
+              $(this).css('display', 'inline');
+              $(this).css('animation', '1s fadein');
+              next();
+            });
+          $(".state-percents-group .state-5")
+            .delay(3400)
+            .queue(function (next) {
+              $(this).css('display', 'inline');
+              // need arizona to be display:  block for 1023px and down
+              $(this).css('animation', '1s fadein');
+              next();
+            });
         }
 
         if (!oneTimeAnimateElements.mobileSpeaking && $('.field--name-field-students-speaking').hasClass('in-view')) {
