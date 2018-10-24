@@ -90,4 +90,13 @@ jQuery(document).ready(function($) {
             }
         }, (id == 'top' ? 500 : 0));
     }
+
+
+    // Freshman profile alignment
+    var freshmanProfileIcon = $(".freshman-profile-icon");
+    freshmanProfileIcon.each(function() {
+      var width = $(this).width();
+      var totalPadding = 80-width
+      $(this).css({paddingRight: totalPadding/2 + 'px', paddingLeft: totalPadding/2 + 'px'});
+    })
 });

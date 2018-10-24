@@ -3,7 +3,7 @@
 // blues
 $navy: #002E5D;
 $darknavy: #002040;
-$medblue: #5D7998 ; // was 869DB5 but not quite accessible
+$medblue: #32538D; ; // was 869DB5 but not quite accessible
 $lightBlue: #e0f0cc;
 $xlightblue: #C3DDF9;
 
@@ -13,7 +13,7 @@ $lightRoyal: #114BAD;
 // There are 7-9 grays right now..
 $xlightgray: #f2f2f2;
 $lightgray: #e6e6e6;
-$medgray: #767676; // extra
+$medgray: #666; // extra
 $gray: #c5c5c5;
 $darkgray: #666; // went from 4a4a4a to 666
 $darkestgray: #141414;  // this should be used for body & default text.
@@ -36,9 +36,9 @@ $lightgreen: #e0f0cc;
 $white: #FFF;
 
 /* ---- fonts ---- */
-//$ringside: "Gotham A", "Gotham B", Arial, sans-serif;
-$ringside: "Ringside Narrow A", "Ringside Narrow B", sans-serif;
-$vitesse: "Vitesse A", "Vitesse B", serif;
+//$ringside: "HCo Ringside Narrow SSm", Arial, sans-serif;
+$ringside: "HCo Ringside Narrow SSm", Arial, sans-serif;
+$vitesse: "HCo Ringside Narrow SSm", Arial, sans-serif;
 
 
 /* ------------- Headings Etc -------------------- */
@@ -73,12 +73,13 @@ h1, .h1, .v1 {
 @mixin v2() {
   font-size: 25px;
   line-height: 34px;
-  font-weight: 400!important;
+  font-weight: 300!important;
   @media screen and (min-width: 1024px) {
       font-size: 30px;
   }
   @media screen and (min-width: 1224px) {
-    font-size: 35px;
+    font-size: 38px;
+    line-height: 44px;
   }
 }
 h2, .v2 {
@@ -92,14 +93,13 @@ h2, .v2 {
   font-weight: 500;
   //letter-spacing: .5px;
   @media screen and (min-width: 1024px) {
-    font-size: 16px; // has to be 16, not 17 - breaks somethings
+    font-size: 15px; // has to be 16, not 17 - breaks somethings
     line-height: 23px; // check if this is okay everywhere for .v3
   }
   @media screen and (min-width: 1224px) {
-    font-size: 23px!important;
+    font-size: 17px!important;
     letter-spacing: .5px;
   }
-
 }
 
 h3, .v3 {
@@ -173,10 +173,10 @@ h4, .v4 { // h9 & h3 combo
     }
   // katria see if this is necessary for ytext:
   @media screen and (max-width: 1223px) { // test this on other pages
-    font-size: 50px; // 55px is too big for about Total students - test
+    font-size: 44px;
   }
   @media screen and (max-width: 768px) {
-    font-size: 45px;
+    font-size: 40px;
   }
 
 }
@@ -186,7 +186,6 @@ h4, .v4 { // h9 & h3 combo
 @mixin medium-text() {
   font-family: $ringside;
   font-size: 35px;
-  font-weight: bold;
   line-height: 40px;
   letter-spacing: 0.8px; // improves readability
   @media screen and (max-width: 1024px){
@@ -198,8 +197,8 @@ h4, .v4 { // h9 & h3 combo
   @include medium-text();
 }
 .v4 {
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 15px;
   text-transform: uppercase;
   font-weight: 600;
   /*letter-spacing:*/
@@ -265,11 +264,11 @@ $v1-desktopw-font: 200px;
   //}
 
   h4, .v4 {
-    font-size: 17px; // testing 16 to 17
-    line-height: 17px;
+    font-size: 14px; // testing 16 to 17
+    line-height: 15px;
   }
   h3, .v3 {
-    font-size: 23px;
+    font-size: 17px;
     letter-spacing: .5px;
     //line-height: 48px;
   }
@@ -342,8 +341,8 @@ $v1-desktopw-font: 200px;
 
 @mixin navy-circle($circle-width) {
   background: $navy;
-  padding: 25px ;
-  border: 2px solid $medgray;
+  padding: 25px;
+  border: 2px solid $white;
   border-radius: 50%;
   width: $circle-width;
   height: $circle-width;
@@ -373,6 +372,7 @@ $v1-desktopw-font: 200px;
   font-weight: 700; // katria testing with new font change - i think all are bolded..
   color: #fff;
   text-align: center; // katria testing with new font change, i think all are centered..?
+  letter-spacing: 1.3px;
   a:hover, a:focus  {
     text-decoration: none;
     color: #fff;
@@ -383,7 +383,7 @@ $v1-desktopw-font: 200px;
 @mixin hover-to-royal() {
     color: white;
     text-decoration: none;
-    background-color: $royal;
+    background-color: $medblue;
     transition: background 0.2s;
 }
 @mixin hover-to-navy() {
@@ -441,3 +441,4 @@ $v1-desktopw-font: 200px;
 .students-speaking-text-wrapper h3 {
   line-height: normal!important;
 }
+

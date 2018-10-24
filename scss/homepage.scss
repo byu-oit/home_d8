@@ -64,7 +64,7 @@ byu-footer-column :nth-child(2) {
   font-family: $ringside !important;
 }
 .normal-weight, .normal-weight p{
-  font-weight: normal!important;
+  font-weight: 300!important;
 }
 .bold, .v2.bold {
   font-weight: bold!important;
@@ -87,8 +87,14 @@ byu-footer-column :nth-child(2) {
 .extra-small {
   font-size: 12px;
 }
+.medblue {
+  color: $medblue;
+}
 .navy, .navy p {
   color: $navy;
+}
+.darknavy {
+  color: $darknavy;
 }
 .white {
   color: #fff;

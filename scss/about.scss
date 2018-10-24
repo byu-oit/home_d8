@@ -6,15 +6,12 @@
   .quote-wrapper.full-width-bar-inner {
     display: flex;
     margin-top: 50px;
-    @media screen and (max-width: 1224px) {
-      padding-right: 35px;
-    }
     @media screen and (max-width: 767px) {
       margin-top: 25px;
       padding: 0px 25px;
       .v3 {
         text-align: left;
-        //line-height: 24px!important;
+        line-height: 19px!important;
       }
 
 
@@ -38,25 +35,34 @@
     }
   }
   .quote-icon {
-    //font-weight: bold;
-    font-size: 200px;
-    line-height: 22px; // this positions it correctly
-    //font-family: $vitesse;
-    //color: $lightgray;
-    margin-top: 30px;
+    font-size: 150px;
+    line-height: 150px; // this positions it correctly
+    height: 50px; // avoids pushing the quote reference down
     // come back to this for smaller sizes/bg instead/overlap
     @media screen and (max-width: 1023px) {
       display: none;
 
     }
   }
+
+  // Adjust quote line-height
+  .field--name-field-quote {
+    line-height: 40px !important;
+
+    @media screen and (max-width: 1024px) {
+      padding-right: 30px;
+    }
+  }
+
+  // quote source desktop
+  .field--name-field-quote-source {
+    font-size: 16px !important;
+    line-height: 21px;
+  }
+
   /// quote source mobile
   .field--name-field-quote-source {
-    max-width: 400px!important;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 80px;
-    margin-top: 10px;
+    margin: 10px auto 80px;
 
     @media screen and (max-width: 767px) {
       padding: 0px 25px 15px;
@@ -236,7 +242,7 @@
     }
 
     p {
-      color: $xlightgray;
+      color: $darknavy;
     }
     .larger-p, .larger-p2 {
       width: 100%;
@@ -595,7 +601,7 @@
       width: 145px; // smaller for new font
     }
     @media screen and (min-width: 1024px) {
-      width: 175px; // smaller for new font
+      width: 200px; // smaller for new font
     }
 
     height: 40px;
@@ -610,11 +616,11 @@
   }
   .state-field-wrapper {
     height: 40px;
-    width: 50px;
+    width: 64px;
   }
   .countries-field-wrapper {
     height: 40px;
-    width: 65px;
+    width: 77px;
     @media screen and (max-width: 767px) {
       width: 52px;
       margin-right: .5em;
@@ -630,6 +636,11 @@
       display: block!important;
     }
 
+  }
+
+  .field--name-field-states.field--type-integer,
+  .field--name-field-countries.field--type-integer {
+    margin-right: 6px;
   }
 
   .jumbo-text.and-icon {
@@ -649,7 +660,7 @@
   }
   .countries-cont {
     @media screen and (min-width: 1024px) {
-      width: 300px;
+      width: 312px;
     }
     @media screen and (max-width: 767px) {
       position: relative;
@@ -828,6 +839,10 @@
     .navy-circle {
       @include navy-circle(156px);
       padding: 15px;
+
+      @media screen and (min-width: 768px) {
+        padding: 25px 15px 15px;
+      }
       @media screen and (max-width: 767px) {
         width: 145px;
         height: 145px;
@@ -836,9 +851,6 @@
         margin-left: 0px;
         margin-top: 0px;
         margin: 0px 5px;
-      }
-      @media screen and (max-width: 1223px) {
-        padding: 15px;
       }
     }
   }
