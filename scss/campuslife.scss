@@ -179,6 +179,13 @@ section.page-header {
       position: relative;
     }
   }
+  @media screen and (min-width: 1425px) {
+    img {
+      bottom: 80px;
+      position: relative;
+
+    }
+  }
 }
 .promo-link-item.field__item {
   padding: 5px;
