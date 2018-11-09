@@ -360,10 +360,6 @@ function home_d8_preprocess_html(&$variables) {
         $variables['attributes']['class'][] = $logged_in;
     }
 
-    // adding browser classes to body
-    $browserclasses = home_d8_browser_classes();
-    $variables['attributes']['class'][] = implode(' ', $browserclasses);// Concatenate with spaces.
-
 
 }
 //
