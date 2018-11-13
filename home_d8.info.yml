@@ -22,6 +22,7 @@ libraries-override:
 regions:
   header: 'Header'
   header_actions: 'Header Actions'
+  header_actions2: 'Header Actions 2'
   nav_top: 'Nav Top'
   search: 'Search'
   language_switcher : 'Language Switcher'

@@ -48,6 +48,9 @@
         {% if page.header_actions %}
             <div slot="actions" class="action-bg {{ actions_bg }}">{{ page.header_actions }}</div>
         {% endif %}
+        {% if page.header_actions2 %}
+            <div slot="actions2" class="action-bg {{ actions_bg }}">{{ page.header_actions2 }}</div>
+        {% endif %}
 
         {% if login_use == TRUE %}
             <byu-user-info slot="user">
