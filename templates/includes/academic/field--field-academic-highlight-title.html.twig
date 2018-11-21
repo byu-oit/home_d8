@@ -53,6 +53,5 @@
 %}
 
 {% for item in items %}
-  <div{{ attributes.addClass(classes, 'field__item', 'v2', 'ringside', 'white', 'university-for') }}>University for</div>
-  <div{{ attributes.removeClass('university-for').addClass('actual-title') }}>{{ item.content }}</div>
+  <div{{ attributes.removeClass('university-for').addClass(classes, 'field__item', 'v3', 'ringside', 'white', 'university-for', 'actual-title') }}>University for {{ item.content }}</div>
 {% endfor %}
