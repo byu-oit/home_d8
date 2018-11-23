@@ -382,6 +382,21 @@ byu-menu.byu-component-rendered a.is-active {
   background-color: #ddd;
 }
 
+
+/* -------- Calendar widget ---------- */
+
+
+#block-calendarwidgetfeaturedevents h2 {
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 1223px) {
+  #block-calendarwidgetfeaturedevents h2 {
+    text-align: center;
+  }
+
+}
+
 /* -------- Basic Pages ------------- */
 .main {
   padding: 60px 0px 100px;
