@@ -274,6 +274,10 @@ div#edit-keys--description {
 
 /* ----- main page --------- */
 //4 main content types that have stretch-full-width with bars
+h1 {
+  font-weight: 300!important;
+}
+
 .type-about, .type-academic, .type-admissions, .type-campus-life {
   .main {
     //padding: 0px 0px 30px;  // moved to below because we need to set all 4 content types AND front page
