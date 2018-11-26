@@ -1,0 +1,3 @@
+[submodule "byu-homepage-components"]
+	path = byu-homepage-components
+	url = https://github.com/byu-oit/byu-homepage-components.git
