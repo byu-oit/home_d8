@@ -3,6 +3,7 @@
 html, body {
   overflow-x: hidden;
   color: #666;
+  margin-top: 0!important;
 }
 
 /* ----------- BYU HOMEPAGE SPECIFIC--------- */
@@ -34,9 +35,28 @@ a:hover {
 
 /* --- overriding byu_d8 for homepage components:  -- */
 
+byu-search {
+  @media screen and (min-width: 769px) {
+    margin-left: 100px
+  }
+}
 [slot="actions"] div {
   margin: 0;
 }
+div[slot="actions"] {
+  @media screen and (min-width: 769px) {
+    height: 24px;
+  }
+}
+div[slot="actions2"] {
+  @media screen and (min-width: 769px) {
+    margin-left: 8px;
+    padding-left: 8px;
+    border-left: 1px solid white;
+    height: 24px;
+  }
+}
+
 #header {
     z-index: auto;
 }
@@ -120,7 +140,7 @@ byu-footer-column :nth-child(2) {
 .right-text {
   text-align: right;
 }
-.centered-text, .center-text {
+.centered-text, .center-text, .center {
   text-align: center;
 }
 .centered-margin {
@@ -260,10 +280,23 @@ $circle-width: 156px;
   display: none;
 }
 
+div#edit-keys--description {
+  /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 
 
 /* ----- main page --------- */
 //4 main content types that have stretch-full-width with bars
+h1 {
+  font-weight: 300!important;
+}
+
 .type-about, .type-academic, .type-admissions, .type-campus-life {
   .main {
     //padding: 0px 0px 30px;  // moved to below because we need to set all 4 content types AND front page
@@ -284,7 +317,7 @@ $circle-width: 156px;
         max-width: 1024px;
       }
       @media screen and (max-width: 1223px) and (min-width: 1024px) {
-        max-width: 824px;
+        max-width: 996px;
       }
       // we don't set a max-width on mobile ones now because a lot of them are full width for mobile & Tablet:
 
@@ -366,6 +399,21 @@ $circle-width: 156px;
 
 byu-menu.byu-component-rendered a.is-active {
   background-color: #ddd;
+}
+
+
+/* -------- Calendar widget ---------- */
+
+
+#block-calendarwidgetfeaturedevents h2 {
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 1223px) {
+  #block-calendarwidgetfeaturedevents h2 {
+    text-align: center;
+  }
+
 }
 
 /* -------- Basic Pages ------------- */
