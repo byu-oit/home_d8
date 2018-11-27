@@ -1,6 +1,6 @@
 name: BYU Homepage Theme
 type: theme
-base theme: byu_d8
+base theme: byu_theme
 description: 'Responsive BYU Homepage Theme using web components.'
 package: Custom
 

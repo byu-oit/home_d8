@@ -19,6 +19,7 @@ article.node--type-academic {
 
   @media screen and (min-width: 426px) {
     @include navy-circle($undergrad-desktop);
+    margin-left: 16px;
   }
 }
 
@@ -98,12 +99,6 @@ article.node--type-academic {
   }
 }
 
-.rank-prefix {
-  padding-right: 10px;
-  opacity: 0.8;
-}
-
-
 #circle-wrapper, #academic-success {
   min-height: 15em;
 }
@@ -120,7 +115,7 @@ div#links-and-calendar {
 
 .academic-highlight-overlay {
   background-color: $navy; // can't be converted to class due to screen size design changes
-  padding: 0 15px 10px 15px;
+  padding: 10px 15px;
   @media screen and (min-width: 768px) and (max-width: 991px) {
     .field--name-field-academic-highlight-title.actual-title { // we do need this spacing
       min-height: 3em;
@@ -133,8 +128,18 @@ div#links-and-calendar {
     height: auto;
 }
 
-.field--name-field-academic-highlight-rank {
-    margin-top: -1.3em;
+@media screen and (max-width: 767px) {
+  .academic-highlight-overlay {
+    height: 82px;
+    position: relative;
+    top: -82px;
+    opacity: 0.9;
+  }
+
+  .field--name-field-academic-highlight-rank {
+    display: inline-block;
+    float: left;
+  }
 }
 
 .field--name-field-academic-highlight-title.university-for {
@@ -144,6 +149,22 @@ div#links-and-calendar {
     margin-top: 0;
     min-height: 2em;
     margin-bottom: 5px;
+    margin-left: 72px;
+}
+.field--name-field-academic-highlight-byline {
+  margin-left: 72px;
+}
+
+.field__item:last-child {
+  .field--name-field-academic-highlight-title.actual-title {
+    margin-top: 0;
+    min-height: 2em;
+    margin-bottom: 5px;
+    margin-left: 90px;
+  }
+  .field--name-field-academic-highlight-byline {
+    margin-left: 90px;
+  }
 }
 
 
@@ -243,13 +264,40 @@ div#links-and-calendar {
 
   .field--name-field-academic-highlight > .field__item {
     margin-bottom: 10px;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: -72px;
+    }
   }
 }
 
 .academic-highlights {
+
+  // Rank size
+   .rank-size {
+    font-family: $ringside;
+    font-size: 42px;
+    line-height: 82px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-top: -10px;
+    &.white {
+      color: #fff;
+    }
+    // katria see if this is necessary for ytext:
+    @media screen and (max-width: 1223px) { // test this on other pages
+      font-size: 44px;
+      display: inline-block;
+      float: left;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 40px;
+    }
+  }
+
   @media screen and (min-width: 768px) {
     display: flex;
-    margin-top: -50px; // Shim to align the highlights with Yfacts since Yfacts is moved up by using top: -###px
+    margin-top: -70px; // Shim to align the highlights with Yfacts since Yfacts is moved up by using top: -###px
 
     & > .field__item {
       flex: 1; // Makes images the same size
@@ -264,70 +312,51 @@ div#links-and-calendar {
     }
   }
 
-  // size/alignment of #2, #5, #30 on mobile devices
-  @media screen and (max-width: 767px) {
-
-    .field--name-field-academic-highlight-image {
-      margin-bottom: 0;
-    }
-    .field--name-field-academic-highlight-rank {
-      margin-bottom: 25px;
-      //margin-top: -1em;
-    }
+  @media screen and (min-width: 1200px) {
+    margin-top: -150px;
   }
-
 
   @media screen and (min-width: 1024px) {
-    // Shim to align the highlights with Yfacts since Yfacts is moved up by using top: -###px
-    margin-top: -70px;
-
-    & > .field__item:nth-child(2) {
-      margin: 0 8px; // Adds spacing between the images
-    }
-  }
-  @media screen and (min-width: 1224px) {
-    margin-top: -150px; // Shim to align the highlights with Yfacts
-  }
-  @media screen and (min-width: 1824px) {
     //change overlay to hover over image rather than display below
     & > .field__item {
       background-color: transparent;
     }
     .academic-highlight-overlay {
-      width: 85%;
-      margin-top: -200px;
+      width: 100%;
+      margin-top: -82px;
       opacity: .9;
-      height: 166px;
+      height: 82px;
 
       // Aligning text in hovering overlay
       .field.field--name-field-academic-highlight-rank.field--type-integer.field--label-hidden.field__item.large-text {
         display: inline;
       }
       .field.field--name-field-academic-highlight-title.field--type-string.field--label-hidden.field__item.university-for {
-        margin-left: 90px;
-        margin-top: -74px;
-        font-size: 25px; // cant get around this; it just wont fit
+        margin-left: 70px;
+        @media screen and (min-width: 1224px) {
+          margin-top: -74px;
+        }
         line-height: normal; // helps it fit
       }
       .field.field--name-field-academic-highlight-title.field--type-string.field--label-hidden.field__item.actual-title {
-        font-size: 25px; // cant get around this; it just wont fit
-        line-height: normal; // helps it fit
-        padding-bottom: 10px;
+        line-height: normal;
+        padding-left: 8px;
       }
       .field.field--name-field-academic-highlight-title.field--type-string.field--label-hidden.field__item.actual-title,
       .field.field--name-field-academic-highlight-byline.field--type-string.field--label-hidden.field__item.white
       {
-        margin-left: 90px;
+        margin-left: 70px;
+        padding-left: 8px;
       }
     }
 
     & > .field__item:last-child {
       .field.field--name-field-academic-highlight-title.field--type-string.field--label-hidden.field__item.university-for {
-        margin-left: 125px;
+        margin-left: 90px;
       }
       .field.field--name-field-academic-highlight-title.field--type-string.field--label-hidden.field__item.actual-title,
       .field.field--name-field-academic-highlight-byline.field--type-string.field--label-hidden.field__item.white {
-        margin-left: 125px;
+        margin-left: 90px;
       }
     }
   }

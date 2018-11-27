@@ -285,11 +285,11 @@
       @include medium-text();
       padding-right: 35px !important; // strangely needed to center number now.. wasn't needed before
       @media screen and (max-width: 767px) {
-        //top: -39px;
-        top: 0px;
+        top: -40px;
+        left: 20%;
         position: relative;
       }
-      @media screen and (max-width: 1023px) {
+      @media screen and (max-width: 1023px) and (min-width: 768px) {
         padding-right: 35px !important;
         left: 10px;
       }
@@ -299,7 +299,6 @@
     }
     .color-2 .tooltip > .tooltip-inner {
       padding-right: 25px !important; // strangely needed to center number now.. wasn't needed before
-
     }
 
     .assets-wrap {
@@ -333,7 +332,7 @@
       //background-color: $lightgray;
       box-shadow: none;
       @media screen and (max-width: 767px) {
-        width: 70%;
+        width: 60%;
         background: none;
       }
     }
@@ -830,7 +829,7 @@
       justify-content: center;
     }
     @media screen and (max-width: 767px) {
-      padding: 0px 35px 40px;
+      padding: 0 0 40px;
       background: none;
       margin-top: 0px;
     }
@@ -1058,6 +1057,10 @@
     }
   }
 
+}
+
+.progress-bar.bar2 {
+  background-color: $medgray !important;
 }
 
 /* --- Firefox fixes ---------- */
