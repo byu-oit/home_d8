@@ -275,6 +275,27 @@ $circle-width: 156px;
 
 
 /* ---- header --- */
+
+div[slot="actions2"] {
+  @media screen and (min-width: 769px) {
+    padding-left: 16px;
+    border-left: solid 1px $white;
+    margin-left: 0;
+  }
+}
+
+div[slot="actions"] {
+  @media screen and (min-width: 769px) {
+    margin-right: 16px;
+  }
+}
+
+byu-search {
+  @media screen and (min-width: 769px) {
+    margin-left: 116px !important;
+  }
+}
+
 .byu-search .visually-hidden,
 .byu-search input#edit-submit {
   display: none;
