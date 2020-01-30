@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap-sass": "^3.4.1",
+    "bootstrap-sass": "^3.3.7",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "^3.9.2",
@@ -23,7 +23,7 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "bootstrap": "^3.4.1",
+    "bootstrap": "^3.3.7",
     "jquery": "^3.3.1"
   }
 }
